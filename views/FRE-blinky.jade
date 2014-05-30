@@ -1,0 +1,51 @@
+extends layout
+
+block content
+  .row
+    .large-12.columns.fre-container
+      .large-4.columns.right
+        img(style="margin-top:-30px; max-width=253px; float: right;" src='#{s3url}tessel-plugged.jpg')
+      .large-8.columns
+        .row
+          h1 Plug in your Tessel!
+          p
+          p In your command line, make a folder for your Tessel code, change directory into that folder, and then initialize <a href="https://www.npmjs.org/">npm</a> in that folder:
+          code
+            cli mkdir tessel-code;
+            cli cd tessel-code;
+            cli npm init;
+          p Great! Now you're set up to run code on Tessel.
+        .row
+          .greyBar(style="height:2px;")
+        .row
+          p Blinking some lights is the "Hello World" of hardware.
+          p Make a new file in your "tessel-code" directory called "blinky.js", and copy/paste this code into it:
+
+          pre.prettyprint
+            code.
+              var tessel = require('tessel');
+
+              var led1 = tessel.led[0].output().high();
+              var led2 = tessel.led[1].output().low();
+
+              setInterval(function () {
+                  console.log("I'm blinking! (Press CTRL + C to stop)");
+                  led1.toggle();
+                  led2.toggle();
+              }, 100);
+          p
+
+          p In your command line, enter
+
+          p.bigCode <code><cli>tessel run blinky.js</cli></code>
+
+          p <b>Look at your Tessel!</b> The blue and green LEDs on your Tessel's LED panel should blink back and forth.
+
+          p <b>Bonus:</b> mess with the code to make the LEDs blink in sync.
+
+block bottom_nav
+  .row
+    .large-6.columns.left
+      a.bottomButton(href="/install" class="button") Prev: Install
+    .large-6.columns.right
+      a.bottomButton.right(href="/modules" class="button") Next: Add modules

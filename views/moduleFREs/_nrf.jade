@@ -1,0 +1,25 @@
+- var thismod = "nrf24"
+- var pkg = "rf-nrf24"
+- var doThis = "Watch in your command line as the NRF modules communicate back and forth."
+- var bonus = "<br/><br/><b>Bonus:</b> Change the data the NRF module is sending."
+
+- var i = 1
+- var moduleDocs = moduleDocs_filepath + pkg
+- var moreInfo = moreInfo1 + thismod.toUpperCase() + moreInfo2 + moduleDocs + moreInfo3
+
+//- +see_video("http://youtu.be/JLZzLyH9jc4")
++make_directory(i, thismod, "<b>Note:</b> the nRF24 module can only communicate to other nRF24 modules, so for this example we'll need two Tessels each with their own nRF24 module. If you have an Arduino with an nRF24 module, you can talk to the Arduino instead with <a href='https://github.com/tessel/rf-nrf24/blob/master/examples/RF24-pingpair.js'>an alternate nrf24 example</a>.")
+- i++
++normal_row(i, modulesPlugged_filepath +  thismod + ".jpeg", plugIn1 + thismod.toUpperCase() + plugIn2)
+- i++
++normal_row(i, moduleCorners_filepath + thismod + ".jpg", install1 + pkg + install2)
+- i++
++displayCode(i, code.code, thismod)
+- i++
+
++normal_row(i, moduleCorners_filepath + thismod + "-double.jpg", "Now change the role in the example file from 'ping' to 'pong' and send the 'ping' file to one Tessel and the 'pong' file to another Tessel. <br/><br/>"+push1 + thismod + push2)
+- i++
++normal_row(i, moduleGifs_filepath + thismod + ".gif", "Watch in your command line as the nrf modules communicate back and forth.<br/><br/><b>Bonus:</b> Change the data the nrf module is sending.<br/><br/>For more information on the " + thismod + " module, see the module docs <a href='" + moduleDocs + "', target=0>here</a>.")
+
+- i++
++seeForums(i, thismod, thismod.toUpperCase())

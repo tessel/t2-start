@@ -1,0 +1,5 @@
+- var moduleList = ['accelerometer', 'ambient', 'audio', 'ble', 'camera', 'climate', 'gprs', 'gps', 'ir', 'microsd', 'nrf', 'relay', 'rfid', 'servo']
+  each val in moduleList
+    - var imgsrc = s3url + val + 'bw.png'
+    button.modules.semiopaque(name=val, id=val, title=val)
+      img(src=imgsrc, width=50, title=val)

@@ -1,0 +1,42 @@
+extends layout
+
+block content
+  .row
+    .large-12.columns.fre-container
+      .row
+        .large-12.columns
+          h1 Modules
+          p Tessel has four module ports, labeled A, B, C, and D.
+      .row
+        .large-6.columns
+          img.centeralign(width="400px" src="#{s3url}tessel-ports.jpg")
+        .large-6.columns
+          p In the examples below, port "A" is always specified. But as long as you change the port in the code, you can plug your module into any of the ports.
+      .row
+        .large-12.columns
+          p Modules should be plugged in so that all of the electrical components are face up and all the hexagons are face down:
+      .row
+        .large-6.columns.left
+          h4 face up
+          img(src="#{s3url}tessel-all-plugged-sm.jpg")
+        .large-6.columns.right
+          h4 face down
+          img(src="#{s3url}tessel-all-plugged-back-sm.jpg")
+      .row
+        .large-12.columns
+          .greyBar(style="height:2px;")
+
+      .row
+        .large-12.columns
+          h2 Choose a module below to get up and running
+          p If you've already tried out your modules, move on to <a href="/wifi">Wifi.</a>
+
+      include _modulesList.jade
+
+block bottom_nav
+  .row
+    .large-6.columns.left
+      a.bottomButton(href="/blinky" class="button") Prev: Blink lights
+
+    .large-6.columns.right
+      a.bottomButton.right(href="/wifi" class="button") Next: Connect to Wifi

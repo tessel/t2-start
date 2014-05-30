@@ -1,0 +1,28 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.3",
+    "jade": "*",
+    "request": "*"
+  },
+  "jshintConfig": {
+    "node": true,
+    "camelcase": true,
+    "curly": true,
+    "esnext": false,
+    "globals": {},
+    "globalstrict": false,
+    "indent": 2,
+    "quotmark": true,
+    "smarttabs": false,
+    "trailing": true,
+    "undef": true,
+    "unused": true,
+    "white": true
+  }
+}

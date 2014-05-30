@@ -1,0 +1,22 @@
+- var thismod = "ambient"
+- var pkg = "ambient-attx4"
+- var doThis = "Watch light and sound values appear in your terminal! Try clapping or shining a flashlight at it."
+- var bonus = "<br/><br/><b>Bonus:</b> Change the code so the sound trigger activates with just a whisper."
+
+- var i = 1
+- var moduleDocs = moduleDocs_filepath + pkg
+- var moreInfo = moreInfo1 + thismod + moreInfo2 + moduleDocs + moreInfo3
+
+//- +see_video("http://youtu.be/JLZzLyH9jc4")
++make_directory(i, thismod)
+- i++
++normal_row(i, modulesPlugged_filepath +  thismod + ".jpeg", plugIn1 + thismod + plugIn2)
+- i++
++normal_row(i, moduleCorners_filepath + thismod + ".jpg", install1 + pkg + install2)
+- i++
+.row
++displayCode(i, code.code, thismod)
+- i++
++normal_row(i, moduleGifs_filepath + thismod + ".gif", push1 + thismod + push2 + doThis + bonus + moreInfo)
+- i++
++seeForums(i, thismod, thismod)

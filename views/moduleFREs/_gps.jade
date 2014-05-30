@@ -1,0 +1,22 @@
+- var thismod = "gps"
+- var pkg = "gps-a2235h"
+- var moduleDocs = moduleDocs_filepath + pkg
+- var doThis = "Check out your location! If you're having trouble getting a location fix, try going outside; you probably don't have satellites indoors."
+- var bonus = "<br/><br/><b>Bonus:</b> Set up a geofence so that you are inside it. (Hint: you may need to check the documentation.)"
+
+- var i = 1
+- var moduleDocs = moduleDocs_filepath + pkg
+- var moreInfo = moreInfo1 + thismod.toUpperCase() + moreInfo2 + moduleDocs + moreInfo3
+
+//- +see_video("http://youtu.be/JLZzLyH9jc4")
++make_directory(i, thismod, "<b>Note:</b> the time between seeing satellites and actually getting a lock is dependent on the satelite. Be in view of the open sky for best results (and even then it may take a while to get a lock). Once the module has a lock, the lock should stay for a while.")
+- i++
++normal_row(i, modulesPlugged_filepath +  thismod + ".jpeg", plugIn1 + thismod.toUpperCase() + plugIn2)
+- i++
++normal_row(i, moduleCorners_filepath + thismod + ".jpg", install1 + pkg + install2)
+- i++
++displayCode(i, code.code, thismod)
+- i++
++normal_row(i, moduleGifs_filepath + thismod + ".gif", push1 + thismod + push2 + doThis + bonus + moreInfo)
+- i++
++seeForums(i, thismod, thismod.toUpperCase())

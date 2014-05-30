@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  .row
+    .large-10.columns.fre-container
+      .row.container-no-background
+        h1 Congratulations, you've completed the Tessel Tutorial!
+        h2 Next:
+        ol
+          li
+            a(href="http://twitter.com/technicalhumans" target=1)
+              | Follow us <img src="#{s3url}external-link.png">
+            |  on Twitter
+          li
+            a(href="https://www.facebook.com/technicallyamachine/app_100265896690345" target=2)
+              | Sign up <img src="#{s3url}external-link.png">
+            |  for our biweekly newsletter
+          li
+            a(href="https://github.com/tessel/docs" target=3)
+              | Check out <img src="#{s3url}external-link.png">
+            |  further documentation
+
+block bottom_nav
+  .row
+    .large-6.columns.left
+      a.bottomButton(href="/usage" class="button") Prev: Usage

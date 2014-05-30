@@ -1,0 +1,130 @@
+extends layout
+script.
+  function selectText(node) {
+    if (document.selection) {
+      var range = document.body.createTextRange();
+      range.moveToElementText(node);
+      range.select();
+    } else if (window.getSelection) {
+      var range = document.createRange();
+      range.selectNode(node);
+      window.getSelection().addRange(range);
+    }
+  }
+
+  $(function () {
+    var isMac = navigator.platform.toUpperCase().indexOf('MAC')!==-1;
+    var isWindows = navigator.platform.toUpperCase().indexOf('WIN')!==-1;
+    var isLinux = navigator.platform.toUpperCase().indexOf('LINUX')!==-1;
+
+    isMac && $('.nav a[href="#tab-osx"]').tab('show');
+    isWindows && $('.nav a[href="#tab-windows"]').tab('show');
+    isLinux && $('.nav a[href="#tab-linux"]').tab('show');
+    $('.nav a[href=' + window.location.hash + ']').tab('show')
+
+    $('.nav a[href]').on('click', function () {
+      window.location.hash = $(this).attr('href');
+    })
+
+    $('pre.p').on('click', function () {
+      selectText($(this)[0]);
+    })
+
+    $('.prereqtoggle').on('click', function () {
+      $('.prereqs').toggle()
+    })
+
+    $.ajax({
+      url: 'https://s3.amazonaws.com/tessel-tools/',
+      dataFormat: 'xml',
+      success: function(data) {
+        var contents = $(data).find('Contents');
+
+        var files = [];
+        for (i = 0; i < contents.length; i++) {
+          files.push(($(contents[i]).find('Key').text()));
+        }
+
+        var cli = [], firmware = [];
+        files.forEach(function (file) {
+          var m;
+          if (m = file.match(/^cli\/tessel-cli-(\d+\-\d+\-\d+).tar.gz/)) cli.push(m[1]);
+          if (m = file.match(/^firmware\/tessel-firmware-(\d+\-\d+\-\d+).bin/)) firmware.push(m[1])
+        })
+
+        var cli_latest = cli.sort().pop();
+        var firmware_latest = firmware.sort().pop();
+        $('#releases-cli b').text(cli_latest)
+        $('#releases-firmware b').text(firmware_latest)
+      }
+    });
+  })
+
+block content
+  .row
+    .large-12.columns.fre-container
+      h1 Install Tessel
+
+      p Select the operating system you are working on.
+
+      dl#install-tabs(class="tabs contained three-up" data-tab)
+        dd.active
+          a(href="#tab-osx" data-toggle="tab" ) OSX
+        dd
+          a(href="#tab-linux" data-toggle="tab") Linux
+        dd
+          a(href="#tab-pc" data-toggle="tab") Windows
+
+      .tabs-content
+        .content.active#tab-osx
+          p
+            a(href="http://nodejs.org") Node.js
+            |  is a prerequisite for installing the Tessel command line. You can install it from the <a href="http://nodejs.org">official website</a>, or if you have <a href="http://brew.sh">brew</a> installed:</p>
+          code
+            cli brew install node
+          p Once Node.js is installed, run this installation script from your terminal
+            code
+              cli npm install -g http://builds.tessel.io/cli/tessel-cli-current.tar.gz
+          p If the installation didn't work, please post the error message to our <a href="http://forums.tessel.io/category/installation-issues">forums</a> and we'll help you out.</i>
+          p If the scripts ran without errors, proceed to <a href="#firmware">update the firmware</a>.
+
+        .content#tab-linux
+          p
+            a(href="http://nodejs.org") Node.js
+            |  is a prerequisite for installing the Tessel command line. You can install it from the <a href="http://nodejs.org">official website</a>, via <a href="https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager">package manager</a>, or if you are running Ubuntu 13.10 or later, you can run this:
+          code
+            cli apt-get update;
+            cli apt-get install nodejs;
+          p Once Node is installed, run this in your terminal:
+          code
+            cli npm install -g http://builds.tessel.io/cli/tessel-cli-current.tar.gz
+          p If the installation didn't work, please post the error message to our <a href="http://forums.tessel.io/category/installation-issues">forums</a> and we'll help you out.</i>
+          p If the scripts ran without errors, proceed to <a href="#firmware">update the firmware</a>.
+
+        .content#tab-pc
+          p On Windows, Tessel drivers will install automatically when you plug in.
+          p On Windows 7, you may receive the notification "Device driver software was not successfully installed". If you do, click on the notification, click the "Change settings..." button, and then select "Install driver software from Windows Update if it is not found on my computer." Save changes and re-try.
+          p Next, install <a href="http://nodejs.org">Node.JS</a>. You need this to interact with Tessel from the command line.
+          p After installing the Tessel drivers and Node.js, run this in cmd.exe:
+          code
+            cli npm install -g http://builds.tessel.io/cli/tessel-cli-current.tar.gz
+          p If the installation didn't work, please post the error message to our <a href="http://forums.tessel.io/category/installation-issues">forums</a> and we'll help you out.</i>
+          p If the scripts ran without errors, proceed to <a href="#firmware">update the firmware</a>.
+
+  .row
+    .large-12.columns.fre-container
+
+      h3#firmware Update Tessel's Firmware
+      p Plug Tessel into your computer via USB. In the command line, run
+        code
+          cli tessel update
+      p The lights should blink yellow and red during the firmware upload.
+      p Once the firmware update is complete, continue to the next step.
+
+
+block bottom_nav
+  .row
+    .large-12.columns.right
+      a.bottomButton.right(href="/blinky" class="button") Next: Blink lights
+
+      script(src='/javascripts/FRE-install-client.js')

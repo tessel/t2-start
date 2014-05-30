@@ -1,0 +1,159 @@
+extends layout
+
+block content
+  .row
+    .large-12.columns.fre-container
+      // mixin for the modular formatting of each module's FRE
+      mixin modulemodule(val)
+        - var imgsrc = s3url +'modules/' + val + '.png'
+        .row
+          .large-12.columns.fre-container
+            span
+              img(src=imgsrc, style="margin-top:-20px;").constrain-sm
+            span(style="padding-left:10px;")
+              if (val == 'ble' || val == 'gprs'|| val == 'gps'|| val == 'ir'|| val == 'nrf'|| val == 'rfid')
+                h2.leftalign.moduleTitle #{val.toUpperCase()}
+              else if (val == 'microsd')
+                h2.leftalign.moduleTitle MicroSD
+              else
+                h2.leftalign.moduleTitle #{ucfirst(val)}
+
+        .row(id=val)
+          .large-12.columns
+            +#{val}
+
+      mixin displayCode(number, code, module)
+        .row
+          +num_col(number)
+        .row
+          .large-12.columns.left
+            p Save this code in a text file called <code>#{module}.js</code>:
+            pre.prettyprint#exampleCode
+              code.
+                #{code}
+        .row
+          .large-12.columns
+            .greyBar(style="height:2px;")
+
+      // mixins for within the includes
+      mixin num_col(num)
+        .large-12.columns
+          p.moduleStep Step #{num}
+
+      mixin normal_row(number, imgsrc, text)
+        .row
+          +num_col(number)
+        .row
+          .large-6.columns
+            p !{text}
+          .large-6.columns
+            img(src=imgsrc).constrain
+
+        .row
+          .large-12.columns
+            .greyBar(style="height:2px;")
+
+      mixin see_video(url)
+        .row
+          .large-12.columns
+            p Follow the directions below or <a href="#{url}"", target=0>view as a video</a>
+
+        .row
+          .large-12.columns
+            .greyBar(style="height:2px;")
+
+      mixin make_directory(number, thismod, special)
+        .row
+          +num_col(number)
+        .row
+          .large-12.columns
+            p
+              | Make a directory inside your "tessel-code" folder: enter
+              | <code><cli>mkdir #{thismod}</cli></code>
+              | into your command line, then change directory into that folder:
+              | <code><cli>cd #{thismod}</cli></code>
+            if (special)
+              p!=special
+        .row
+          .large-12.columns
+            .greyBar(style="height:2px;")
+
+      mixin seeForums(number, url, thismod)
+        .row
+          +num_col(number)
+        .row
+          .large-12.columns
+            p If you run into any issues you can check out the <a href=forumUrl+"#{url}">#{thismod} forums</a>.
+        .row
+          .large-12.columns
+            .greyBar(style="height:2px;")
+
+
+      - var modulesPlugged_filepath = s3url+"modules_plugged/"
+      - var moduleCorners_filepath = s3url+"modules_corners/"
+      - var moduleGifs_filepath = s3url+"gifs/"
+      - var moduleSpecial_filepath = s3url+"modules_special/"
+      - var moduleDocs_filepath = "https://github.com/tessel/"
+
+      - var plugIn1 = "It's best to unplug Tessel from power while plugging in modules.</br><br/>Plug the "
+      - var plugIn2 = " module into Tessel <b>port A</b> with the hexagon/icon side down and the electrical components on the top, then plug Tessel into your computer via USB."
+
+      - var install1 = "Install by typing <code><cli>npm install "
+      - var install2 = "</code></cli> into the command line."
+
+      - var push1 = "In your command line, <code><cli>tessel run "
+      - var push2 = ".js</cli></code><br/>"
+
+      - var moreInfo1 = "<br/><br/>To see what else you can do with the "
+      - var moreInfo2 = " module, see the module docs <a href='"
+      - var moreInfo3 = "', target=0>here</a>."
+
+      // include all the modules
+      //each val in moduleList
+      +modulemodule(displayModule)
+
+      // workaround mixins for fake dynamic includes
+      mixin accelerometer
+        include moduleFREs/_accelerometer
+      mixin ambient
+        include moduleFREs/_ambient
+      mixin audio
+        include moduleFREs/_audio
+      mixin ble
+        include moduleFREs/_ble
+      mixin camera
+        include moduleFREs/_camera
+      mixin climate
+        include moduleFREs/_climate
+      mixin gprs
+        include moduleFREs/_gprs
+      mixin gps
+        include moduleFREs/_gps
+      mixin ir
+        include moduleFREs/_ir
+      mixin microsd
+        include moduleFREs/_microsd
+      mixin nrf
+        include moduleFREs/_nrf
+      mixin relay
+        include moduleFREs/_relay
+      mixin rfid
+        include moduleFREs/_rfid
+      mixin servo
+        include moduleFREs/_servo
+
+      .row
+        .large-12.columns
+          h2 Choose another module
+          p Or if you're all set, move on to <a href="/wifi">Wifi.</a>
+
+      include _modulesList.jade
+
+
+block bottom_nav
+  .row
+    .large-6.columns.left
+      a.bottomButton(href="/blinky" class="button") Prev: Blink lights
+
+    .large-6.columns.right
+      a.bottomButton.right(href="/wifi" class="button") Next: Connect to Wifi

@@ -1,0 +1,197 @@
+doctype html
+html
+  head
+    title= title
+    script(src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js")
+    link(href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/css/foundation.min.css", rel="stylesheet")
+
+    script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+    script(src="/javascripts/custom/active-link.js")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation.min.js")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation/foundation.tab.min.js")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation/foundation.topbar.min.js")
+
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/gh-fork-ribbon.css')
+
+    style.
+      body { background: white; }
+      pre code { overflow: auto; }
+
+      .top-bar, .top-bar.expanded .title-area { font-family: Helvetica, sans-serif; background: #eee; z-index: 1000 }
+      .top-bar-section li a:not(.button) { background: black; font-size: 14px; }
+      .top-bar a { -webkit-transition: background 0.2s linear; line-height: 42px; height: 45px; display: block; }
+      .top-bar a:hover { background: rgba(0, 0, 0, 0.1) !important; }
+      .twitterbird img { height: 40px; vertical-align: middle; }
+      .top-bar .divider { border-left: 1px solid #bbb !important ; border-right: none !important; }
+      .top-bar-section li a:not(.button) { background: none; color: black; }
+      .top-bar-section ul.right { background: #eee; }
+      .top-bar .toggle-topbar.menu-icon a { color: black; }
+      .top-bar .toggle-topbar.menu-icon a span {
+        -webkit-box-shadow: 0 10px 0 1px #000,0 16px 0 1px #000,0 22px 0 1px #000;
+        box-shadow: 0 10px 0 1px #000,0 16px 0 1px #000,0 22px 0 1px #000;
+      }
+      .top-bar.expanded ul.right a { line-height: 20px }
+      .top-bar.expanded ul.right a img { margin-top: -8px }
+
+      #sec-what, #sec-spec, #sec-lastcall { padding-top: 30px; padding-bottom: 30px; }
+      #sec-heading { padding-bottom: 30px; text-align: center; }
+
+      #sec-heading .desc { font-size: 1.1em; }
+      #sec-heading .desc p { font-size: 20px; }
+      #sec-heading .desc p.tagline { font-size: 34px; text-align: center; line-height: 1.3 }
+      #sec-heading .desc { margin-top: 100px; }
+      #sec-heading-pic-column { text-align: right }
+      @media (max-width: 768px) {
+        #toTopHover, #toTop { display: none; left: -100000px }
+        #sec-heading-pic { margin-bottom: -30px; margin-top: -500px !important; z-index: 0; }
+        #sec-heading-pic { display: none }
+        #sec-heading .desc { margin-top: 0; }
+        #sec-heading-pic-column { text-align: center; }
+        code { font-size: 14px !important; }
+      }
+      @media (max-width: 500px) {
+        code {font-size: 12px !important; }
+      }
+
+      @media(max-height: 200px){
+        .side-nav{ overflow-y: scroll; }
+      }
+
+      @media(max-height: 560px){.side-nav{ overflow-y: scroll; }}
+
+      @media (max-width: 640px){
+        #alt-menu{ display: block;}
+        #main-menu{ display: none;}
+        #sticky-topbar { display:none;}
+        #fre-sidebar{display: none;}
+        #fre-content{ margin-left:0px; padding-left:0px; max-width:100%}
+      }
+      #sec-heading-pic { width: 360px; margin-top: -150px }
+      #sec-heading fieldset { background: white; }
+
+      #sec-what { background: #fff; padding: 10px 0 50px; }
+      .modules li { text-align: center; font-weight: bold; text-transform: uppercase; line-height: 1.1; font-size: 0.8em; }
+      .modules a { display: block; }
+      .modules img { max-height: 80px; }
+      .modules li span { display: block; margin: 10px 0; font-family: Helvetica; }
+
+      #servo-anim-block {
+        background: #ddeaf6; padding: 50px 0;
+      }
+      #servo-anim-code {
+        font-weight: normal; font-size: 16px; padding: 14px 20px; border-radius: 7px; text-align: left
+      }
+      @media (max-width: 768px) {
+        #servo-anim-code { border-radius: 4px; padding: 14px 14px; margin-bottom: 20px }
+        #servo-anim-block button.large { margin-bottom: 0; }
+        #servo-anim-block { padding: 20px 0; }
+        #sec-what { padding-bottom: 20px; font-size: 14px; }
+        #sec-what br { display: none; }
+      }
+
+      #sec-teardown { background: #333; }
+
+      #sec-spec { background: #ddd; border-width: 1px 0; border-color: #ccc; border-style: solid; }
+      #sec-spec .specs { margin: 20px 0; }
+
+      #sec-lastcall { border-width: 1px 0; border-color: #aaa; border-style: solid; text-align: center; background: #fff }
+
+      #sec-footer {  color: white; padding-top: 15px; }
+
+      tt, span.name { color: #f54a42; font-family: inherit; font-size: inherit; }
+      .disc { padding-left: 25px; margin: 10px 0;}
+      ul.spread li { margin: 20px 0; }
+      pre.code { background: #333; border-radius: 5px; line-height: 1.4; padding: 10px 20px; color: #eb0; margin: 20px; }
+      #sec-what h2, #sec-spec h2 { text-transform: uppercase; text-align: center; font-size: 1.6em; color: #444; margin: 25px 20px; }
+      h3 { margin-top: 40px; color: #000 !important; }
+      h4 { text-transform: uppercase; font-size: 0.9em; text-align: center; color: #444; }
+    block head
+
+  body
+  - var moduleList = ['accelerometer', 'ambient', 'audio', 'ble', 'camera', 'climate', 'gprs', 'gps', 'ir', 'microsd', 'nrf', 'relay', 'rfid', 'servo']
+    #sticky-topbar.sticky
+      nav.top-bar(data-topbar, data-options="sticky_on: large")
+        ul.title-area(style="background-color: #d7d7d7;")
+          li.name
+            h1
+              a(href="https://tessel.io/")
+                nobr
+                  img(src="#{s3url}tessel-name.png", style="max-height: 18px; vertical-align: middle;", alt="Technical Machine")
+          li.toggle-topbar.menu-icon
+            a(href="#")
+              span Menu
+
+        section.top-bar-section#main-menu
+          ul.right
+            li
+              a(href="/" style="background-color:#eee;") Start
+            li.divider.hide-for-small
+            li
+              a(href="http://tessel.io/docs" style="background-color:#eee;") Docs
+            li.divider.hide-for-small
+            li
+              a(href="http://forums.tessel.io" style="background-color:#eee;") Forums
+            li.divider.hide-for-small
+            li
+              a(href="http://tessel.io/shop" style="background-color:#eee;") Shop
+            li.divider.hide-for-small
+            li
+              a(href="http://blog.technical.io" style="background-color:#eee;") Blog
+            li.divider.hide-for-small
+            li
+              a(href="http://tessel.io/jobs" style="background-color:#eee;") Jobs
+            li.divider.hide-for-small
+            li
+              a.twitterbird(href="http://twitter.com/technicalhumans" style="background-color:#eee;")
+                img(src="https://abs.twimg.com/a/1379971261/images/resources/twitter-bird-light-bgs.png", alt="@technicalhumans")
+
+    nav.top-bar(data-topbar)#alt-menu
+      // display this menu in mobile mode
+      ul.title-area(style="background-color: #d7d7d7;")
+        li.name
+          h1
+            a(href="https://tessel.io/")
+              nobr
+                img(src="#{s3url}tessel-name.png", style="max-height: 18px; vertical-align: middle;", alt="Technical Machine")
+        li.toggle-topbar.menu-icon
+          a(href="#")
+            span Menu
+      section.top-bar-section
+        ul.right
+          li
+            a(href="/install") install
+          li
+            a(href="/blinky") blinky
+          li
+            a(href="/modules") modules
+          li
+            a(href="/wifi") wifi
+          li
+            a(href="/tweet") tweet
+          li
+            a(href="/usage") usage
+          li
+            a(href="/finished") finish
+
+
+    section
+      include _FRE-sidebar.jade
+      div#fre-content
+        block content
+        .row
+          .large-12.columns
+            .greyBar
+        block bottom_nav
+
+    .github-fork-ribbon-wrapper.right-bottom
+      .github-fork-ribbon
+        a(href="https://github.com/technicalmachine/start.tessel.io") Fork on Github
+
+    section#sec-footer
+      .row.rightalign
+        .large-12.columns.large-right(style="text-align: right")
+          p Technical Machine &copy; 2014.
+
+    script(src="http://include.reinvigorate.net/re_.js")
+    script(src="/javascripts/reinvigorate.js")

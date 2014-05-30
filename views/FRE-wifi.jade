@@ -1,0 +1,73 @@
+extends layout
+
+block content
+  .row
+    .large-12.columns.fre-container
+      .row
+        .large-12.columns
+          h1 Connect Tessel to Wifi
+      br
+      .row
+        .large-12.columns
+          p Tessel can only connect to 2.4GHz networks. To connect to a new network, enter in your command line (without brackets)
+          h3 <code><cli>tessel wifi -n [network name] -p [password] -s [security type*]</cli></code>
+          i <code>*</code>The security type flag is optional; default is wpa2.<br/><br/>
+      .row
+        .large-12.columns
+          .greyBar(style="height:2px;")
+      .row
+        .large-6.columns
+          p Tessel is connected to Wifi when the yellow status light is on. Tessel saves network credentials and tries to reconnect automatically on startup.
+          p Once that yellow light is on, you're connected to Wifi!
+        .large-6.columns
+          img(src="#{s3url}wifi.JPG").constrain
+      .row
+        .large-12.columns
+          .greyBar(style="height:2px;")
+          p Here is an example of serving a website over Tessel's Wifi connection:
+          p Save the following code in a file called <code>wifi.js</code>:
+          pre.prettyprint#exampleCode
+            code.
+              var http = require('http');
+
+              var statusCode = 200;
+              var count = 1;
+
+              setImmediate(function start () {
+                console.log('http request #' + (count++))
+                http.get("http://httpstat.us/" + statusCode, function (res) {
+                  console.log('# statusCode', res.statusCode)
+
+                  var bufs = [];
+                  res.on('data', function (data) {
+                    bufs.push(new Buffer(data));
+                    console.log('# received', new Buffer(data).toString());
+                  })
+                  res.on('close', function () {
+                    console.log('done.');
+                    setImmediate(start);
+                  })
+                }).on('error', function (e) {
+                  console.log('not ok -', e.message, 'error event')
+                  setImmediate(start);
+                });
+              });
+
+          p Run the code on your Tessel by typing this in the terminal:
+          p <code><cli>tessel run wifi.js</cli></code>
+          p Watch Tessel ping the website in your console!
+      .row
+        .large-12.columns
+          .greyBar(style="height:2px;")
+      .row
+        .large-12.columns
+          p <b>If you run into errors:</b> First, check to make sure the yellow status light is on. If it is not, you are not connected to Wifi. Try power cycling your Tessel and then run the <code>tessel wifi</code> command again.
+          p If you're still having trouble, please log your error on the <a href="http://forums.tessel.io/category/wifi">Wifi forums</a>.
+
+block bottom_nav
+  .row
+    .large-5.columns.left
+      a.bottomButton(href="/modules" class="button") Prev: Add modules
+    .large-6.columns.right
+      //- a.bottomButton.right(href="/tweet" class="button") Next: Tweet
+      a.bottomButton.right(href="/usage" class="button") Next: Usage
