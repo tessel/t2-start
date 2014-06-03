@@ -93,8 +93,7 @@ block content
             a(href="http://nodejs.org") Node.js
             |  is a prerequisite for installing the Tessel command line. You can install it from the <a href="http://nodejs.org">official website</a>, via <a href="https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager">package manager</a>, or if you are running Ubuntu 13.10 or later, you can run this:
           code
-            cli apt-get update;
-            cli apt-get install nodejs;
+            cli apt-get install nodejs npm nodejs-legacy libusb-1.0-0-dev;
           p Once Node is installed, run this in your terminal:
           code
             cli npm install -g http://builds.tessel.io/cli/tessel-cli-current.tar.gz
