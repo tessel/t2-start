@@ -1,0 +1,129 @@
+extends layout
+
+block content
+  .row
+    .large-12.columns.fre-container
+      title: "Tessel's First Tweet"
+      .row
+        .large-12.columns
+          h1 Tessel's First Tweet
+      br
+
+  .row
+    .large-12.columns
+      p This code snippet makes Tessel send a tweet from a dummy account <a href="https://twitter.com/TesselTweet" target=0>(@TesselTweet)</a> that we've created for this.
+      p If you want to post from your own account, go to <a href="https://apps.twitter.com/" target=0>apps.twitter.com</a>, create your own OAuth tokens with read and write permissions, and paste them into the script.
+  .row
+    .large-12.columns
+      .greyBar(style="height:2px;")
+  .row.large-12.columns
+      p First, create a new directory within your "tessel-code" directory:
+        code
+          cli mkdir tessel-tweet
+          cli cd tessel-tweet
+
+      p Now copy and paste the following into a new file and save it as "tweet.js". Change the twitterHandle var to your own Twitter handle.
+
+  .row
+    .large-12.columns
+      pre.prettyprint
+        code.
+          // Node requires
+          var https = require('https');
+          var crypto = require('crypto');
+
+          var twitterHandle = '@technicalhumans'
+
+          // The status to tweet
+          var status = 'Hello' + twitterHandle + '. This is your #Tessel speaking.'
+          // Timestamp
+          var curtime = parseInt(process.env.DEPLOY_TIMESTAMP || Date.now());
+
+          // Copy your own keys here if you want
+          var oauth_consumer_key = "O7oc0pvsZn4xjgcuHuYdX4FaC";
+          var oauth_consumer_secret = "iJYuHFz2sD46Nvk3mcwzX8uih14aEAMgVWdWoR59nx8v6Zl7ZX"
+          var oauth_access_token = "2529232909-luARGU89K4CKFMvfzBjCgG6ubefzDkdDWkSB85i"
+          var oauth_access_secret = "GXQfuzvGdjLEs3t1HEYfhQ9x9bdBcSBVXjBkbRgwYlOE0"
+
+          // Set up OAuth
+          var oauth_data = {
+            oauth_consumer_key: oauth_consumer_key,
+            oauth_nonce: require('crypto').pseudoRandomBytes(32).toString('hex'),
+            oauth_signature_method: 'HMAC-SHA1',
+            oauth_timestamp: Math.floor(curtime / 1000),
+            oauth_token: oauth_access_token,
+            oauth_version: '1.0'
+          };
+          oauth_data.status = status;
+          var out = [].concat(
+            ['POST', 'https://api.twitter.com/1.1/statuses/update.json'],
+            (Object.keys(oauth_data).sort().map(function (k) {
+              return encodeURIComponent(k) + '=' + encodeURIComponent(oauth_data[k])
+            }).join('&'))
+          ).map(encodeURIComponent).join('&');
+          delete oauth_data.status;
+          oauth_data.oauth_signature = crypto
+            .createHmac('sha1', [oauth_consumer_secret, oauth_access_secret].join('&'))
+            .update(out)
+            .digest('base64');
+          var auth_header = 'OAuth ' + Object.keys(oauth_data).sort().map(function (key) {
+            return key + '="' + encodeURIComponent(oauth_data[key]) + '"'
+          }).join(', ');
+
+          // Set up a request
+          var req = https.request({
+            port: 443,
+            method: 'POST',
+            hostname: 'api.twitter.com',
+            path: '/1.1/statuses/update.json',
+            headers: {
+              Host: 'api.twitter.com',
+              'Accept': '*/*',
+              "User-Agent": "tessel",
+              'Authorization': auth_header,
+              'Content-Type': 'application/x-www-form-urlencoded',
+              'Connection': 'keep-alive'
+            }
+          }, function (res) {
+            console.log("statusCode: ", res.statusCode);
+            console.log("headers: ", res.headers);
+            res.on('data', function(d) {
+              console.log(' ');
+              console.log(' ');
+              console.log(String(d));
+            });
+          });
+
+          // POST to Twitter
+          req.write('status=' + encodeURIComponent(status));
+          req.end();
+
+          // Log any errors
+          req.on('error', function(e) {
+            console.error(e);
+          });
+
+  .row
+    .large-4.columns
+      <br/>
+      p Now run
+        code
+          cli tessel run tweet.js;
+      p
+        a(href="https://twitter.com/TesselTweet" target=0) Check Twitter for your tweet!
+
+    .large-8.columns.right
+      img(src="#{s3url}tessel-tweet-2.png", style="float:right;")
+
+
+  .row
+    .large-12.columns
+      <br/>
+      p <b>Bonus:</b> Try making Tessel tweet output from a module.
+
+block bottom_nav
+  .row
+    .large-5.columns.left
+      a.bottomButton(href="/wifi" class="button") Prev: Wifi
+    .large-6.columns.right
+      a.bottomButton.right(href="/usage" class="button") Next: usage
