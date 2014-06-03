@@ -32,18 +32,18 @@ block content
           var https = require('https');
           var crypto = require('crypto');
 
-          var twitterHandle = '@technicalhumans'
+          var twitterHandle = '@technicalhumans';
 
           // The status to tweet
-          var status = 'Hello' + twitterHandle + '. This is your #Tessel speaking.'
+          var status = 'Hello' + twitterHandle + '. This is your #Tessel speaking.';
           // Timestamp
           var curtime = parseInt(process.env.DEPLOY_TIMESTAMP || Date.now());
 
           // Copy your own keys here if you want
           var oauth_consumer_key = "O7oc0pvsZn4xjgcuHuYdX4FaC";
-          var oauth_consumer_secret = "iJYuHFz2sD46Nvk3mcwzX8uih14aEAMgVWdWoR59nx8v6Zl7ZX"
-          var oauth_access_token = "2529232909-luARGU89K4CKFMvfzBjCgG6ubefzDkdDWkSB85i"
-          var oauth_access_secret = "GXQfuzvGdjLEs3t1HEYfhQ9x9bdBcSBVXjBkbRgwYlOE0"
+          var oauth_consumer_secret = "iJYuHFz2sD46Nvk3mcwzX8uih14aEAMgVWdWoR59nx8v6Zl7ZX";
+          var oauth_access_token = "2529232909-luARGU89K4CKFMvfzBjCgG6ubefzDkdDWkSB85i";
+          var oauth_access_secret = "GXQfuzvGdjLEs3t1HEYfhQ9x9bdBcSBVXjBkbRgwYlOE0";
 
           // Set up OAuth
           var oauth_data = {
@@ -58,7 +58,7 @@ block content
           var out = [].concat(
             ['POST', 'https://api.twitter.com/1.1/statuses/update.json'],
             (Object.keys(oauth_data).sort().map(function (k) {
-              return encodeURIComponent(k) + '=' + encodeURIComponent(oauth_data[k])
+              return encodeURIComponent(k) + '=' + encodeURIComponent(oauth_data[k]);
             }).join('&'))
           ).map(encodeURIComponent).join('&');
           delete oauth_data.status;
@@ -67,7 +67,7 @@ block content
             .update(out)
             .digest('base64');
           var auth_header = 'OAuth ' + Object.keys(oauth_data).sort().map(function (key) {
-            return key + '="' + encodeURIComponent(oauth_data[key]) + '"'
+            return key + '="' + encodeURIComponent(oauth_data[key]) + '"';
           }).join(', ');
 
           // Set up a request
