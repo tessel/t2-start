@@ -1,81 +1,23 @@
 extends layout
-script.
-  function selectText(node) {
-    if (document.selection) {
-      var range = document.body.createTextRange();
-      range.moveToElementText(node);
-      range.select();
-    } else if (window.getSelection) {
-      var range = document.createRange();
-      range.selectNode(node);
-      window.getSelection().addRange(range);
-    }
-  }
-
-  $(function () {
-    var isMac = navigator.platform.toUpperCase().indexOf('MAC')!==-1;
-    var isWindows = navigator.platform.toUpperCase().indexOf('WIN')!==-1;
-    var isLinux = navigator.platform.toUpperCase().indexOf('LINUX')!==-1;
-
-    isMac && $('.nav a[href="#tab-osx"]').tab('show');
-    isWindows && $('.nav a[href="#tab-windows"]').tab('show');
-    isLinux && $('.nav a[href="#tab-linux"]').tab('show');
-    $('.nav a[href=' + window.location.hash + ']').tab('show')
-
-    $('.nav a[href]').on('click', function () {
-      window.location.hash = $(this).attr('href');
-    })
-
-    $('pre.p').on('click', function () {
-      selectText($(this)[0]);
-    })
-
-    $('.prereqtoggle').on('click', function () {
-      $('.prereqs').toggle()
-    })
-
-    $.ajax({
-      url: 'https://s3.amazonaws.com/tessel-tools/',
-      dataFormat: 'xml',
-      success: function(data) {
-        var contents = $(data).find('Contents');
-
-        var files = [];
-        for (i = 0; i < contents.length; i++) {
-          files.push(($(contents[i]).find('Key').text()));
-        }
-
-        var cli = [], firmware = [];
-        files.forEach(function (file) {
-          var m;
-          if (m = file.match(/^cli\/tessel-cli-(\d+\-\d+\-\d+).tar.gz/)) cli.push(m[1]);
-          if (m = file.match(/^firmware\/tessel-firmware-(\d+\-\d+\-\d+).bin/)) firmware.push(m[1])
-        })
-
-        var cli_latest = cli.sort().pop();
-        var firmware_latest = firmware.sort().pop();
-        $('#releases-cli b').text(cli_latest)
-        $('#releases-firmware b').text(firmware_latest)
-      }
-    });
-  })
+block head
+  script(src="/javascripts/custom/install.js")
 
 block content
   .row
-    .large-12.columns.fre-container
+    .large-12.columns.fre-container#anchor
       h1 Install Tessel
 
       p Select the operating system you are working on.
 
       dl#install-tabs(class="tabs contained three-up" data-tab)
         dd.active
-          a(href="#tab-osx" data-toggle="tab" ) OSX
+          a#osx-tab(href="#tab-osx" data-toggle="tab" ) OSX
         dd
-          a(href="#tab-linux" data-toggle="tab") Linux
+          a#linux-tab(href="#tab-linux" data-toggle="tab") Linux
         dd
-          a(href="#tab-pc" data-toggle="tab") Windows
+          a#pc-tab(href="#tab-pc" data-toggle="tab") Windows
 
-      .tabs-content
+      .tabs-content#install-content
         .content.active#tab-osx
           p
             a(href="http://nodejs.org") Node.js
