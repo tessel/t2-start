@@ -1,7 +1,7 @@
 - var thismod = "audio"
 - var pkg = "audio-vs1053b"
-- var doThis = "Listen to the audio file over your headphone speakers."
-- var bonus = "<br/><br/><b>Bonus:</b> Change the code to play the audio file really loudly."
+- var doThis = "When prompted, hold down the config button and speak loudly at the Audio module. When you release the button the recording will be played back to you."
+- var bonus = "<br/><br/><b>Bonus:</b> Change the code to playback the audio file really loudly."
 
 - var i = 1
 - var moduleDocs = moduleDocs_filepath + pkg
@@ -18,6 +18,8 @@
 +normal_row(i, moduleCorners_filepath + thismod + ".jpg", install1 + pkg + install2)
 - i++
 +displayCode(i, code.code, thismod)
+- i++
++normal_row(i, moduleSpecial_filepath + "config_button" + ".jpg", "Locate the config button on Tessel. You'll be holding down this button to record sound.")
 - i++
 +normal_row(i, moduleGifs_filepath + thismod + ".gif", push1 + thismod + push2 + doThis + bonus + moreInfo)
 - i++
