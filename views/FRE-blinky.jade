@@ -11,9 +11,9 @@ block content
           p
           p In your command line, make a folder for your Tessel code, change directory into that folder, and then initialize <a href="https://www.npmjs.org/">npm</a> in that folder:
           code
-            cli mkdir tessel-code;
-            cli cd tessel-code;
-            cli npm init;
+            cli mkdir tessel-code
+            cli cd tessel-code
+            cli mkdir node_modules
           p Great! Now you're set up to run code on Tessel.
         .row
           .greyBar(style="height:2px;")
@@ -23,13 +23,18 @@ block content
 
           pre.prettyprint
             code.
+              // Import the interface to Tessel hardware
               var tessel = require('tessel');
 
-              var led1 = tessel.led[0].output().high();
-              var led2 = tessel.led[1].output().low();
+              // Set the led pins as outputs with initial states
+              // Truthy initial state sets the pin high
+              // Falsy sets it low.
+              var led1 = tessel.led[0].output(1);
+              var led2 = tessel.led[1].output(0);
 
               setInterval(function () {
                   console.log("I'm blinking! (Press CTRL + C to stop)");
+                  // Toggle the led states
                   led1.toggle();
                   led2.toggle();
               }, 100);

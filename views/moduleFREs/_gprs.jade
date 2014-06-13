@@ -1,7 +1,7 @@
 - var thismod = "gprs"
 - var pkg = "gprs-sim900"
 - var doThis = "After 10-20 seconds, check the phone you specified for a text!<p>If it didn't work, check the green 'NET LIGHT' LED on your GPRS module. If it is blinking more quickly than once every three seconds, you don't have enough bars of phone service to send a text."
-- var bonus = "<br/><br/><b>Bonus:</b> CTRL + C out of the running code, and run it again as<br/><cli><code>tessel run gprs.js -m</code></cli><br/>The <code>-m</code> lets you interact with the module in the command line.<p>Once your Tessel has successfully sent you a text, text it back. You should see an 'unsolicited event' in your command line when you receive it. To read it, enter <code>at+cmgr=x</code>, where x is the number mentioned in the 'unsolicited event' notification."
+- var bonus = "<br/><br/><b>Bonus:</b> Try interacting with the module using the command line.<p>Once your Tessel has successfully sent you a text, text it back. If all goes well, you should see a notification in your command line when the Tessel receives the SMS from your phone. To read the text you sent the Tessel, enter <code>at+cmgr=x</code>, where x is the number mentioned in the 'unsolicited event' notification."
 
 - var i = 1
 - var moduleDocs = moduleDocs_filepath + pkg
@@ -10,7 +10,7 @@
 //- +see_video("http://youtu.be/JLZzLyH9jc4")
 +make_directory(i, thismod)
 - i++
-+normal_row(i, s3url+"modules_clipped/" +  thismod + "-goodies.png", "Attach antenna and insert an unlocked (pre-paid) SIM card [not included] into GPRS module as pictured.")
++normal_row(i, s3url+"modules_special/" +  thismod + "-goodies.png", "Attach antenna and insert an unlocked (pre-paid) SIM card [not included] into GPRS module as pictured.")
 - i++
 +normal_row(i, moduleSpecial_filepath +  "gprs-3v" + ".jpeg", "Make sure the Power select jumper in the top right corner of the module is set to 3.3V. You may have to pull off the jumper pin from its location at 'External' and move it to 3.3V.")
 - i++
