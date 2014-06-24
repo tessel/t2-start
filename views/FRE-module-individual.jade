@@ -4,7 +4,7 @@ block content
   .row
     .large-12.columns.fre-container
       // mixin for the modular formatting of each module's FRE
-      mixin modulemodule(val)
+      mixin modulemodule(val, link)
         - var imgsrc = s3url +'modules/' + val + '.png'
         .row
           .large-12.columns.fre-container
@@ -17,6 +17,9 @@ block content
                 h2.leftalign.moduleTitle MicroSD
               else
                 h2.leftalign.moduleTitle #{ucfirst(val)}
+            span(style="padding-left:20px;")
+              a(href=link) 
+                i.fa.fa-github  View Source
 
         .row(id=val)
           .large-12.columns
@@ -110,7 +113,7 @@ block content
 
       // include all the modules
       //each val in moduleList
-      +modulemodule(displayModule)
+      +modulemodule(displayModule, code.github)
 
       // workaround mixins for fake dynamic includes
       mixin accelerometer
