@@ -45,20 +45,20 @@ app.get('/finished', firstrun.finished);
 
 // get the data from github
 var githubCode = {
-  accelerometer: {url: 'https://raw.githubusercontent.com/tessel/accel-mma84/master/examples/accelerometer.js', code: '', updated: null, replace: 'accel-mma84'},
-  ambient: {url: 'https://raw.githubusercontent.com/tessel/ambient-attx4/master/examples/ambient.js', code: '', updated: null, replace: 'ambient-attx4'},
-  audio: {url: 'https://raw.githubusercontent.com/tessel/audio-vs1053b/master/examples/audio.js', code: '', updated: null, replace: 'audio-vs1053b'},
-  ble: {url: 'https://raw.githubusercontent.com/tessel/ble-ble113a/master/examples/ble.js', code: '', updated: null, replace: 'ble-ble113a'},
-  camera: {url: 'https://raw.githubusercontent.com/tessel/camera-vc0706/master/examples/camera.js', code: '', updated: null, replace: 'camera-vc0706'},
-  climate: {url: 'https://raw.githubusercontent.com/tessel/climate-si7005/master/examples/climate.js', code: '', updated: null, replace: 'climate-si7005'},
-  gprs: {url: 'https://raw.githubusercontent.com/tessel/gprs-sim900/master/examples/gprs.js', code: '', updated: null, replace: 'gprs-sim900'},
-  gps: {url: 'https://raw.githubusercontent.com/tessel/gps-a2235h/master/examples/gps.js', code: '', updated: null, replace: 'gps-a2235h'},
-  ir: {url: 'https://raw.githubusercontent.com/tessel/ir-attx4/master/examples/infrared.js', code: '', updated: null, replace: 'ir-attx4'},
-  microsd: {url: 'https://raw.githubusercontent.com/tessel/sdcard/master/examples/microsd.js', code: '', updated: null, replace: 'sdcard'},
-  nrf: {url: 'https://raw.githubusercontent.com/tessel/node-nrf/jh-tessel/examples/nrf24.js', code: '', updated: null, replace: 'rf-nrf24'},
-  relay: {url: 'https://raw.githubusercontent.com/tessel/relay-mono/master/examples/relay.js', code: '', updated: null, replace: 'relay-mono'},
-  rfid: {url: 'https://raw.githubusercontent.com/tessel/rfid-pn532/master/examples/rfid.js', code: '', updated: null, replace: 'rfid-pn532'},
-  servo: {url: 'https://raw.githubusercontent.com/tessel/servo-pca9685/master/examples/servo.js', code: '', updated: null, replace: 'servo-pca9685'}
+  accelerometer: {url: 'https://raw.githubusercontent.com/tessel/accel-mma84/master/examples/accelerometer.js', github: 'https://github.com/tessel/accel-mma84', code: '', updated: null, replace: 'accel-mma84'},
+  ambient: {url: 'https://raw.githubusercontent.com/tessel/ambient-attx4/master/examples/ambient.js', github: 'https://github.com/tessel/ambient-attx4', code: '', updated: null, replace: 'ambient-attx4'},
+  audio: {url: 'https://raw.githubusercontent.com/tessel/audio-vs1053b/master/examples/audio.js', github: 'https://github.com/tessel/audio-vs1053b', code: '', updated: null, replace: 'audio-vs1053b'},
+  ble: {url: 'https://raw.githubusercontent.com/tessel/ble-ble113a/master/examples/ble.js', github: 'https://github.com/tessel/ble-ble113a', code: '', updated: null, replace: 'ble-ble113a'},
+  camera: {url: 'https://raw.githubusercontent.com/tessel/camera-vc0706/master/examples/camera.js', github: 'https://github.com/tessel/camera-vc0706', code: '', updated: null, replace: 'camera-vc0706'},
+  climate: {url: 'https://raw.githubusercontent.com/tessel/climate-si7005/master/examples/climate.js', github: 'https://github.com/tessel/climate-si7005', code: '', updated: null, replace: 'climate-si7005'},
+  gprs: {url: 'https://raw.githubusercontent.com/tessel/gprs-sim900/master/examples/gprs.js', github: 'https://github.com/tessel/gprs-sim900', code: '', updated: null, replace: 'gprs-sim900'},
+  gps: {url: 'https://raw.githubusercontent.com/tessel/gps-a2235h/master/examples/gps.js', github: 'https://github.com/tessel/gps-a2235h', code: '', updated: null, replace: 'gps-a2235h'},
+  ir: {url: 'https://raw.githubusercontent.com/tessel/ir-attx4/master/examples/infrared.js', github: 'https://github.com/tessel/ir-attx4', code: '', updated: null, replace: 'ir-attx4'},
+  microsd: {url: 'https://raw.githubusercontent.com/tessel/sdcard/master/examples/microsd.js', github: 'https://github.com/tessel/sdcard', code: '', updated: null, replace: 'sdcard'},
+  nrf: {url: 'https://raw.githubusercontent.com/tessel/node-nrf/jh-tessel/examples/nrf24.js', github: 'https://github.com/tessel/rf-nrf24', code: '', updated: null, replace: 'rf-nrf24'},
+  relay: {url: 'https://raw.githubusercontent.com/tessel/relay-mono/master/examples/relay.js', github: 'https://github.com/tessel/relay-mono', code: '', updated: null, replace: 'relay-mono'},
+  rfid: {url: 'https://raw.githubusercontent.com/tessel/rfid-pn532/master/examples/rfid.js', github: 'https://github.com/tessel/rfid-pn532', code: '', updated: null, replace: 'rfid-pn532'},
+  servo: {url: 'https://raw.githubusercontent.com/tessel/servo-pca9685/master/examples/servo.js', github: 'https://github.com/tessel/servo-pca9685', code: '', updated: null, replace: 'servo-pca9685'}
 };
 
 app.get('/modules/:slug', function (req, res) {
