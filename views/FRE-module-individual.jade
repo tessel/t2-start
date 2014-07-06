@@ -18,7 +18,7 @@ block content
               else
                 h2.leftalign.moduleTitle #{ucfirst(val)}
             span(style="padding-left:20px;")
-              a(href=link) 
+              a(href=link)
                 i.fa.fa-github  View Source
 
         .row(id=val)
@@ -70,13 +70,13 @@ block content
           +num_col(number)
         .row
           .large-12.columns
+            if (special)
+              p!=special
             p
               | Make a directory inside your "tessel-code" folder: enter
               | <code><cli>mkdir #{thismod}</cli></code>
               | into your command line, then change directory into that folder:
               | <code><cli>cd #{thismod}</cli></code>
-            if (special)
-              p!=special
         .row
           .large-12.columns
             .greyBar(style="height:2px;")
