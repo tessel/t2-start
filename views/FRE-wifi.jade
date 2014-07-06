@@ -48,7 +48,7 @@ block content
                     bufs.push(new Buffer(data));
                     console.log('# received', new Buffer(data).toString());
                   })
-                  res.on('close', function () {
+                  res.on('end', function () {
                     console.log('done.');
                     setImmediate(start);
                   })
