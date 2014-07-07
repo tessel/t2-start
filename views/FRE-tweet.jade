@@ -48,7 +48,7 @@ block content
           // Set up OAuth
           var oauth_data = {
             oauth_consumer_key: oauth_consumer_key,
-            oauth_nonce: require('crypto').pseudoRandomBytes(32).toString('hex'),
+            oauth_nonce: crypto.pseudoRandomBytes(32).toString('hex'),
             oauth_signature_method: 'HMAC-SHA1',
             oauth_timestamp: Math.floor(curtime / 1000),
             oauth_token: oauth_access_token,
