@@ -52,7 +52,15 @@ block content
           .large-6.columns
             p !{text}
           .large-6.columns
-            img(src=imgsrc).constrain
+            .row
+              .large-12.columns
+                - if (imgsrc instanceof Array) {
+                    for src in imgsrc
+                      img(src=src).constrain
+                - } else {
+                    img(src=imgsrc).constrain
+                - }
+
 
         .row
           .large-12.columns
