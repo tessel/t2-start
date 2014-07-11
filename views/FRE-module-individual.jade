@@ -25,11 +25,13 @@ block content
           .large-12.columns
             +#{val}
 
-      mixin displayCode(number, code, module)
+      mixin displayCode(number, code, module, special)
         .row
           +num_col(number)
         .row
           .large-12.columns.left
+            if (special)
+              p!=special
             p Save this code in a text file called <code>#{module}.js</code>:
             pre.prettyprint#exampleCode
               code.
