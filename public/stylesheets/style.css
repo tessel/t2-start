@@ -425,6 +425,17 @@ cli {
   height: 0px;
 }
 
+.inlineCode {
+  background-color: #f8f8f8;
+  color: #666666;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 14px;
+  padding: 2px;
+  margin: 0px;
+}
+
 /* New Project */
 
 textarea#readme {
