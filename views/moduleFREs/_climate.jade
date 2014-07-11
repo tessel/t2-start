@@ -8,13 +8,13 @@
 - var moreInfo = moreInfo1 + thismod + moreInfo2 + moduleDocs + moreInfo3
 
 //- +see_video("http://youtu.be/yGc7ZGQL0vk")
-+make_directory(i, thismod)
++make_directory(i, thismod, "<b>Note: There are 2 different Climate modules. </br>Any module shipped after July 10, 2014 is the si7020 instead of the si7005.</b>")
 - i++
 +normal_row(i, modulesPlugged_filepath +  thismod + ".jpeg", plugIn1 + thismod + plugIn2)
 - i++
-+normal_row(i, moduleCorners_filepath + thismod + ".jpg", install1 + pkg + install2)
++normal_row(i, [moduleCorners_filepath + thismod + ".jpg", moduleCorners_filepath  + "climate-si7020.jpg"], "<b>Check if your module is a si7020 or a si7005</b><br/><p>If it's a si7005 install by typing <code><cli>npm install "+ pkg + "</code></cli> <p>Otherwise if it's a si7020 install with</p><code><cli>npm install climate-si7020</code></cli>")
 - i++
-+displayCode(i, code.code, thismod)
++displayCode(i, code.code, thismod, "<b>If you're using a si7020, replace climate-si7005 with si7020.</b>")
 - i++
 +normal_row(i, moduleGifs_filepath + thismod + ".gif", push1 + thismod + push2 + doThis + bonus + moreInfo)
 - i++
