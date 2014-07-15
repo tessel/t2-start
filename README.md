@@ -1,5 +1,15 @@
-#Tessel's getting started page
+# Tessel's getting started page
 
-## Start
+Hosted at [start.tessel.io](http://start.tessel.io/)
 
-`node app.js`
+## Installation
+
+`npm install`
+
+## Usage
+
+`npm start`
+
+## License
+
+MIT
