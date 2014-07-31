@@ -25,10 +25,11 @@ block content
             cli tessel wifi -l
           p This lists available wifi networks and will also show your connection status.
           p If the red status light goes on, it means Tessel tried to connect to a network but was unable to succeed. The red LED also turns on if the wifi connection drops. 
-          p In summary:
           ul 
             li Steady yellow LED = Tessel is connected to wifi
             li Steady red LED = Tessel is not connected to wifi
+
+          p All 4 LEDS (red, blue, green, and yellow) are accessible through Tessel's <a href="https://tessel.io/docs/hardwareAPI#api-array-Pin-tessel-led" target="_blank">hardware API</a>. If user pushed code is changing the state of the yellow/red LEDs, they will no longer be reliable indicators of Wifi state.
         .large-6.columns
           img(src="#{s3url}wifi.JPG").constrain
       .row
@@ -81,8 +82,8 @@ block content
                */ 
               var wifi = require('wifi-cc3000');
               var network = '#####'; // put in your network name here
-              var pass = '#####'; // put in your password here
-              var security = 'wpa2'; // other options are 'wep', or leave blank for unsecured
+              var pass = '#####'; // put in your password here, or leave blank for unsecured
+              var security = 'wpa2'; // other options are 'wep', 'wpa', or 'unsecured'
 
               // connect to the wifi network
               // check if the wifi chip is busy (currently trying to connect), if not, try to connect
@@ -110,12 +111,12 @@ block content
 
               wifi.on('connect', function(err, data){
                 // you're connected
-                console.log("connect emittied", err, data);
+                console.log("connect emitted", err, data);
               });
 
               wifi.on('disconnect', function(err, data){
                 // wifi dropped, probably want to call connect() again
-                console.log("disconnect emittied", err, data);
+                console.log("disconnect emitted", err, data);
               })
 
               wifi.on('timeout', function(err){
