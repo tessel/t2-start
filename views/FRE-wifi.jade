@@ -24,6 +24,11 @@ block content
           code
             cli tessel wifi -l
           p This lists available wifi networks and will also show your connection status.
+          p If the red status light goes on, it means Tessel tried to connect to a network but was unable to succeed. The red LED also turns on if the wifi connection drops. 
+          p In summary:
+          ul 
+            li Steady yellow LED = Tessel is connected to wifi
+            li Steady red LED = Tessel is not connected to wifi
         .large-6.columns
           img(src="#{s3url}wifi.JPG").constrain
       .row
@@ -61,6 +66,73 @@ block content
           p Run the code on your Tessel by typing this in the terminal:
           p <code><cli>tessel run wifi.js</cli></code>
           p Watch Tessel ping the website in your console!
+
+      .row
+        .large-12.columns
+          .greyBar(style="height:2px;")
+          
+          p Tessel's wifi can also be controlled programatically. The full API docs are at <a href="https://github.com/tessel/docs/blob/master/hardware-api.md#tessel">github.com/tessel/docs</a>. 
+          p Save the following in a file called <code>wifi-control.js</code>:
+          pre.prettyprint#exampleCode
+            code.
+              /* the wifi-cc3000 library is bundled in with Tessel's firmware,
+               * so there's no need for an npm install. It's similar
+               * to how require('tessel') works.
+               */ 
+              var wifi = require('wifi-cc3000');
+              var network = '#####'; // put in your network name here
+              var pass = '#####'; // put in your password here
+              var security = 'wpa2'; // other options are 'wep', or leave blank for unsecured
+
+              // connect to the wifi network
+              // check if the wifi chip is busy (currently trying to connect), if not, try to connect
+              function tryConnect(){
+                if (!wifi.isBusy()) {
+                  connect();
+                } else {
+                  // The cc3k is set up to automatically try to connect on boot. 
+                  // For the first few seconds of program bootup, you'll always 
+                  // see the wifi chip as being "busy"
+                  console.log("is busy, trying again");
+                  setTimeout(function(){
+                    tryConnect();
+                  }, 1000);
+                } 
+              }
+
+              function connect(){
+                wifi.connect({
+                  security: security
+                  , ssid: network
+                  , password: pass
+                  , timeout: 30 // in seconds
+                });
+
+              wifi.on('connect', function(err, data){
+                // you're connected
+                console.log("connect emittied", err, data);
+              });
+
+              wifi.on('disconnect', function(err, data){
+                // wifi dropped, probably want to call connect() again
+                console.log("disconnect emittied", err, data);
+              })
+
+              wifi.on('timeout', function(err){
+                // tried to connect but couldn't, retry
+                console.log("timeout emitted"); 
+                connect();
+              });
+
+              wifi.on('error', function(err){
+                // one of the following happened
+                // 1. tried to disconnect while not connected
+                // 2. tried to disconnect while in the middle of trying to connect
+                // 3. tried to initialize a connection without first waiting for a timeout or a disconnect
+                console.log("error emitted", err);
+              });
+
+
       .row
         .large-12.columns
           .greyBar(style="height:2px;")
