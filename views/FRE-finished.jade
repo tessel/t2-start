@@ -3,30 +3,23 @@ extends layout
 block content
   .row
     .large-10.columns.fre-container
-      .row.container-no-background
+      .row
         h1 Congratulations! <br/> You've completed the Tessel Tutorial!
-
       .row
         .large-12.columns
-          p.moduleStep Contributing
-          p Tessel is fully open source. We love having the community involved through reporting issues or pull requests on our <a href="https://github.com/tessel/firmware">firmware</a> or our <a href="https://github.com/tessel/runtime">runtime</a>. 
-          p If you're interested in helping us out, we've written up <a href="https://github.com/tessel/contribution-guide">a contribution guide</a> designed to walk through how our firmware, runtime, and hardware all interact.
-      .row
-        .large-12.columns
-          p.moduleStep Next:
-          ol
-            li
-              a(href="http://twitter.com/technicalhumans" target=1)
-                | Follow us <img src="#{s3url}external-link.png">
-              |  on Twitter
-            li
-              a(href="https://www.facebook.com/technicallyamachine/app_100265896690345" target=2)
-                | Sign up <img src="#{s3url}external-link.png">
-              |  for our biweekly newsletter
-            li
-              a(href="http://tessel.io/docs" target=3)
-                | Check out <img src="#{s3url}external-link.png">
-              |  further documentation
+          p.moduleStep What's next?
+          p
+            a(href="//technical.io/projects" target=0)
+              b Check out
+              |  Tessel projects &rarr;
+          p
+            a(href="//twitter.com/technicalhumans" target=1) 
+              b Follow us
+              |  on Twitter &rarr;
+          p
+            a(href="////github.com/tessel/contribution-guide" target=2)
+              b Contribute
+              |  to the Tessel project &rarr;
 
 block bottom_nav
   .row

@@ -7,7 +7,7 @@ var request = require('request');
 var firstrun = require('./routes/firstrun');
 
 var app = express()
-  .set('port', process.env.PORT || 3000)
+  .set('port', process.env.PORT || 7000)
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'jade')
   .use(express.favicon(path.join(__dirname, 'public/images/favicon.ico')))
