@@ -229,6 +229,11 @@ cli {
   height: 200px;
 }
 
+.social{
+  height: 50px;
+  margin-left: 1em;
+}
+
 /************************** sections *************************/
 
 .moduleFREtext {
