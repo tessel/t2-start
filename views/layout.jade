@@ -116,6 +116,7 @@ html
 
       ga('create', 'UA-53817604-2', 'auto');
       ga('send', 'pageview');
+    script(src="/javascripts/custom/event_track.js")
 
   body
   - var moduleList = ['accelerometer', 'ambient', 'audio', 'ble', 'camera', 'climate', 'gprs', 'gps', 'ir', 'microsd', 'nrf', 'relay', 'rfid', 'servo']
@@ -209,3 +210,7 @@ html
     script(src="/javascripts/reinvigorate.js")
     script.
       $(document).foundation();
+
+    block footer
+      footer 
+      include social_track
