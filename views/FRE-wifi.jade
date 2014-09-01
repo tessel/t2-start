@@ -9,7 +9,7 @@ block content
       br
       .row
         .large-12.columns
-          p Tessel can only connect to <b>802.11b/g</b> networks. The wifi chip does not support 802.11n. If you are having trouble connecting, make sure the router has b/g mode enabled.
+          p Tessel can only connect to <b>802.11b/g</b> networks using <b>channels 1 through 11</b>. The wifi chip does not support 802.11n or channels 12 - 14. If you are having trouble connecting, make sure the router has b/g mode enabled and isn't using channels 12, 13, or 14.
           p <b>To connect to a new network,</b> enter in your command line (without brackets)
           code
             cli tessel wifi -n [network name] -p [password] -s [security type*]
