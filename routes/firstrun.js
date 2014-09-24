@@ -10,7 +10,7 @@ exports.install = function (req, res) {
 
 // Plug in Tessel, push Blinky
 exports.blinky = function (req, res) {
-	res.render('FRE-blinky', {title: 'Pushing Your First Code', page: 'blinky'});
+	res.render('FRE-blinky', {title: 'Running Your First Script', page: 'blinky'});
 };
 
 // some usage examples

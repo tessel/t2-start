@@ -12,8 +12,8 @@ block content
           p In your command line, make a folder for your Tessel code, change directory into that folder, and then initialize <a href="https://www.npmjs.org/">npm</a> in that folder:
           code
             cli mkdir tessel-code
-            cli cd tessel-code
-            cli mkdir node_modules
+            cli npm init
+          p You can press enter at each option within npm init to accept npm's defaults.
           p Great! Now you're set up to run code on Tessel.
         .row
           .greyBar(style="height:2px;")
@@ -44,6 +44,8 @@ block content
 
           p.bigCode <code><cli>tessel run blinky.js</cli></code>
 
+          p to run your code in Tessel's RAM.
+          
           p <b>Look at your Tessel!</b> The blue and green LEDs on your Tessel's LED panel should blink back and forth.
 
           p <b>Bonus:</b> mess with the code to make the LEDs blink in sync.
