@@ -24,14 +24,15 @@ block content
       code
         cli tessel run blinky.js
 
-      .console-output
-        | >> Bundling directory ... <br/>
-        | >> Deploying bundle ... <br/>
-        | >> Running script ...<br/>
-        | >> "I'm blinking! (Press CTRL + C to stop)" <br/>
-        | >> "I'm blinking! (Press CTRL + C to stop)" <br/>
-        | >> "I'm blinking! (Press CTRL + C to stop)" <br/>
-        | >> ... <br/>
+      code
+        .console-output
+          | >> Bundling directory ... <br/>
+          | >> Deploying bundle ... <br/>
+          | >> Running script ...<br/>
+          | >> "I'm blinking! (Press CTRL + C to stop)" <br/>
+          | >> "I'm blinking! (Press CTRL + C to stop)" <br/>
+          | >> "I'm blinking! (Press CTRL + C to stop)" <br/>
+          | >> ... <br/>
   .row
     .large-12.columns
       .greyBar(style="height:2px;")
@@ -44,20 +45,22 @@ block content
       code
         cli tessel push blinky.js
 
-      .console-output
-        | >> Bundling directory ... <br/>
-        | >> Deploying bundle ... <br/>
-        | >> Running script ...<br/>
-        | >> Finished deployment <br/>
+      code
+        .console-output
+          | >> Bundling directory ... <br/>
+          | >> Deploying bundle ... <br/>
+          | >> Running script ...<br/>
+          | >> Finished deployment <br/>
 
       p While Tessel is running code from flash, you won't see any console logs by default. To see output after a "push" command, enter
       code
         cli tessel logs
 
-      .console-output
-        | >> "I'm blinking! (Press CTRL + C to stop)" <br/>
-        | >> "I'm blinking! (Press CTRL + C to stop)" <br/>
-        | >> ...<br/>
+      code
+        .console-output
+          | >> "I'm blinking! (Press CTRL + C to stop)" <br/>
+          | >> "I'm blinking! (Press CTRL + C to stop)" <br/>
+          | >> ...<br/>
   .row
     .large-12.columns
       .greyBar(style="height:2px;")
@@ -71,8 +74,9 @@ block content
       code
         cli tessel erase
 
-      .console-output
-        | >> Attempting to erase filesystem <br/>
+      code
+        .console-output
+          | >> Attempting to erase filesystem <br/>
 
       p This will erase the blinky code from Tessel, and the LEDs will stop blinking.
 
