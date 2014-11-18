@@ -16,54 +16,60 @@ block content
       .greyBar(style="height:2px;")
   .row
     .large-12.columns
-      h2 tessel run <script.js | path/to/folder>
-      p This command loads code into Tessel's RAM. When Tessel is reset (or the script ends with CTRL + C), Tessel loses the code. This command is useful for running code while developing, and will be used throughout this tutorial.
+      h2
+        code tessel run <script.js | path/to/folder>
+      p This command loads code into RAM on Tessel. When Tessel is reset (or the script ends with CTRL + C), Tessel loses the code. This command is useful for running code while developing, and will be used throughout this tutorial.
 
       p This command is shown in the <a href="/blinky">blinky example.</a>
 
       code
         cli tessel run blinky.js
 
-      .console-output
-        | >> Bundling directory ... <br/>
-        | >> Deploying bundle ... <br/>
-        | >> Running script ...<br/>
-        | >> "I'm blinking! (Press CTRL + C to stop)" <br/>
-        | >> "I'm blinking! (Press CTRL + C to stop)" <br/>
-        | >> "I'm blinking! (Press CTRL + C to stop)" <br/>
-        | >> ... <br/>
+      code
+        .console-output
+          | >> Bundling directory ... <br/>
+          | >> Deploying bundle ... <br/>
+          | >> Running script ...<br/>
+          | >> "I'm blinking! (Press CTRL + C to stop)" <br/>
+          | >> "I'm blinking! (Press CTRL + C to stop)" <br/>
+          | >> "I'm blinking! (Press CTRL + C to stop)" <br/>
+          | >> ... <br/>
   .row
     .large-12.columns
       .greyBar(style="height:2px;")
   .row
     .large-12.columns
-      h2 tessel push <script.js | path/to/folder>
-      p This command saves code into Tessel's flash. This means that Tessel auto-runs this code when powered. The code will stay on here even if you reset Tessel. If you "tessel run" while you have code saved in Flash, the new code will run until the Tessel is reset, and then Tessel will switch back to the code from Flash.
+      h2
+        code tessel push <script.js | path/to/folder>
+      p This command saves code into flash memory on Tessel. This means that Tessel auto-runs this code when powered. The code will stay on here even if you reset Tessel. If you "tessel run" while you have code saved in Flash, the new code will run until the Tessel is reset, and then Tessel will switch back to the code from Flash.
 
       p From your "tessel-code" directory, where you saved blinky.js,
       code
         cli tessel push blinky.js
 
-      .console-output
-        | >> Bundling directory ... <br/>
-        | >> Deploying bundle ... <br/>
-        | >> Running script ...<br/>
-        | >> Finished deployment <br/>
+      code
+        .console-output
+          | >> Bundling directory ... <br/>
+          | >> Deploying bundle ... <br/>
+          | >> Running script ...<br/>
+          | >> Finished deployment <br/>
 
-      p While Tessel is running code from flash, you won't see any console logs by default. To see output after a "push" command, enter
+      p While Tessel is running code from flash, console logs will be hidden by default. To see output after a "push" command, enter
       code
         cli tessel logs
 
-      .console-output
-        | >> "I'm blinking! (Press CTRL + C to stop)" <br/>
-        | >> "I'm blinking! (Press CTRL + C to stop)" <br/>
-        | >> ...<br/>
+      code
+        .console-output
+          | >> "I'm blinking! (Press CTRL + C to stop)" <br/>
+          | >> "I'm blinking! (Press CTRL + C to stop)" <br/>
+          | >> ...<br/>
   .row
     .large-12.columns
       .greyBar(style="height:2px;")
   .row
     .large-12.columns
-      h2 tessel erase
+      h2
+        code tessel erase
       p This command erases any JavaScript code saved to Tessel's flash memory. The firmware is left unchanged. If you push buggy code to Tessel, an erase can remove your code.
 
       p Try unplugging and replugging in your Tessel after you have loaded the blinky code in Flash (tessel push). After a few seconds, you should see the LEDs start to blink.
@@ -71,8 +77,9 @@ block content
       code
         cli tessel erase
 
-      .console-output
-        | >> Attempting to erase filesystem <br/>
+      code
+        .console-output
+          | >> Attempting to erase filesystem <br/>
 
       p This will erase the blinky code from Tessel, and the LEDs will stop blinking.
 
