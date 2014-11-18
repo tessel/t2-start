@@ -17,7 +17,7 @@ block content
   .row
     .large-12.columns
       h2
-        code tessel run <script.js | path/to/folder>
+        code tessel run &lt;script.js | path/to/folder&gt;
       p This command loads code into RAM on Tessel. When Tessel is reset (or the script ends with CTRL + C), Tessel loses the code. This command is useful for running code while developing, and will be used throughout this tutorial.
 
       p This command is shown in the <a href="/blinky">blinky example.</a>
@@ -40,7 +40,7 @@ block content
   .row
     .large-12.columns
       h2
-        code tessel push <script.js | path/to/folder>
+        code tessel push &lt;script.js | path/to/folder&gt;
       p This command saves code into flash memory on Tessel. This means that Tessel auto-runs this code when powered. The code will stay on here even if you reset Tessel. If you "tessel run" while you have code saved in Flash, the new code will run until the Tessel is reset, and then Tessel will switch back to the code from Flash.
 
       p From your "tessel-code" directory, where you saved blinky.js,
