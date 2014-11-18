@@ -1,0 +1,44 @@
+extends ja-layout
+
+block content
+  .row
+    .large-12.columns.fre-container
+      .row
+        .large-12.columns
+          h1 モジュール
+          p Tesselには、モジュールを挿しこむためのポートがA〜Dの4個あります。
+      .row
+        .large-6.columns
+          img.centeralign(width="400px" src="#{s3url}tessel-ports.jpg")
+        .large-6.columns
+          p このページ以降、各モジュールの解説ではポートAを使います。挿しこむポートを変更したい場合は、プログラム中でポートを指定している部分を変更すれば動作します。
+          p モジュールの抜き差しは、Tesselがパソコンにつながっていない状態で行ってください。
+          p このページの一番下に、各モジュールの使い方を解説するページへのリンクがあります。
+      .row
+        .large-12.columns
+          p モジュールはいずれも、電子部品がハンダ付けされている面が表側、六角形のロゴマークの有る面が裏側になるように挿しこんでください。
+      .row
+        .large-6.columns.left
+          h4 表
+          img(src="#{s3url}tessel-all-plugged-sm.jpg")
+        .large-6.columns.right
+          h4 裏
+          img(src="#{s3url}tessel-all-plugged-back-sm.jpg")
+      .row
+        .large-12.columns
+          .greyBar(style="height:2px;")
+
+      .row
+        .large-12.columns
+          h2 使いたいモジュールはどれですか？試してみましょう！
+          p すでにモジュールを試し終わっている場合は<a href="/wifi">無線LAN</a>に進んでください。
+
+      include ja-_modulesList.jade
+
+block bottom_nav
+  .row
+    .large-6.columns.left
+      a.bottomButton(href="/ja/blinky" class="button") 戻る：点滅
+
+    .large-6.columns.right
+      a.bottomButton.right(href="/ja/wifi" class="button") 進む：無線LAN

@@ -1,3 +1,5 @@
+- var moduleList = { 'accelerometer': '加速度センサー', 'ambient': '環境センサー', 'audio': 'オーディオ', 'ble': 'BLE', 'camera': 'カメラ', 'climate': '気候センサー', 'gprs': 'GPRS通信', 'gps': 'GPS', 'ir': '赤外線通信', 'microsd': 'マイクロSD', 'nrf': 'nRF24通信', 'relay': 'リレー', 'rfid': 'RFID', 'servo': 'サーボモーター' }
+- title = moduleList[title] || title
 doctype html
 html
   head
@@ -110,7 +112,6 @@ html
     block head
 
   body
-  - var moduleList = ['accelerometer', 'ambient', 'audio', 'ble', 'camera', 'climate', 'gprs', 'gps', 'ir', 'microsd', 'nrf', 'relay', 'rfid', 'servo']
     #sticky-topbar.sticky
       nav.top-bar(data-topbar, data-options="sticky_on: large")
         ul.title-area(style="background-color: #d7d7d7;")
@@ -126,31 +127,31 @@ html
         section.top-bar-section#main-menu
           ul.right
             li
-              a(href="/#{page}" style="background-color:#eee;" class="active") en
+              a(href="/#{page}" style="background-color:#eee;") en
             li.divider.hide-for-small
             li
-              a(href="/ja/#{page}" style="background-color:#eee;") ja
+              a(href="/ja/#{page}" style="background-color:#eee;" class="active") ja
             li.divider.hide-for-small
             li
-              a(href="/" style="background-color:#eee;") Start
+              a(href="/" style="background-color:#eee;") 入門
             li.divider.hide-for-small
             li
-              a(href="//tessel.io/docs" style="background-color:#eee;") Docs
+              a(href="//tessel.io/docs" style="background-color:#eee;") ドキュメント
             li.divider.hide-for-small
             li
-              a(href="//tessel.io/modules" style="background-color:#eee;") Modules
+              a(href="//tessel.io/modules" style="background-color:#eee;") モジュール
             li.divider.hide-for-small
             li
-              a(href="//tessel.io/projects" style="background-color:#eee;") Projects
+              a(href="//tessel.io/projects" style="background-color:#eee;") プロジェクト
             li.divider.hide-for-small
             li
-              a(href="//forums.tessel.io" style="background-color:#eee;") Forums
+              a(href="//forums.tessel.io" style="background-color:#eee;") 掲示板
             li.divider.hide-for-small
             li
-              a(href="//tessel.io/shop" style="background-color:#eee;") Shop
+              a(href="//tessel.io/shop" style="background-color:#eee;") 購入
             li.divider.hide-for-small
             li
-              a(href="//blog.technical.io" style="background-color:#eee;") Blog
+              a(href="//blog.technical.io" style="background-color:#eee;") ブログ
             li.divider.hide-for-small
             li
               a.twitterbird(href="//twitter.com/technicalhumans" style="background-color:#eee;")
@@ -170,23 +171,23 @@ html
       section.top-bar-section
         ul.right
           li
-            a(href="/install") install
+            a(href="/install") インストール
           li
-            a(href="/blinky") blinky
+            a(href="/blinky") 点滅
           li
-            a(href="/modules") modules
+            a(href="/modules") モジュール
           li
-            a(href="/wifi") wifi
+            a(href="/wifi") 無線LAN
           li
-            a(href="/tweet") tweet
+            a(href="/tweet") ツイート
           li
-            a(href="/usage") usage
+            a(href="/usage") コマンド
           li
-            a(href="/finished") finish
+            a(href="/finished") おわりに
 
 
     section
-      include _FRE-sidebar.jade
+      include ja-_FRE-sidebar.jade
       div#fre-content
         block content
         .row

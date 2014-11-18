@@ -1,0 +1,22 @@
+- var thismod = "relay"
+- var pkg = "relay-mono"
+- var doThis = "2秒ごとにオンとオフが切り替わります。このプログラムを使って、いろいろなものの電源を入れたり切ったりしてみましょう。以下のGIF画像では、#{title}モジュールと#{ambient}モジュールを使って、机をたたくごとにライトのオンオフが切り替わるようにしています。"
+- var bonus = "<br/><br/><b>おまけ：</b>10秒ごとに、ポート1のオンとオフが切り替わるようにプログラムを変更してみてください。"
+
+- var i = 1
+- var moduleDocs = moduleDocs_filepath + pkg
+
+//- +see_video("http://youtu.be/JLZzLyH9jc4")
++make_directory(i, thismod)
+- i++
++normal_row(i, moduleSpecial_filepath +  "relay-wires" + ".jpeg", "#{title}モジュールを使って別の機器の電源を制御したい場合は、電源のケーブルを切って、中の電線をむき出しにして、#{title}モジュールのポート1の端子台に挿しこんでください。特に電源を制御したい機器が無い場合は、何もつながず、そのまま進めてください。電源が制御されるようすは見られませんが、切り替わるときにカチっという音が聞こえます。")
+- i++
++normal_row(i, modulesPlugged_filepath +  thismod + ".jpeg", plugIn, {'port': 'A'})
+- i++
++normal_row(i, moduleCorners_filepath + thismod + ".jpg", install, {'package': pkg})
+- i++
++displayCode(i, code.code, thismod)
+- i++
++normal_row(i, moduleGifs_filepath + thismod + ".gif", push + doThis + bonus + moreInfo, {'href': moduleDocs, 'ambient': moduleList['ambient']})
+- i++
++seeForums(i, thismod, thismod)

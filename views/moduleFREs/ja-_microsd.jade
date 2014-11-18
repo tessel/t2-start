@@ -1,0 +1,22 @@
+- var thismod = "microsd"
+- var pkg = "sdcard"
+- var doThis = "SDカードからデータを読んだり書いたりしてみましょう！"
+- var bonus = "<br/><br/><b>おまけ：</b>SDカードにテキストファイルを書き込むには、プログラムをどういうふうに変更したらいいでしょうか。"
+
+- var i = 1
+- var moduleDocs = moduleDocs_filepath + pkg
+
+//- +see_video("http://youtu.be/JLZzLyH9jc4")
++make_directory(i, thismod)
+- i++
++normal_row(i, s3url+"modules_clipped/" +  thismod + ".png", "このモジュールに、マイクロSDカードを挿入してください。")
+- i++
++normal_row(i, modulesPlugged_filepath +  thismod + ".jpeg", plugIn, {'port': 'A'})
+- i++
++normal_row(i, moduleCorners_filepath + thismod + ".jpg", install, {'package': pkg})
+- i++
++displayCode(i, code.code, thismod)
+- i++
++normal_row(i, moduleGifs_filepath + thismod + ".gif", push + doThis + bonus + moreInfo, {'href': moduleDocs})
+- i++
++seeForums(i, thismod, title)

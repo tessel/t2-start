@@ -1,0 +1,37 @@
+- var thismod = "servo"
+- var pkg = "servo-pca9685"
+- var doThis = "サーボモーターが回転します！"
+- var bonus = "<br/><br/><b>おまけ：</b>値1の位置まで一気に回転させ、そのあと値0の位置に戻すようにプログラムを変更してみてください。"
+
+- var i = 1
+- var moduleDocs = moduleDocs_filepath + pkg
+- moreInfo = render(moreInfo, {'module': thismod, 'href': moduleDocs})
+
+//- +see_video("http://youtu.be/pNuhntwguBM")
++make_directory(i, thismod)
+- i++
+<br/>
+.row
+  +num_col(i)
+  .large-5.columns
+    img(src="#{s3url}modules_special/servo_servo.jpeg")
+  .large-6.columns.right
+    div 写真のようにサーボモーターを#{title}モジュールの端子の1番に挿しこんでください。<br/><br/>
+      li 茶色いワイヤー（グラウンド）は「<code>-</code>」の位置に来ます。
+      li 赤いワイヤー（電源）は「<code>+</code>」の位置に来ます。
+      li 黄色いワイヤー（信号線）は「<code>S</code>」の位置に来ます。
+.row
+  .large-12.columns
+    .greyBar(style="height:2px;")
+- i++
++normal_row(i, s3url+"modules_special/servo_power.png", "5V出力のACアダプターを用意し、#{title}モジュール上のDCジャックに挿しこんでください。ACアダプターをコンセントにも挿しこんでください。")
+- i++
++normal_row(i, modulesPlugged_filepath +  thismod + ".jpeg", plugIn, {'port': 'A'})
+- i++
++normal_row(i, moduleCorners_filepath + thismod + ".jpg", install, {'package': pkg})
+- i++
++displayCode(i, code.code, thismod)
+- i++
++normal_row(i, moduleGifs_filepath + thismod + ".gif", push + doThis + bonus + moreInfo, {'href': moduleDocs})
+- i++
++seeForums(i, thismod, thismod)

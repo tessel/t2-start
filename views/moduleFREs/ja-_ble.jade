@@ -1,0 +1,20 @@
+- var thismod = "ble"
+- var pkg = "ble-ble113a"
+- var doThis = "何らかのBLEデバイスを用意し、アドバタイジングの状態にしてください。TesselがBLEデバイスを発見すると、画面に表示されます。"
+- var bonus = "<br/><br/><b>おまけ：</b>発見したBLEデバイスのアドレスだけを表示するように、プログラムを変更してみてください。"
+
+- var i = 1
+- var moduleDocs = moduleDocs_filepath + pkg
+
+//- +see_video("http://youtu.be/JLZzLyH9jc4")
++make_directory(i, thismod)
+- i++
++normal_row(i, modulesPlugged_filepath +  thismod + ".jpeg", plugIn, {'port': 'A'})
+- i++
++normal_row(i, moduleCorners_filepath + thismod + ".jpg", install, {'package': pkg})
+- i++
++displayCode(i, code.code, thismod)
+- i++
++normal_row(i, moduleGifs_filepath + thismod + ".gif", push + doThis + bonus + moreInfo, {'href': moduleDocs})
+- i++
++seeForums(i, thismod, title)

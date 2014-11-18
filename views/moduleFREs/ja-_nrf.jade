@@ -1,0 +1,26 @@
+- var thismod = "nrf24"
+- var pkg = "rf-nrf24"
+- var doThis = "#{title}モジュールが送受信したデータが表示されます。"
+- var bonus = "<br/><br/><b>おまけ：</b>送信するデータを変更してみましょう。"
+
+- var i = 1
+- var moduleDocs = moduleDocs_filepath + pkg
+
+p
+  b #{title}モジュールは、日本国内で無線機器を使用するために必要な認証を取得していません。そのため、日本国内では使用してはいけません。使用すると電波法違反になります。
+//- +see_video("http://youtu.be/JLZzLyH9jc4")
++make_directory(i, thismod, "#{title}モジュールは、無線LANではありません。このモジュールを使うことで、Tesselを使った省電力なメッシュネットワークを作ることができます。<p><b>注意：</b>#{title}モジュールは、nRF24チップが使用されている機器とだけ通信することができます。そのため、このページの例では、2台のTesselにそれぞれ#{title}モジュールを挿しこんで使用します。もしも、Arduinoを持っているなら、<a href='https://github.com/tessel/rf-nrf24/blob/master/examples/RF24-pingpair.js'>こちらの例</a>を使えばArduinoと通信することができます。")
+- i++
++normal_row(i, modulesPlugged_filepath +  thismod + ".jpeg", plugIn, {'port': 'A'})
+- i++
++normal_row(i, moduleCorners_filepath + thismod + ".jpg", install, {'package': pkg})
+- i++
++displayCode(i, code.code, thismod)
+- i++
+
++normal_row(i, moduleCorners_filepath + thismod + "-double.jpg", "もう1台のパソコンとTesselを用意し、上記のプログラムをコピーしてください。一方のパソコンでは、プログラムの中の「<code>role = 'ping';</code>」となっている「<code>ping</code>」の部分を「<code>pong</code>」に変更してください。それぞれのパソコンで、以下のようにプログラムを動かしてください。<br/><br/>" + push)
+- i++
++normal_row(i, moduleGifs_filepath + thismod + ".gif", doThis + bonus + moreInfo, {'href': moduleDocs})
+
+- i++
++seeForums(i, thismod, title)

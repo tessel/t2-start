@@ -1,0 +1,20 @@
+- var thismod = "camera"
+- var pkg = "camera-vc0706"
+- var doThis = "写真が撮影されます！"
+- var bonus = "<br/><br/><b>おまけ：</b>違う解像度の写真を撮影するように、プログラムを変更してみてください（ヒント：#{title}モジュールのドキュメントを読んでみてください）。"
+
+- var i = 1
+- var moduleDocs = moduleDocs_filepath + pkg
+
+//- +see_video("http://youtu.be/JLZzLyH9jc4")
++make_directory(i, thismod)
+- i++
++normal_row(i, modulesPlugged_filepath +  thismod + ".jpeg", plugIn, {'port': 'A'})
+- i++
++normal_row(i, moduleCorners_filepath + thismod + ".jpg", install, {'package': pkg})
+- i++
++displayCode(i, code.code, thismod)
+- i++
++normal_row(i, moduleGifs_filepath + thismod + ".gif", push + "「<span class='inlineCode'>--upload-dir</span>」というコマンドラインオプションを使うと、画像をどこに保存するのかを指定することができます。「<span class='inlineCode'>.</span>」は、現在いる場所のディレクトリを意味します。あるいは、「<span class='inlineCode'>process.env.TESSEL_UPLOAD_DIR</span>」という環境変数を設定しておけば、このコマンドラインオプションは不要です。<br/><br/>" + doThis + bonus + moreInfo, {'option': '--upload-dir ./', 'href': moduleDocs})
+- i++
++seeForums(i, thismod, thismod)

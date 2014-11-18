@@ -1,0 +1,60 @@
+extends ja-layout
+
+block content
+  .row
+    .large-12.columns.fre-container
+      .large-4.columns.right
+        img(style="margin-top:-30px; max-width=253px; float: right;" src='#{s3url}tessel-plugged.jpg')
+      .large-8.columns
+        .row
+          h1 こんにちは、（物理）世界！
+          p
+          p Tesselのプログラムを保存するためのディレクトリーを作成し、このディレクトリーの中に移動してから、<a href="https://www.npmjs.org/">npm</a>の環境を初期化してください。
+          code
+            cli mkdir tessel-code
+            cli cd tessel-code
+            cli npm init
+          p ここでは、ディレクトリー名を「tessel-code」としました。
+          p 「npm install」の実行中に文字入力を求められますが、いずれでもエンターキーだけを押して進めば十分です。
+          p おつかれさまでした！Tesselを動かすための準備はこれでおしまいです。
+        .row
+          .greyBar(style="height:2px;")
+        .row
+          p ランプを点滅させることがハードウェアにおける「Hello World」です。
+          p  「tessel-code」ディレクトリーの中に「blinky.js」という名前のファイルを作成し、以下の内容を書き込んで保存してください。
+
+          pre.prettyprint
+            code.
+              // Tesselのためのライブラリを読み込みます。
+              var tessel = require('tessel');
+
+              // ランプにつながっている端子のモードを出力に設定します。
+              // これらの値を真にすると、出力はHighになります。
+              // 偽にすると、出力はLowになります。
+              var led1 = tessel.led[0].output(1);
+              var led2 = tessel.led[1].output(0);
+
+              setInterval(function () {
+                  console.log("I'm blinking! (Press CTRL + C to stop)");
+                  // ランプの状態を反転します。
+                  led1.toggle();
+                  led2.toggle();
+              }, 100);
+          p
+
+          p コマンドラインに、以下のコマンドを入力してください。
+
+          p.bigCode <code><cli>tessel run blinky.js</cli></code>
+
+          p いま作成したプログラムが、TesselのRAM上で実行されます。
+          
+          p <b>Tesselを見てください！</b>青と緑のランプが交互に点灯していますね。
+
+          p <b>おまけ：</b>ふたつのランプが同時に点滅するように、プログラムを書き換えてみましょう。
+
+block bottom_nav
+  .row
+    .large-6.columns.left
+      a.bottomButton(href="/ja/install" class="button") 戻る：インストール
+    .large-6.columns.right
+      a.bottomButton.right(href="/ja/modules" class="button") 進む：モジュール
