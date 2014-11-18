@@ -16,8 +16,9 @@ block content
       .greyBar(style="height:2px;")
   .row
     .large-12.columns
-      h2 tessel run <script.js | path/to/folder>
-      p This command loads code into Tessel's RAM. When Tessel is reset (or the script ends with CTRL + C), Tessel loses the code. This command is useful for running code while developing, and will be used throughout this tutorial.
+      h2
+        code tessel run <script.js | path/to/folder>
+      p This command loads code into RAM on Tessel. When Tessel is reset (or the script ends with CTRL + C), Tessel loses the code. This command is useful for running code while developing, and will be used throughout this tutorial.
 
       p This command is shown in the <a href="/blinky">blinky example.</a>
 
@@ -38,8 +39,9 @@ block content
       .greyBar(style="height:2px;")
   .row
     .large-12.columns
-      h2 tessel push <script.js | path/to/folder>
-      p This command saves code into Tessel's flash. This means that Tessel auto-runs this code when powered. The code will stay on here even if you reset Tessel. If you "tessel run" while you have code saved in Flash, the new code will run until the Tessel is reset, and then Tessel will switch back to the code from Flash.
+      h2
+        code tessel push <script.js | path/to/folder>
+      p This command saves code into flash memory on Tessel. This means that Tessel auto-runs this code when powered. The code will stay on here even if you reset Tessel. If you "tessel run" while you have code saved in Flash, the new code will run until the Tessel is reset, and then Tessel will switch back to the code from Flash.
 
       p From your "tessel-code" directory, where you saved blinky.js,
       code
@@ -52,7 +54,7 @@ block content
           | >> Running script ...<br/>
           | >> Finished deployment <br/>
 
-      p While Tessel is running code from flash, you won't see any console logs by default. To see output after a "push" command, enter
+      p While Tessel is running code from flash, console logs will be hidden by default. To see output after a "push" command, enter
       code
         cli tessel logs
 
@@ -66,7 +68,8 @@ block content
       .greyBar(style="height:2px;")
   .row
     .large-12.columns
-      h2 tessel erase
+      h2
+        code tessel erase
       p This command erases any JavaScript code saved to Tessel's flash memory. The firmware is left unchanged. If you push buggy code to Tessel, an erase can remove your code.
 
       p Try unplugging and replugging in your Tessel after you have loaded the blinky code in Flash (tessel push). After a few seconds, you should see the LEDs start to blink.
