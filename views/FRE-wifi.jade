@@ -36,6 +36,12 @@ block content
         .large-12.columns
           .greyBar(style="height:2px;")
           p Here is an example of requesting a website over Tessel's Wifi connection:
+          p Make a wifi directory
+          code 
+            cli mkdir wifi
+            cli cd wifi
+            cli npm init
+
           p Save the following code in a file called <code>wifi.js</code>:
           pre.prettyprint#exampleCode
             code.
@@ -74,6 +80,7 @@ block content
           
           p Tessel's wifi can also be controlled programatically. The full API docs can be found 
             a(href="https://tessel.io/docs/wifi") here.
+
           p Save the following in a file called <code>wifi-control.js</code>:
           pre.prettyprint#exampleCode
             code.
@@ -85,22 +92,7 @@ block content
               var network = '#####'; // put in your network name here
               var pass = '#####'; // put in your password here, or leave blank for unsecured
               var security = 'wpa2'; // other options are 'wep', 'wpa', or 'unsecured'
-
-              // connect to the wifi network
-              // check if the wifi chip is busy (currently trying to connect), if not, try to connect
-              function tryConnect(){
-                if (!wifi.isBusy()) {
-                  connect();
-                } else {
-                  // The cc3k is set up to automatically try to connect on boot. 
-                  // For the first few seconds of program bootup, you'll always 
-                  // see the wifi chip as being "busy"
-                  console.log("is busy, trying again");
-                  setTimeout(function(){
-                    tryConnect();
-                  }, 1000);
-                } 
-              }
+              var timeouts = 0;
 
               function connect(){
                 wifi.connect({
@@ -111,20 +103,26 @@ block content
                 });
               }
 
-              wifi.on('connect', function(err, data){
+              wifi.on('connect', function(data){
                 // you're connected
-                console.log("connect emitted", err, data);
+                console.log("connect emitted", data);
               });
 
-              wifi.on('disconnect', function(err, data){
+              wifi.on('disconnect', function(data){
                 // wifi dropped, probably want to call connect() again
-                console.log("disconnect emitted", err, data);
+                console.log("disconnect emitted", data);
               })
 
               wifi.on('timeout', function(err){
                 // tried to connect but couldn't, retry
                 console.log("timeout emitted"); 
-                connect();
+                if (timeouts > 3) {
+                  // reset the wifi chip if we've timed out too many times
+                  powerCycle();
+                } else {
+                  // try to reconnect
+                  connect();
+                }
               });
 
               wifi.on('error', function(err){
@@ -135,6 +133,22 @@ block content
                 console.log("error emitted", err);
               });
 
+              // reset the wifi chip progammatically
+              function powerCycle(){
+                // when the wifi chip resets, it will automatically try to reconnect
+                // to the last saved network
+                wifi.reset(function(){
+                  timeouts = 0; // reset timeouts
+                  console.log("done power cycling");
+                  // give it some time to auto reconnect
+                  setTimeout(function(){
+                    if (!wifi.isConnected()) {
+                      // try to reconnect
+                      connect();
+                    }
+                    }, 20 *10000); // 20 second wait
+                })
+              }
 
       .row
         .large-12.columns
