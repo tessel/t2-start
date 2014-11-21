@@ -36,6 +36,12 @@ block content
         .large-12.columns
           .greyBar(style="height:2px;")
           p Here is an example of requesting a website over Tessel's Wifi connection:
+          p Make a wifi directory
+          code 
+            cli mkdir wifi
+            cli cd wifi
+            cli npm init
+
           p Save the following code in a file called <code>wifi.js</code>:
           pre.prettyprint#exampleCode
             code.
@@ -74,6 +80,7 @@ block content
           
           p Tessel's wifi can also be controlled programatically. The full API docs can be found 
             a(href="https://tessel.io/docs/wifi") here.
+
           p Save the following in a file called <code>wifi-control.js</code>:
           pre.prettyprint#exampleCode
             code.
@@ -139,7 +146,7 @@ block content
                       // try to reconnect
                       connect();
                     }
-                    }, 20 *10000);
+                    }, 20 *10000); // 20 second wait
                 })
               }
 
