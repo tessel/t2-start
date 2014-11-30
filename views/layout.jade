@@ -113,7 +113,7 @@ html
   - var moduleList = ['accelerometer', 'ambient', 'audio', 'ble', 'camera', 'climate', 'gprs', 'gps', 'ir', 'microsd', 'nrf', 'relay', 'rfid', 'servo']
     #sticky-topbar.sticky
       nav.top-bar(data-topbar, data-options="sticky_on: large")
-        ul.title-area(style="background-color: #d7d7d7;")
+        ul.title-area
           li.name
             h1
               a(href="https://tessel.io/")
@@ -126,35 +126,35 @@ html
         section.top-bar-section#main-menu
           ul.right
             li
-              a(href="/#{page}" style="background-color:#eee;" class="active") en
+              a.topMenuBar(href="/") Start
             li.divider.hide-for-small
             li
-              a(href="/ja/#{page}" style="background-color:#eee;") ja
+              a.topMenuBar(href="//tessel.io/docs") Docs
             li.divider.hide-for-small
             li
-              a(href="/" style="background-color:#eee;") Start
+              a.topMenuBar(href="//tessel.io/modules") Modules
             li.divider.hide-for-small
             li
-              a(href="//tessel.io/docs" style="background-color:#eee;") Docs
+              a.topMenuBar(href="//tessel.io/projects") Projects
             li.divider.hide-for-small
             li
-              a(href="//tessel.io/modules" style="background-color:#eee;") Modules
+              a.topMenuBar(href="//forums.tessel.io") Forums
             li.divider.hide-for-small
             li
-              a(href="//tessel.io/projects" style="background-color:#eee;") Projects
+              a.topMenuBar(href="//tessel.io/shop") Shop
             li.divider.hide-for-small
             li
-              a(href="//forums.tessel.io" style="background-color:#eee;") Forums
-            li.divider.hide-for-small
-            li
-              a(href="//tessel.io/shop" style="background-color:#eee;") Shop
-            li.divider.hide-for-small
-            li
-              a(href="//blog.technical.io" style="background-color:#eee;") Blog
+              a.topMenuBar(href="//blog.technical.io") Blog
             li.divider.hide-for-small
             li
               a.twitterbird(href="//twitter.com/technicalhumans" style="background-color:#eee;")
                 img(src="https://abs.twimg.com/a/1379971261/images/resources/twitter-bird-light-bgs.png", alt="@technicalhumans")
+            li.divider.hide-for-small
+            li
+              a(href="/#{page}" style="background-color:#eee;" class="active") en
+            li.divider.hide-for-small
+            li
+              a(href="/ja/#{page}" style="background-color:#eee;") 日本
 
     nav.top-bar(data-topbar)#alt-menu
       // display this menu in mobile mode

@@ -114,7 +114,7 @@ html
   body
     #sticky-topbar.sticky
       nav.top-bar(data-topbar, data-options="sticky_on: large")
-        ul.title-area(style="background-color: #d7d7d7;")
+        ul.title-area
           li.name
             h1
               a(href="https://tessel.io/")
@@ -127,35 +127,35 @@ html
         section.top-bar-section#main-menu
           ul.right
             li
-              a(href="/#{page}" style="background-color:#eee;") en
+              a.topMenuBar(href="/" style="background-color:#eee;") 入門
             li.divider.hide-for-small
             li
-              a(href="/ja/#{page}" style="background-color:#eee;" class="active") ja
+              a.topMenuBar(href="//tessel.io/docs") ドキュメント
             li.divider.hide-for-small
             li
-              a(href="/" style="background-color:#eee;") 入門
+              a.topMenuBar(href="//tessel.io/modules") モジュール
             li.divider.hide-for-small
             li
-              a(href="//tessel.io/docs" style="background-color:#eee;") ドキュメント
+              a.topMenuBar(href="//tessel.io/projects") プロジェクト
             li.divider.hide-for-small
             li
-              a(href="//tessel.io/modules" style="background-color:#eee;") モジュール
+              a.topMenuBar(href="//forums.tessel.io") 掲示板
             li.divider.hide-for-small
             li
-              a(href="//tessel.io/projects" style="background-color:#eee;") プロジェクト
+              a.topMenuBar(href="//tessel.io/shop") 購入
             li.divider.hide-for-small
             li
-              a(href="//forums.tessel.io" style="background-color:#eee;") 掲示板
-            li.divider.hide-for-small
-            li
-              a(href="//tessel.io/shop" style="background-color:#eee;") 購入
-            li.divider.hide-for-small
-            li
-              a(href="//blog.technical.io" style="background-color:#eee;") ブログ
+              a.topMenuBar(href="//blog.technical.io") ブログ
             li.divider.hide-for-small
             li
               a.twitterbird(href="//twitter.com/technicalhumans" style="background-color:#eee;")
                 img(src="https://abs.twimg.com/a/1379971261/images/resources/twitter-bird-light-bgs.png", alt="@technicalhumans")
+            li.divider.hide-for-small
+            li
+              a(href="/#{page}" style="background-color:#eee;") en
+            li.divider.hide-for-small
+            li
+              a(href="/ja/#{page}" style="background-color:#eee;" class="active") 日本
 
     nav.top-bar(data-topbar)#alt-menu
       // display this menu in mobile mode
