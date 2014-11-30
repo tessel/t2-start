@@ -10,7 +10,7 @@ div#fre-sidebar
       a(href="/modules") 3. modules
         //ul
         mixin moduleLink(val)
-          li( style="padding-left:10px;" class=(page === val ? "active" : ""))
+          li( style="padding-left:10px;" class=(page === ('modules/' + val) ? "active" : ""))
             a.side-bar-modules(href="/modules/" + val)
               | &#9675; #{val}
         each val in moduleList

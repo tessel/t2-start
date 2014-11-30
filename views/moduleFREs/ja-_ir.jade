@@ -1,0 +1,20 @@
+- var thismod = "ir"
+- var pkg = "ir-attx4"
+- var doThis = "#{title}モジュールをテレビに向けると、テレビの電源が入ります（テレビの機種によって、残念ながら反応しないことがあります）。デジカメや携帯電話のカメラで#{title}モジュールを写すと、赤外線が出ているようすを見ることができます。"
+- var bonus = "<br/><br/><b>おまけ：</b>他の電気製品の電源を入れられるようにプログラムを変更してみてください。"
+
+- var i = 1
+- var moduleDocs = moduleDocs_filepath + pkg
+
+//- +see_video("http://youtu.be/JLZzLyH9jc4")
++make_directory(i, thismod)
+- i++
++normal_row(i, modulesPlugged_filepath +  thismod + ".jpeg", plugIn, {'port': 'A'})
+- i++
++normal_row(i, moduleCorners_filepath + thismod + ".jpg", install, {'package': pkg})
+- i++
++displayCode(i, code.code, thismod)
+- i++
++normal_row(i, moduleGifs_filepath + thismod + ".gif", push + doThis + bonus + moreInfo, {'href': moduleDocs})
+- i++
++seeForums(i, thismod, title)

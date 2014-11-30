@@ -1,0 +1,20 @@
+- var thismod = "climate"
+- var pkg = "climate-si7005"
+- var doThis = "#{title}モジュールを手でおおって息を吹きかけて、温度と湿度が変わるようすを見てください。"
+- var bonus = "<br/><br/><b>おまけ：</b>上記の例では温度の単位が華氏（&#x2109;）です。摂氏（&#x2103;）で表示するように変更してみてください。"
+
+- var i = 1
+- var moduleDocs = moduleDocs_filepath + pkg
+
+//- +see_video("http://youtu.be/yGc7ZGQL0vk")
++make_directory(i, thismod, "<b>climateモジュールには、少し異なる2種類が存在します。<br/>2014年10月以降のモジュールは、センサーとしてsi7020を採用しています。それ以前はsi7005です。</b>")
+- i++
++normal_row(i, modulesPlugged_filepath +  thismod + ".jpeg", plugIn, {'port': 'A'})
+- i++
++normal_row(i, [moduleCorners_filepath + thismod + ".jpg", moduleCorners_filepath  + "climate-si7020.jpg"], "<b>モジュールの基板の裏側を見て、センサーがsi7020なのかsi7005なのかを確認してください。</b><br/><p>si7005の場合には、以下のコマンドを入力してインストールしてください。</p><code><cli>npm install "+ pkg + "</code></cli> <p>si7020の場合には、以下のコマンドを入力してインストールしてください。</p><code><cli>npm install climate-si7020</code></cli>")
+- i++
++displayCode(i, code.code, thismod, "<b>以下、si7020のモジュールの場合には、「climate-si7005」と書いてある部分を「climate-si7020」に読み替えてください。</b>")
+- i++
++normal_row(i, moduleGifs_filepath + thismod + ".gif", push + doThis + bonus + moreInfo, {'href': moduleDocs})
+- i++
++seeForums(i, thismod, thismod)

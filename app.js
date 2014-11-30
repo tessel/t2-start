@@ -43,6 +43,15 @@ app.get('/wifi', firstrun.wifi);
 app.get('/tweet', firstrun.tweet);
 app.get('/finished', firstrun.finished);
 
+app.get('/ja', firstrun.ja_index);
+app.get('/ja/install', firstrun.ja_install);
+app.get('/ja/blinky', firstrun.ja_blinky);
+app.get('/ja/usage', firstrun.ja_usage);
+app.get('/ja/modules', firstrun.ja_modules);
+app.get('/ja/wifi', firstrun.ja_wifi);
+app.get('/ja/tweet', firstrun.ja_tweet);
+app.get('/ja/finished', firstrun.ja_finished);
+
 // get the data from github
 var githubCode = {
   accelerometer: {url: 'https://raw.githubusercontent.com/tessel/accel-mma84/master/examples/accelerometer.js', github: 'https://github.com/tessel/accel-mma84', code: '', updated: null, replace: 'accel-mma84'},
@@ -61,8 +70,13 @@ var githubCode = {
   servo: {url: 'https://raw.githubusercontent.com/tessel/servo-pca9685/master/examples/servo.js', github: 'https://github.com/tessel/servo-pca9685', code: '', updated: null, replace: 'servo-pca9685'}
 };
 
-app.get('/modules/:slug', function (req, res) {
+function modulePage(req, res) {
   var module = req.params.slug;
+  var prefix = '';
+  if (req.params.lang == 'ja') {
+    prefix = 'ja-';
+  }
+
   // update on anything older than 1 hour
   var d = new Date((new Date) * 1 - 1000 * 3600 * 1);
   // if any urls have blank code, request it
@@ -75,12 +89,15 @@ app.get('/modules/:slug', function (req, res) {
       code = code.replace(' // Replace \'../\' with \'' + githubCode[module].replace + '\' in your own code', '');
       githubCode[module].code = code;
       githubCode[module].updated = Date.now();
-      res.render('FRE-module-individual', {title: module, displayModule: module, page: module, code: githubCode[module]});
+      res.render(prefix + 'FRE-module-individual', {title: module, displayModule: module, page: 'modules/' + module, code: githubCode[module]});
     });
   } else {
-    res.render('FRE-module-individual', {title: module, displayModule: module, page: module, code: githubCode[module]});
+    res.render(prefix + 'FRE-module-individual', {title: module, displayModule: module, page: 'modules/' + module, code: githubCode[module]});
   }
-});
+}
+
+app.get('/modules/:slug', modulePage);
+app.get('/:lang/modules/:slug', modulePage);
 
 http.createServer(app).listen(app.get('port'), function () {
   console.log('Express server listening on port ' + app.get('port'));

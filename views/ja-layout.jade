@@ -1,3 +1,5 @@
+- var moduleList = { 'accelerometer': '加速度センサー', 'ambient': '環境センサー', 'audio': 'オーディオ', 'ble': 'BLE', 'camera': 'カメラ', 'climate': '気候センサー', 'gprs': 'GPRS通信', 'gps': 'GPS', 'ir': '赤外線通信', 'microsd': 'マイクロSD', 'nrf': 'nRF24通信', 'relay': 'リレー', 'rfid': 'RFID', 'servo': 'サーボモーター' }
+- title = moduleList[title] || title
 doctype html
 html
   head
@@ -110,7 +112,6 @@ html
     block head
 
   body
-  - var moduleList = ['accelerometer', 'ambient', 'audio', 'ble', 'camera', 'climate', 'gprs', 'gps', 'ir', 'microsd', 'nrf', 'relay', 'rfid', 'servo']
     #sticky-topbar.sticky
       nav.top-bar(data-topbar, data-options="sticky_on: large")
         ul.title-area
@@ -126,35 +127,35 @@ html
         section.top-bar-section#main-menu
           ul.right
             li
-              a.topMenuBar(href="/") Start
+              a.topMenuBar(href="/" style="background-color:#eee;") 入門
             li.divider.hide-for-small
             li
-              a.topMenuBar(href="//tessel.io/docs") Docs
+              a.topMenuBar(href="//tessel.io/docs") ドキュメント
             li.divider.hide-for-small
             li
-              a.topMenuBar(href="//tessel.io/modules") Modules
+              a.topMenuBar(href="//tessel.io/modules") モジュール
             li.divider.hide-for-small
             li
-              a.topMenuBar(href="//tessel.io/projects") Projects
+              a.topMenuBar(href="//tessel.io/projects") プロジェクト
             li.divider.hide-for-small
             li
-              a.topMenuBar(href="//forums.tessel.io") Forums
+              a.topMenuBar(href="//forums.tessel.io") 掲示板
             li.divider.hide-for-small
             li
-              a.topMenuBar(href="//tessel.io/shop") Shop
+              a.topMenuBar(href="//tessel.io/shop") 購入
             li.divider.hide-for-small
             li
-              a.topMenuBar(href="//blog.technical.io") Blog
+              a.topMenuBar(href="//blog.technical.io") ブログ
             li.divider.hide-for-small
             li
               a.twitterbird(href="//twitter.com/technicalhumans" style="background-color:#eee;")
                 img(src="https://abs.twimg.com/a/1379971261/images/resources/twitter-bird-light-bgs.png", alt="@technicalhumans")
             li.divider.hide-for-small
             li
-              a(href="/#{page}" style="background-color:#eee;" class="active") en
+              a(href="/#{page}" style="background-color:#eee;") en
             li.divider.hide-for-small
             li
-              a(href="/ja/#{page}" style="background-color:#eee;") 日本
+              a(href="/ja/#{page}" style="background-color:#eee;" class="active") 日本
 
     nav.top-bar(data-topbar)#alt-menu
       // display this menu in mobile mode
@@ -170,23 +171,23 @@ html
       section.top-bar-section
         ul.right
           li
-            a(href="/install") install
+            a(href="/install") インストール
           li
-            a(href="/blinky") blinky
+            a(href="/blinky") 点滅
           li
-            a(href="/modules") modules
+            a(href="/modules") モジュール
           li
-            a(href="/wifi") wifi
+            a(href="/wifi") 無線LAN
           li
-            a(href="/tweet") tweet
+            a(href="/tweet") ツイート
           li
-            a(href="/usage") usage
+            a(href="/usage") コマンド
           li
-            a(href="/finished") finish
+            a(href="/finished") おわりに
 
 
     section
-      include _FRE-sidebar.jade
+      include ja-_FRE-sidebar.jade
       div#fre-content
         block content
         .row

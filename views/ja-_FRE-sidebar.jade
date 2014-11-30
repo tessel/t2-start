@@ -1,0 +1,24 @@
+div#fre-sidebar
+  ul(class="side-nav")
+    li(class=(page === "install" ? "active" : ""))
+      a(href="/ja/install") 1. インストール
+    li( class=(page === "blinky" ? "active" : ""))
+      a(href="/ja/blinky") 2. 点滅
+    li( class=(page === "modules" ? "active" : ""))
+      a(href="/ja/modules") 3. モジュール
+        //ul
+        mixin moduleLink(name, descr)
+          li( style="padding-left:10px;" class=(page === ('modules/' + name) ? "active" : ""))
+            a.side-bar-modules(href="/ja/modules/" + name)
+              span(title=name)
+                | &#9675; #{descr}
+        each descr, name in moduleList
+          +moduleLink(name, descr)
+    li( class=(page === "wifi" ? "active" : ""))
+      a(href="/ja/wifi") 4. 無線LAN
+    li( class=(page === "tweet" ? "active" : ""))
+      a(href="/ja/tweet") 5. ツイート
+    li( class=(page === "usage" ? "active" : ""))
+      a(href="/ja/usage") 6. コマンド
+    li( class=(page === "finished" ? "active" : ""))
+      a(href="/ja/finished") 7. おわりに

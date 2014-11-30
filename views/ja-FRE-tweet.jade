@@ -1,0 +1,90 @@
+extends ja-layout
+
+block content
+  .row
+    .large-12.columns.fre-container
+      .row
+        .large-12.columns
+          h1 Tesselではじめてのツイート
+      br
+
+  .row
+    .large-12.columns
+      p <a href="/wifi">無線LANへの接続</a>が完了したので、ツイッターにツイートをしてみましょう。
+      p このページのプログラムの例は、当社が作成したダミーのツイッターアカウント<a href="https://twitter.com/TesselTweet" target=0>（@TesselTweet）</a>に、Tesselからツイートを書き込みます。
+      p あなた自身のツイッターアカウントでツイートを書き込みたい場合は、<a href="https://apps.twitter.com/" target=0>apps.twitter.com</a>のページで、読み書き権限付きのOAuthトークンを作成し、このスクリプトの中に貼り付けてください。
+  .row
+    .large-12.columns
+      .greyBar(style="height:2px;")
+  .row.large-12.columns
+      p まず、「tessel-code」ディレクトリの中に、もうひとつディレクトリを作ってください：
+        code
+          cli mkdir tessel-tweet
+          cli cd tessel-tweet
+          cli npm init
+
+      p 以下のスクリプトをコピーし、「tweet.js」という名前のファイルに保存してください。「twitterHandle」という変数を設定している部分を、あなた自身のツイッターアカウントに変更するといいですよ。
+
+  .row
+    .large-12.columns
+      pre.prettyprint
+        code.
+          // Nodeのrequire
+          var twitter = require('twitter');
+          var util = require('util')
+
+          var twitterHandle = '@technicalhumans';
+          // ツイートする内容
+          var status = 'Hello ' + twitterHandle + '. This is your #Tessel speaking.';
+
+          // OAuthのキーとシークレットを設定する
+          var twit = new twitter({
+            consumer_key: 'O7oc0pvsZn4xjgcuHuYdX4FaC',
+            consumer_secret: 'iJYuHFz2sD46Nvk3mcwzX8uih14aEAMgVWdWoR59nx8v6Zl7ZX',
+            access_token_key: '2529232909-luARGU89K4CKFMvfzBjCgG6ubefzDkdDWkSB85i',
+            access_token_secret: 'GXQfuzvGdjLEs3t1HEYfhQ9x9bdBcSBVXjBkbRgwYlOE0'
+          });
+
+          // ツイートする！
+          twit.updateStatus(status, function(data) {
+            if (data.name === 'Error') {
+              console.log('error sending tweet!', data.message);
+            }
+            else {
+              console.log('tweet successful!');
+            }
+          });
+  .row
+    .large-12.columns
+      p このスクリプトでは、
+        a(href="https://www.npmjs.org/package/twitter") Node.jsのツイッター用ライブラリ
+        | を使用しています。
+
+      p 以下のように、npmコマンドを使ってツイッター用ライブラリをインストールしてください。
+        code
+          cli npm install twitter
+
+  .row
+    .large-4.columns
+      <br/>
+      p 準備ができたら、このスクリプトを実行してみましょう。
+        code
+          cli tessel run tweet.js
+      p
+        a(href="https://twitter.com/TesselTweet" target=0) ツイートされたかどうか、確かめてみてください。
+
+    .large-8.columns.right
+      img(src="#{s3url}tessel-tweet-2.png", style="float:right;")
+
+
+  .row
+    .large-12.columns
+      <br/>
+      p <b>おまけ：</b>センサーモジュールから読み取った値をツイートしてみましょう。
+
+block bottom_nav
+  .row
+    .large-5.columns.left
+      a.bottomButton(href="/ja/wifi" class="button") 戻る：無線LAN
+    .large-6.columns.right
+      a.bottomButton.right(href="/ja/usage" class="button") 進む：コマンド
