@@ -43,6 +43,8 @@ app.get('/wifi', firstrun.wifi);
 app.get('/tweet', firstrun.tweet);
 app.get('/finished', firstrun.finished);
 
+app.get('/diy', firstrun.diy);
+
 app.get('/ja', firstrun.ja_index);
 app.get('/ja/install', firstrun.ja_install);
 app.get('/ja/blinky', firstrun.ja_blinky);
