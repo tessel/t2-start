@@ -2,6 +2,8 @@
 
 div#fre-sidebar
   ul(class="side-nav")
+    li(class=(page === "cmd" ? "active" : ""))
+      a(href="/cmd") 0. prereqs
     li(class=(page === "install" ? "active" : ""))
       a(href="/install") 1. install
     li( class=(page === "blinky" ? "active" : ""))
