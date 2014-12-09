@@ -93,15 +93,27 @@ block content
 
   .row
     .large-12.columns.fre-container
-      h3#firmware Update Tessel's Firmware
-      p Plug Tessel into your computer via USB. In the command line, run
-        code
-          cli tessel update
-      p The lights should blink yellow and red during the firmware upload.
-      p Once the firmware update is complete, continue to the next step.
-
+      h3#text-editor Text Editors
+      p You will also need a text editor to save your JavaScript files.
+        | This means a plaintext editor, not a Word document.
+      p Here are some good options:
+        ul
+          li
+            a(href="http://www.sublimetext.com/") Sublime Text
+          li
+            a(href="https://atom.io/") Atom
+          li
+            a(href="http://notepad-plus-plus.org/") Notepad++
+      
+      p Typically, you will save a longer script
+      p In the context of this tutorial, things that should be run in the command line look
+      cli
+        code like this
+      p And scripts that should be saved in the text editor will look
+      pre.prettyprint
+        code like this
 
 block bottom_nav
   .row
     .large-12.columns.right
-      a.bottomButton.right(href="/blinky" class="button") Next: Blink lights
+      a.bottomButton.right(href="/install" class="button") Next: Install Node
