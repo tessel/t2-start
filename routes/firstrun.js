@@ -6,6 +6,11 @@ exports.ja_index = function (req, res) {
 	res.redirect('/ja/install');
 };
 
+// Command line page
+exports.cmd = function (req, res) {
+	res.render('FRE-cmd', {title: 'Command Line 101', page: 'cmd'});
+}
+
 // Installation page
 exports.install = function (req, res) {
 	res.render('FRE-install', {title: 'Tessel Installation', page: 'install'});

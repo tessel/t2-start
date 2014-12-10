@@ -35,6 +35,7 @@ if ('development' == app.get('env')) {
 
 // Initialize all of the routes of the app
 app.get('/', firstrun.index);
+app.get('/cmd', firstrun.cmd);
 app.get('/install', firstrun.install);
 app.get('/blinky', firstrun.blinky);
 app.get('/usage', firstrun.usage);
