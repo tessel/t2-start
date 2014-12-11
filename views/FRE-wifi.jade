@@ -115,8 +115,9 @@ block content
 
               wifi.on('timeout', function(err){
                 // tried to connect but couldn't, retry
-                console.log("timeout emitted"); 
-                if (timeouts > 3) {
+                console.log("timeout emitted");
+                timeouts++;
+                if (timeouts > 2) {
                   // reset the wifi chip if we've timed out too many times
                   powerCycle();
                 } else {
@@ -146,7 +147,7 @@ block content
                       // try to reconnect
                       connect();
                     }
-                    }, 20 *10000); // 20 second wait
+                    }, 20 *1000); // 20 second wait
                 })
               }
 

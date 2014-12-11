@@ -116,8 +116,9 @@ block content
 
               wifi.on('timeout', function(err){
                 // 接続しようとしたが、接続できなかった。リトライする。
-                console.log("timeout emitted"); 
-                if (timeouts > 3) {
+                console.log("timeout emitted");
+                timeouts++;
+                if (timeouts > 2) {
                   // 何度もタイムアウトしたので、無線LANチップをリセットする。
                   powerCycle();
                 } else {
@@ -147,7 +148,7 @@ block content
                       // 接続する。
                       connect();
                     }
-                    }, 20 *10000); // 20秒待つ
+                    }, 20 *1000); // 20秒待つ
                 })
               }
 
