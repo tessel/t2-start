@@ -66,6 +66,16 @@ block content
           .large-12.columns
             .greyBar(style="height:2px;")
 
+      mixin project(title, slug, imgUrl)
+        .large-3.columns
+          .projects-container
+            a(href="https://projects.tessel.io/projects/" + slug)
+              .project-image
+                img(src=imgUrl)
+              .project-details
+                .project-title
+                  h5 #{title}
+
       mixin see_video(url)
         .row
           .large-12.columns
@@ -91,11 +101,23 @@ block content
           .large-12.columns
             .greyBar(style="height:2px;")
 
-      mixin seeForums(number, url, thismod)
+      mixin seeForums(number, url, thismod, projects)
         .row
           +num_col(number)
         .row
           .large-12.columns
+            p What can you make next? Try some of these community-created projects:
+        .row
+          each project in projects
+            .large-4.columns.left
+              .projects-container
+                a(href="https://projects.tessel.io/projects/" + project.slug, target=0)
+                  .project-image
+                    img(src=project.imgUrl)
+                  .project-details
+                    .project-title
+                      h5 #{project.title}
+        .row    
             p If you run into any issues you can check out the <a href="#{forumUrl}#{url}">#{thismod} forums</a>.
         .row
           .large-12.columns
