@@ -87,11 +87,25 @@ block content
           .large-12.columns
             .greyBar(style="height:2px;")
 
-      mixin seeForums(number, url, thismod)
+      mixin seeForums(number, url, thismod, projects)
         .row
           +num_col(number)
         .row
           .large-12.columns
+            p あなたはこの #{thismod} で他に何を行うことができますか <a href="//tessel.io/projects">コミュニティプロジェクトをお試しください</a>
+        .row
+          each project in projects
+            .large-4.columns.left
+              .projects-container
+                a(href="https://projects.tessel.io/projects/" + project.slug, target=0)
+                  .project-image
+                    img(src=project.imgUrl)
+                  .project-details
+                    .project-title
+                      h5 #{project.title}
+        .row
+          .large-12.columns
+            p <a href="//projects.tessel.io/projects/new">またはあなた自身を発明し、それを共有！</a>
             p 何か困ったことがあったら、<a href="#{forumUrl}#{url}">#{title}モジュールの掲示板</a>で聞いてみてください。
         .row
           .large-12.columns

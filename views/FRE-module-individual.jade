@@ -106,7 +106,7 @@ block content
           +num_col(number)
         .row
           .large-12.columns
-            p What can you make next? Try some of these community-created projects:
+            p What else can you do with a #{thismod} module? Try a <a href="//tessel.io/projects">community-created project</a>
         .row
           each project in projects
             .large-4.columns.left
@@ -117,7 +117,9 @@ block content
                   .project-details
                     .project-title
                       h5 #{project.title}
-        .row    
+        .row
+          .large-12.columns  
+            p or invent your own and <a href="//projects.tessel.io/projects/new">share it</a>!
             p If you run into any issues you can check out the <a href="#{forumUrl}#{url}">#{thismod} forums</a>.
         .row
           .large-12.columns
