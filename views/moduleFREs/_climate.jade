@@ -7,6 +7,8 @@
 - var moduleDocs = moduleDocs_filepath + pkg
 - var moreInfo = moreInfo1 + thismod + moreInfo2 + moduleDocs + moreInfo3
 
+- var projects = [{title: 'EnviroReport Web Dashboard for Climate Module', slug: 'enviroreport-web-dashboard-for-climate-module', imgUrl: 'https://tessel-portal.s3.amazonaws.com/uploads/original-30-1406805442184-enviroReport.png'}, {title: 'Tessel Greenhouse', slug: 'tessel-greenhouse', imgUrl: 'https://tessel-portal.s3.amazonaws.com/uploads/original-21-1405819625532-20140719_182515.jpg'}, {title: 'Climate Logging over MQTT', slug: 'climate-logging-over-mqtt', imgUrl: 'https://tessel-portal.s3.amazonaws.com/uploads/original-51-1411599954078-IMG_0002.JPG'}]
+
 //- +see_video("http://youtu.be/yGc7ZGQL0vk")
 +make_directory(i, thismod, "<b>Note: There are 2 different Climate modules. <br/>Any module shipped after July 10, 2014 is the si7020 instead of the si7005.</b>")
 - i++
@@ -18,4 +20,4 @@
 - i++
 +normal_row(i, moduleGifs_filepath + thismod + ".gif", push1 + thismod + push2 + doThis + bonus + moreInfo)
 - i++
-+seeForums(i, thismod, thismod)
++seeForums(i, thismod, thismod, projects)

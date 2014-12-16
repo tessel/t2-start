@@ -7,6 +7,7 @@
 - var moduleDocs = moduleDocs_filepath + pkg
 - var moreInfo = moreInfo1 + thismod + moreInfo2 + moduleDocs + moreInfo3
 
+- var projects = [{title: 'Tessel Halloween', slug: 'tessel-halloween', imgUrl: 'https://tessel-portal.s3.amazonaws.com/uploads/original-26-1412558504356-2014-10-05_0004.jpg'}, {title: 'SolidShops Order Notifications', slug: 'solidshops-order-notifications', imgUrl: 'https://tessel-portal.s3.amazonaws.com/uploads/original-81-1412515556027-ID-10053999.jpg'}]
 
 //- +see_video("http://youtu.be/JLZzLyH9jc4")
 +make_directory(i, thismod)
@@ -23,4 +24,4 @@
 - i++
 +normal_row(i, moduleGifs_filepath + thismod + ".gif", push1 + thismod + push2 + doThis + bonus + moreInfo)
 - i++
-+seeForums(i, thismod, thismod)
++seeForums(i, thismod, thismod, projects)

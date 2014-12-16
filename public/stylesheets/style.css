@@ -369,6 +369,18 @@ cli {
   text-align: left;
 }
 
+.project-container {
+}
+
+.project-image {
+  height: 150px;
+  overflow: hidden;
+}
+
+.project-title {
+  font-weight: bold;
+}
+
 /************************** other *************************/
 .triangle-side {
   width: 15px;

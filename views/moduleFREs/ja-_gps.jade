@@ -6,6 +6,8 @@
 - var i = 1
 - var moduleDocs = moduleDocs_filepath + pkg
 
+- var projects = [{title: 'Tessel Tracker', slug: 'tessel-tracker', imgUrl: 'https://tessel-portal.s3.amazonaws.com/uploads/original-95-1415046308538-asdf.png'}]
+
 //- +see_video("http://youtu.be/JLZzLyH9jc4")
 +make_directory(i, thismod, "<b>注意：</b>現時点では、#{title}モジュールは<b>ポートC</b>でしか動作しません。ポートCはマイコンのRFノイズの影響を一番受けにくいのです。Tesselが複雑な処理をしていると、位置の確定は難しくなります。人工衛星からの電波を受信して位置が確定するまでにかかる時間は、人工衛星の状態によって異なります。野外で実験するのがいちばんです（それでも位置が確定するまでに多少の時間がかかります）。いったん位置が確定すると、電波状態が少し悪くなっても確定したままです。")
 - i++
@@ -17,4 +19,4 @@
 - i++
 +normal_row(i, moduleGifs_filepath + thismod + ".gif", push + doThis + bonus + moreInfo, {'href': moduleDocs})
 - i++
-+seeForums(i, thismod, title)
++seeForums(i, thismod, thismod, projects)

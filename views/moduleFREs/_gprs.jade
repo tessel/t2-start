@@ -7,6 +7,8 @@
 - var moduleDocs = moduleDocs_filepath + pkg
 - var moreInfo = moreInfo1 + thismod.toUpperCase() + moreInfo2 + moduleDocs + moreInfo3
 
+- var projects = [{title: 'Tessel Trigger with GPRS', slug: 'tessel-trigger-with-gprs', imgUrl: 'https://tessel-portal.s3.amazonaws.com/uploads/original-10-1404430142419-photo1.jpg'}, {title: 'Tessel Tracker', slug: 'tessel-tracker', imgUrl: 'https://tessel-portal.s3.amazonaws.com/uploads/original-95-1415046308538-asdf.png'}]
+
 //- +see_video("http://youtu.be/JLZzLyH9jc4")
 +make_directory(i, thismod)
 - i++
@@ -24,4 +26,4 @@
 - i++
 +normal_row(i, s3url+"modules_clipped/" + "gprs-external-power" + ".jpg", "The GPRS module can be externally powered through the External power pins. This allows the module to draw more current and get a better connection to the cell network. If you're seeing the Tessel become unresponsive after running the GPRS module, switch to external power.<br/><br/>First switch the jumper in the green area to connect External the 3.3V pins. Then connect an external GND to one of the two black arrows in the pink circle and external power to one of the two red arrows.")
 - i++
-+seeForums(i, thismod, thismod.toUpperCase())
++seeForums(i, thismod, thismod.toUpperCase(), projects)

@@ -6,6 +6,8 @@
 - var i = 1
 - var moduleDocs = moduleDocs_filepath + pkg
 
+- var projects = [{title: 'Tessel Trigger with GPRS', slug: 'tessel-trigger-with-gprs', imgUrl: 'https://tessel-portal.s3.amazonaws.com/uploads/original-10-1404430142419-photo1.jpg'}, {title: 'Tessel Tracker', slug: 'tessel-tracker', imgUrl: 'https://tessel-portal.s3.amazonaws.com/uploads/original-95-1415046308538-asdf.png'}]
+
 p
   b 日本国内にはGPRSでの通信サービスを提供している通信会社はありません。
     | そのため、日本国内では事実上使用できません。
@@ -27,4 +29,4 @@ p
 - i++
 +normal_row(i, s3url+"modules_clipped/" + "gprs-external-power" + ".jpg", "#{title}モジュールは外部電源端子を使って外部から電源をとることができます。外部から電源をとるとより多くの電流が使えるので、正常に働く可能性が高くなります。もし、#{title}モジュールを使おうとしたらTesselが反応しなくなるようなことがあったら、外部電源に替えてみてください。<br/><br/>図の緑色で囲ったところのジャンパーピンを付け替えて、Externalと書かれたピンと3.3Vと書かれたピンをつなぎます。さらに、ピンクで囲まれた中にあるふたつの黒い矢印のうちどちらかに外部電源のグラウンド（マイナス側）を、ふたつの赤い矢印のうちひとつに外部電源のプラス側をつないでください。")
 - i++
-+seeForums(i, thismod, title)
++seeForums(i, thismod, thismod, projects)
