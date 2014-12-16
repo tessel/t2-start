@@ -18,7 +18,7 @@ block content
     .large-12.columns
       h2
         code tessel run &lt;script.js | path/to/folder&gt;
-      p This command loads code into RAM on Tessel. When Tessel is reset (or the script ends with CTRL + C), Tessel loses the code. This command is useful for running code while developing, and will be used throughout this tutorial.
+      p This command loads code into RAM on Tessel. When Tessel is reset (or the script ends with CTRL + C), Tessel loses the code. This command is useful for running code while developing, and is used throughout this tutorial.
 
       p This command is shown in the <a href="/blinky">blinky example.</a>
 
@@ -63,6 +63,16 @@ block content
           | >> "I'm blinking! (Press CTRL + C to stop)" <br/>
           | >> "I'm blinking! (Press CTRL + C to stop)" <br/>
           | >> ...<br/>
+          
+  .row
+    .large-4.columns
+      p The <code>push</code> command is great if you want to run Tessel from an external power source, such as a USB battery, wall USB power, solar phone charger, or another power source.
+      p The code you've pushed will start running as soon as the Tessel receives power.
+      p Read more about it <a href="https://tessel.io/docs/untethered", target=0>here.</a>
+    .large-4.columns
+      img(src="https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/tessel-battery.jpg", style="height:300px")
+    .large-4.columns
+      img(src="https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/tessel-plug.jpg", style="height:300px")
   .row
     .large-12.columns
       .greyBar(style="height:2px;")
