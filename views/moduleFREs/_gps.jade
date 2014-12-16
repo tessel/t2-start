@@ -8,7 +8,7 @@
 - var moduleDocs = moduleDocs_filepath + pkg
 - var moreInfo = moreInfo1 + thismod.toUpperCase() + moreInfo2 + moduleDocs + moreInfo3
 
-- var projects = [{title: 'Dog Sleep Tracker', slug: 'dog-sleep-tracker', imgUrl: 'https://tessel-portal.s3.amazonaws.com/uploads/original-66-1410903121991-gif%20%281%29.jpg'}, {title: 'Dog Sleep Tracker', slug: 'dog-sleep-tracker', imgUrl: 'https://tessel-portal.s3.amazonaws.com/uploads/original-66-1410903121991-gif%20%281%29.jpg'}, {title: 'Dog Sleep Tracker', slug: 'dog-sleep-tracker', imgUrl: 'https://tessel-portal.s3.amazonaws.com/uploads/original-66-1410903121991-gif%20%281%29.jpg'}]
+- var projects = [{title: 'Tessel Tracker', slug: 'tessel-tracker', imgUrl: 'https://tessel-portal.s3.amazonaws.com/uploads/original-95-1415046308538-asdf.png'}]
 
 //- +see_video("http://youtu.be/JLZzLyH9jc4")
 +make_directory(i, thismod, "<b>Note:</b> The GPS module only works on <b>port C</b> at the moment. Port C is the most isolated from RF noise from the MCU, and having Tessel doing a lot of processing will make getting a lock harder. The time between seeing satellites and actually getting a lock is dependent on the satellite. Be in view of the open sky for best results (and even then it may take a while to get a lock). Once the module has a lock, the lock should stay for a while.")

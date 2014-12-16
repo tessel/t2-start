@@ -6,6 +6,8 @@
 - var i = 1
 - var moduleDocs = moduleDocs_filepath + pkg
 
+- var projects = [{title: 'Tessel iBeacon', slug: 'tessel-ibeacon', imgUrl: 'https://tessel-portal.s3.amazonaws.com/uploads/original-116-1417499022399-foreground_notification.png'}]
+
 //- +see_video("http://youtu.be/JLZzLyH9jc4")
 +make_directory(i, thismod)
 - i++
@@ -17,4 +19,4 @@
 - i++
 +normal_row(i, moduleGifs_filepath + thismod + ".gif", push + doThis + bonus + moreInfo, {'href': moduleDocs})
 - i++
-+seeForums(i, thismod, title)
++seeForums(i, thismod, thismod, projects)

@@ -6,6 +6,8 @@
 - var i = 1
 - var moduleDocs = moduleDocs_filepath + pkg
 
+- var projects = [{title: 'Tesselcam', slug: 'tesselcam', imgUrl: 'https://tessel-portal.s3.amazonaws.com/uploads/original-33-1407951047894-FDAYQ9QHY5Y5YHT.LARGE.jpg'}, {title: 'MMS Camera', slug: 'mms-camera', imgUrl: 'https://tessel-portal.s3.amazonaws.com/uploads/original-80-1412209088994-iphone-os-mms.jpg'}, {title: 'Motion Activated Twitter Feed', slug: 'motion-activated-camera-2', imgUrl: 'https://tessel-portal.s3.amazonaws.com/uploads/original-69-1411410065563-original-11-1406772957465-20140730_191415.jpg'}]
+
 //- +see_video("http://youtu.be/JLZzLyH9jc4")
 +make_directory(i, thismod)
 - i++
@@ -17,4 +19,4 @@
 - i++
 +normal_row(i, moduleGifs_filepath + thismod + ".gif", push + "「<span class='inlineCode'>--upload-dir</span>」というコマンドラインオプションを使うと、画像をどこに保存するのかを指定することができます。「<span class='inlineCode'>.</span>」は、現在いる場所のディレクトリを意味します。あるいは、「<span class='inlineCode'>process.env.TESSEL_UPLOAD_DIR</span>」という環境変数を設定しておけば、このコマンドラインオプションは不要です。<br/><br/>" + doThis + bonus + moreInfo, {'option': '--upload-dir ./', 'href': moduleDocs})
 - i++
-+seeForums(i, thismod, thismod)
++seeForums(i, thismod, thismod, projects)

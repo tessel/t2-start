@@ -6,6 +6,8 @@
 - var i = 1
 - var moduleDocs = moduleDocs_filepath + pkg
 
+- var projects = []
+
 p
   b #{title}モジュールは、日本国内で無線機器を使用するために必要な認証を取得していません。そのため、日本国内では使用してはいけません。使用すると電波法違反になります。
 //- +see_video("http://youtu.be/JLZzLyH9jc4")
@@ -23,4 +25,4 @@ p
 +normal_row(i, moduleGifs_filepath + thismod + ".gif", doThis + bonus + moreInfo, {'href': moduleDocs})
 
 - i++
-+seeForums(i, thismod, title)
++seeForums(i, thismod, thismod, projects)
