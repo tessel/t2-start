@@ -63,3 +63,7 @@ exports.finished = function (req, res) {
 exports.ja_finished = function (req, res) {
 	res.render('ja-FRE-finished.jade', {title: 'おわりに', page: 'finished'});
 };
+
+exports.diy = function (req, res) {
+	res.redirect('//tessel.io/docs/DIYModule');
+};
