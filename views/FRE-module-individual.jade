@@ -69,7 +69,7 @@ block content
       mixin project(title, slug, imgUrl)
         .large-3.columns
           .projects-container
-            a(href="https://projects.tessel.io/projects/" + slug)
+            a(href="//www.tessel.hackster.io/" + slug)
               .project-image
                 img(src=imgUrl)
               .project-details
@@ -109,16 +109,11 @@ block content
             p What else can you do with a #{thismod} module? Try a <a href="//tessel.io/projects", target=0>community-created project.</a>
         .row
           each project in projects
-            .large-4.columns.left
-              .projects-container
-                a(href="https://projects.tessel.io/projects/" + project.slug, target=0)
-                  .project-image
-                    img(src=project.imgUrl)
-                  .project-title
-                    p #{project.title}
+            .large-6.columns.left
+              | !{project}
         .row
           .large-12.columns  
-            p What are you making? <a href="//projects.tessel.io/projects/new", target=0>Share your invention!</a>
+            p <br/>What are you making? <a href="//tessel.hackster.io", target=0>Share your invention!</a>
             p If you run into any issues you can check out the <a href="#{forumUrl}#{url}">#{thismod} forums</a>.
         .row
           .large-12.columns
