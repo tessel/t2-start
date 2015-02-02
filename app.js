@@ -40,9 +40,12 @@ app.get('/install', firstrun.install);
 app.get('/blinky', firstrun.blinky);
 app.get('/usage', firstrun.usage);
 app.get('/modules', firstrun.modules);
+app.get('/modules/diy', firstrun.diy);
 app.get('/wifi', firstrun.wifi);
 app.get('/tweet', firstrun.tweet);
 app.get('/finished', firstrun.finished);
+
+app.get('/diy', firstrun.diy);
 
 app.get('/ja', firstrun.ja_index);
 app.get('/ja/install', firstrun.ja_install);
