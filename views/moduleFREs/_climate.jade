@@ -10,7 +10,7 @@
 - var projects = ["<iframe frameborder='0' height='270' scrolling='no' src='http://tessel.hackster.io/ehannum/tessel-greenhouse/embed' width='360'></iframe>", "<iframe frameborder='0' height='270' scrolling='no' src='http://tessel.hackster.io/peterchaivre/enviroreport/embed' width='360'></iframe>"]
 
 //- +see_video("http://youtu.be/yGc7ZGQL0vk")
-+make_directory(i, thismod, "<b>Note: There are 2 different Climate modules. <br/>Any module shipped after July 10, 2014 is the si7020 instead of the si7005.</b>")
++make_directory(i, thismod, "<b>Note: There are 2 different Climate modules. <br/>Any module shipped after July 10, 2014 is the si7020 instead of the si7005.<br /><br /> Also note that temperature and humidity readings can be skewed by the operating temperature of the Tessel. Distancing the the climate module from the Tessel via <a href='https://www.adafruit.com/products/1950?gclid=CjwKEAiA_s2lBRCe1YPXxtSe-DcSJACCIh3LlrKOKB5hJLKIxjIwgeJPYVW_or_As5UMK6fqwk-YERoCxGXw_wcB'>wires</a> is recommended for accurate readings.</b>")
 - i++
 +normal_row(i, modulesPlugged_filepath +  thismod + ".jpeg", plugIn1 + thismod + plugIn2A)
 - i++
