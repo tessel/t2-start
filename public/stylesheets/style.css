@@ -20,6 +20,7 @@ textarea {
 
 code {
 	word-wrap: break-word;
+  font-family: Andale Mono;
 }
 
 .box {
@@ -498,7 +499,7 @@ body#newfromrepo {
 
 /* override foundation */
 .topMenuBar {
-  background-color:#eee !important; 
+  background-color:#eee !important;
   font-weight: 700 !important;
 }
 
