@@ -10,7 +10,8 @@ html
     script(src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation.min.js")
     script(src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation/foundation.tab.min.js")
     script(src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation/foundation.topbar.min.js")
-
+    
+    link(rel='stylesheet', href='/stylesheets/main.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/gh-fork-ribbon.css')
     link(rel='stylesheet', href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css")
@@ -19,21 +20,7 @@ html
       body { background: white; }
       pre code { overflow: auto; }
 
-      .top-bar, .top-bar.expanded .title-area { font-family: Helvetica, sans-serif; background: #eee; z-index: 1000 }
-      .top-bar-section li a:not(.button) { background: black; font-size: 14px; }
-      .top-bar a { -webkit-transition: background 0.2s linear; line-height: 42px; height: 45px; display: block; }
-      .top-bar a:hover { background: rgba(0, 0, 0, 0.1) !important; }
-      .twitterbird img { height: 40px; vertical-align: middle; }
-      .top-bar .divider { border-left: 1px solid #bbb !important ; border-right: none !important; }
-      .top-bar-section li a:not(.button) { background: none; color: black; }
-      .top-bar-section ul.right { background: #eee; }
-      .top-bar .toggle-topbar.menu-icon a { color: black; }
-      .top-bar .toggle-topbar.menu-icon a span {
-        -webkit-box-shadow: 0 10px 0 1px #000,0 16px 0 1px #000,0 22px 0 1px #000;
-        box-shadow: 0 10px 0 1px #000,0 16px 0 1px #000,0 22px 0 1px #000;
-      }
-      .top-bar.expanded ul.right a { line-height: 20px }
-      .top-bar.expanded ul.right a img { margin-top: -8px }
+    
 
       #sec-what, #sec-spec, #sec-lastcall { padding-top: 30px; padding-bottom: 30px; }
       #sec-heading { padding-bottom: 30px; text-align: center; }
@@ -97,9 +84,6 @@ html
       #sec-spec .specs { margin: 20px 0; }
 
       #sec-lastcall { border-width: 1px 0; border-color: #aaa; border-style: solid; text-align: center; background: #fff }
-
-      #sec-footer {  color: white; padding-top: 15px; }
-
       tt, span.name { color: #f54a42; font-family: inherit; font-size: inherit; }
       .disc { padding-left: 25px; margin: 10px 0;}
       ul.spread li { margin: 20px 0; }
@@ -111,50 +95,36 @@ html
 
   body
   - var moduleList = ['accelerometer', 'ambient', 'audio', 'ble', 'camera', 'climate', 'gprs', 'gps', 'ir', 'microsd', 'nrf', 'relay', 'rfid', 'servo']
-    #sticky-topbar.sticky
-      nav.top-bar(data-topbar, data-options="sticky_on: large")
-        ul.title-area
-          li.name
-            h1
-              a(href="https://tessel.io/")
-                nobr
-                  img(src="#{s3url}tessel-name.png", style="max-height: 18px; vertical-align: middle;", alt="Technical Machine")
-          li.toggle-topbar.menu-icon
-            a(href="#")
-              span Menu
+    nav.top-bar.fixed(data-topbar, role="navigation")
+      ul.title-area
+        li.name
+          h1
+            a(href="/")
+              img.top-bar__logo(src="https://s3.amazonaws.com/technicalmachine-assets/technical-io/tessel-logo-horizontal.svg", alt="Tessel")
+        li.toggle-topbar.menu-icon
+          a(href="#")
+            span Menu
+      section.top-bar-section
+        ul.right
+          li
+            a(href="https://tessel.io/start") Start
+          li
+            a(href="https://tessel.io/docs") Docs
+          li
+            a(href="https://tessel.io/modules") Modules
+          li
+            a(href="https://tessel.io/projects") Projects
+          li
+            a(href="https://tessel.io/forums") Forums
+          li
+            a(href="https://tessel.io/shop") Shop
+          li
+            a(href="https://tessel.io/blog") Blog
+          li
+            a(href="/#{page}" class="active") en
+          li
+            a(href="/ja/#{page}") 日本
 
-        section.top-bar-section#main-menu
-          ul.right
-            li
-              a.topMenuBar(href="/") Start
-            li.divider.hide-for-small
-            li
-              a.topMenuBar(href="//tessel.io/docs") Docs
-            li.divider.hide-for-small
-            li
-              a.topMenuBar(href="//tessel.io/modules") Modules
-            li.divider.hide-for-small
-            li
-              a.topMenuBar(href="//tessel.io/projects") Projects
-            li.divider.hide-for-small
-            li
-              a.topMenuBar(href="//forums.tessel.io") Forums
-            li.divider.hide-for-small
-            li
-              a.topMenuBar(href="//shop.tessel.io") Shop
-            li.divider.hide-for-small
-            li
-              a.topMenuBar(href="//blog.technical.io") Blog
-            li.divider.hide-for-small
-            li
-              a.twitterbird(href="//twitter.com/technicalhumans" style="background-color:#eee;")
-                img(src="https://abs.twimg.com/a/1379971261/images/resources/twitter-bird-light-bgs.png", alt="@technicalhumans")
-            li.divider.hide-for-small
-            li
-              a(href="/#{page}" style="background-color:#eee;" class="active") en
-            li.divider.hide-for-small
-            li
-              a(href="/ja/#{page}" style="background-color:#eee;") 日本
 
     nav.top-bar(data-topbar)#alt-menu
       // display this menu in mobile mode
@@ -197,11 +167,28 @@ html
     .github-fork-ribbon-wrapper.right-bottom
       .github-fork-ribbon
         a(href="https://github.com/technicalmachine/start.tessel.io") Fork on Github
-
-    section#sec-footer
-      .row.rightalign
-        .large-12.columns.large-right(style="text-align: right")
-          p Technical Machine &copy; 2014.
+    footer
+      section#sec-footer
+        .row
+          .large-10.column.large-centered
+            .row.text-center
+              p Technical Machine &copy; 2013-2015.
+            .row.text-center
+              p 
+                a(href="/resellers") Resellers
+                |  | 
+                a(href="/community") Community
+                |  | 
+                a(href="/about") About us
+                |  | 
+                a(href="/blog") Blog
+                |  | 
+                a(href="/jobs") Jobs
+                |  | 
+                a(href="/press") Press
+            .row.text-center
+              a(href="https://heapanalytics.com/?utm_source=badge")
+                img(style="width:100px;height:40px" src="//heapanalytics.com/img/badge.png" alt="Heap - iOS and Web Analytics")
 
     script(src="http://include.reinvigorate.net/re_.js")
     script(src="/javascripts/reinvigorate.js")
