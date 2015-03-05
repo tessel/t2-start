@@ -497,12 +497,6 @@ body#newfromrepo {
 	text-align: right;
 }
 
-/* override foundation */
-.topMenuBar {
-  background-color:#eee !important;
-  font-weight: 700 !important;
-}
-
 /************************** old *************************/
 
 .belowh3[title]:hover:after {
