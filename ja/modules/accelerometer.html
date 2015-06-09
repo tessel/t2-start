@@ -1,97 +1,422 @@
-<!DOCTYPE html><html><head><title>加速度センサー</title><script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script><link href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/css/foundation.min.css" rel="stylesheet"><script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script src="../../javascripts/custom/active-link.js"></script><script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation.min.js"></script><script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation/foundation.tab.min.js"></script><script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation/foundation.topbar.min.js"></script><link rel="stylesheet" href="../../stylesheets/style.css"><link rel="stylesheet" href="../../stylesheets/gh-fork-ribbon.css"><link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css"><style>body { background: white; }
-pre code { overflow: auto; }
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for HTML5 for Mac OS X version 4.9.26">
+  <title>加速度センサー</title>
+  <script src=
+  "https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js">
+  </script>
+  <link href=
+  "http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/css/foundation.min.css"
+  rel="stylesheet">
+  <script src=
+  "http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+  </script>
+  <script src="../../javascripts/custom/active-link.js">
+  </script>
+  <script src=
+  "http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation.min.js">
+  </script>
+  <script src=
+  "http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation/foundation.tab.min.js">
+  </script>
+  <script src=
+  "http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation/foundation.topbar.min.js">
+  </script>
+  <link rel="stylesheet" href="../../stylesheets/style.css">
+  <link rel="stylesheet" href=
+  "../../stylesheets/gh-fork-ribbon.css">
+  <link rel="stylesheet" href=
+  "http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
 
-.top-bar, .top-bar.expanded .title-area { font-family: Helvetica, sans-serif; background: #eee; z-index: 1000 }
-.top-bar-section li a:not(.button) { background: black; font-size: 14px; }
-.top-bar a { -webkit-transition: background 0.2s linear; line-height: 42px; height: 45px; display: block; }
-.top-bar a:hover { background: rgba(0, 0, 0, 0.1) !important; }
-.twitterbird img { height: 40px; vertical-align: middle; }
-.top-bar .divider { border-left: 1px solid #bbb !important ; border-right: none !important; }
-.top-bar-section li a:not(.button) { background: none; color: black; }
-.top-bar-section ul.right { background: #eee; }
-.top-bar .toggle-topbar.menu-icon a { color: black; }
-.top-bar .toggle-topbar.menu-icon a span {
+  <style>
+  body { background: white; }
+  pre code { overflow: auto; }
+
+  .top-bar, .top-bar.expanded .title-area { font-family: Helvetica, sans-serif; background: #eee; z-index: 1000 }
+  .top-bar-section li a:not(.button) { background: black; font-size: 14px; }
+  .top-bar a { -webkit-transition: background 0.2s linear; line-height: 42px; height: 45px; display: block; }
+  .top-bar a:hover { background: rgba(0, 0, 0, 0.1) !important; }
+  .twitterbird img { height: 40px; vertical-align: middle; }
+  .top-bar .divider { border-left: 1px solid #bbb !important ; border-right: none !important; }
+  .top-bar-section li a:not(.button) { background: none; color: black; }
+  .top-bar-section ul.right { background: #eee; }
+  .top-bar .toggle-topbar.menu-icon a { color: black; }
+  .top-bar .toggle-topbar.menu-icon a span {
   -webkit-box-shadow: 0 10px 0 1px #000,0 16px 0 1px #000,0 22px 0 1px #000;
   box-shadow: 0 10px 0 1px #000,0 16px 0 1px #000,0 22px 0 1px #000;
-}
-.top-bar.expanded ul.right a { line-height: 20px }
-.top-bar.expanded ul.right a img { margin-top: -8px }
+  }
+  .top-bar.expanded ul.right a { line-height: 20px }
+  .top-bar.expanded ul.right a img { margin-top: -8px }
 
-#sec-what, #sec-spec, #sec-lastcall { padding-top: 30px; padding-bottom: 30px; }
-#sec-heading { padding-bottom: 30px; text-align: center; }
+  #sec-what, #sec-spec, #sec-lastcall { padding-top: 30px; padding-bottom: 30px; }
+  #sec-heading { padding-bottom: 30px; text-align: center; }
 
-#sec-heading .desc { font-size: 1.1em; }
-#sec-heading .desc p { font-size: 20px; }
-#sec-heading .desc p.tagline { font-size: 34px; text-align: center; line-height: 1.3 }
-#sec-heading .desc { margin-top: 100px; }
-#sec-heading-pic-column { text-align: right }
-@media (max-width: 768px) {
+  #sec-heading .desc { font-size: 1.1em; }
+  #sec-heading .desc p { font-size: 20px; }
+  #sec-heading .desc p.tagline { font-size: 34px; text-align: center; line-height: 1.3 }
+  #sec-heading .desc { margin-top: 100px; }
+  #sec-heading-pic-column { text-align: right }
+  @media (max-width: 768px) {
   #toTopHover, #toTop { display: none; left: -100000px }
   #sec-heading-pic { margin-bottom: -30px; margin-top: -500px !important; z-index: 0; }
   #sec-heading-pic { display: none }
   #sec-heading .desc { margin-top: 0; }
   #sec-heading-pic-column { text-align: center; }
   code { font-size: 14px !important; }
-}
-@media (max-width: 500px) {
+  }
+  @media (max-width: 500px) {
   code {font-size: 12px !important; }
-}
+  }
 
-@media(max-height: 200px){
+  @media(max-height: 200px){
   .side-nav{ overflow-y: scroll; }
-}
+  }
 
-@media(max-height: 560px){.side-nav{ overflow-y: scroll; }}
+  @media(max-height: 560px){.side-nav{ overflow-y: scroll; }}
 
-@media (max-width: 640px){
+  @media (max-width: 640px){
   #alt-menu{ display: block;}
   #main-menu{ display: none;}
   #sticky-topbar { display:none;}
   #fre-sidebar{display: none;}
   #fre-content{ margin-left:0px; padding-left:0px; max-width:100%}
-}
-#sec-heading-pic { width: 360px; margin-top: -150px }
-#sec-heading fieldset { background: white; }
+  }
+  #sec-heading-pic { width: 360px; margin-top: -150px }
+  #sec-heading fieldset { background: white; }
 
-#sec-what { background: #fff; padding: 10px 0 50px; }
-.modules li { text-align: center; font-weight: bold; text-transform: uppercase; line-height: 1.1; font-size: 0.8em; }
-.modules a { display: block; }
-.modules img { max-height: 80px; }
-.modules li span { display: block; margin: 10px 0; font-family: Helvetica; }
+  #sec-what { background: #fff; padding: 10px 0 50px; }
+  .modules li { text-align: center; font-weight: bold; text-transform: uppercase; line-height: 1.1; font-size: 0.8em; }
+  .modules a { display: block; }
+  .modules img { max-height: 80px; }
+  .modules li span { display: block; margin: 10px 0; font-family: Helvetica; }
 
-#servo-anim-block {
+  #servo-anim-block {
   background: #ddeaf6; padding: 50px 0;
-}
-#servo-anim-code {
+  }
+  #servo-anim-code {
   font-weight: normal; font-size: 16px; padding: 14px 20px; border-radius: 7px; text-align: left
-}
-@media (max-width: 768px) {
+  }
+  @media (max-width: 768px) {
   #servo-anim-code { border-radius: 4px; padding: 14px 14px; margin-bottom: 20px }
   #servo-anim-block button.large { margin-bottom: 0; }
   #servo-anim-block { padding: 20px 0; }
   #sec-what { padding-bottom: 20px; font-size: 14px; }
   #sec-what br { display: none; }
-}
+  }
 
-#sec-teardown { background: #333; }
+  #sec-teardown { background: #333; }
 
-#sec-spec { background: #ddd; border-width: 1px 0; border-color: #ccc; border-style: solid; }
-#sec-spec .specs { margin: 20px 0; }
+  #sec-spec { background: #ddd; border-width: 1px 0; border-color: #ccc; border-style: solid; }
+  #sec-spec .specs { margin: 20px 0; }
 
-#sec-lastcall { border-width: 1px 0; border-color: #aaa; border-style: solid; text-align: center; background: #fff }
+  #sec-lastcall { border-width: 1px 0; border-color: #aaa; border-style: solid; text-align: center; background: #fff }
 
-#sec-footer {  color: white; padding-top: 15px; }
+  #sec-footer {  color: white; padding-top: 15px; }
 
-tt, span.name { color: #f54a42; font-family: inherit; font-size: inherit; }
-.disc { padding-left: 25px; margin: 10px 0;}
-ul.spread li { margin: 20px 0; }
-pre.code { background: #333; border-radius: 5px; line-height: 1.4; padding: 10px 20px; color: #eb0; margin: 20px; }
-#sec-what h2, #sec-spec h2 { text-transform: uppercase; text-align: center; font-size: 1.6em; color: #444; margin: 25px 20px; }
-h3 { margin-top: 40px; color: #000 !important; }
-h4 { text-transform: uppercase; font-size: 0.9em; text-align: center; color: #444; }</style></head><body><div id="sticky-topbar" class="sticky"><nav data-topbar data-options="sticky_on: large" class="top-bar"><ul class="title-area"><li class="name"><h1><a href="https://tessel.io/"><nobr><img src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/tessel-name.png" style="max-height: 18px; vertical-align: middle;" alt="Technical Machine"></nobr></a></h1></li><li class="toggle-topbar menu-icon"><a href="accelerometer.html#"><span>Menu</span></a></li></ul><section id="main-menu" class="top-bar-section"><ul class="right"><li><a href="../../index.html" style="background-color:#eee;" class="topMenuBar">入門</a></li><li class="divider hide-for-small"></li><li><a href="http://tessel.io/docs" class="topMenuBar">ドキュメント</a></li><li class="divider hide-for-small"></li><li><a href="http://tessel.io/modules" class="topMenuBar">モジュール</a></li><li class="divider hide-for-small"></li><li><a href="http://tessel.io/projects" class="topMenuBar">プロジェクト</a></li><li class="divider hide-for-small"></li><li><a href="http://forums.tessel.io/" class="topMenuBar">掲示板</a></li><li class="divider hide-for-small"></li><li><a href="http://shop.tessel.io/" class="topMenuBar">購入</a></li><li class="divider hide-for-small"></li><li><a href="http://blog.technical.io/" class="topMenuBar">ブログ</a></li><li class="divider hide-for-small"></li><li><a href="http://twitter.com/technicalhumans" style="background-color:#eee;" class="twitterbird"><img src="https://abs.twimg.com/a/1379971261/images/resources/twitter-bird-light-bgs.png" alt="@technicalhumans"></a></li><li class="divider hide-for-small"></li><li><a href="../../modules/accelerometer.html" style="background-color:#eee;">en</a></li><li class="divider hide-for-small"></li><li><a href="accelerometer.html" style="background-color:#eee;" class="active">日本</a></li></ul></section></nav></div><nav data-topbar id="alt-menu" class="top-bar"><!-- display this menu in mobile mode--><ul style="background-color: #d7d7d7;" class="title-area"><li class="name"><h1><a href="https://tessel.io/"><nobr><img src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/tessel-name.png" style="max-height: 18px; vertical-align: middle;" alt="Technical Machine"></nobr></a></h1></li><li class="toggle-topbar menu-icon"><a href="accelerometer.html#"><span>Menu</span></a></li></ul><section class="top-bar-section"><ul class="right"><li><a href="../../index.html">インストール</a></li><li><a href="../../blinky.html">点滅</a></li><li><a href="../../modules.html">モジュール</a></li><li><a href="../../wifi.html">無線LAN</a></li><li><a href="../../tweet.html">ツイート</a></li><li><a href="../../usage.html">コマンド</a></li><li><a href="../../finished.html">おわりに</a></li></ul></section></nav><section><div id="fre-sidebar"><ul class="side-nav"><li><a href="../install.html">1. インストール</a></li><li><a href="../blinky.html">2. 点滅</a></li><li><a href="../modules.html">3. モジュール<!--ul--><li style="padding-left:10px;" class="active"><a href="accelerometer.html" class="side-bar-modules"><span title="accelerometer">&#9675; 加速度センサー</span></a></li><li style="padding-left:10px;"><a href="ambient.html" class="side-bar-modules"><span title="ambient">&#9675; 環境センサー</span></a></li><li style="padding-left:10px;"><a href="audio.html" class="side-bar-modules"><span title="audio">&#9675; オーディオ</span></a></li><li style="padding-left:10px;"><a href="ble.html" class="side-bar-modules"><span title="ble">&#9675; BLE</span></a></li><li style="padding-left:10px;"><a href="camera.html" class="side-bar-modules"><span title="camera">&#9675; カメラ</span></a></li><li style="padding-left:10px;"><a href="climate.html" class="side-bar-modules"><span title="climate">&#9675; 気候センサー</span></a></li><li style="padding-left:10px;"><a href="gprs.html" class="side-bar-modules"><span title="gprs">&#9675; GPRS通信</span></a></li><li style="padding-left:10px;"><a href="gps.html" class="side-bar-modules"><span title="gps">&#9675; GPS</span></a></li><li style="padding-left:10px;"><a href="ir.html" class="side-bar-modules"><span title="ir">&#9675; 赤外線通信</span></a></li><li style="padding-left:10px;"><a href="microsd.html" class="side-bar-modules"><span title="microsd">&#9675; マイクロSD</span></a></li><li style="padding-left:10px;"><a href="nrf.html" class="side-bar-modules"><span title="nrf">&#9675; nRF24通信</span></a></li><li style="padding-left:10px;"><a href="relay.html" class="side-bar-modules"><span title="relay">&#9675; リレー</span></a></li><li style="padding-left:10px;"><a href="rfid.html" class="side-bar-modules"><span title="rfid">&#9675; RFID</span></a></li><li style="padding-left:10px;"><a href="servo.html" class="side-bar-modules"><span title="servo">&#9675; サーボモーター</span></a></li></a></li><li><a href="../wifi.html">4. 無線LAN</a></li><li><a href="../tweet.html">5. ツイート</a></li><li><a href="../usage.html">6. コマンド</a></li><li><a href="../finished.html">7. おわりに</a></li></ul></div><div id="fre-content"><div class="row"><div class="large-12 columns fre-container"><!-- mixin for the modular formatting of each module's FRE--><!-- mixins for within the includes--><!-- include all the modules--><!--each val in moduleList--><div class="row"><div class="large-12 columns fre-container"><span><img src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules/accelerometer.png" style="margin-top:-20px;" class="constrain-sm"></span><span style="padding-left:10px;"><h2 class="leftalign moduleTitle">加速度センサー</h2></span><span style="padding-left:20px;"><a href="https://github.com/tessel/accel-mma84"><i class="fa fa-github"> View Source</i></a></span></div></div><div id="accelerometer" class="row"><div class="large-12 columns"><div class="row"><div class="large-12 columns"><p class="moduleStep">手順1</p></div></div><div class="row"><div class="large-12 columns"><p>以下のコマンドを入力して、「tessel-code」ディレクトリーの中に、もうひとつディレクトリーを作ってください：
-<code><cli>mkdir accelerometer</cli></code>
-いま作ったディレクトリーの中に移ってください。
-<code><cli>cd accelerometer</cli></code></p></div></div><div class="row"><div class="large-12 columns"><div style="height:2px;" class="greyBar"></div></div></div><div class="row"><div class="large-12 columns"><p class="moduleStep">手順2</p></div></div><div class="row"><div class="large-6 columns"><p>加速度センサー（accelerometer）モジュールをTesselの<b>ポートA</b>に挿しこんでください。このとき、六角形のTesselロゴの面が裏側、電子部品が有る側を表側になるようにしてください。最後に、TesselとパソコンをUSBケーブルで接続してください。</p></div><div class="large-6 columns"><div class="row"><div class="large-12 columns"><img src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_plugged/accelerometer.jpeg" class="constrain"></div></div></div></div><div class="row"><div class="large-12 columns"><div style="height:2px;" class="greyBar"></div></div></div><div class="row"><div class="large-12 columns"><p class="moduleStep">手順3</p></div></div><div class="row"><div class="large-6 columns"><p>以下のコマンドを入力して、パッケージをインストールしてください。<code><cli>npm install accel-mma84</cli></code></p></div><div class="large-6 columns"><div class="row"><div class="large-12 columns"><img src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_corners/accelerometer.jpg" class="constrain"></div></div></div></div><div class="row"><div class="large-12 columns"><div style="height:2px;" class="greyBar"></div></div></div><div class="row"><div class="large-12 columns"><p class="moduleStep">手順4</p></div></div><div class="row"><div class="large-12 columns left"><p><code>accelerometer.js</code>という名前のファイルを作成し、以下の内容を書き込んで保存してください。</p><pre id="exampleCode" class="prettyprint"><code>// Any copyright is dedicated to the Public Domain.
+  tt, span.name { color: #f54a42; font-family: inherit; font-size: inherit; }
+  .disc { padding-left: 25px; margin: 10px 0;}
+  ul.spread li { margin: 20px 0; }
+  pre.code { background: #333; border-radius: 5px; line-height: 1.4; padding: 10px 20px; color: #eb0; margin: 20px; }
+  #sec-what h2, #sec-spec h2 { text-transform: uppercase; text-align: center; font-size: 1.6em; color: #444; margin: 25px 20px; }
+  h3 { margin-top: 40px; color: #000 !important; }
+  h4 { text-transform: uppercase; font-size: 0.9em; text-align: center; color: #444; }
+  </style>
+</head>
+<body>
+  <div id="sticky-topbar" class="sticky">
+    <nav data-topbar="" data-options="sticky_on: large" class=
+    "top-bar">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="https://tessel.io/"><nobr><img src=
+          "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/tessel-name.png"
+          style="max-height: 18px; vertical-align: middle;" alt=
+          "Technical Machine"></nobr></a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a href="accelerometer.html#"><span>Menu</span></a>
+        </li>
+      </ul>
+      <section id="main-menu" class="top-bar-section">
+        <ul class="right">
+          <li>
+            <a href="../../index.html" style=
+            "background-color:#eee;" class="topMenuBar">入門</a>
+          </li>
+          <li>
+            <a href="http://tessel.io/docs" class=
+            "topMenuBar">ドキュメント</a>
+          </li>
+          <li>
+            <a href="http://tessel.io/modules" class=
+            "topMenuBar">モジュール</a>
+          </li>
+          <li>
+            <a href="http://tessel.io/projects" class=
+            "topMenuBar">プロジェクト</a>
+          </li>
+          <li>
+            <a href="http://forums.tessel.io/" class=
+            "topMenuBar">掲示板</a>
+          </li>
+          <li>
+            <a href="http://shop.tessel.io/" class=
+            "topMenuBar">購入</a>
+          </li>
+          <li>
+            <a href="http://blog.technical.io/" class=
+            "topMenuBar">ブログ</a>
+          </li>
+          <li>
+            <a href="http://twitter.com/technicalhumans" style=
+            "background-color:#eee;" class="twitterbird"><img src=
+            "https://abs.twimg.com/a/1379971261/images/resources/twitter-bird-light-bgs.png"
+            alt="@technicalhumans"></a>
+          </li>
+          <li>
+            <a href="../../modules/accelerometer.html" style=
+            "background-color:#eee;">en</a>
+          </li>
+          <li>
+            <a href="accelerometer.html" style=
+            "background-color:#eee;" class="active">日本</a>
+          </li>
+        </ul>
+      </section>
+    </nav>
+  </div>
+  <nav data-topbar="" id="alt-menu" class="top-bar">
+    <!-- display this menu in mobile mode-->
+    <ul style="background-color: #d7d7d7;" class="title-area">
+      <li class="name">
+        <h1><a href="https://tessel.io/"><nobr><img src=
+        "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/tessel-name.png"
+        style="max-height: 18px; vertical-align: middle;" alt=
+        "Technical Machine"></nobr></a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon">
+        <a href="accelerometer.html#"><span>Menu</span></a>
+      </li>
+    </ul>
+    <section class="top-bar-section">
+      <ul class="right">
+        <li>
+          <a href="../../index.html">インストール</a>
+        </li>
+        <li>
+          <a href="../../blinky.html">点滅</a>
+        </li>
+        <li>
+          <a href="../../modules.html">モジュール</a>
+        </li>
+        <li>
+          <a href="../../wifi.html">無線LAN</a>
+        </li>
+        <li>
+          <a href="../../tweet.html">ツイート</a>
+        </li>
+        <li>
+          <a href="../../usage.html">コマンド</a>
+        </li>
+        <li>
+          <a href="../../finished.html">おわりに</a>
+        </li>
+      </ul>
+    </section>
+  </nav>
+  <section>
+    <div id="fre-sidebar">
+      <ul class="side-nav">
+        <li>
+          <a href="../install.html">1. インストール</a>
+        </li>
+        <li>
+          <a href="../blinky.html">2. 点滅</a>
+        </li>
+        <li>
+          <a href="../modules.html">3. モジュール<!--ul-->
+          <ul>
+            <li style="padding-left:10px;" class="active">
+              <a href="accelerometer.html" class=
+              "side-bar-modules"><span title="accelerometer">○
+              加速度センサー</span></a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="ambient.html" class=
+              "side-bar-modules"><span title="ambient">○
+              環境センサー</span></a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="audio.html" class=
+              "side-bar-modules"><span title="audio">○
+              オーディオ</span></a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="ble.html" class=
+              "side-bar-modules"><span title="ble">○ BLE</span></a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="camera.html" class=
+              "side-bar-modules"><span title="camera">○
+              カメラ</span></a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="climate.html" class=
+              "side-bar-modules"><span title="climate">○
+              気候センサー</span></a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="gprs.html" class=
+              "side-bar-modules"><span title="gprs">○
+              GPRS通信</span></a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="gps.html" class=
+              "side-bar-modules"><span title="gps">○ GPS</span></a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="ir.html" class=
+              "side-bar-modules"><span title="ir">○
+              赤外線通信</span></a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="microsd.html" class=
+              "side-bar-modules"><span title="microsd">○
+              マイクロSD</span></a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="nrf.html" class=
+              "side-bar-modules"><span title="nrf">○
+              nRF24通信</span></a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="relay.html" class=
+              "side-bar-modules"><span title="relay">○
+              リレー</span></a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="rfid.html" class=
+              "side-bar-modules"><span title="rfid">○
+              RFID</span></a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="servo.html" class=
+              "side-bar-modules"><span title="servo">○
+              サーボモーター</span></a>
+            </li>
+          </ul></a>
+        </li>
+        <li>
+          <a href="../wifi.html">4. 無線LAN</a>
+        </li>
+        <li>
+          <a href="../tweet.html">5. ツイート</a>
+        </li>
+        <li>
+          <a href="../usage.html">6. コマンド</a>
+        </li>
+        <li>
+          <a href="../finished.html">7. おわりに</a>
+        </li>
+      </ul>
+    </div>
+    <div id="fre-content">
+      <div class="row">
+        <div class="large-12 columns fre-container">
+          <!-- mixin for the modular formatting of each module's FRE--><!-- mixins for within the includes--><!-- include all the modules--><!--each val in moduleList-->
+          <div class="row">
+            <div class="large-12 columns fre-container">
+              <span><img src=
+              "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules/accelerometer.png"
+              style="margin-top:-20px;" class=
+              "constrain-sm"></span>
+              <h2 class="leftalign moduleTitle"><span style=
+              "padding-left:10px;">加速度センサー</span></h2><span style=
+              "padding-left:20px;"><a href=
+              "https://github.com/tessel/accel-mma84"><i class=
+              "fa fa-github">View Source</i></a></span>
+            </div>
+          </div>
+          <div id="accelerometer" class="row">
+            <div class="large-12 columns">
+              <div class="row">
+                <div class="large-12 columns">
+                  <p class="moduleStep">手順1</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <p>
+                  以下のコマンドを入力して、「tessel-code」ディレクトリーの中に、もうひとつディレクトリーを作ってください：
+                  <code><kbd>mkdir accelerometer</kbd></code>
+                  いま作ったディレクトリーの中に移ってください。 <code><kbd>cd
+                  accelerometer</kbd></code></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <div style="height:2px;" class="greyBar"></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <p class="moduleStep">手順2</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-6 columns">
+                  <p>
+                  加速度センサー（accelerometer）モジュールをTesselの<b>ポートA</b>に挿しこんでください。このとき、六角形のTesselロゴの面が裏側、電子部品が有る側を表側になるようにしてください。最後に、TesselとパソコンをUSBケーブルで接続してください。</p>
+                </div>
+                <div class="large-6 columns">
+                  <div class="row">
+                    <div class="large-12 columns"><img src=
+                    "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_plugged/accelerometer.jpeg"
+                    class="constrain"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <div style="height:2px;" class="greyBar"></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <p class="moduleStep">手順3</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-6 columns">
+                  <p>以下のコマンドを入力して、パッケージをインストールしてください。<code><kbd>npm
+                  install accel-mma84</kbd></code></p>
+                </div>
+                <div class="large-6 columns">
+                  <div class="row">
+                    <div class="large-12 columns"><img src=
+                    "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_corners/accelerometer.jpg"
+                    class="constrain"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <div style="height:2px;" class="greyBar"></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <p class="moduleStep">手順4</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns left">
+                  <p>
+                  <code>accelerometer.js</code>という名前のファイルを作成し、以下の内容を書き込んで保存してください。</p>
+                  <pre id="exampleCode" class="prettyprint">
+<code>// Any copyright is dedicated to the Public Domain.
 // http://creativecommons.org/publicdomain/zero/1.0/
 
 /*********************************************
@@ -116,4 +441,205 @@ accel.on('ready', function () {
 accel.on('error', function(err){
   console.log('Error:', err);
 });
-</code></pre></div></div><div class="row"><div class="large-12 columns"><div style="height:2px;" class="greyBar"></div></div></div><div class="row"><div class="large-12 columns"><p class="moduleStep">手順5</p></div></div><div class="row"><div class="large-6 columns"><p>以下のコマンドを入力してください。<code><cli>tessel run accelerometer.js </cli></code><br/>表示されるxyzの値に注目してください。Tesselを持ち上げて、いろいろな向きに傾けてみてください。<br/><br/><b>おまけ：</b>値の表示を1秒（1000ミリ秒）ごとにするには、プログラムをどういうふうに変更したらいいでしょうか。<br/><br/>加速度センサーモジュールの機能についてもっと知りたい場合は、<a href="https://github.com/tessel/accel-mma84" target=0>モジュールのドキュメント</a>を参照してください。</p></div><div class="large-6 columns"><div class="row"><div class="large-12 columns"><img src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/gifs/accelerometer.gif" class="constrain"></div></div></div></div><div class="row"><div class="large-12 columns"><div style="height:2px;" class="greyBar"></div></div></div><div class="row"><div class="large-12 columns"><p class="moduleStep">手順6</p></div></div><div class="row"><div class="large-12 columns"><p>あなたはこの accelerometer で他に何を行うことができますか <a href="http://tessel.io/projects", target=0>コミュニティプロジェクトを試してみてください</a></p></div></div><div class="row"><div class="large-4 columns left"><div class="projects-container"><a href="https://projects.tessel.io/projects/undefined" target="0"><div class="project-image"><img></div><div class="project-title"><p></p></div></a></div></div><div class="large-4 columns left"><div class="projects-container"><a href="https://projects.tessel.io/projects/undefined" target="0"><div class="project-image"><img></div><div class="project-title"><p></p></div></a></div></div></div><div class="row"><div class="large-12 columns"><p>あなたは何を作っている <a href="http://projects.tessel.io/projects/new", target=0>あなたの本を共有する</a></p><p>何か困ったことがあったら、<a href="http://forums.tessel.io/category/accelerometer">加速度センサーモジュールの掲示板</a>で聞いてみてください。</p></div></div><div class="row"><div class="large-12 columns"><div style="height:2px;" class="greyBar"></div></div></div></div></div><!-- workaround mixins for fake dynamic includes--><div class="row"><div class="large-12 columns"><h2>他のモジュールを試す</h2><p>あるいは、ここを飛ばして<a href="../../wifi.html">無線LAN</a>に進んでください。</p></div></div><div class="row"><div class="large-12 columns"><ul class="small-block-grid-1 large-block-grid-3"><li><a href="accelerometer.html"><span class="moduleLink">加速度センサー</span></a></li><li><a href="ambient.html"><span class="moduleLink">環境センサー&nbsp;<small>明るさ＋音</small></span></a></li><li><a href="audio.html"><span class="moduleLink">オーディオ</span></a></li><li><a href="ble.html"><span class="moduleLink">BLE&nbsp;<small>Bluetooth Low Energy</small></span></a></li><li><a href="camera.html"><span class="moduleLink">カメラ</span></a></li><li><a href="climate.html"><span class="moduleLink">気候センサー</span></a></li><li><a href="gprs.html"><span class="moduleLink">GPRS通信</span></a></li><li><a href="gps.html"><span class="moduleLink">GPS</span></a></li><li><a href="ir.html"><span class="moduleLink">赤外線通信</span></a></li><li><a href="microsd.html"><span class="moduleLink">マイクロSD</span></a></li><li><a href="nrf.html"><span class="moduleLink">nRF24通信</span></a></li><li><a href="relay.html"><span class="moduleLink">リレー</span></a></li><li><a href="rfid.html"><span class="moduleLink">RFID</span></a></li><li><a href="servo.html"><span class="moduleLink">サーボモーター</span></a></li></ul></div></div></div></div><div class="row"><div class="large-12 columns"><div class="greyBar"></div></div></div><div class="row"><div class="large-6 columns left"><a href="../blinky.html" class="bottomButton button">戻る：点滅</a></div><div class="large-6 columns right"><a href="../wifi.html" class="bottomButton right button">進む：無線LAN</a></div></div></div></section><div class="github-fork-ribbon-wrapper right-bottom"><div class="github-fork-ribbon"><a href="https://github.com/technicalmachine/start.tessel.io">Fork on Github</a></div></div><section id="sec-footer"><div class="row rightalign"><div style="text-align: right" class="large-12 columns large-right"><p>Technical Machine &copy; 2014.</p></div></div></section><script src="http://include.reinvigorate.net/re_.js"></script><script src="../../javascripts/reinvigorate.js"></script><script>$(document).foundation();</script></body></html>
+</code>
+</pre>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <div style="height:2px;" class="greyBar"></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <p class="moduleStep">手順5</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-6 columns">
+                  <p>以下のコマンドを入力してください。<code><kbd>tessel run
+                  accelerometer.js</kbd></code><br>
+                  表示されるxyzの値に注目してください。Tesselを持ち上げて、いろいろな向きに傾けてみてください。<br>
+
+                  <br>
+                  <b>おまけ：</b>値の表示を1秒（1000ミリ秒）ごとにするには、プログラムをどういうふうに変更したらいいでしょうか。<br>
+
+                  <br>
+                  加速度センサーモジュールの機能についてもっと知りたい場合は、<a href=
+                  "https://github.com/tessel/accel-mma84" target=
+                  "0">モジュールのドキュメント</a>を参照してください。</p>
+                </div>
+                <div class="large-6 columns">
+                  <div class="row">
+                    <div class="large-12 columns"><img src=
+                    "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/gifs/accelerometer.gif"
+                    class="constrain"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <div style="height:2px;" class="greyBar"></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <p class="moduleStep">手順6</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <p>あなたはこの accelerometer で他に何を行うことができますか <a href=
+                  "http://tessel.io/projects" target=
+                  "0">コミュニティプロジェクトを試してみてください</a></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-4 columns left">
+                  <div class="projects-container">
+                    <a href=
+                    "https://projects.tessel.io/projects/undefined"
+                    target="0">
+                    <div class="project-image"><img></div>
+                    <div class="project-title"></div></a>
+                  </div>
+                </div>
+                <div class="large-4 columns left">
+                  <div class="projects-container">
+                    <a href=
+                    "https://projects.tessel.io/projects/undefined"
+                    target="0">
+                    <div class="project-image"><img></div>
+                    <div class="project-title"></div></a>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <p>あなたは何を作っている <a href=
+                  "http://projects.tessel.io/projects/new" target=
+                  "0">あなたの本を共有する</a></p>
+                  <p>何か困ったことがあったら、<a href=
+                  "http://forums.tessel.io/category/accelerometer">加速度センサーモジュールの掲示板</a>で聞いてみてください。</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <div style="height:2px;" class="greyBar"></div>
+                </div>
+              </div>
+            </div>
+          </div><!-- workaround mixins for fake dynamic includes-->
+          <div class="row">
+            <div class="large-12 columns">
+              <h2>他のモジュールを試す</h2>
+              <p>あるいは、ここを飛ばして<a href=
+              "../../wifi.html">無線LAN</a>に進んでください。</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <ul class="small-block-grid-1 large-block-grid-3">
+                <li>
+                  <a href="accelerometer.html"><span class=
+                  "moduleLink">加速度センサー</span></a>
+                </li>
+                <li>
+                  <a href="ambient.html"><span class=
+                  "moduleLink">環境センサー&nbsp;<small>明るさ＋音</small></span></a>
+                </li>
+                <li>
+                  <a href="audio.html"><span class=
+                  "moduleLink">オーディオ</span></a>
+                </li>
+                <li>
+                  <a href="ble.html"><span class=
+                  "moduleLink">BLE&nbsp;<small>Bluetooth Low
+                  Energy</small></span></a>
+                </li>
+                <li>
+                  <a href="camera.html"><span class=
+                  "moduleLink">カメラ</span></a>
+                </li>
+                <li>
+                  <a href="climate.html"><span class=
+                  "moduleLink">気候センサー</span></a>
+                </li>
+                <li>
+                  <a href="gprs.html"><span class=
+                  "moduleLink">GPRS通信</span></a>
+                </li>
+                <li>
+                  <a href="gps.html"><span class=
+                  "moduleLink">GPS</span></a>
+                </li>
+                <li>
+                  <a href="ir.html"><span class=
+                  "moduleLink">赤外線通信</span></a>
+                </li>
+                <li>
+                  <a href="microsd.html"><span class=
+                  "moduleLink">マイクロSD</span></a>
+                </li>
+                <li>
+                  <a href="nrf.html"><span class=
+                  "moduleLink">nRF24通信</span></a>
+                </li>
+                <li>
+                  <a href="relay.html"><span class=
+                  "moduleLink">リレー</span></a>
+                </li>
+                <li>
+                  <a href="rfid.html"><span class=
+                  "moduleLink">RFID</span></a>
+                </li>
+                <li>
+                  <a href="servo.html"><span class=
+                  "moduleLink">サーボモーター</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="greyBar"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-6 columns left">
+          <a href="../blinky.html" class=
+          "bottomButton button">戻る：点滅</a>
+        </div>
+        <div class="large-6 columns right">
+          <a href="../wifi.html" class=
+          "bottomButton right button">進む：無線LAN</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="github-fork-ribbon-wrapper right-bottom">
+    <div class="github-fork-ribbon">
+      <a href=
+      "https://github.com/technicalmachine/start.tessel.io">Fork on
+      Github</a>
+    </div>
+  </div>
+  <section id="sec-footer">
+    <div class="row rightalign">
+      <div style="text-align: right" class=
+      "large-12 columns large-right">
+        <p>Technical Machine © 2014.</p>
+      </div>
+    </div>
+  </section>
+  <script src="http://include.reinvigorate.net/re_.js">
+  </script>
+  <script src="../../javascripts/reinvigorate.js">
+  </script>
+  <script>
+  $(document).foundation();
+  </script>
+</body>
+</html>

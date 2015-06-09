@@ -1,80 +1,372 @@
-<!DOCTYPE html><html><head><title>ir</title><script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script><link href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/css/foundation.min.css" rel="stylesheet"><script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script src="../javascripts/custom/active-link.js"></script><script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation.min.js"></script><script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation/foundation.tab.min.js"></script><script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation/foundation.topbar.min.js"></script><link rel="stylesheet" href="../stylesheets/main.css"><link rel="stylesheet" href="../stylesheets/style.css"><link rel="stylesheet" href="../stylesheets/gh-fork-ribbon.css"><link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css"><style>body { background: white; }
-pre code { overflow: auto; }
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for HTML5 for Mac OS X version 4.9.26">
+  <title>ir</title>
+  <script src=
+  "https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js">
+  </script>
+  <link href=
+  "http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/css/foundation.min.css"
+  rel="stylesheet">
+  <script src=
+  "http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+  </script>
+  <script src="../javascripts/custom/active-link.js">
+  </script>
+  <script src=
+  "http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation.min.js">
+  </script>
+  <script src=
+  "http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation/foundation.tab.min.js">
+  </script>
+  <script src=
+  "http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation/foundation.topbar.min.js">
+  </script>
+  <link rel="stylesheet" href="../stylesheets/main.css">
+  <link rel="stylesheet" href="../stylesheets/style.css">
+  <link rel="stylesheet" href="../stylesheets/gh-fork-ribbon.css">
+  <link rel="stylesheet" href=
+  "http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+
+  <style>
+  body { background: white; }
+  pre code { overflow: auto; }
 
 
 
-#sec-what, #sec-spec, #sec-lastcall { padding-top: 30px; padding-bottom: 30px; }
-#sec-heading { padding-bottom: 30px; text-align: center; }
+  #sec-what, #sec-spec, #sec-lastcall { padding-top: 30px; padding-bottom: 30px; }
+  #sec-heading { padding-bottom: 30px; text-align: center; }
 
-#sec-heading .desc { font-size: 1.1em; }
-#sec-heading .desc p { font-size: 20px; }
-#sec-heading .desc p.tagline { font-size: 34px; text-align: center; line-height: 1.3 }
-#sec-heading .desc { margin-top: 100px; }
-#sec-heading-pic-column { text-align: right }
-@media (max-width: 768px) {
+  #sec-heading .desc { font-size: 1.1em; }
+  #sec-heading .desc p { font-size: 20px; }
+  #sec-heading .desc p.tagline { font-size: 34px; text-align: center; line-height: 1.3 }
+  #sec-heading .desc { margin-top: 100px; }
+  #sec-heading-pic-column { text-align: right }
+  @media (max-width: 768px) {
   #toTopHover, #toTop { display: none; left: -100000px }
   #sec-heading-pic { margin-bottom: -30px; margin-top: -500px !important; z-index: 0; }
   #sec-heading-pic { display: none }
   #sec-heading .desc { margin-top: 0; }
   #sec-heading-pic-column { text-align: center; }
   code { font-size: 14px !important; }
-}
-@media (max-width: 500px) {
+  }
+  @media (max-width: 500px) {
   code {font-size: 12px !important; }
-}
+  }
 
-@media(max-height: 200px){
+  @media(max-height: 200px){
   .side-nav{ overflow-y: scroll; }
-}
+  }
 
-@media(max-height: 560px){.side-nav{ overflow-y: scroll; }}
+  @media(max-height: 560px){.side-nav{ overflow-y: scroll; }}
 
-@media (max-width: 640px){
+  @media (max-width: 640px){
   #alt-menu{ display: block;}
   #main-menu{ display: none;}
   #sticky-topbar { display:none;}
   #fre-sidebar{display: none;}
   #fre-content{ margin-left:0px; padding-left:0px; max-width:100%}
-}
-#sec-heading-pic { width: 360px; margin-top: -150px }
-#sec-heading fieldset { background: white; }
+  }
+  #sec-heading-pic { width: 360px; margin-top: -150px }
+  #sec-heading fieldset { background: white; }
 
-#sec-what { background: #fff; padding: 10px 0 50px; }
-.modules li { text-align: center; font-weight: bold; text-transform: uppercase; line-height: 1.1; font-size: 0.8em; }
-.modules a { display: block; }
-.modules img { max-height: 80px; }
-.modules li span { display: block; margin: 10px 0; font-family: Helvetica; }
+  #sec-what { background: #fff; padding: 10px 0 50px; }
+  .modules li { text-align: center; font-weight: bold; text-transform: uppercase; line-height: 1.1; font-size: 0.8em; }
+  .modules a { display: block; }
+  .modules img { max-height: 80px; }
+  .modules li span { display: block; margin: 10px 0; font-family: Helvetica; }
 
-#servo-anim-block {
+  #servo-anim-block {
   background: #ddeaf6; padding: 50px 0;
-}
-#servo-anim-code {
+  }
+  #servo-anim-code {
   font-weight: normal; font-size: 16px; padding: 14px 20px; border-radius: 7px; text-align: left
-}
-@media (max-width: 768px) {
+  }
+  @media (max-width: 768px) {
   #servo-anim-code { border-radius: 4px; padding: 14px 14px; margin-bottom: 20px }
   #servo-anim-block button.large { margin-bottom: 0; }
   #servo-anim-block { padding: 20px 0; }
   #sec-what { padding-bottom: 20px; font-size: 14px; }
   #sec-what br { display: none; }
-}
+  }
 
-#sec-teardown { background: #333; }
+  #sec-teardown { background: #333; }
 
-#sec-spec { background: #ddd; border-width: 1px 0; border-color: #ccc; border-style: solid; }
-#sec-spec .specs { margin: 20px 0; }
+  #sec-spec { background: #ddd; border-width: 1px 0; border-color: #ccc; border-style: solid; }
+  #sec-spec .specs { margin: 20px 0; }
 
-#sec-lastcall { border-width: 1px 0; border-color: #aaa; border-style: solid; text-align: center; background: #fff }
-tt, span.name { color: #f54a42; font-family: inherit; font-size: inherit; }
-.disc { padding-left: 25px; margin: 10px 0;}
-ul.spread li { margin: 20px 0; }
-pre.code { background: #333; border-radius: 5px; line-height: 1.4; padding: 10px 20px; color: #eb0; margin: 20px; }
-#sec-what h2, #sec-spec h2 { text-transform: uppercase; text-align: center; font-size: 1.6em; color: #444; margin: 25px 20px; }
-h3 { margin-top: 40px; color: #000 !important; }
-h4 { text-transform: uppercase; font-size: 0.9em; text-align: center; color: #444; }</style></head><body></body><nav data-topbar role="navigation" class="top-bar fixed"><ul class="title-area"><li class="name"><h1><a href="../index.html"><img src="https://s3.amazonaws.com/technicalmachine-assets/technical-io/tessel-logo-horizontal.svg" alt="Tessel" class="top-bar__logo"></a></h1></li><li class="toggle-topbar menu-icon"><a href="ir.html#"><span>Menu</span></a></li></ul><section class="top-bar-section"><ul class="right"><li><a href="https://tessel.io/start">Start</a></li><li><a href="https://tessel.io/docs">Docs</a></li><li><a href="https://tessel.io/modules">Modules</a></li><li><a href="https://tessel.io/projects">Projects</a></li><li><a href="https://tessel.io/forums">Forums</a></li><li><a href="https://tessel.io/shop">Shop</a></li><li><a href="https://tessel.io/blog">Blog</a></li><li><a href="ir.html" class="active">en</a></li><li><a href="../ja/modules/ir.html">日本</a></li></ul></section></nav><nav data-topbar id="alt-menu" class="top-bar"><!-- display this menu in mobile mode--><ul style="background-color: #d7d7d7;" class="title-area"><li class="name"><h1><a href="https://tessel.io/"><nobr><img src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/tessel-name.png" style="max-height: 18px; vertical-align: middle;" alt="Technical Machine"></nobr></a></h1></li><li class="toggle-topbar menu-icon"><a href="ir.html#"><span>Menu</span></a></li></ul><section class="top-bar-section"><ul class="right"><li><a href="../index.html">install</a></li><li><a href="../blinky.html">blinky</a></li><li><a href="../modules.html">modules</a></li><li><a href="../wifi.html">wifi</a></li><li><a href="../tweet.html">tweet</a></li><li><a href="../usage.html">usage</a></li><li><a href="../finished.html">finish</a></li></ul></section></nav><section><div id="fre-sidebar"><ul class="side-nav"><li><a href="../cmd.html">0. prereqs</a></li><li><a href="../index.html">1. install</a></li><li><a href="../blinky.html">2. blinky</a></li><li><a href="../modules.html">3. modules<!--ul--><li style="padding-left:10px;"><a href="accelerometer.html" class="side-bar-modules">&#9675; accelerometer</a></li><li style="padding-left:10px;"><a href="ambient.html" class="side-bar-modules">&#9675; ambient</a></li><li style="padding-left:10px;"><a href="audio.html" class="side-bar-modules">&#9675; audio</a></li><li style="padding-left:10px;"><a href="ble.html" class="side-bar-modules">&#9675; ble</a></li><li style="padding-left:10px;"><a href="camera.html" class="side-bar-modules">&#9675; camera</a></li><li style="padding-left:10px;"><a href="climate.html" class="side-bar-modules">&#9675; climate</a></li><li style="padding-left:10px;"><a href="gprs.html" class="side-bar-modules">&#9675; gprs</a></li><li style="padding-left:10px;"><a href="gps.html" class="side-bar-modules">&#9675; gps</a></li><li style="padding-left:10px;" class="active"><a href="ir.html" class="side-bar-modules">&#9675; ir</a></li><li style="padding-left:10px;"><a href="microsd.html" class="side-bar-modules">&#9675; microsd</a></li><li style="padding-left:10px;"><a href="nrf.html" class="side-bar-modules">&#9675; nrf</a></li><li style="padding-left:10px;"><a href="relay.html" class="side-bar-modules">&#9675; relay</a></li><li style="padding-left:10px;"><a href="rfid.html" class="side-bar-modules">&#9675; rfid</a></li><li style="padding-left:10px;"><a href="servo.html" class="side-bar-modules">&#9675; servo</a></li></a></li><li><a href="../wifi.html">4. wifi</a></li><li><a href="../usage.html">5. usage</a></li><li><a href="../finished.html">6. finished</a></li></ul></div><div id="fre-content"><div class="row"><div class="large-12 columns fre-container"><!-- mixin for the modular formatting of each module's FRE--><!-- mixins for within the includes--><!-- include all the modules--><!--each val in moduleList--><div class="row"><div class="large-12 columns fre-container"><span><img src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules/ir.png" style="margin-top:-20px;" class="constrain-sm"></span><span style="padding-left:10px;"><h2 class="leftalign moduleTitle">IR</h2></span><span style="padding-left:20px;"><a href="https://github.com/tessel/ir-attx4"><i class="fa fa-github"> View Source</i></a></span></div></div><div id="ir" class="row"><div class="large-12 columns"><div class="row"><div class="large-12 columns"><p class="moduleStep">Step 1</p></div></div><div class="row"><div class="large-12 columns"><p>Make a directory inside your "tessel-code" folder: enter
-<code><cli>mkdir ir</cli></code>
-into your command line, then change directory into that folder:
-<code><cli>cd ir</cli></code></p></div></div><div class="row"><div class="large-12 columns"><div style="height:2px;" class="greyBar"></div></div></div><div class="row"><div class="large-12 columns"><p class="moduleStep">Step 2</p></div></div><div class="row"><div class="large-6 columns"><p>Plug the IR module into Tessel <b>port A</b> with the hexagon/icon side down and the electrical components on the top, then plug Tessel into your computer via USB.</p></div><div class="large-6 columns"><div class="row"><div class="large-12 columns"><img src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_plugged/ir.jpeg" class="constrain"></div></div></div></div><div class="row"><div class="large-12 columns"><div style="height:2px;" class="greyBar"></div></div></div><div class="row"><div class="large-12 columns"><p class="moduleStep">Step 3</p></div></div><div class="row"><div class="large-6 columns"><p>Install by typing <code><cli>npm install ir-attx4</cli></code> into the command line.</p></div><div class="large-6 columns"><div class="row"><div class="large-12 columns"><img src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_corners/ir.jpg" class="constrain"></div></div></div></div><div class="row"><div class="large-12 columns"><div style="height:2px;" class="greyBar"></div></div></div><div class="row"><div class="large-12 columns"><p class="moduleStep">Step 4</p></div></div><div class="row"><div class="large-12 columns left"><p>Save this code in a text file called <code>ir.js</code>:</p><pre id="exampleCode" class="prettyprint"><code>// Any copyright is dedicated to the Public Domain.
+  #sec-lastcall { border-width: 1px 0; border-color: #aaa; border-style: solid; text-align: center; background: #fff }
+  tt, span.name { color: #f54a42; font-family: inherit; font-size: inherit; }
+  .disc { padding-left: 25px; margin: 10px 0;}
+  ul.spread li { margin: 20px 0; }
+  pre.code { background: #333; border-radius: 5px; line-height: 1.4; padding: 10px 20px; color: #eb0; margin: 20px; }
+  #sec-what h2, #sec-spec h2 { text-transform: uppercase; text-align: center; font-size: 1.6em; color: #444; margin: 25px 20px; }
+  h3 { margin-top: 40px; color: #000 !important; }
+  h4 { text-transform: uppercase; font-size: 0.9em; text-align: center; color: #444; }
+  </style>
+</head>
+<body>
+  <nav data-topbar="" role="navigation" class="top-bar fixed">
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="../index.html"><img src=
+        "https://s3.amazonaws.com/technicalmachine-assets/technical-io/tessel-logo-horizontal.svg"
+        alt="Tessel" class="top-bar__logo"></a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon">
+        <a href="ir.html#"><span>Menu</span></a>
+      </li>
+    </ul>
+    <section class="top-bar-section">
+      <ul class="right">
+        <li>
+          <a href="https://tessel.io/start">Start</a>
+        </li>
+        <li>
+          <a href="https://tessel.io/docs">Docs</a>
+        </li>
+        <li>
+          <a href="https://tessel.io/modules">Modules</a>
+        </li>
+        <li>
+          <a href="https://tessel.io/projects">Projects</a>
+        </li>
+        <li>
+          <a href="https://tessel.io/forums">Forums</a>
+        </li>
+        <li>
+          <a href="https://tessel.io/shop">Shop</a>
+        </li>
+        <li>
+          <a href="https://tessel.io/blog">Blog</a>
+        </li>
+        <li>
+          <a href="ir.html" class="active">en</a>
+        </li>
+        <li>
+          <a href="../ja/modules/ir.html">日本</a>
+        </li>
+      </ul>
+    </section>
+  </nav>
+  <nav data-topbar="" id="alt-menu" class="top-bar">
+    <!-- display this menu in mobile mode-->
+    <ul style="background-color: #d7d7d7;" class="title-area">
+      <li class="name">
+        <h1><a href="https://tessel.io/"><nobr><img src=
+        "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/tessel-name.png"
+        style="max-height: 18px; vertical-align: middle;" alt=
+        "Technical Machine"></nobr></a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon">
+        <a href="ir.html#"><span>Menu</span></a>
+      </li>
+    </ul>
+    <section class="top-bar-section">
+      <ul class="right">
+        <li>
+          <a href="../index.html">install</a>
+        </li>
+        <li>
+          <a href="../blinky.html">blinky</a>
+        </li>
+        <li>
+          <a href="../modules.html">modules</a>
+        </li>
+        <li>
+          <a href="../wifi.html">wifi</a>
+        </li>
+        <li>
+          <a href="../tweet.html">tweet</a>
+        </li>
+        <li>
+          <a href="../usage.html">usage</a>
+        </li>
+        <li>
+          <a href="../finished.html">finish</a>
+        </li>
+      </ul>
+    </section>
+  </nav>
+  <section>
+    <div id="fre-sidebar">
+      <ul class="side-nav">
+        <li>
+          <a href="../cmd.html">0. prereqs</a>
+        </li>
+        <li>
+          <a href="../index.html">1. install</a>
+        </li>
+        <li>
+          <a href="../blinky.html">2. blinky</a>
+        </li>
+        <li>
+          <a href="../modules.html">3. modules<!--ul-->
+          <ul>
+            <li style="padding-left:10px;">
+              <a href="accelerometer.html" class=
+              "side-bar-modules">○ accelerometer</a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="ambient.html" class="side-bar-modules">○
+              ambient</a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="audio.html" class="side-bar-modules">○
+              audio</a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="ble.html" class="side-bar-modules">○ ble</a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="camera.html" class="side-bar-modules">○
+              camera</a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="climate.html" class="side-bar-modules">○
+              climate</a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="gprs.html" class="side-bar-modules">○
+              gprs</a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="gps.html" class="side-bar-modules">○ gps</a>
+            </li>
+            <li style="padding-left:10px;" class="active">
+              <a href="ir.html" class="side-bar-modules">○ ir</a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="microsd.html" class="side-bar-modules">○
+              microsd</a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="nrf.html" class="side-bar-modules">○ nrf</a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="relay.html" class="side-bar-modules">○
+              relay</a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="rfid.html" class="side-bar-modules">○
+              rfid</a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="servo.html" class="side-bar-modules">○
+              servo</a>
+            </li>
+          </ul></a>
+        </li>
+        <li>
+          <a href="../wifi.html">4. wifi</a>
+        </li>
+        <li>
+          <a href="../usage.html">5. usage</a>
+        </li>
+        <li>
+          <a href="../finished.html">6. finished</a>
+        </li>
+      </ul>
+    </div>
+    <div id="fre-content">
+      <div class="row">
+        <div class="large-12 columns fre-container">
+          <!-- mixin for the modular formatting of each module's FRE--><!-- mixins for within the includes--><!-- include all the modules--><!--each val in moduleList-->
+          <div class="row">
+            <div class="large-12 columns fre-container">
+              <span><img src=
+              "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules/ir.png"
+              style="margin-top:-20px;" class=
+              "constrain-sm"></span>
+              <h2 class="leftalign moduleTitle"><span style=
+              "padding-left:10px;">IR</span></h2><span style=
+              "padding-left:20px;"><a href=
+              "https://github.com/tessel/ir-attx4"><i class=
+              "fa fa-github">View Source</i></a></span>
+            </div>
+          </div>
+          <div id="ir" class="row">
+            <div class="large-12 columns">
+              <div class="row">
+                <div class="large-12 columns">
+                  <p class="moduleStep">Step 1</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <p>Make a directory inside your "tessel-code"
+                  folder: enter <code><kbd>mkdir ir</kbd></code>
+                  into your command line, then change directory
+                  into that folder: <code><kbd>cd
+                  ir</kbd></code></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <div style="height:2px;" class="greyBar"></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <p class="moduleStep">Step 2</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-6 columns">
+                  <p>Plug the IR module into Tessel <b>port A</b>
+                  with the hexagon/icon side down and the
+                  electrical components on the top, then plug
+                  Tessel into your computer via USB.</p>
+                </div>
+                <div class="large-6 columns">
+                  <div class="row">
+                    <div class="large-12 columns"><img src=
+                    "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_plugged/ir.jpeg"
+                    class="constrain"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <div style="height:2px;" class="greyBar"></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <p class="moduleStep">Step 3</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-6 columns">
+                  <p>Install by typing <code><kbd>npm install
+                  ir-attx4</kbd></code> into the command line.</p>
+                </div>
+                <div class="large-6 columns">
+                  <div class="row">
+                    <div class="large-12 columns"><img src=
+                    "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_corners/ir.jpg"
+                    class="constrain"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <div style="height:2px;" class="greyBar"></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <p class="moduleStep">Step 4</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns left">
+                  <p>Save this code in a text file called
+                  <code>ir.js</code>:</p>
+                  <pre id="exampleCode" class="prettyprint">
+<code>// Any copyright is dedicated to the Public Domain.
 // http://creativecommons.org/publicdomain/zero/1.0/
 
 /*********************************************
@@ -92,7 +384,7 @@ var infrared = infraredlib.use(tessel.port['A']);
 // When we're connected
 infrared.on('ready', function() {
   if (!err) {
-    console.log(&quot;Connected to IR!&quot;);
+    console.log("Connected to IR!");
     // Start sending a signal every three seconds
     setInterval(function() {
       // Make a buffer of on/off durations (each duration is 16 bits)
@@ -100,9 +392,9 @@ infrared.on('ready', function() {
       // Send the signal at 38 kHz
       infrared.sendRawSignal(38, powerBuffer, function(err) {
         if (err) {
-          console.log(&quot;Unable to send signal: &quot;, err);
+          console.log("Unable to send signal: ", err);
         } else {
-          console.log(&quot;Signal sent!&quot;);
+          console.log("Signal sent!");
         }
       });
     }, 3000); // Every 3 seconds
@@ -113,6 +405,222 @@ infrared.on('ready', function() {
 
 // If we get data, print it out
 infrared.on('data', function(data) {
-	console.log(&quot;Received RX Data: &quot;, data);
+        console.log("Received RX Data: ", data);
 });
-</code></pre></div></div><div class="row"><div class="large-12 columns"><div style="height:2px;" class="greyBar"></div></div></div><div class="row"><div class="large-12 columns"><p class="moduleStep">Step 5</p></div></div><div class="row"><div class="large-6 columns"><p>In your command line, <code><cli>tessel run ir.js</cli></code><br/>Try turning on your TV! Look at the IR LED through a camera.<br/><br/><b>Bonus:</b> Change the code to turn on a different device.<br/><br/>To see what else you can do with the IR module, see the module docs <a href='https://github.com/tessel/ir-attx4', target=0>here</a>.</p></div><div class="large-6 columns"><div class="row"><div class="large-12 columns"><img src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/gifs/ir.gif" class="constrain"></div></div></div></div><div class="row"><div class="large-12 columns"><div style="height:2px;" class="greyBar"></div></div></div><div class="row"><div class="large-12 columns"><p class="moduleStep">Step 6</p></div></div><div class="row"><div class="large-12 columns"><p>What else can you do with a IR module? Try a <a href="http://tessel.io/projects", target=0>community-created project.</a></p></div></div><div class="row"><div class="large-6 columns left"><iframe frameborder='0' height='270' scrolling='no' src='http://tessel.hackster.io/ifoundthemeaningoflife/simple-remote-switch/embed' width='360'></iframe></div><div class="large-6 columns left"><iframe frameborder='0' height='270' scrolling='no' src='http://tessel.hackster.io/roberto-hidalgo/tessel-panorama-selfie/embed' width='360'></iframe></div></div><div class="row"><div class="large-12 columns"> <p><br/>What are you making? <a href="http://tessel.hackster.io/", target=0>Share your invention!</a></p><p>If you run into any issues you can check out the <a href="http://forums.tessel.io/category/ir">IR forums</a>.</p></div></div><div class="row"><div class="large-12 columns"><div style="height:2px;" class="greyBar"></div></div></div></div></div><!-- workaround mixins for fake dynamic includes--><div class="row"><div class="large-12 columns"><h2>Choose another module</h2><p>Or if you're all set, move on to <a href="../wifi.html">Wifi.</a></p></div></div><div class="row"><div class="large-12 columns"><ul class="small-block-grid-1 large-block-grid-3"><li><a href="accelerometer.html"><span class="moduleLink">Accelerometer</span></a></li><li><a href="ambient.html"><span class="moduleLink">Ambient <small>Light + Sound</small></span></a></li><li><a href="audio.html"><span class="moduleLink">Audio</span></a></li><li><a href="ble.html"><span class="moduleLink">Bluetooth <small>Low Energy</small></span></a></li><li><a href="camera.html"><span class="moduleLink">Camera</span></a></li><li><a href="climate.html"><span class="moduleLink">Climate</span></a></li><li><a href="gprs.html"><span class="moduleLink">GPRS</span></a></li><li><a href="gps.html"><span class="moduleLink">GPS</span></a></li><li><a href="ir.html"><span class="moduleLink">Infrared</span></a></li><li><a href="microsd.html"><span class="moduleLink">MicroSD Card</span></a></li><li><a href="nrf.html"><span class="moduleLink">nRF24</span></a></li><li><a href="relay.html"><span class="moduleLink">Relay</span></a></li><li><a href="rfid.html"><span class="moduleLink">RFID</span></a></li><li><a href="servo.html"><span class="moduleLink">Servo</span></a></li></ul></div></div></div></div><div class="row"><div class="large-12 columns"><div class="greyBar"></div></div></div><div class="row"><div class="large-6 columns left"><a href="../blinky.html" class="bottomButton button">Prev: Blink lights</a></div><div class="large-6 columns right"><a href="../wifi.html" class="bottomButton right button">Next: Connect to Wifi</a></div></div></div></section><div class="github-fork-ribbon-wrapper right-bottom"><div class="github-fork-ribbon"><a href="https://github.com/technicalmachine/start.tessel.io">Fork on Github</a></div></div><footer><section id="sec-footer"><div class="row"><div class="large-10 column large-centered"><div class="row text-center"><p>Technical Machine &copy; 2013-2015.</p></div><div class="row text-center"><p><a href="http://tessel.io/resellers">Resellers</a> | <a href="http://tessel.io/community">Community</a> | <a href="http://tessel.io/about">About us</a> | <a href="http://tessel.io/blog">Blog</a> | <a href="http://tessel.io/press">Press</a></p></div><div class="row text-center"><a href="https://heapanalytics.com/?utm_source=badge"><img style="width:100px;height:40px" src="http://heapanalytics.com/img/badge.png" alt="Heap - iOS and Web Analytics"></a></div></div></div></section></footer><script src="http://include.reinvigorate.net/re_.js"></script><script src="../javascripts/reinvigorate.js"></script><script>$(document).foundation();</script></html>
+</code>
+</pre>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <div style="height:2px;" class="greyBar"></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <p class="moduleStep">Step 5</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-6 columns">
+                  <p>In your command line, <code><kbd>tessel run
+                  ir.js</kbd></code><br>
+                  Try turning on your TV! Look at the IR LED
+                  through a camera.<br>
+                  <br>
+                  <b>Bonus:</b> Change the code to turn on a
+                  different device.<br>
+                  <br>
+                  To see what else you can do with the IR module,
+                  see the module docs <a href=
+                  'https://github.com/tessel/ir-attx4' target=
+                  "0">here</a>.</p>
+                </div>
+                <div class="large-6 columns">
+                  <div class="row">
+                    <div class="large-12 columns"><img src=
+                    "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/gifs/ir.gif"
+                    class="constrain"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <div style="height:2px;" class="greyBar"></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <p class="moduleStep">Step 6</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <p>What else can you do with a IR module? Try a
+                  <a href="http://tessel.io/projects" target=
+                  "0">community-created project.</a></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-6 columns left">
+                  <iframe frameborder='0' height='270' scrolling=
+                  'no' src=
+                  'http://tessel.hackster.io/ifoundthemeaningoflife/simple-remote-switch/embed'
+                  width='360'></iframe>
+                </div>
+                <div class="large-6 columns left">
+                  <iframe frameborder='0' height='270' scrolling=
+                  'no' src=
+                  'http://tessel.hackster.io/roberto-hidalgo/tessel-panorama-selfie/embed'
+                  width='360'></iframe>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <p><br>
+                  What are you making? <a href=
+                  "http://tessel.hackster.io/" target="0">Share
+                  your invention!</a></p>
+                  <p>If you run into any issues you can check out
+                  the <a href=
+                  "http://forums.tessel.io/category/ir">IR
+                  forums</a>.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <div style="height:2px;" class="greyBar"></div>
+                </div>
+              </div>
+            </div>
+          </div><!-- workaround mixins for fake dynamic includes-->
+          <div class="row">
+            <div class="large-12 columns">
+              <h2>Choose another module</h2>
+              <p>Or if you're all set, move on to <a href=
+              "../wifi.html">Wifi.</a></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <ul class="small-block-grid-1 large-block-grid-3">
+                <li>
+                  <a href="accelerometer.html"><span class=
+                  "moduleLink">Accelerometer</span></a>
+                </li>
+                <li>
+                  <a href="ambient.html"><span class=
+                  "moduleLink">Ambient <small>Light +
+                  Sound</small></span></a>
+                </li>
+                <li>
+                  <a href="audio.html"><span class=
+                  "moduleLink">Audio</span></a>
+                </li>
+                <li>
+                  <a href="ble.html"><span class=
+                  "moduleLink">Bluetooth <small>Low
+                  Energy</small></span></a>
+                </li>
+                <li>
+                  <a href="camera.html"><span class=
+                  "moduleLink">Camera</span></a>
+                </li>
+                <li>
+                  <a href="climate.html"><span class=
+                  "moduleLink">Climate</span></a>
+                </li>
+                <li>
+                  <a href="gprs.html"><span class=
+                  "moduleLink">GPRS</span></a>
+                </li>
+                <li>
+                  <a href="gps.html"><span class=
+                  "moduleLink">GPS</span></a>
+                </li>
+                <li>
+                  <a href="ir.html"><span class=
+                  "moduleLink">Infrared</span></a>
+                </li>
+                <li>
+                  <a href="microsd.html"><span class=
+                  "moduleLink">MicroSD Card</span></a>
+                </li>
+                <li>
+                  <a href="nrf.html"><span class=
+                  "moduleLink">nRF24</span></a>
+                </li>
+                <li>
+                  <a href="relay.html"><span class=
+                  "moduleLink">Relay</span></a>
+                </li>
+                <li>
+                  <a href="rfid.html"><span class=
+                  "moduleLink">RFID</span></a>
+                </li>
+                <li>
+                  <a href="servo.html"><span class=
+                  "moduleLink">Servo</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="greyBar"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-6 columns left">
+          <a href="../blinky.html" class=
+          "bottomButton button">Prev: Blink lights</a>
+        </div>
+        <div class="large-6 columns right">
+          <a href="../wifi.html" class=
+          "bottomButton right button">Next: Connect to Wifi</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="github-fork-ribbon-wrapper right-bottom">
+    <div class="github-fork-ribbon">
+      <a href=
+      "https://github.com/technicalmachine/start.tessel.io">Fork on
+      Github</a>
+    </div>
+  </div>
+  <footer>
+    <section id="sec-footer">
+      <div class="row">
+        <div class="large-10 column large-centered">
+          <div class="row text-center">
+            <p>Technical Machine © 2013-2015.</p>
+          </div>
+          <div class="row text-center">
+            <p><a href="http://tessel.io/resellers">Resellers</a> |
+            <a href="http://tessel.io/community">Community</a> |
+            <a href="http://tessel.io/about">About us</a> |
+            <a href="http://tessel.io/blog">Blog</a> | <a href=
+            "http://tessel.io/press">Press</a></p>
+          </div>
+          <div class="row text-center">
+            <a href=
+            "https://heapanalytics.com/?utm_source=badge"><img style="width:100px;height:40px"
+            src="http://heapanalytics.com/img/badge.png" alt=
+            "Heap - iOS and Web Analytics"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+  <script src="http://include.reinvigorate.net/re_.js">
+  </script>
+  <script src="../javascripts/reinvigorate.js">
+  </script>
+  <script>
+  $(document).foundation();
+  </script>
+</body>
+</html>

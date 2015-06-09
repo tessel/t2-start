@@ -1,75 +1,529 @@
-<!DOCTYPE html><html><head><title>Command Line 101</title><script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script><link href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/css/foundation.min.css" rel="stylesheet"><script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script src="javascripts/custom/active-link.js"></script><script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation.min.js"></script><script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation/foundation.tab.min.js"></script><script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation/foundation.topbar.min.js"></script><link rel="stylesheet" href="stylesheets/main.css"><link rel="stylesheet" href="stylesheets/style.css"><link rel="stylesheet" href="stylesheets/gh-fork-ribbon.css"><link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css"><style>body { background: white; }
-pre code { overflow: auto; }
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for HTML5 for Mac OS X version 4.9.26">
+  <title>Command Line 101</title>
+  <script src=
+  "https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js">
+  </script>
+  <link href=
+  "http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/css/foundation.min.css"
+  rel="stylesheet">
+  <script src=
+  "http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+  </script>
+  <script src="javascripts/custom/active-link.js">
+  </script>
+  <script src=
+  "http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation.min.js">
+  </script>
+  <script src=
+  "http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation/foundation.tab.min.js">
+  </script>
+  <script src=
+  "http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation/foundation.topbar.min.js">
+  </script>
+  <link rel="stylesheet" href="stylesheets/main.css">
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <link rel="stylesheet" href="stylesheets/gh-fork-ribbon.css">
+  <link rel="stylesheet" href=
+  "http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+
+  <style>
+  body { background: white; }
+  pre code { overflow: auto; }
 
 
 
-#sec-what, #sec-spec, #sec-lastcall { padding-top: 30px; padding-bottom: 30px; }
-#sec-heading { padding-bottom: 30px; text-align: center; }
+  #sec-what, #sec-spec, #sec-lastcall { padding-top: 30px; padding-bottom: 30px; }
+  #sec-heading { padding-bottom: 30px; text-align: center; }
 
-#sec-heading .desc { font-size: 1.1em; }
-#sec-heading .desc p { font-size: 20px; }
-#sec-heading .desc p.tagline { font-size: 34px; text-align: center; line-height: 1.3 }
-#sec-heading .desc { margin-top: 100px; }
-#sec-heading-pic-column { text-align: right }
-@media (max-width: 768px) {
+  #sec-heading .desc { font-size: 1.1em; }
+  #sec-heading .desc p { font-size: 20px; }
+  #sec-heading .desc p.tagline { font-size: 34px; text-align: center; line-height: 1.3 }
+  #sec-heading .desc { margin-top: 100px; }
+  #sec-heading-pic-column { text-align: right }
+  @media (max-width: 768px) {
   #toTopHover, #toTop { display: none; left: -100000px }
   #sec-heading-pic { margin-bottom: -30px; margin-top: -500px !important; z-index: 0; }
   #sec-heading-pic { display: none }
   #sec-heading .desc { margin-top: 0; }
   #sec-heading-pic-column { text-align: center; }
   code { font-size: 14px !important; }
-}
-@media (max-width: 500px) {
+  }
+  @media (max-width: 500px) {
   code {font-size: 12px !important; }
-}
+  }
 
-@media(max-height: 200px){
+  @media(max-height: 200px){
   .side-nav{ overflow-y: scroll; }
-}
+  }
 
-@media(max-height: 560px){.side-nav{ overflow-y: scroll; }}
+  @media(max-height: 560px){.side-nav{ overflow-y: scroll; }}
 
-@media (max-width: 640px){
+  @media (max-width: 640px){
   #alt-menu{ display: block;}
   #main-menu{ display: none;}
   #sticky-topbar { display:none;}
   #fre-sidebar{display: none;}
   #fre-content{ margin-left:0px; padding-left:0px; max-width:100%}
-}
-#sec-heading-pic { width: 360px; margin-top: -150px }
-#sec-heading fieldset { background: white; }
+  }
+  #sec-heading-pic { width: 360px; margin-top: -150px }
+  #sec-heading fieldset { background: white; }
 
-#sec-what { background: #fff; padding: 10px 0 50px; }
-.modules li { text-align: center; font-weight: bold; text-transform: uppercase; line-height: 1.1; font-size: 0.8em; }
-.modules a { display: block; }
-.modules img { max-height: 80px; }
-.modules li span { display: block; margin: 10px 0; font-family: Helvetica; }
+  #sec-what { background: #fff; padding: 10px 0 50px; }
+  .modules li { text-align: center; font-weight: bold; text-transform: uppercase; line-height: 1.1; font-size: 0.8em; }
+  .modules a { display: block; }
+  .modules img { max-height: 80px; }
+  .modules li span { display: block; margin: 10px 0; font-family: Helvetica; }
 
-#servo-anim-block {
+  #servo-anim-block {
   background: #ddeaf6; padding: 50px 0;
-}
-#servo-anim-code {
+  }
+  #servo-anim-code {
   font-weight: normal; font-size: 16px; padding: 14px 20px; border-radius: 7px; text-align: left
-}
-@media (max-width: 768px) {
+  }
+  @media (max-width: 768px) {
   #servo-anim-code { border-radius: 4px; padding: 14px 14px; margin-bottom: 20px }
   #servo-anim-block button.large { margin-bottom: 0; }
   #servo-anim-block { padding: 20px 0; }
   #sec-what { padding-bottom: 20px; font-size: 14px; }
   #sec-what br { display: none; }
-}
+  }
 
-#sec-teardown { background: #333; }
+  #sec-teardown { background: #333; }
 
-#sec-spec { background: #ddd; border-width: 1px 0; border-color: #ccc; border-style: solid; }
-#sec-spec .specs { margin: 20px 0; }
+  #sec-spec { background: #ddd; border-width: 1px 0; border-color: #ccc; border-style: solid; }
+  #sec-spec .specs { margin: 20px 0; }
 
-#sec-lastcall { border-width: 1px 0; border-color: #aaa; border-style: solid; text-align: center; background: #fff }
-tt, span.name { color: #f54a42; font-family: inherit; font-size: inherit; }
-.disc { padding-left: 25px; margin: 10px 0;}
-ul.spread li { margin: 20px 0; }
-pre.code { background: #333; border-radius: 5px; line-height: 1.4; padding: 10px 20px; color: #eb0; margin: 20px; }
-#sec-what h2, #sec-spec h2 { text-transform: uppercase; text-align: center; font-size: 1.6em; color: #444; margin: 25px 20px; }
-h3 { margin-top: 40px; color: #000 !important; }
-h4 { text-transform: uppercase; font-size: 0.9em; text-align: center; color: #444; }</style><script src="javascripts/custom/install.js"></script></head><body></body><nav data-topbar role="navigation" class="top-bar fixed"><ul class="title-area"><li class="name"><h1><a href="index.html"><img src="https://s3.amazonaws.com/technicalmachine-assets/technical-io/tessel-logo-horizontal.svg" alt="Tessel" class="top-bar__logo"></a></h1></li><li class="toggle-topbar menu-icon"><a href="cmd.html#"><span>Menu</span></a></li></ul><section class="top-bar-section"><ul class="right"><li><a href="https://tessel.io/start">Start</a></li><li><a href="https://tessel.io/docs">Docs</a></li><li><a href="https://tessel.io/modules">Modules</a></li><li><a href="https://tessel.io/projects">Projects</a></li><li><a href="https://tessel.io/forums">Forums</a></li><li><a href="https://tessel.io/shop">Shop</a></li><li><a href="https://tessel.io/blog">Blog</a></li><li><a href="cmd.html" class="active">en</a></li><li><a href="http://start.tessel.io/ja/cmd">日本</a></li></ul></section></nav><nav data-topbar id="alt-menu" class="top-bar"><!-- display this menu in mobile mode--><ul style="background-color: #d7d7d7;" class="title-area"><li class="name"><h1><a href="https://tessel.io/"><nobr><img src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/tessel-name.png" style="max-height: 18px; vertical-align: middle;" alt="Technical Machine"></nobr></a></h1></li><li class="toggle-topbar menu-icon"><a href="cmd.html#"><span>Menu</span></a></li></ul><section class="top-bar-section"><ul class="right"><li><a href="index.html">install</a></li><li><a href="blinky.html">blinky</a></li><li><a href="modules.html">modules</a></li><li><a href="wifi.html">wifi</a></li><li><a href="tweet.html">tweet</a></li><li><a href="usage.html">usage</a></li><li><a href="finished.html">finish</a></li></ul></section></nav><section><div id="fre-sidebar"><ul class="side-nav"><li class="active"><a href="cmd.html">0. prereqs</a></li><li><a href="index.html">1. install</a></li><li><a href="blinky.html">2. blinky</a></li><li><a href="modules.html">3. modules<!--ul--><li style="padding-left:10px;"><a href="modules/accelerometer.html" class="side-bar-modules">&#9675; accelerometer</a></li><li style="padding-left:10px;"><a href="modules/ambient.html" class="side-bar-modules">&#9675; ambient</a></li><li style="padding-left:10px;"><a href="modules/audio.html" class="side-bar-modules">&#9675; audio</a></li><li style="padding-left:10px;"><a href="modules/ble.html" class="side-bar-modules">&#9675; ble</a></li><li style="padding-left:10px;"><a href="modules/camera.html" class="side-bar-modules">&#9675; camera</a></li><li style="padding-left:10px;"><a href="modules/climate.html" class="side-bar-modules">&#9675; climate</a></li><li style="padding-left:10px;"><a href="modules/gprs.html" class="side-bar-modules">&#9675; gprs</a></li><li style="padding-left:10px;"><a href="modules/gps.html" class="side-bar-modules">&#9675; gps</a></li><li style="padding-left:10px;"><a href="modules/ir.html" class="side-bar-modules">&#9675; ir</a></li><li style="padding-left:10px;"><a href="modules/microsd.html" class="side-bar-modules">&#9675; microsd</a></li><li style="padding-left:10px;"><a href="modules/nrf.html" class="side-bar-modules">&#9675; nrf</a></li><li style="padding-left:10px;"><a href="modules/relay.html" class="side-bar-modules">&#9675; relay</a></li><li style="padding-left:10px;"><a href="modules/rfid.html" class="side-bar-modules">&#9675; rfid</a></li><li style="padding-left:10px;"><a href="modules/servo.html" class="side-bar-modules">&#9675; servo</a></li></a></li><li><a href="wifi.html">4. wifi</a></li><li><a href="usage.html">5. usage</a></li><li><a href="finished.html">6. finished</a></li></ul></div><div id="fre-content"><div class="row"><div id="anchor" class="large-12 columns fre-container"><h1>Command Line Basics</h1><p>Using Tessel is just like web development. But if you're not familiar with web development, you might want to take a minute or two to get comfortable with some key tools of the trade: the command line (the "terminal", where you execute commands) and the text editor, where you will work on and save your programs.</p><p>Select the operating system you are working on.</p><dl id="install-tabs" data-tab class="tabs contained three-up"><dd class="active"><a id="osx-tab" href="cmd.html#tab-osx" data-toggle="tab">OSX</a></dd><dd><a id="linux-tab" href="cmd.html#tab-linux" data-toggle="tab">Linux</a></dd><dd><a id="pc-tab" href="cmd.html#tab-pc" data-toggle="tab">Windows</a></dd></dl><div id="install-content" class="tabs-content"><div id="tab-osx" class="content active"><p>Open up the application on your computer called “Terminal” by pressing ⌘ + SPACE and typing “Terminal”.</p><p>Its dock icon looks like <img src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/mac-term-icon.png">, and the terminal will look something like <img src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/mac-term.png"></p><p>You can use the terminal to write commands to your computer (this is the “command line”). Let’s try it out!</p><p>In your terminal, type</p><cli><code>ls</code></cli><p>and hit enter.</p><p>The <code>ls</code> command, short for “list”, tells your computer to list all of the file names for the folder you’re in. Your list of files probably includes “Desktop” and “Documents”, among others. Let’s try another command: type</p><cli><code>cd Documents</code></cli><p>and hit enter.</p><p>You are now in the Documents folder; <code>cd</code> means “change directory”. If you try <code>ls</code> again, you should see the contents of your Documents folder listed out. If you want to compare, open up Finder and look in Documents to see the same files.</p><p>Let’s get back to the folder we were in before:</p><cli><code>cd ..</code></cli><p>You changed directory again!</p><cli><code>ls</code></cli><p>to see what we have here. You’re back where you started! The <code>..</code> after <code>cd</code> tells it to go up one folder in the directory.</p><p>Ok, now you're a cool hacker who can use the terminal (or "console") to write in the command line. (If you want to learn more commands, there are a whole bunch of them <a href="http://ss64.com/bash/" target=1>here</a>. I recommend <code>pwd</code>, <code>open</code>, <code>mkdir</code>, <code>touch</code>, <code>mv</code>, and <code>cp</code>.)</p></div><div id="tab-linux" class="content"><p>Open up the application on your computer called “Terminal” by tapping the SUPER key (Windows or Apple key, depending on your hardware) and typing “Terminal”.</p><p>Its icon looks like <img src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/mac-term-icon.png">, and the terminal will look something like <img src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/mac-term.png"></p><p>You can use the terminal to write commands to your computer (this is the “command line”). Let’s try it out!</p><p>In your terminal, type</p><cli><code>ls</code></cli><p>and hit enter.</p><p>The <code>ls</code> command, short for “list”, tells your computer to list all of the file names for the folder you’re in. Your list of files probably includes “Desktop” and “Documents”, among others. Let’s try another command: type</p><cli><code>cd Documents</code></cli><p>and hit enter.</p><p>You are now in the Documents folder; <code>cd</code> means “change directory”. If you try <code>ls</code> again, you should see the contents of your Documents folder listed out. If you want to compare, open up Finder and look in Documents to see the same files.</p><p>Let’s get back to the folder we were in before:</p><cli><code>cd ..</code></cli><p>You changed directory again!</p><cli><code>ls</code></cli><p>to see what we have here. You’re back where you started! The <code>..</code> after <code>cd</code> tells it to go up one folder in the directory.</p><p>Ok, now you're a cool hacker who can use the terminal (or "console") to write in the command line. (If you want to learn more commands, there are a whole bunch of them <a href="http://ss64.com/bash/" target=1>here</a>. I recommend <code>pwd</code>, <code>open</code>, <code>mkdir</code>, <code>touch</code>, <code>mv</code>, and <code>cp</code>.)</p></div><div id="tab-pc" class="content"><p>Open up the application on your computer called “Command Prompt”.</p><p>If you’re not on Windows 8, go to the start menu and type “Command Prompt”.</p><p>If you are on Windows 8+, swipe right to find “Windows System”, within which you can find “Command Prompt”.</p><p>Its icon looks like <img src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/win-term-icon.png">, and the application (the terminal) will look something like <img src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/win-term.png"></p><p>You can use the terminal to write commands to your computer (this is the “command line”). Let’s try it out!</p><p>In your terminal, type</p><cli><code>dir</code></cli><p>and hit enter.</p><p>The <code>dir</code> command, short for “directory”, tells your computer to list all of the file names for the folder you’re in. Your list of files probably includes “Desktop” and “Documents”, among others. Let’s try another command:</p><p>Now type</p><cli><code>cd Documents</code></cli><p>into your command line and press enter.</p><p>You are now in the Documents folder; <code>cd</code> means “change directory”. If you try <code>dir</code> again, you should see the contents of your Documents folder listed out. If you want to compare, open up My Comuter and look in Documents to see the same files.</p><p>Let’s get back to the folder we were in before:</p><cli><code>cd ..</code></cli><p>You changed directory again!</p><cli><code>dir</code></cli><p>to see what we have here. You’re back where you started! The <code>..</code> after <code>cd</code> tells it to go up one folder in the directory.</p><p>Now you’re a cool hacker who can use the terminal to write in the command line. (If you want to learn more commands, there are a whole bunch of them <a href="http://ss64.com/nt/" target=1>here</a>.)</p></div></div></div></div><div class="row"><div class="large-12 columns fre-container"><h3 id="text-editor">Text Editors</h3><p>You will also need a text editor to save your JavaScript files.
-This means a plaintext editor, not a Word document.</p><p>Here are some good options:<ul><li><a href="http://www.sublimetext.com/">Sublime Text</a></li><li><a href="https://atom.io/">Atom</a></li><li><a href="http://notepad-plus-plus.org/">Notepad++</a></li></ul></p><p>Typically, directions that belong in the command line are one line, whereas longer scripts, such as anything in JavaScript, should be typed into the text editor and saved, then run through the command line.</p><p>In the context of this tutorial, things that should be run in the command line look</p><cli><code>like this</code></cli><p>And scripts that should be saved in the text editor will look</p><pre class="prettyprint"><code>like this</code></pre></div></div><div class="row"><div class="large-12 columns"><div class="greyBar"></div></div></div><div class="row"><div class="large-12 columns right"><a href="index.html" class="bottomButton right button">Next: Install</a></div></div></div></section><div class="github-fork-ribbon-wrapper right-bottom"><div class="github-fork-ribbon"><a href="https://github.com/technicalmachine/start.tessel.io">Fork on Github</a></div></div><footer><section id="sec-footer"><div class="row"><div class="large-10 column large-centered"><div class="row text-center"><p>Technical Machine &copy; 2013-2015.</p></div><div class="row text-center"><p><a href="http://tessel.io/resellers">Resellers</a> | <a href="http://tessel.io/community">Community</a> | <a href="http://tessel.io/about">About us</a> | <a href="http://tessel.io/blog">Blog</a> | <a href="http://tessel.io/press">Press</a></p></div><div class="row text-center"><a href="https://heapanalytics.com/?utm_source=badge"><img style="width:100px;height:40px" src="http://heapanalytics.com/img/badge.png" alt="Heap - iOS and Web Analytics"></a></div></div></div></section></footer><script src="http://include.reinvigorate.net/re_.js"></script><script src="javascripts/reinvigorate.js"></script><script>$(document).foundation();</script></html>
+  #sec-lastcall { border-width: 1px 0; border-color: #aaa; border-style: solid; text-align: center; background: #fff }
+  tt, span.name { color: #f54a42; font-family: inherit; font-size: inherit; }
+  .disc { padding-left: 25px; margin: 10px 0;}
+  ul.spread li { margin: 20px 0; }
+  pre.code { background: #333; border-radius: 5px; line-height: 1.4; padding: 10px 20px; color: #eb0; margin: 20px; }
+  #sec-what h2, #sec-spec h2 { text-transform: uppercase; text-align: center; font-size: 1.6em; color: #444; margin: 25px 20px; }
+  h3 { margin-top: 40px; color: #000 !important; }
+  h4 { text-transform: uppercase; font-size: 0.9em; text-align: center; color: #444; }
+  </style>
+  <script src="javascripts/custom/install.js">
+  </script>
+</head>
+<body>
+  <nav data-topbar="" role="navigation" class="top-bar fixed">
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="index.html"><img src=
+        "https://s3.amazonaws.com/technicalmachine-assets/technical-io/tessel-logo-horizontal.svg"
+        alt="Tessel" class="top-bar__logo"></a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon">
+        <a href="cmd.html#"><span>Menu</span></a>
+      </li>
+    </ul>
+    <section class="top-bar-section">
+      <ul class="right">
+        <li>
+          <a href="https://tessel.io/start">Start</a>
+        </li>
+        <li>
+          <a href="https://tessel.io/docs">Docs</a>
+        </li>
+        <li>
+          <a href="https://tessel.io/modules">Modules</a>
+        </li>
+        <li>
+          <a href="https://tessel.io/projects">Projects</a>
+        </li>
+        <li>
+          <a href="https://tessel.io/forums">Forums</a>
+        </li>
+        <li>
+          <a href="https://tessel.io/shop">Shop</a>
+        </li>
+        <li>
+          <a href="https://tessel.io/blog">Blog</a>
+        </li>
+        <li>
+          <a href="cmd.html" class="active">en</a>
+        </li>
+        <li>
+          <a href="http://start.tessel.io/ja/cmd">日本</a>
+        </li>
+      </ul>
+    </section>
+  </nav>
+  <nav data-topbar="" id="alt-menu" class="top-bar">
+    <!-- display this menu in mobile mode-->
+    <ul style="background-color: #d7d7d7;" class="title-area">
+      <li class="name">
+        <h1><a href="https://tessel.io/"><nobr><img src=
+        "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/tessel-name.png"
+        style="max-height: 18px; vertical-align: middle;" alt=
+        "Technical Machine"></nobr></a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon">
+        <a href="cmd.html#"><span>Menu</span></a>
+      </li>
+    </ul>
+    <section class="top-bar-section">
+      <ul class="right">
+        <li>
+          <a href="index.html">install</a>
+        </li>
+        <li>
+          <a href="blinky.html">blinky</a>
+        </li>
+        <li>
+          <a href="modules.html">modules</a>
+        </li>
+        <li>
+          <a href="wifi.html">wifi</a>
+        </li>
+        <li>
+          <a href="tweet.html">tweet</a>
+        </li>
+        <li>
+          <a href="usage.html">usage</a>
+        </li>
+        <li>
+          <a href="finished.html">finish</a>
+        </li>
+      </ul>
+    </section>
+  </nav>
+  <section>
+    <div id="fre-sidebar">
+      <ul class="side-nav">
+        <li class="active">
+          <a href="cmd.html">0. prereqs</a>
+        </li>
+        <li>
+          <a href="index.html">1. install</a>
+        </li>
+        <li>
+          <a href="blinky.html">2. blinky</a>
+        </li>
+        <li>
+          <a href="modules.html">3. modules<!--ul-->
+          <ul>
+            <li style="padding-left:10px;">
+              <a href="modules/accelerometer.html" class=
+              "side-bar-modules">○ accelerometer</a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="modules/ambient.html" class=
+              "side-bar-modules">○ ambient</a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="modules/audio.html" class=
+              "side-bar-modules">○ audio</a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="modules/ble.html" class="side-bar-modules">○
+              ble</a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="modules/camera.html" class=
+              "side-bar-modules">○ camera</a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="modules/climate.html" class=
+              "side-bar-modules">○ climate</a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="modules/gprs.html" class=
+              "side-bar-modules">○ gprs</a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="modules/gps.html" class="side-bar-modules">○
+              gps</a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="modules/ir.html" class="side-bar-modules">○
+              ir</a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="modules/microsd.html" class=
+              "side-bar-modules">○ microsd</a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="modules/nrf.html" class="side-bar-modules">○
+              nrf</a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="modules/relay.html" class=
+              "side-bar-modules">○ relay</a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="modules/rfid.html" class=
+              "side-bar-modules">○ rfid</a>
+            </li>
+            <li style="padding-left:10px;">
+              <a href="modules/servo.html" class=
+              "side-bar-modules">○ servo</a>
+            </li>
+          </ul></a>
+        </li>
+        <li>
+          <a href="wifi.html">4. wifi</a>
+        </li>
+        <li>
+          <a href="usage.html">5. usage</a>
+        </li>
+        <li>
+          <a href="finished.html">6. finished</a>
+        </li>
+      </ul>
+    </div>
+    <div id="fre-content">
+      <div class="row">
+        <div id="anchor" class="large-12 columns fre-container">
+          <h1>Command Line Basics</h1>
+          <p>Using Tessel is just like web development. But if
+          you're not familiar with web development, you might want
+          to take a minute or two to get comfortable with some key
+          tools of the trade: the command line (the "terminal",
+          where you execute commands) and the text editor, where
+          you will work on and save your programs.</p>
+          <p>Select the operating system you are working on.</p>
+          <dl id="install-tabs" data-tab="" class=
+          "tabs contained three-up">
+            <dd class="active">
+              <a id="osx-tab" href="cmd.html#tab-osx" data-toggle=
+              "tab">OSX</a>
+            </dd>
+            <dd>
+              <a id="linux-tab" href="cmd.html#tab-linux"
+              data-toggle="tab">Linux</a>
+            </dd>
+            <dd>
+              <a id="pc-tab" href="cmd.html#tab-pc" data-toggle=
+              "tab">Windows</a>
+            </dd>
+          </dl>
+          <div id="install-content" class="tabs-content">
+            <div id="tab-osx" class="content active">
+              <p>Open up the application on your computer called
+              “Terminal” by pressing ⌘ + SPACE and typing
+              “Terminal”.</p>
+              <p>Its dock icon looks like <img src=
+              "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/mac-term-icon.png">
+               , and the terminal will look something like
+              <img src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/mac-term.png">
+              </p>
+              <p>You can use the terminal to write commands to your
+              computer (this is the “command line”). Let’s try it
+              out!</p>
+              <p>In your terminal,
+              type</p><kbd><code>ls</code></kbd>
+              <p>and hit enter.</p>
+              <p>The <code>ls</code> command, short for “list”,
+              tells your computer to list all of the file names for
+              the folder you’re in. Your list of files probably
+              includes “Desktop” and “Documents”, among others.
+              Let’s try another command: type</p><kbd><code>cd
+              Documents</code></kbd>
+              <p>and hit enter.</p>
+              <p>You are now in the Documents folder;
+              <code>cd</code> means “change directory”. If you try
+              <code>ls</code> again, you should see the contents of
+              your Documents folder listed out. If you want to
+              compare, open up Finder and look in Documents to see
+              the same files.</p>
+              <p>Let’s get back to the folder we were in
+              before:</p><kbd><code>cd ..</code></kbd>
+              <p>You changed directory
+              again!</p><kbd><code>ls</code></kbd>
+              <p>to see what we have here. You’re back where you
+              started! The <code>..</code> after <code>cd</code>
+              tells it to go up one folder in the directory.</p>
+              <p>Ok, now you're a cool hacker who can use the
+              terminal (or "console") to write in the command line.
+              (If you want to learn more commands, there are a
+              whole bunch of them <a href="http://ss64.com/bash/"
+              target="1">here</a>. I recommend <code>pwd</code>,
+              <code>open</code>, <code>mkdir</code>,
+              <code>touch</code>, <code>mv</code>, and
+              <code>cp</code>.)</p>
+            </div>
+            <div id="tab-linux" class="content">
+              <p>Open up the application on your computer called
+              “Terminal” by tapping the SUPER key (Windows or Apple
+              key, depending on your hardware) and typing
+              “Terminal”.</p>
+              <p>Its icon looks like <img src=
+              "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/mac-term-icon.png">
+               , and the terminal will look something like
+              <img src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/mac-term.png">
+              </p>
+              <p>You can use the terminal to write commands to your
+              computer (this is the “command line”). Let’s try it
+              out!</p>
+              <p>In your terminal,
+              type</p><kbd><code>ls</code></kbd>
+              <p>and hit enter.</p>
+              <p>The <code>ls</code> command, short for “list”,
+              tells your computer to list all of the file names for
+              the folder you’re in. Your list of files probably
+              includes “Desktop” and “Documents”, among others.
+              Let’s try another command: type</p><kbd><code>cd
+              Documents</code></kbd>
+              <p>and hit enter.</p>
+              <p>You are now in the Documents folder;
+              <code>cd</code> means “change directory”. If you try
+              <code>ls</code> again, you should see the contents of
+              your Documents folder listed out. If you want to
+              compare, open up Finder and look in Documents to see
+              the same files.</p>
+              <p>Let’s get back to the folder we were in
+              before:</p><kbd><code>cd ..</code></kbd>
+              <p>You changed directory
+              again!</p><kbd><code>ls</code></kbd>
+              <p>to see what we have here. You’re back where you
+              started! The <code>..</code> after <code>cd</code>
+              tells it to go up one folder in the directory.</p>
+              <p>Ok, now you're a cool hacker who can use the
+              terminal (or "console") to write in the command line.
+              (If you want to learn more commands, there are a
+              whole bunch of them <a href="http://ss64.com/bash/"
+              target="1">here</a>. I recommend <code>pwd</code>,
+              <code>open</code>, <code>mkdir</code>,
+              <code>touch</code>, <code>mv</code>, and
+              <code>cp</code>.)</p>
+            </div>
+            <div id="tab-pc" class="content">
+              <p>Open up the application on your computer called
+              “Command Prompt”.</p>
+              <p>If you’re not on Windows 8, go to the start menu
+              and type “Command Prompt”.</p>
+              <p>If you are on Windows 8+, swipe right to find
+              “Windows System”, within which you can find “Command
+              Prompt”.</p>
+              <p>Its icon looks like <img src=
+              "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/win-term-icon.png">
+               , and the application (the terminal) will look
+              something like <img src=
+              "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/win-term.png">
+              </p>
+              <p>You can use the terminal to write commands to your
+              computer (this is the “command line”). Let’s try it
+              out!</p>
+              <p>In your terminal,
+              type</p><kbd><code>dir</code></kbd>
+              <p>and hit enter.</p>
+              <p>The <code>dir</code> command, short for
+              “directory”, tells your computer to list all of the
+              file names for the folder you’re in. Your list of
+              files probably includes “Desktop” and “Documents”,
+              among others. Let’s try another command:</p>
+              <p>Now type</p><kbd><code>cd Documents</code></kbd>
+              <p>into your command line and press enter.</p>
+              <p>You are now in the Documents folder;
+              <code>cd</code> means “change directory”. If you try
+              <code>dir</code> again, you should see the contents
+              of your Documents folder listed out. If you want to
+              compare, open up My Comuter and look in Documents to
+              see the same files.</p>
+              <p>Let’s get back to the folder we were in
+              before:</p><kbd><code>cd ..</code></kbd>
+              <p>You changed directory
+              again!</p><kbd><code>dir</code></kbd>
+              <p>to see what we have here. You’re back where you
+              started! The <code>..</code> after <code>cd</code>
+              tells it to go up one folder in the directory.</p>
+              <p>Now you’re a cool hacker who can use the terminal
+              to write in the command line. (If you want to learn
+              more commands, there are a whole bunch of them
+              <a href="http://ss64.com/nt/" target=
+              "1">here</a>.)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-12 columns fre-container">
+          <h3 id="text-editor">Text Editors</h3>
+          <p>You will also need a text editor to save your
+          JavaScript files. This means a plaintext editor, not a
+          Word document.</p>
+          <p>Here are some good options:</p>
+          <ul>
+            <li>
+              <a href="http://www.sublimetext.com/">Sublime
+              Text</a>
+            </li>
+            <li>
+              <a href="https://atom.io/">Atom</a>
+            </li>
+            <li>
+              <a href="http://notepad-plus-plus.org/">Notepad++</a>
+            </li>
+          </ul>
+          <p>Typically, directions that belong in the command line
+          are one line, whereas longer scripts, such as anything in
+          JavaScript, should be typed into the text editor and
+          saved, then run through the command line.</p>
+          <p>In the context of this tutorial, things that should be
+          run in the command line look</p><kbd><code>like
+          this</code></kbd>
+          <p>And scripts that should be saved in the text editor
+          will look</p>
+          <pre class="prettyprint">
+<code>like this</code>
+</pre>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="greyBar"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-12 columns right">
+          <a href="index.html" class=
+          "bottomButton right button">Next: Install</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="github-fork-ribbon-wrapper right-bottom">
+    <div class="github-fork-ribbon">
+      <a href=
+      "https://github.com/technicalmachine/start.tessel.io">Fork on
+      Github</a>
+    </div>
+  </div>
+  <footer>
+    <section id="sec-footer">
+      <div class="row">
+        <div class="large-10 column large-centered">
+          <div class="row text-center">
+            <p>Technical Machine © 2013-2015.</p>
+          </div>
+          <div class="row text-center">
+            <p><a href="http://tessel.io/resellers">Resellers</a> |
+            <a href="http://tessel.io/community">Community</a> |
+            <a href="http://tessel.io/about">About us</a> |
+            <a href="http://tessel.io/blog">Blog</a> | <a href=
+            "http://tessel.io/press">Press</a></p>
+          </div>
+          <div class="row text-center">
+            <a href=
+            "https://heapanalytics.com/?utm_source=badge"><img style="width:100px;height:40px"
+            src="http://heapanalytics.com/img/badge.png" alt=
+            "Heap - iOS and Web Analytics"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+  <script src="http://include.reinvigorate.net/re_.js">
+  </script> 
+  <script src="javascripts/reinvigorate.js">
+  </script> 
+  <script>
+  $(document).foundation();
+  </script>
+</body>
+</html>
