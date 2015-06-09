@@ -1,0 +1,507 @@
+/************************ defaults *************************/
+
+body {
+        font-family: “Trebuchet MS”, Verdana, Arial, serif;
+}
+
+button {
+	background-color: #008cba;
+	color: #ffffff;
+}
+
+button:hover {
+	background-color: #b8c8f5;
+	color: #000000;
+}
+
+textarea {
+  overflow: auto;
+}
+
+code {
+	word-wrap: break-word;
+  font-family: Andale Mono;
+}
+
+.box {
+  border:1px solid #dbdbdb;
+  padding: 7px;
+}
+
+.bigCode{
+  font-size:1.6875rem;
+}
+
+.side-nav {
+  position: fixed;
+  height:100%;
+
+  width:180px;
+  padding-left:30px;
+}
+
+.bottomButton{
+  width: 260px;
+}
+
+.textAlignLeft{
+  padding-left: 0px;
+}
+
+.greyBar{
+  width:100%;
+  height:4px;
+  background-color:#dbdbdb;
+  margin-bottom: 30px;
+  margin-top:10px;
+}
+
+.moduleLink{
+  font-size:1.3em;
+}
+
+.side-nav li.active>a:first-child{
+  color: #4d4d4d !important;
+  font-weight: bold !important;
+}
+
+.tabs dd.active, .tabs li.active{
+  border-top: 3px solid #2ba6cb;
+  margin-top: -3px;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  border-bottom: 0px;
+}
+
+.three-up dd{
+  width: 33.33%;
+  text-align:center;
+}
+
+.tabs-content{
+  border: 1px solid #eee;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+pre.prettyprint, code.prettyprint {
+  background-color: #000;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  border-radius: 8px;
+}
+
+pre.prettyprint {
+  width: 95%;
+  margin: 1em auto;
+  padding: 1em;
+  white-space: pre-wrap;
+  text-wrap:break-word;
+}
+
+pre .str, code .str { color: #e7e499; } /* string  - eggyolk gold */
+pre .kwd, code .kwd { color: #b8c8f5; } /* keyword - LED blue */
+pre .com, code .com { color: #555555; font-style: italic; } /* comment - foundation blue */
+pre .typ, code .typ { color: #6ecbcc; } /* type - turq green */
+pre .lit, code .lit { color: #fc0c26; } /* literal - red */
+pre .pun, code .pun { color: #8B8970; } /* punctuation - lemon chiffon4  */
+pre .pln, code .pln { color: #f0f0f0; } /* plaintext - white */
+pre .tag, code .tag { color: #9c9cff; } /* html/xml tag  (bluey)  */
+pre .htm, code .htm { color: #dda0dd; } /* html tag  light purply*/
+pre .xsl, code .xsl { color: #d0a0d0; } /* xslt tag  light purply*/
+pre .atn, code .atn { color: #46eeee; font-weight: normal;} /* html/xml attribute name  - lt turquoise */
+pre .atv, code .atv { color: #EEB4B4; } /* html/xml attribute value - rosy brown2 */
+pre .dec, code .dec { color: #3387CC; } /* decimal - blue */
+
+/********************** single-style ***********************/
+
+.white {
+  color: white;
+}
+
+.whiteBackground {
+  background-color: white;
+}
+
+.opaque {
+/* need to figure out something to do with preventing inheritance */
+  opacity: 1;
+}
+
+.opaque:hover {
+  opacity:0.3;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.break-word {
+  word-wrap: break-word;
+}
+
+.centeralign {
+  text-align: center;
+}
+
+.rightalign {
+  text-align: right;
+}
+
+.leftalign {
+  text-align: left;
+}
+
+/******************** custom styles **********************/
+
+cli {
+  padding-left: 1%;
+  padding-right: 1%;
+  display: block;
+  margin: 2%;
+  margin-left: 0px;
+  margin-right: 0px;
+  border-left: 3px solid #DBDBDB;
+}
+
+.console-output {
+  background: black;
+  color: gray;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 15px;
+  line-height: 1.2em;
+  font-size: 0.95em;
+}
+
+.currentlink {
+  color: gray;
+}
+
+.helptext {
+  color: #888888;
+}
+
+.hiddenbutton {
+  background-color: white;
+  color: black;
+}
+
+.hiddenbutton:hover {
+  background: white;
+  color: black;
+}
+
+.hiddenbutton:focus {
+  background: white;
+  outline: none;
+  color: black;
+}
+
+.semiopaque:hover {
+  opacity: 0.6;
+}
+
+/*.semiopaque:focus{
+  opacity: 1.0;
+}*/
+
+.disguiseaslink {
+  background-color: #dddddd;
+  color: #008cba;
+  padding: 0px;
+}
+
+.disguiseaslink:hover{
+  background: #dddddd;
+  color: #006687;
+}
+
+.disguiseaslink:focus{
+  background: #dddddd;
+  color: #006687;
+  outline: none;
+}
+
+.special-embed{
+  height: 200px;
+}
+
+.social{
+  height: 50px;
+  margin-left: 1em;
+}
+
+/************************** sections *************************/
+
+.moduleFREtext {
+  font-size:16pt;
+  font-family:"Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;font-weight:300;font-style:normal;color:#222;text-rendering:optimizeLegibility;
+  margin: 5%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.modulecontainter {
+  padding: 10%;
+  background: white;
+  word-wrap: break-word;
+}
+
+.main-container {
+  padding: 5%;
+  background: #dddddd;
+  word-wrap: break-word;
+}
+
+.white-container {
+  padding: 5%;
+  background: white;
+  word-wrap: break-word;
+  display: block;
+  height: 2000px;
+}
+
+.container-no-background {
+  padding: 5%;
+  word-wrap: break-word;
+}
+
+.constrain {
+  max-width: 400px;
+  max-height:300px;
+}
+
+.constrain-sm {
+  max-width: 50px;
+  vertical-align: center;
+}
+
+.moduleStep{
+  color: #999999;
+  font-size: 1.3em;
+}
+
+.num {
+  display: block;
+  width: 76px;
+  padding: 5px;
+}
+
+.small-text {
+  font-size:0.75em;
+}
+
+.prereqs {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #cccccc;
+  padding: 1%;
+  border-radius: 5px;
+  display: block;
+  margin:1%;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/* FRE Frame */
+
+#main-menu {
+  background-color: #eee;
+}
+
+#sec-left {
+	/*background-color: #eee;*/
+	color: black;
+	padding: 15px;
+	padding-top: 0px;
+	border-right: thin double;
+	border-color: #bbb;
+}
+
+.fre-container {
+  /*background: #eee;*/
+  color: black;
+  word-wrap: break-word;
+  padding-top:20px;
+}
+
+.beige-back {
+  /*background: #eee;*/
+}
+
+.footer{
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+/* Module FRE */
+
+.modulehead {
+	cursor: pointer;
+  border-bottom: 3px solid #fff;
+  background-color: #eee;
+}
+
+.moduleTitle{
+  color: #008cba;
+  display: inline-block;
+  padding-top:10px;
+}
+
+.triangle {
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 9px 0 9px 23px;
+  border-color: transparent transparent transparent #008cba;
+}
+
+.modulebody {
+	background-color: none;
+  padding: 30px;
+}
+
+#moduleFRE {
+  text-align: left;
+}
+
+.project-container {
+}
+
+.project-image {
+  height: 150px;
+  overflow: hidden;
+}
+
+.project-title {
+  font-weight: bold;
+}
+
+/************************** other *************************/
+.triangle-side {
+  width: 15px;
+  transform:rotate(90deg);
+  -ms-transform:rotate(90deg); /* IE 9 */
+  -webkit-transform:rotate(90deg); /* Safari and Chrome */
+}
+
+.triangle-down {
+  transform:rotate(180deg);
+  -ms-transform:rotate(180deg); /* IE 9 */
+  -webkit-transform:rotate(180deg); /* Safari and Chrome */
+}
+
+/* Module Icons */
+
+.modules {
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: black;
+  text-align: center;
+  height: 100px;
+  top: 1px;
+}
+
+#alt-menu{
+  display: none;
+}
+
+.top-bar .toggle-topbar.menu-icon a span {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  background-color: #eee;
+}
+
+#fre-content{
+  margin-left:-180px;
+  padding-left:400px;
+  max-width:100%
+}
+.modules:hover {
+  background: white;
+  color: black;
+}
+
+.modules:focus {
+  background: white;
+  outline: none;
+  color: black;
+}
+
+
+.modules[title]:hover:after {
+  content: attr(title);
+  display: block;
+  width: 50px;
+  text-align: center;
+  height: 0px;
+}
+
+.inlineCode {
+  background-color: #f8f8f8;
+  color: #666666;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 14px;
+  padding: 2px;
+  margin: 0px;
+}
+
+/* New Project */
+
+textarea#readme {
+	height: 800px;
+}
+
+input#repotitle {
+	font-size: 2.75rem;
+}
+
+body#newfromrepo {
+	text-align: center;
+	background: #008cba;
+}
+
+.main-container#newfromrepo {
+	background: white;
+}
+
+/* Main Projects Page */
+
+#projects {
+  position: relative;
+}
+
+.projectTile {
+	width: 230px;
+	padding: 0;
+	margin: 5px;
+	position: relative;
+}
+
+.projectTile:hover {
+/*	background-color: #b8c8f5;*/
+  opacity: 0.8;
+}
+
+#logout {
+	display: block;
+	max-width: 152px;
+	text-align: right;
+}
+
+/************************** old *************************/
+
+.belowh3[title]:hover:after {
+  content: attr(title);
+  position: absolute;
+  top: 90px;
+  left: 90px;
+}

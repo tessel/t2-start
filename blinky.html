@@ -1,0 +1,88 @@
+<!DOCTYPE html><html><head><title>Running Your First Script</title><script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script><link href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/css/foundation.min.css" rel="stylesheet"><script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script src="javascripts/custom/active-link.js"></script><script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation.min.js"></script><script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation/foundation.tab.min.js"></script><script src="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation/foundation.topbar.min.js"></script><link rel="stylesheet" href="stylesheets/main.css"><link rel="stylesheet" href="stylesheets/style.css"><link rel="stylesheet" href="stylesheets/gh-fork-ribbon.css"><link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css"><style>body { background: white; }
+pre code { overflow: auto; }
+
+
+
+#sec-what, #sec-spec, #sec-lastcall { padding-top: 30px; padding-bottom: 30px; }
+#sec-heading { padding-bottom: 30px; text-align: center; }
+
+#sec-heading .desc { font-size: 1.1em; }
+#sec-heading .desc p { font-size: 20px; }
+#sec-heading .desc p.tagline { font-size: 34px; text-align: center; line-height: 1.3 }
+#sec-heading .desc { margin-top: 100px; }
+#sec-heading-pic-column { text-align: right }
+@media (max-width: 768px) {
+  #toTopHover, #toTop { display: none; left: -100000px }
+  #sec-heading-pic { margin-bottom: -30px; margin-top: -500px !important; z-index: 0; }
+  #sec-heading-pic { display: none }
+  #sec-heading .desc { margin-top: 0; }
+  #sec-heading-pic-column { text-align: center; }
+  code { font-size: 14px !important; }
+}
+@media (max-width: 500px) {
+  code {font-size: 12px !important; }
+}
+
+@media(max-height: 200px){
+  .side-nav{ overflow-y: scroll; }
+}
+
+@media(max-height: 560px){.side-nav{ overflow-y: scroll; }}
+
+@media (max-width: 640px){
+  #alt-menu{ display: block;}
+  #main-menu{ display: none;}
+  #sticky-topbar { display:none;}
+  #fre-sidebar{display: none;}
+  #fre-content{ margin-left:0px; padding-left:0px; max-width:100%}
+}
+#sec-heading-pic { width: 360px; margin-top: -150px }
+#sec-heading fieldset { background: white; }
+
+#sec-what { background: #fff; padding: 10px 0 50px; }
+.modules li { text-align: center; font-weight: bold; text-transform: uppercase; line-height: 1.1; font-size: 0.8em; }
+.modules a { display: block; }
+.modules img { max-height: 80px; }
+.modules li span { display: block; margin: 10px 0; font-family: Helvetica; }
+
+#servo-anim-block {
+  background: #ddeaf6; padding: 50px 0;
+}
+#servo-anim-code {
+  font-weight: normal; font-size: 16px; padding: 14px 20px; border-radius: 7px; text-align: left
+}
+@media (max-width: 768px) {
+  #servo-anim-code { border-radius: 4px; padding: 14px 14px; margin-bottom: 20px }
+  #servo-anim-block button.large { margin-bottom: 0; }
+  #servo-anim-block { padding: 20px 0; }
+  #sec-what { padding-bottom: 20px; font-size: 14px; }
+  #sec-what br { display: none; }
+}
+
+#sec-teardown { background: #333; }
+
+#sec-spec { background: #ddd; border-width: 1px 0; border-color: #ccc; border-style: solid; }
+#sec-spec .specs { margin: 20px 0; }
+
+#sec-lastcall { border-width: 1px 0; border-color: #aaa; border-style: solid; text-align: center; background: #fff }
+tt, span.name { color: #f54a42; font-family: inherit; font-size: inherit; }
+.disc { padding-left: 25px; margin: 10px 0;}
+ul.spread li { margin: 20px 0; }
+pre.code { background: #333; border-radius: 5px; line-height: 1.4; padding: 10px 20px; color: #eb0; margin: 20px; }
+#sec-what h2, #sec-spec h2 { text-transform: uppercase; text-align: center; font-size: 1.6em; color: #444; margin: 25px 20px; }
+h3 { margin-top: 40px; color: #000 !important; }
+h4 { text-transform: uppercase; font-size: 0.9em; text-align: center; color: #444; }</style></head><body></body><nav data-topbar role="navigation" class="top-bar fixed"><ul class="title-area"><li class="name"><h1><a href="index.html"><img src="https://s3.amazonaws.com/technicalmachine-assets/technical-io/tessel-logo-horizontal.svg" alt="Tessel" class="top-bar__logo"></a></h1></li><li class="toggle-topbar menu-icon"><a href="blinky.html#"><span>Menu</span></a></li></ul><section class="top-bar-section"><ul class="right"><li><a href="https://tessel.io/start">Start</a></li><li><a href="https://tessel.io/docs">Docs</a></li><li><a href="https://tessel.io/modules">Modules</a></li><li><a href="https://tessel.io/projects">Projects</a></li><li><a href="https://tessel.io/forums">Forums</a></li><li><a href="https://tessel.io/shop">Shop</a></li><li><a href="https://tessel.io/blog">Blog</a></li><li><a href="blinky.html" class="active">en</a></li><li><a href="ja/blinky.html">日本</a></li></ul></section></nav><nav data-topbar id="alt-menu" class="top-bar"><!-- display this menu in mobile mode--><ul style="background-color: #d7d7d7;" class="title-area"><li class="name"><h1><a href="https://tessel.io/"><nobr><img src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/tessel-name.png" style="max-height: 18px; vertical-align: middle;" alt="Technical Machine"></nobr></a></h1></li><li class="toggle-topbar menu-icon"><a href="blinky.html#"><span>Menu</span></a></li></ul><section class="top-bar-section"><ul class="right"><li><a href="index.html">install</a></li><li><a href="blinky.html">blinky</a></li><li><a href="modules.html">modules</a></li><li><a href="wifi.html">wifi</a></li><li><a href="tweet.html">tweet</a></li><li><a href="usage.html">usage</a></li><li><a href="finished.html">finish</a></li></ul></section></nav><section><div id="fre-sidebar"><ul class="side-nav"><li><a href="cmd.html">0. prereqs</a></li><li><a href="index.html">1. install</a></li><li class="active"><a href="blinky.html">2. blinky</a></li><li><a href="modules.html">3. modules<!--ul--><li style="padding-left:10px;"><a href="modules/accelerometer.html" class="side-bar-modules">&#9675; accelerometer</a></li><li style="padding-left:10px;"><a href="modules/ambient.html" class="side-bar-modules">&#9675; ambient</a></li><li style="padding-left:10px;"><a href="modules/audio.html" class="side-bar-modules">&#9675; audio</a></li><li style="padding-left:10px;"><a href="modules/ble.html" class="side-bar-modules">&#9675; ble</a></li><li style="padding-left:10px;"><a href="modules/camera.html" class="side-bar-modules">&#9675; camera</a></li><li style="padding-left:10px;"><a href="modules/climate.html" class="side-bar-modules">&#9675; climate</a></li><li style="padding-left:10px;"><a href="modules/gprs.html" class="side-bar-modules">&#9675; gprs</a></li><li style="padding-left:10px;"><a href="modules/gps.html" class="side-bar-modules">&#9675; gps</a></li><li style="padding-left:10px;"><a href="modules/ir.html" class="side-bar-modules">&#9675; ir</a></li><li style="padding-left:10px;"><a href="modules/microsd.html" class="side-bar-modules">&#9675; microsd</a></li><li style="padding-left:10px;"><a href="modules/nrf.html" class="side-bar-modules">&#9675; nrf</a></li><li style="padding-left:10px;"><a href="modules/relay.html" class="side-bar-modules">&#9675; relay</a></li><li style="padding-left:10px;"><a href="modules/rfid.html" class="side-bar-modules">&#9675; rfid</a></li><li style="padding-left:10px;"><a href="modules/servo.html" class="side-bar-modules">&#9675; servo</a></li></a></li><li><a href="wifi.html">4. wifi</a></li><li><a href="usage.html">5. usage</a></li><li><a href="finished.html">6. finished</a></li></ul></div><div id="fre-content"><div class="row"><div class="large-12 columns fre-container"><div class="large-4 columns right"><img style="margin-top:-30px; max-width=253px; float: right;" src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/tessel-plugged.jpg"></div><div class="large-8 columns"><div class="row"><h1>Hello, (Physical) World!</h1><p></p><p>In your command line, make a folder for your Tessel code, change directory into that folder, and then initialize <a href="https://www.npmjs.org/">npm</a> in that folder:</p><code><cli>mkdir tessel-code</cli><cli>cd tessel-code</cli><cli>npm init -y</cli></code><p>You can press enter at each option within npm init to accept npm's defaults.</p><p>Great! Now you're set up to run code on Tessel.</p></div><div class="row"><div style="height:2px;" class="greyBar"></div></div><div class="row"><p>Blinking some lights is the "Hello World" of hardware.</p><p>Make a new file in your "tessel-code" directory called "blinky.js", and copy/paste this code into it:</p><pre class="prettyprint"><code>// Import the interface to Tessel hardware
+var tessel = require('tessel');
+
+// Set the led pins as outputs with initial states
+// Truthy initial state sets the pin high
+// Falsy sets it low.
+var led1 = tessel.led[0].output(1);
+var led2 = tessel.led[1].output(0);
+
+setInterval(function () {
+    console.log("I'm blinking! (Press CTRL + C to stop)");
+    // Toggle the led states
+    led1.toggle();
+    led2.toggle();
+}, 100);</code></pre><p></p><p>In your command line, enter</p><p class="bigCode"><code><cli>tessel run blinky.js</cli></code></p><p>to run your code in Tessel's RAM.</p><p><b>Look at your Tessel!</b> The blue and green LEDs on your Tessel's LED panel should blink back and forth.</p><p><b>Bonus:</b> mess with the code to make the LEDs blink in sync.</p></div></div></div></div><div class="row"><div class="large-12 columns"><div class="greyBar"></div></div></div><div class="row"><div class="large-6 columns left"><a href="index.html" class="bottomButton button">Prev: Install</a></div><div class="large-6 columns right"><a href="modules.html" class="bottomButton right button">Next: Add modules</a></div></div></div></section><div class="github-fork-ribbon-wrapper right-bottom"><div class="github-fork-ribbon"><a href="https://github.com/technicalmachine/start.tessel.io">Fork on Github</a></div></div><footer><section id="sec-footer"><div class="row"><div class="large-10 column large-centered"><div class="row text-center"><p>Technical Machine &copy; 2013-2015.</p></div><div class="row text-center"><p><a href="http://tessel.io/resellers">Resellers</a> | <a href="http://tessel.io/community">Community</a> | <a href="http://tessel.io/about">About us</a> | <a href="http://tessel.io/blog">Blog</a> | <a href="http://tessel.io/press">Press</a></p></div><div class="row text-center"><a href="https://heapanalytics.com/?utm_source=badge"><img style="width:100px;height:40px" src="http://heapanalytics.com/img/badge.png" alt="Heap - iOS and Web Analytics"></a></div></div></div></section></footer><script src="http://include.reinvigorate.net/re_.js"></script><script src="javascripts/reinvigorate.js"></script><script>$(document).foundation();</script></html>
