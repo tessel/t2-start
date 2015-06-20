@@ -480,7 +480,7 @@ var phoneNumber = '##########'; // Replace the #s with the String representation
 var message = 'Text from a Tessel!';
 
 //  Port, callback
-var gprs = gprslib.use(hardware); 
+var gprs = gprslib.use(hardware);
 gprs.on('ready', function() {
   console.log('GPRS module connected to Tessel. Searching for network...')
   //  Give it 10 more seconds to connect to the network, then try to send an SMS
@@ -748,7 +748,7 @@ gprs.on('error', function (err) {
   <div class="github-fork-ribbon-wrapper right-bottom">
     <div class="github-fork-ribbon">
       <a href=
-      "https://github.com/technicalmachine/start.tessel.io">Fork on
+      "https://github.com/tessel/t2-start">Fork on
       Github</a>
     </div>
   </div>

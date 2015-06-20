@@ -355,7 +355,7 @@ setImmediate(function start () {
   console.log('http request #' + (count++))
   http.get("http://httpstat.us/" + statusCode, function (res) {
     console.log('# statusCode', res.statusCode)
-    
+
     var bufs = [];
     res.on('data', function (data) {
       bufs.push(new Buffer(data));
@@ -390,7 +390,7 @@ setImmediate(function start () {
 <code>/* the wifi-cc3000 library is bundled in with Tessel's firmware,
  * so there's no need for an npm install. It's similar
  * to how require('tessel') works.
- */ 
+ */
 var wifi = require('wifi-cc3000');
 var network = '#####'; // put in your network name here
 var pass = '#####'; // put in your password here, or leave blank for unsecured
@@ -497,7 +497,7 @@ function powerCycle(){
   <div class="github-fork-ribbon-wrapper right-bottom">
     <div class="github-fork-ribbon">
       <a href=
-      "https://github.com/technicalmachine/start.tessel.io">Fork on
+      "https://github.com/tessel/t2-start">Fork on
       Github</a>
     </div>
   </div>
@@ -526,9 +526,9 @@ function powerCycle(){
     </section>
   </footer>
   <script src="http://include.reinvigorate.net/re_.js">
-  </script> 
+  </script>
   <script src="javascripts/reinvigorate.js">
-  </script> 
+  </script>
   <script>
   $(document).foundation();
   </script>

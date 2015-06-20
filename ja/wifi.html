@@ -388,7 +388,7 @@ setImmediate(function start () {
   console.log('http request #' + (count++))
   http.get("http://httpstat.us/" + statusCode, function (res) {
     console.log('# statusCode', res.statusCode)
-    
+
     var bufs = [];
     res.on('data', function (data) {
       bufs.push(new Buffer(data));
@@ -422,7 +422,7 @@ setImmediate(function start () {
  * このライブラリはTesselのファームウェアに組み込まれているので、
  * npm installする必要はありません。
  * これは、require('tessel')でも同様です。
- */ 
+ */
 var wifi = require('wifi-cc3000');
 var network = '#####'; // ネットワーク名を入れてください。
 var pass = '#####'; // パスワードを入れてください。パスワード無しの場合は、カラ文字列にしてください。
@@ -525,7 +525,7 @@ function powerCycle(){
   <div class="github-fork-ribbon-wrapper right-bottom">
     <div class="github-fork-ribbon">
       <a href=
-      "https://github.com/technicalmachine/start.tessel.io">Fork on
+      "https://github.com/tessel/t2-start">Fork on
       Github</a>
     </div>
   </div>

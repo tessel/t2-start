@@ -466,8 +466,8 @@ nrf.on('ready', function () {
                 });
         } else {
                 console.log("PONG back");
-                var rx = nrf.openPipe('rx', pipes[0], {size: 4});  
-                        tx = nrf.openPipe('tx', pipes[1], {autoAck: false}); 
+                var rx = nrf.openPipe('rx', pipes[0], {size: 4});
+                        tx = nrf.openPipe('tx', pipes[1], {autoAck: false});
                 rx.on('data', function (d) {
                         console.log("Got data, will respond", d);
                         tx.write(d);
@@ -666,7 +666,7 @@ process.ref();</code>
   <div class="github-fork-ribbon-wrapper right-bottom">
     <div class="github-fork-ribbon">
       <a href=
-      "https://github.com/technicalmachine/start.tessel.io">Fork on
+      "https://github.com/tessel/t2-start">Fork on
       Github</a>
     </div>
   </div>
