@@ -4,34 +4,6 @@ layout: default
 
 <script src="javascripts/custom/install.js"></script>
 <div class="row">
-  <div id="anchor" class="large-12 columns fre-container">
-    {% capture include_install %}{% include_relative install.md %}{% endcapture %}
-    {{ include_install | markdownify }}
-  </div>
-</div>
-<div class="row">
-  <div class="large-12 columns fre-container">
-    <h3 id="firmware">Update Tessel's Firmware</h3>
-    <p>Plug Tessel into your computer via USB. In the command
-    line, run <code><kbd>tessel update</kbd></code></p>
-    <p>The lights should blink yellow and red during the
-    firmware upload.</p>
-    <p>Once the firmware update is complete, continue to the
-    next step.</p>
-  </div>
-</div>
-<div class="row">
-  <div class="large-12 columns">
-    <div class="greyBar"></div>
-  </div>
-</div>
-<div class="row">
-  <div class="large-6 columns left">
-    <a href="cmd.html" class="bottomButton button">Prev:
-    Command line</a>
-  </div>
-  <div class="large-6 columns right">
-    <a href="blinky.html" class=
-    "bottomButton right button">Next: Blink lights</a>
-  </div>
+  {% capture include_install %}{% include_relative install.md %}{% endcapture %}
+  {{ include_install | markdownify }}
 </div>
