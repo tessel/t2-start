@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -279,10 +283,8 @@
     <div id="fre-content">
       <div class="row">
         <div id="anchor" class="large-12 columns fre-container">
-          <h1>Install Tessel</h1>
-          <p>New to the command line? <a href="cmd.html">Take a step
-          back and learn the basics.</a></p>
-          <p>Select the operating system you are working on.</p>
+          {% capture include_install %}{% include_relative install.md %}{% endcapture %}
+          {{ include_install | markdownify }}
           <dl id="install-tabs" data-tab="" class=
           "tabs contained three-up">
             <dd class="active">
