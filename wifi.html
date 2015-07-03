@@ -1,398 +1,125 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta name="generator" content=
-  "HTML Tidy for HTML5 for Mac OS X version 4.9.26">
-  <title>Connecting to Wifi</title>
-  <script src=
-  "https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js">
-  </script>
-  <link href=
-  "http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/css/foundation.min.css"
-  rel="stylesheet">
-  <script src=
-  "http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js">
-  </script>
-  <script src="javascripts/custom/active-link.js">
-  </script>
-  <script src=
-  "http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation.min.js">
-  </script>
-  <script src=
-  "http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation/foundation.tab.min.js">
-  </script>
-  <script src=
-  "http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation/foundation.topbar.min.js">
-  </script>
-  <link rel="stylesheet" href="stylesheets/main.css">
-  <link rel="stylesheet" href="stylesheets/style.css">
-  <link rel="stylesheet" href="stylesheets/gh-fork-ribbon.css">
-  <link rel="stylesheet" href=
-  "http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+---
+layout: default
+---
 
-  <style>
-  body { background: white; }
-  pre code { overflow: auto; }
-
-
-
-  #sec-what, #sec-spec, #sec-lastcall { padding-top: 30px; padding-bottom: 30px; }
-  #sec-heading { padding-bottom: 30px; text-align: center; }
-
-  #sec-heading .desc { font-size: 1.1em; }
-  #sec-heading .desc p { font-size: 20px; }
-  #sec-heading .desc p.tagline { font-size: 34px; text-align: center; line-height: 1.3 }
-  #sec-heading .desc { margin-top: 100px; }
-  #sec-heading-pic-column { text-align: right }
-  @media (max-width: 768px) {
-  #toTopHover, #toTop { display: none; left: -100000px }
-  #sec-heading-pic { margin-bottom: -30px; margin-top: -500px !important; z-index: 0; }
-  #sec-heading-pic { display: none }
-  #sec-heading .desc { margin-top: 0; }
-  #sec-heading-pic-column { text-align: center; }
-  code { font-size: 14px !important; }
-  }
-  @media (max-width: 500px) {
-  code {font-size: 12px !important; }
-  }
-
-  @media(max-height: 200px){
-  .side-nav{ overflow-y: scroll; }
-  }
-
-  @media(max-height: 560px){.side-nav{ overflow-y: scroll; }}
-
-  @media (max-width: 640px){
-  #alt-menu{ display: block;}
-  #main-menu{ display: none;}
-  #sticky-topbar { display:none;}
-  #fre-sidebar{display: none;}
-  #fre-content{ margin-left:0px; padding-left:0px; max-width:100%}
-  }
-  #sec-heading-pic { width: 360px; margin-top: -150px }
-  #sec-heading fieldset { background: white; }
-
-  #sec-what { background: #fff; padding: 10px 0 50px; }
-  .modules li { text-align: center; font-weight: bold; text-transform: uppercase; line-height: 1.1; font-size: 0.8em; }
-  .modules a { display: block; }
-  .modules img { max-height: 80px; }
-  .modules li span { display: block; margin: 10px 0; font-family: Helvetica; }
-
-  #servo-anim-block {
-  background: #ddeaf6; padding: 50px 0;
-  }
-  #servo-anim-code {
-  font-weight: normal; font-size: 16px; padding: 14px 20px; border-radius: 7px; text-align: left
-  }
-  @media (max-width: 768px) {
-  #servo-anim-code { border-radius: 4px; padding: 14px 14px; margin-bottom: 20px }
-  #servo-anim-block button.large { margin-bottom: 0; }
-  #servo-anim-block { padding: 20px 0; }
-  #sec-what { padding-bottom: 20px; font-size: 14px; }
-  #sec-what br { display: none; }
-  }
-
-  #sec-teardown { background: #333; }
-
-  #sec-spec { background: #ddd; border-width: 1px 0; border-color: #ccc; border-style: solid; }
-  #sec-spec .specs { margin: 20px 0; }
-
-  #sec-lastcall { border-width: 1px 0; border-color: #aaa; border-style: solid; text-align: center; background: #fff }
-  tt, span.name { color: #f54a42; font-family: inherit; font-size: inherit; }
-  .disc { padding-left: 25px; margin: 10px 0;}
-  ul.spread li { margin: 20px 0; }
-  pre.code { background: #333; border-radius: 5px; line-height: 1.4; padding: 10px 20px; color: #eb0; margin: 20px; }
-  #sec-what h2, #sec-spec h2 { text-transform: uppercase; text-align: center; font-size: 1.6em; color: #444; margin: 25px 20px; }
-  h3 { margin-top: 40px; color: #000 !important; }
-  h4 { text-transform: uppercase; font-size: 0.9em; text-align: center; color: #444; }
-  </style>
-</head>
-<body>
-  <nav data-topbar="" role="navigation" class="top-bar fixed">
-    <ul class="title-area">
-      <li class="name">
-        <h1><a href="index.html"><img src=
-        "https://s3.amazonaws.com/technicalmachine-assets/technical-io/tessel-logo-horizontal.svg"
-        alt="Tessel" class="top-bar__logo"></a></h1>
-      </li>
-      <li class="toggle-topbar menu-icon">
-        <a href="wifi.html#"><span>Menu</span></a>
-      </li>
-    </ul>
-    <section class="top-bar-section">
-      <ul class="right">
-        <li>
-          <a href="https://tessel.io/start">Start</a>
-        </li>
-        <li>
-          <a href="https://tessel.io/docs">Docs</a>
-        </li>
-        <li>
-          <a href="https://tessel.io/modules">Modules</a>
-        </li>
-        <li>
-          <a href="https://tessel.io/projects">Projects</a>
-        </li>
-        <li>
-          <a href="https://tessel.io/forums">Forums</a>
-        </li>
-        <li>
-          <a href="https://tessel.io/shop">Shop</a>
-        </li>
-        <li>
-          <a href="https://tessel.io/blog">Blog</a>
-        </li>
-        <li>
-          <a href="wifi.html" class="active">en</a>
-        </li>
-        <li>
-          <a href="ja/wifi.html">日本</a>
-        </li>
-      </ul>
-    </section>
-  </nav>
-  <nav data-topbar="" id="alt-menu" class="top-bar">
-    <!-- display this menu in mobile mode-->
-    <ul style="background-color: #d7d7d7;" class="title-area">
-      <li class="name">
-        <h1><a href="https://tessel.io/"><nobr><img src=
-        "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/tessel-name.png"
-        style="max-height: 18px; vertical-align: middle;" alt=
-        "Technical Machine"></nobr></a></h1>
-      </li>
-      <li class="toggle-topbar menu-icon">
-        <a href="wifi.html#"><span>Menu</span></a>
-      </li>
-    </ul>
-    <section class="top-bar-section">
-      <ul class="right">
-        <li>
-          <a href="index.html">install</a>
-        </li>
-        <li>
-          <a href="blinky.html">blinky</a>
-        </li>
-        <li>
-          <a href="modules.html">modules</a>
-        </li>
-        <li>
-          <a href="wifi.html">wifi</a>
-        </li>
-        <li>
-          <a href="tweet.html">tweet</a>
-        </li>
-        <li>
-          <a href="usage.html">usage</a>
-        </li>
-        <li>
-          <a href="finished.html">finish</a>
-        </li>
-      </ul>
-    </section>
-  </nav>
-  <section>
-    <div id="fre-sidebar">
-      <ul class="side-nav">
-        <li>
-          <a href="cmd.html">0. prereqs</a>
-        </li>
-        <li>
-          <a href="index.html">1. install</a>
-        </li>
-        <li>
-          <a href="blinky.html">2. blinky</a>
-        </li>
-        <li>
-          <a href="modules.html">3. modules<!--ul-->
-          <ul>
-            <li style="padding-left:10px;">
-              <a href="modules/accelerometer.html" class=
-              "side-bar-modules">○ accelerometer</a>
-            </li>
-            <li style="padding-left:10px;">
-              <a href="modules/ambient.html" class=
-              "side-bar-modules">○ ambient</a>
-            </li>
-            <li style="padding-left:10px;">
-              <a href="modules/audio.html" class=
-              "side-bar-modules">○ audio</a>
-            </li>
-            <li style="padding-left:10px;">
-              <a href="modules/ble.html" class="side-bar-modules">○
-              ble</a>
-            </li>
-            <li style="padding-left:10px;">
-              <a href="modules/camera.html" class=
-              "side-bar-modules">○ camera</a>
-            </li>
-            <li style="padding-left:10px;">
-              <a href="modules/climate.html" class=
-              "side-bar-modules">○ climate</a>
-            </li>
-            <li style="padding-left:10px;">
-              <a href="modules/gprs.html" class=
-              "side-bar-modules">○ gprs</a>
-            </li>
-            <li style="padding-left:10px;">
-              <a href="modules/gps.html" class="side-bar-modules">○
-              gps</a>
-            </li>
-            <li style="padding-left:10px;">
-              <a href="modules/ir.html" class="side-bar-modules">○
-              ir</a>
-            </li>
-            <li style="padding-left:10px;">
-              <a href="modules/microsd.html" class=
-              "side-bar-modules">○ microsd</a>
-            </li>
-            <li style="padding-left:10px;">
-              <a href="modules/nrf.html" class="side-bar-modules">○
-              nrf</a>
-            </li>
-            <li style="padding-left:10px;">
-              <a href="modules/relay.html" class=
-              "side-bar-modules">○ relay</a>
-            </li>
-            <li style="padding-left:10px;">
-              <a href="modules/rfid.html" class=
-              "side-bar-modules">○ rfid</a>
-            </li>
-            <li style="padding-left:10px;">
-              <a href="modules/servo.html" class=
-              "side-bar-modules">○ servo</a>
-            </li>
-          </ul></a>
-        </li>
-        <li class="active">
-          <a href="wifi.html">4. wifi</a>
-        </li>
-        <li>
-          <a href="usage.html">5. usage</a>
-        </li>
-        <li>
-          <a href="finished.html">6. finished</a>
-        </li>
-      </ul>
+<div class="row">
+  <div class="large-12 columns fre-container">
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>Connect Tessel to Wifi</h1>
+      </div>
+    </div><br>
+    <div class="row">
+      <div class="large-12 columns">
+        <p>Tessel can only connect to <b>802.11b/g</b>
+        networks using <b>channels 1 through 11</b>. The wifi
+        chip does not support 802.11n or channels 12 - 14. If
+        you are having trouble connecting, make sure the
+        router has b/g mode enabled and isn't using channels
+        12, 13, or 14.</p>
+        <p><b>To connect to a new network,</b> enter in your
+        command line (without brackets)</p>
+        <p><code><kbd>tessel
+        wifi -n [network name] -p [password] -s [security
+        type*]</kbd></code></p>
+        <p><i><code>*</code>The security type
+        flag is optional; default is wpa2.</p><br>
+        <br></i>
+      </div>
     </div>
-    <div id="fre-content">
-      <div class="row">
-        <div class="large-12 columns fre-container">
-          <div class="row">
-            <div class="large-12 columns">
-              <h1>Connect Tessel to Wifi</h1>
-            </div>
-          </div><br>
-          <div class="row">
-            <div class="large-12 columns">
-              <p>Tessel can only connect to <b>802.11b/g</b>
-              networks using <b>channels 1 through 11</b>. The wifi
-              chip does not support 802.11n or channels 12 - 14. If
-              you are having trouble connecting, make sure the
-              router has b/g mode enabled and isn't using channels
-              12, 13, or 14.</p>
-              <p><b>To connect to a new network,</b> enter in your
-              command line (without brackets)</p>
-              <p><code><kbd>tessel
-              wifi -n [network name] -p [password] -s [security
-              type*]</kbd></code></p>
-              <p><i><code>*</code>The security type
-              flag is optional; default is wpa2.</p><br>
-              <br></i>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <div style="height:2px;" class="greyBar"></div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-6 columns">
-              <p>Tessel will blink the yellow status light while
-              connecting, and will leave the yellow light on if it
-              connects. Tessel saves network credentials and tries
-              to reconnect automatically on startup.</p>
-              <p>To check whether you're connected,
-              run</p><code><kbd>tessel wifi -l</kbd></code>
-              <p>This lists available wifi networks and will also
-              show your connection status.</p>
-              <p>If the red status light goes on, it means Tessel
-              tried to connect to a network but was unable to
-              succeed. The red LED also turns on if the wifi
-              connection drops.</p>
-              <ul>
-                <li>Steady yellow LED = Tessel is connected to
-                wifi</li>
-                <li>Steady red LED = Tessel is not connected to
-                wifi</li>
-              </ul>
-              <p>All 4 LEDS (red, blue, green, and yellow) are
-              accessible through Tessel's <a href=
-              "https://tessel.io/docs/hardwareAPI#api-array-Pin-tessel-led"
-              target="_blank">hardware API</a>. If user pushed code
-              is changing the state of the yellow/red LEDs, they
-              will no longer be reliable indicators of Wifi
-              state.</p>
-            </div>
-            <div class="large-6 columns"><img src=
-            "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/wifi.JPG"
-            class="constrain"></div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <div style="height:2px;" class="greyBar"></div>
-              <p>Here is an example of requesting a website over
-              Tessel's Wifi connection:</p>
-              <p>Make a wifi directory</p><code><kbd>mkdir
-              wifi</kbd><kbd>cd wifi</kbd><kbd>npm
-              init</kbd></code>
-              <p>Save the following code in a file called
-              <code>wifi.js</code>:</p>
-              <pre id="exampleCode" class="prettyprint">
+    <div class="row">
+      <div class="large-12 columns">
+        <div style="height:2px;" class="greyBar"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-6 columns">
+        <p>Tessel will blink the yellow status light while
+        connecting, and will leave the yellow light on if it
+        connects. Tessel saves network credentials and tries
+        to reconnect automatically on startup.</p>
+        <p>To check whether you're connected,
+        run</p><code><kbd>tessel wifi -l</kbd></code>
+        <p>This lists available wifi networks and will also
+        show your connection status.</p>
+        <p>If the red status light goes on, it means Tessel
+        tried to connect to a network but was unable to
+        succeed. The red LED also turns on if the wifi
+        connection drops.</p>
+        <ul>
+          <li>Steady yellow LED = Tessel is connected to
+          wifi</li>
+          <li>Steady red LED = Tessel is not connected to
+          wifi</li>
+        </ul>
+        <p>All 4 LEDS (red, blue, green, and yellow) are
+        accessible through Tessel's <a href=
+        "https://tessel.io/docs/hardwareAPI#api-array-Pin-tessel-led"
+        target="_blank">hardware API</a>. If user pushed code
+        is changing the state of the yellow/red LEDs, they
+        will no longer be reliable indicators of Wifi
+        state.</p>
+      </div>
+      <div class="large-6 columns"><img src=
+      "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/wifi.JPG"
+      class="constrain"></div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <div style="height:2px;" class="greyBar"></div>
+        <p>Here is an example of requesting a website over
+        Tessel's Wifi connection:</p>
+        <p>Make a wifi directory</p><code><kbd>mkdir
+        wifi</kbd><kbd>cd wifi</kbd><kbd>npm
+        init</kbd></code>
+        <p>Save the following code in a file called
+        <code>wifi.js</code>:</p>
+        <pre id="exampleCode" class="prettyprint">
 <code>var http = require('http');
 
 var statusCode = 200;
 var count = 1;
 
 setImmediate(function start () {
-  console.log('http request #' + (count++))
-  http.get("http://httpstat.us/" + statusCode, function (res) {
-    console.log('# statusCode', res.statusCode)
+console.log('http request #' + (count++))
+http.get("http://httpstat.us/" + statusCode, function (res) {
+console.log('# statusCode', res.statusCode)
 
-    var bufs = [];
-    res.on('data', function (data) {
-      bufs.push(new Buffer(data));
-      console.log('# received', new Buffer(data).toString());
-    })
-    res.on('end', function () {
-      console.log('done.');
-      setImmediate(start);
-    })
-  }).on('error', function (e) {
-    console.log('not ok -', e.message, 'error event')
-    setImmediate(start);
-  });
+var bufs = [];
+res.on('data', function (data) {
+bufs.push(new Buffer(data));
+console.log('# received', new Buffer(data).toString());
+})
+res.on('end', function () {
+console.log('done.');
+setImmediate(start);
+})
+}).on('error', function (e) {
+console.log('not ok -', e.message, 'error event')
+setImmediate(start);
+});
 });
 </code>
 </pre>
-              <p>Run the code on your Tessel by typing this in the
-              terminal:</p>
-              <p><code><kbd>tessel run wifi.js</kbd></code></p>
-              <p>Watch Tessel ping the website in your console!</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <div style="height:2px;" class="greyBar"></div>
-              <p>Tessel's wifi can also be controlled
-              programatically. The full API docs can be found
-              <a href="https://tessel.io/docs/wifi">here.</a></p>
-              <p>Save the following in a file called
-              <code>wifi-control.js</code>:</p>
-              <pre id="exampleCode" class="prettyprint">
+        <p>Run the code on your Tessel by typing this in the
+        terminal:</p>
+        <p><code><kbd>tessel run wifi.js</kbd></code></p>
+        <p>Watch Tessel ping the website in your console!</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <div style="height:2px;" class="greyBar"></div>
+        <p>Tessel's wifi can also be controlled
+        programatically. The full API docs can be found
+        <a href="https://tessel.io/docs/wifi">here.</a></p>
+        <p>Save the following in a file called
+        <code>wifi-control.js</code>:</p>
+        <pre id="exampleCode" class="prettyprint">
 <code>/* the wifi-cc3000 library is bundled in with Tessel's firmware,
- * so there's no need for an npm install. It's similar
- * to how require('tessel') works.
- */
+* so there's no need for an npm install. It's similar
+* to how require('tessel') works.
+*/
 var wifi = require('wifi-cc3000');
 var network = '#####'; // put in your network name here
 var pass = '#####'; // put in your password here, or leave blank for unsecured
@@ -400,139 +127,97 @@ var security = 'wpa2'; // other options are 'wep', 'wpa', or 'unsecured'
 var timeouts = 0;
 
 function connect(){
-  wifi.connect({
-    security: security
-    , ssid: network
-    , password: pass
-    , timeout: 30 // in seconds
-  });
+wifi.connect({
+security: security
+, ssid: network
+, password: pass
+, timeout: 30 // in seconds
+});
 }
 
 wifi.on('connect', function(data){
-  // you're connected
-  console.log("connect emitted", data);
+// you're connected
+console.log("connect emitted", data);
 });
 
 wifi.on('disconnect', function(data){
-  // wifi dropped, probably want to call connect() again
-  console.log("disconnect emitted", data);
+// wifi dropped, probably want to call connect() again
+console.log("disconnect emitted", data);
 })
 
 wifi.on('timeout', function(err){
-  // tried to connect but couldn't, retry
-  console.log("timeout emitted");
-  timeouts++;
-  if (timeouts &gt; 2) {
-    // reset the wifi chip if we've timed out too many times
-    powerCycle();
-  } else {
-    // try to reconnect
-    connect();
-  }
+// tried to connect but couldn't, retry
+console.log("timeout emitted");
+timeouts++;
+if (timeouts &gt; 2) {
+// reset the wifi chip if we've timed out too many times
+powerCycle();
+} else {
+// try to reconnect
+connect();
+}
 });
 
 wifi.on('error', function(err){
-  // one of the following happened
-  // 1. tried to disconnect while not connected
-  // 2. tried to disconnect while in the middle of trying to connect
-  // 3. tried to initialize a connection without first waiting for a timeout or a disconnect
-  console.log("error emitted", err);
+// one of the following happened
+// 1. tried to disconnect while not connected
+// 2. tried to disconnect while in the middle of trying to connect
+// 3. tried to initialize a connection without first waiting for a timeout or a disconnect
+console.log("error emitted", err);
 });
 
 // reset the wifi chip progammatically
 function powerCycle(){
-  // when the wifi chip resets, it will automatically try to reconnect
-  // to the last saved network
-  wifi.reset(function(){
-    timeouts = 0; // reset timeouts
-    console.log("done power cycling");
-    // give it some time to auto reconnect
-    setTimeout(function(){
-      if (!wifi.isConnected()) {
-        // try to reconnect
-        connect();
-      }
-      }, 20 *1000); // 20 second wait
-  })
+// when the wifi chip resets, it will automatically try to reconnect
+// to the last saved network
+wifi.reset(function(){
+timeouts = 0; // reset timeouts
+console.log("done power cycling");
+// give it some time to auto reconnect
+setTimeout(function(){
+if (!wifi.isConnected()) {
+  // try to reconnect
+  connect();
+}
+}, 20 *1000); // 20 second wait
+})
 }
 </code>
 </pre>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <div style="height:2px;" class="greyBar"></div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <p><b>If you run into errors:</b> First, check to
-              make sure the yellow status light is on. If it is
-              not, you are not connected to Wifi. Try power cycling
-              your Tessel and then run the <code>tessel wifi</code>
-              command again.</p>
-              <p>If you're still having trouble, please log your
-              error on the <a href=
-              "http://forums.tessel.io/category/wifi">Wifi
-              forums</a>.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="large-12 columns">
-          <div class="greyBar"></div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="large-5 columns left">
-          <a href="modules.html" class="bottomButton button">Prev:
-          Add modules</a>
-        </div>
-        <div class="large-6 columns right">
-          <a href="usage.html" class=
-          "bottomButton right button">Next: Usage</a>
-        </div>
       </div>
     </div>
-  </section>
-  <div class="github-fork-ribbon-wrapper right-bottom">
-    <div class="github-fork-ribbon">
-      <a href=
-      "https://github.com/tessel/t2-start">Fork on
-      Github</a>
+    <div class="row">
+      <div class="large-12 columns">
+        <div style="height:2px;" class="greyBar"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <p><b>If you run into errors:</b> First, check to
+        make sure the yellow status light is on. If it is
+        not, you are not connected to Wifi. Try power cycling
+        your Tessel and then run the <code>tessel wifi</code>
+        command again.</p>
+        <p>If you're still having trouble, please log your
+        error on the <a href=
+        "http://forums.tessel.io/category/wifi">Wifi
+        forums</a>.</p>
+      </div>
     </div>
   </div>
-  <footer>
-    <section id="sec-footer">
-      <div class="row">
-        <div class="large-10 column large-centered">
-          <div class="row text-center">
-            <p>Technical Machine © 2013-2015.</p>
-          </div>
-          <div class="row text-center">
-            <p><a href="http://tessel.io/resellers">Resellers</a> |
-            <a href="http://tessel.io/community">Community</a> |
-            <a href="http://tessel.io/about">About us</a> |
-            <a href="http://tessel.io/blog">Blog</a> | <a href=
-            "http://tessel.io/press">Press</a></p>
-          </div>
-          <div class="row text-center">
-            <a href=
-            "https://heapanalytics.com/?utm_source=badge"><img style="width:100px;height:40px"
-            src="http://heapanalytics.com/img/badge.png" alt=
-            "Heap - iOS and Web Analytics"></a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </footer>
-  <script src="http://include.reinvigorate.net/re_.js">
-  </script>
-  <script src="javascripts/reinvigorate.js">
-  </script>
-  <script>
-  $(document).foundation();
-  </script>
-</body>
-</html>
+</div>
+<div class="row">
+  <div class="large-12 columns">
+    <div class="greyBar"></div>
+  </div>
+</div>
+<div class="row">
+  <div class="large-5 columns left">
+    <a href="modules.html" class="bottomButton button">Prev:
+    Add modules</a>
+  </div>
+  <div class="large-6 columns right">
+    <a href="usage.html" class=
+    "bottomButton right button">Next: Usage</a>
+  </div>
+</div>

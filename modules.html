@@ -1,451 +1,121 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta name="generator" content=
-  "HTML Tidy for HTML5 for Mac OS X version 4.9.26">
-  <title>Modules 101</title>
-  <script src=
-  "https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js">
-  </script>
-  <link href=
-  "http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/css/foundation.min.css"
-  rel="stylesheet">
-  <script src=
-  "http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js">
-  </script>
-  <script src="javascripts/custom/active-link.js">
-  </script>
-  <script src=
-  "http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation.min.js">
-  </script>
-  <script src=
-  "http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation/foundation.tab.min.js">
-  </script>
-  <script src=
-  "http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/js/foundation/foundation.topbar.min.js">
-  </script>
-  <link rel="stylesheet" href="stylesheets/main.css">
-  <link rel="stylesheet" href="stylesheets/style.css">
-  <link rel="stylesheet" href="stylesheets/gh-fork-ribbon.css">
-  <link rel="stylesheet" href=
-  "http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+---
+layout: default
+---
 
-  <style>
-  body { background: white; }
-  pre code { overflow: auto; }
-
-
-
-  #sec-what, #sec-spec, #sec-lastcall { padding-top: 30px; padding-bottom: 30px; }
-  #sec-heading { padding-bottom: 30px; text-align: center; }
-
-  #sec-heading .desc { font-size: 1.1em; }
-  #sec-heading .desc p { font-size: 20px; }
-  #sec-heading .desc p.tagline { font-size: 34px; text-align: center; line-height: 1.3 }
-  #sec-heading .desc { margin-top: 100px; }
-  #sec-heading-pic-column { text-align: right }
-  @media (max-width: 768px) {
-  #toTopHover, #toTop { display: none; left: -100000px }
-  #sec-heading-pic { margin-bottom: -30px; margin-top: -500px !important; z-index: 0; }
-  #sec-heading-pic { display: none }
-  #sec-heading .desc { margin-top: 0; }
-  #sec-heading-pic-column { text-align: center; }
-  code { font-size: 14px !important; }
-  }
-  @media (max-width: 500px) {
-  code {font-size: 12px !important; }
-  }
-
-  @media(max-height: 200px){
-  .side-nav{ overflow-y: scroll; }
-  }
-
-  @media(max-height: 560px){.side-nav{ overflow-y: scroll; }}
-
-  @media (max-width: 640px){
-  #alt-menu{ display: block;}
-  #main-menu{ display: none;}
-  #sticky-topbar { display:none;}
-  #fre-sidebar{display: none;}
-  #fre-content{ margin-left:0px; padding-left:0px; max-width:100%}
-  }
-  #sec-heading-pic { width: 360px; margin-top: -150px }
-  #sec-heading fieldset { background: white; }
-
-  #sec-what { background: #fff; padding: 10px 0 50px; }
-  .modules li { text-align: center; font-weight: bold; text-transform: uppercase; line-height: 1.1; font-size: 0.8em; }
-  .modules a { display: block; }
-  .modules img { max-height: 80px; }
-  .modules li span { display: block; margin: 10px 0; font-family: Helvetica; }
-
-  #servo-anim-block {
-  background: #ddeaf6; padding: 50px 0;
-  }
-  #servo-anim-code {
-  font-weight: normal; font-size: 16px; padding: 14px 20px; border-radius: 7px; text-align: left
-  }
-  @media (max-width: 768px) {
-  #servo-anim-code { border-radius: 4px; padding: 14px 14px; margin-bottom: 20px }
-  #servo-anim-block button.large { margin-bottom: 0; }
-  #servo-anim-block { padding: 20px 0; }
-  #sec-what { padding-bottom: 20px; font-size: 14px; }
-  #sec-what br { display: none; }
-  }
-
-  #sec-teardown { background: #333; }
-
-  #sec-spec { background: #ddd; border-width: 1px 0; border-color: #ccc; border-style: solid; }
-  #sec-spec .specs { margin: 20px 0; }
-
-  #sec-lastcall { border-width: 1px 0; border-color: #aaa; border-style: solid; text-align: center; background: #fff }
-  tt, span.name { color: #f54a42; font-family: inherit; font-size: inherit; }
-  .disc { padding-left: 25px; margin: 10px 0;}
-  ul.spread li { margin: 20px 0; }
-  pre.code { background: #333; border-radius: 5px; line-height: 1.4; padding: 10px 20px; color: #eb0; margin: 20px; }
-  #sec-what h2, #sec-spec h2 { text-transform: uppercase; text-align: center; font-size: 1.6em; color: #444; margin: 25px 20px; }
-  h3 { margin-top: 40px; color: #000 !important; }
-  h4 { text-transform: uppercase; font-size: 0.9em; text-align: center; color: #444; }
-  </style>
-</head>
-<body>
-  <nav data-topbar="" role="navigation" class="top-bar fixed">
-    <ul class="title-area">
-      <li class="name">
-        <h1><a href="index.html"><img src=
-        "https://s3.amazonaws.com/technicalmachine-assets/technical-io/tessel-logo-horizontal.svg"
-        alt="Tessel" class="top-bar__logo"></a></h1>
-      </li>
-      <li class="toggle-topbar menu-icon">
-        <a href="modules.html#"><span>Menu</span></a>
-      </li>
-    </ul>
-    <section class="top-bar-section">
-      <ul class="right">
-        <li>
-          <a href="https://tessel.io/start">Start</a>
-        </li>
-        <li>
-          <a href="https://tessel.io/docs">Docs</a>
-        </li>
-        <li>
-          <a href="https://tessel.io/modules">Modules</a>
-        </li>
-        <li>
-          <a href="https://tessel.io/projects">Projects</a>
-        </li>
-        <li>
-          <a href="https://tessel.io/forums">Forums</a>
-        </li>
-        <li>
-          <a href="https://tessel.io/shop">Shop</a>
-        </li>
-        <li>
-          <a href="https://tessel.io/blog">Blog</a>
-        </li>
-        <li>
-          <a href="modules.html" class="active">en</a>
-        </li>
-        <li>
-          <a href="ja/modules.html">日本</a>
-        </li>
-      </ul>
-    </section>
-  </nav>
-  <nav data-topbar="" id="alt-menu" class="top-bar">
-    <!-- display this menu in mobile mode-->
-    <ul style="background-color: #d7d7d7;" class="title-area">
-      <li class="name">
-        <h1><a href="https://tessel.io/"><nobr><img src=
-        "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/tessel-name.png"
-        style="max-height: 18px; vertical-align: middle;" alt=
-        "Technical Machine"></nobr></a></h1>
-      </li>
-      <li class="toggle-topbar menu-icon">
-        <a href="modules.html#"><span>Menu</span></a>
-      </li>
-    </ul>
-    <section class="top-bar-section">
-      <ul class="right">
-        <li>
-          <a href="index.html">install</a>
-        </li>
-        <li>
-          <a href="blinky.html">blinky</a>
-        </li>
-        <li>
-          <a href="modules.html">modules</a>
-        </li>
-        <li>
-          <a href="wifi.html">wifi</a>
-        </li>
-        <li>
-          <a href="tweet.html">tweet</a>
-        </li>
-        <li>
-          <a href="usage.html">usage</a>
-        </li>
-        <li>
-          <a href="finished.html">finish</a>
-        </li>
-      </ul>
-    </section>
-  </nav>
-  <section>
-    <div id="fre-sidebar">
-      <ul class="side-nav">
-        <li>
-          <a href="cmd.html">0. prereqs</a>
-        </li>
-        <li>
-          <a href="index.html">1. install</a>
-        </li>
-        <li>
-          <a href="blinky.html">2. blinky</a>
-        </li>
-        <li class="active">
-          <a href="modules.html">3. modules<!--ul-->
-          <ul>
-            <li style="padding-left:10px;">
-              <a href="modules/accelerometer.html" class=
-              "side-bar-modules">○ accelerometer</a>
-            </li>
-            <li style="padding-left:10px;">
-              <a href="modules/ambient.html" class=
-              "side-bar-modules">○ ambient</a>
-            </li>
-            <li style="padding-left:10px;">
-              <a href="modules/audio.html" class=
-              "side-bar-modules">○ audio</a>
-            </li>
-            <li style="padding-left:10px;">
-              <a href="modules/ble.html" class="side-bar-modules">○
-              ble</a>
-            </li>
-            <li style="padding-left:10px;">
-              <a href="modules/camera.html" class=
-              "side-bar-modules">○ camera</a>
-            </li>
-            <li style="padding-left:10px;">
-              <a href="modules/climate.html" class=
-              "side-bar-modules">○ climate</a>
-            </li>
-            <li style="padding-left:10px;">
-              <a href="modules/gprs.html" class=
-              "side-bar-modules">○ gprs</a>
-            </li>
-            <li style="padding-left:10px;">
-              <a href="modules/gps.html" class="side-bar-modules">○
-              gps</a>
-            </li>
-            <li style="padding-left:10px;">
-              <a href="modules/ir.html" class="side-bar-modules">○
-              ir</a>
-            </li>
-            <li style="padding-left:10px;">
-              <a href="modules/microsd.html" class=
-              "side-bar-modules">○ microsd</a>
-            </li>
-            <li style="padding-left:10px;">
-              <a href="modules/nrf.html" class="side-bar-modules">○
-              nrf</a>
-            </li>
-            <li style="padding-left:10px;">
-              <a href="modules/relay.html" class=
-              "side-bar-modules">○ relay</a>
-            </li>
-            <li style="padding-left:10px;">
-              <a href="modules/rfid.html" class=
-              "side-bar-modules">○ rfid</a>
-            </li>
-            <li style="padding-left:10px;">
-              <a href="modules/servo.html" class=
-              "side-bar-modules">○ servo</a>
-            </li>
-          </ul></a>
-        </li>
-        <li>
-          <a href="wifi.html">4. wifi</a>
-        </li>
-        <li>
-          <a href="usage.html">5. usage</a>
-        </li>
-        <li>
-          <a href="finished.html">6. finished</a>
-        </li>
-      </ul>
-    </div>
-    <div id="fre-content">
-      <div class="row">
-        <div class="large-12 columns fre-container">
-          <div class="row">
-            <div class="large-12 columns">
-              <h1>Modules</h1>
-              <p>Tessel has four module ports, labeled A, B, C, and
-              D.</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-6 columns"><img width="400px" src=
-            "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/tessel-ports.jpg"
-            class="centeralign"></div>
-            <div class="large-6 columns">
-              <p>In the examples below, port "A" is always
-              specified. But as long as you change the port in the
-              code, you can plug your module into any of the
-              ports.</p>
-              <p>It's best to unplug Tessel from power while
-              plugging in modules.</p>
-              <p>At the bottom of this page are walkthroughs for
-              the connection and installation of each module.</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <p>Modules should be plugged in so that all of the
-              electrical components are face up and all the
-              hexagons are face down:</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-6 columns left">
-            <h4>face up</h4><img src=
-            "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/tessel-all-plugged-sm.jpg"></div>
-            <div class="large-6 columns right">
-            <h4>face down</h4><img src=
-            "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/tessel-all-plugged-back-sm.jpg"></div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <div style="height:2px;" class="greyBar"></div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <h2>Choose a module below to get up and running</h2>
-              <p>If you've already tried out your modules, move on
-              to <a href="wifi.html">Wifi.</a></p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <ul class="small-block-grid-1 large-block-grid-3">
-                <li>
-                  <a href="modules/accelerometer.html"><span class=
-                  "moduleLink">Accelerometer</span></a>
-                </li>
-                <li>
-                  <a href="modules/ambient.html"><span class=
-                  "moduleLink">Ambient <small>Light +
-                  Sound</small></span></a>
-                </li>
-                <li>
-                  <a href="modules/audio.html"><span class=
-                  "moduleLink">Audio</span></a>
-                </li>
-                <li>
-                  <a href="modules/ble.html"><span class=
-                  "moduleLink">Bluetooth <small>Low
-                  Energy</small></span></a>
-                </li>
-                <li>
-                  <a href="modules/camera.html"><span class=
-                  "moduleLink">Camera</span></a>
-                </li>
-                <li>
-                  <a href="modules/climate.html"><span class=
-                  "moduleLink">Climate</span></a>
-                </li>
-                <li>
-                  <a href="modules/gprs.html"><span class=
-                  "moduleLink">GPRS</span></a>
-                </li>
-                <li>
-                  <a href="modules/gps.html"><span class=
-                  "moduleLink">GPS</span></a>
-                </li>
-                <li>
-                  <a href="modules/ir.html"><span class=
-                  "moduleLink">Infrared</span></a>
-                </li>
-                <li>
-                  <a href="modules/microsd.html"><span class=
-                  "moduleLink">MicroSD Card</span></a>
-                </li>
-                <li>
-                  <a href="modules/nrf.html"><span class=
-                  "moduleLink">nRF24</span></a>
-                </li>
-                <li>
-                  <a href="modules/relay.html"><span class=
-                  "moduleLink">Relay</span></a>
-                </li>
-                <li>
-                  <a href="modules/rfid.html"><span class=
-                  "moduleLink">RFID</span></a>
-                </li>
-                <li>
-                  <a href="modules/servo.html"><span class=
-                  "moduleLink">Servo</span></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="large-12 columns">
-          <div class="greyBar"></div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="large-6 columns left">
-          <a href="blinky.html" class="bottomButton button">Prev:
-          Blink lights</a>
-        </div>
-        <div class="large-6 columns right">
-          <a href="wifi.html" class=
-          "bottomButton right button">Next: Connect to Wifi</a>
-        </div>
+<div class="row">
+  <div class="large-12 columns fre-container">
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>Modules</h1>
+        <p>Tessel has four module ports, labeled A, B, C, and
+        D.</p>
       </div>
     </div>
-  </section>
-  <div class="github-fork-ribbon-wrapper right-bottom">
-    <div class="github-fork-ribbon">
-      <a href=
-      "https://github.com/tessel/t2-start">Fork on
-      Github</a>
+    <div class="row">
+      <div class="large-6 columns"><img width="400px" src=
+      "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/tessel-ports.jpg"
+      class="centeralign"></div>
+      <div class="large-6 columns">
+        <p>In the examples below, port "A" is always
+        specified. But as long as you change the port in the
+        code, you can plug your module into any of the
+        ports.</p>
+        <p>It's best to unplug Tessel from power while
+        plugging in modules.</p>
+        <p>At the bottom of this page are walkthroughs for
+        the connection and installation of each module.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <p>Modules should be plugged in so that all of the
+        electrical components are face up and all the
+        hexagons are face down:</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-6 columns left">
+      <h4>face up</h4><img src=
+      "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/tessel-all-plugged-sm.jpg"></div>
+      <div class="large-6 columns right">
+      <h4>face down</h4><img src=
+      "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/tessel-all-plugged-back-sm.jpg"></div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <div style="height:2px;" class="greyBar"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <h2>Choose a module below to get up and running</h2>
+        <p>If you've already tried out your modules, move on
+        to <a href="wifi.html">Wifi.</a></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <ul class="small-block-grid-1 large-block-grid-3">
+          <li>
+            <a href="modules/accelerometer.html"><span class=
+            "moduleLink">Accelerometer</span></a>
+          </li>
+          <li>
+            <a href="modules/ambient.html"><span class=
+            "moduleLink">Ambient <small>Light +
+            Sound</small></span></a>
+          </li>
+          <li>
+            <a href="modules/audio.html"><span class=
+            "moduleLink">Audio</span></a>
+          </li>
+          <li>
+            <a href="modules/ble.html"><span class=
+            "moduleLink">Bluetooth <small>Low
+            Energy</small></span></a>
+          </li>
+          <li>
+            <a href="modules/camera.html"><span class=
+            "moduleLink">Camera</span></a>
+          </li>
+          <li>
+            <a href="modules/climate.html"><span class=
+            "moduleLink">Climate</span></a>
+          </li>
+          <li>
+            <a href="modules/gprs.html"><span class=
+            "moduleLink">GPRS</span></a>
+          </li>
+          <li>
+            <a href="modules/gps.html"><span class=
+            "moduleLink">GPS</span></a>
+          </li>
+          <li>
+            <a href="modules/ir.html"><span class=
+            "moduleLink">Infrared</span></a>
+          </li>
+          <li>
+            <a href="modules/microsd.html"><span class=
+            "moduleLink">MicroSD Card</span></a>
+          </li>
+          <li>
+            <a href="modules/nrf.html"><span class=
+            "moduleLink">nRF24</span></a>
+          </li>
+          <li>
+            <a href="modules/relay.html"><span class=
+            "moduleLink">Relay</span></a>
+          </li>
+          <li>
+            <a href="modules/rfid.html"><span class=
+            "moduleLink">RFID</span></a>
+          </li>
+          <li>
+            <a href="modules/servo.html"><span class=
+            "moduleLink">Servo</span></a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
-  <footer>
-    <section id="sec-footer">
-      <div class="row">
-        <div class="large-10 column large-centered">
-          <div class="row text-center">
-            <p>Technical Machine © 2013-2015.</p>
-          </div>
-          <div class="row text-center">
-            <p><a href="http://tessel.io/resellers">Resellers</a> |
-            <a href="http://tessel.io/community">Community</a> |
-            <a href="http://tessel.io/about">About us</a> |
-            <a href="http://tessel.io/blog">Blog</a> | <a href=
-            "http://tessel.io/press">Press</a></p>
-          </div>
-          <div class="row text-center">
-            <a href=
-            "https://heapanalytics.com/?utm_source=badge"><img style="width:100px;height:40px"
-            src="http://heapanalytics.com/img/badge.png" alt=
-            "Heap - iOS and Web Analytics"></a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </footer>
-  <script src="http://include.reinvigorate.net/re_.js">
-  </script>
-  <script src="javascripts/reinvigorate.js">
-  </script>
-  <script>
-  $(document).foundation();
-  </script>
-</body>
-</html>
+  
