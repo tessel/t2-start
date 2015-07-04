@@ -33,9 +33,7 @@ code {
 }
 
 .side-nav {
-  position: fixed;
-  height:100%;
-
+  position: absolute;
   width:180px;
   padding-left:30px;
 }
