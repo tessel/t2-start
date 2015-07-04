@@ -20,7 +20,11 @@ You can press enter at each option within npm init to accept npm's defaults.
 
 Great! Now you're set up to run code on Tessel.
 
+</div></div>
+
 <hr>
+
+<div class="large-12 columns"><div class="row">
 
 Blinking some lights is the "Hello World" of hardware.
 
@@ -38,9 +42,9 @@ var led2 = tessel.led[1].output(0);
 
 setInterval(function () {
 console.log("I'm blinking! (Press CTRL + C to stop)");
-// Toggle the led states
-led1.toggle();
-led2.toggle();
+  // Toggle the led states
+  led1.toggle();
+  led2.toggle();
 }, 100);
 {% endhighlight %}
 

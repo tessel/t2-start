@@ -69,7 +69,13 @@ font-weight: normal; font-size: 16px; padding: 14px 20px; border-radius: 7px; te
 tt, span.name { color: #f54a42; font-family: inherit; font-size: inherit; }
 .disc { padding-left: 25px; margin: 10px 0;}
 ul.spread li { margin: 20px 0; }
-pre.code { background: #333; border-radius: 5px; line-height: 1.4; padding: 10px 20px; color: #eb0; margin: 20px; }
+
+pre { background: #eee; border-radius: 5px; line-height: 1.4; padding: 10px 20px; color: #eb0; margin: 20px 0; border: 1px solid #ddd; }
+// Undo Foundation coloring
+pre code {
+	color: black;
+}
+
 #sec-what h2, #sec-spec h2 { text-transform: uppercase; text-align: center; font-size: 1.6em; color: #444; margin: 25px 20px; }
 h3 { margin-top: 40px; color: #000 !important; }
 h4 { text-transform: uppercase; font-size: 0.9em; text-align: center; color: #444; }
