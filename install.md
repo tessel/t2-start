@@ -8,13 +8,13 @@ Select the operating system you are working on.
 
 <dl id="install-tabs" data-tab="" class="tabs contained three-up">
 <dd class="active">
-[OSX](index.html#tab-osx)
+[OSX](#tab-osx)
 </dd>
 <dd>
-[Linux](index.html#tab-linux)
+[Linux](#tab-linux)
 </dd>
 <dd>
-[Windows](index.html#tab-pc)
+[Windows](#tab-pc)
 </dd>
 </dl>
 
