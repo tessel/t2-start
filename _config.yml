@@ -1,3 +1,4 @@
 name: Tessel 2 Guide
 
 markdown:    kramdown
+baseurl: /t2-start
