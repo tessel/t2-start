@@ -3,162 +3,21 @@ layout: default
 ---
 
 <div class="row">
-<div class="large-12 columns fre-container">
-  <h1>Some useful commands...</h1>
-  <p>You can look at all the options of Tessel's CLI by
-  running</p><code><kbd>tessel --help</kbd></code>
-  <p>Here are a few of the most useful ones:</p>
-</div>
-</div>
-<div class="row">
-<div class="large-12 columns">
-  <div style="height:2px;" class="greyBar"></div>
-</div>
-</div>
-<div class="row">
-<div class="large-12 columns">
-  <h2><code>tessel run &lt;script.js |
-  path/to/folder&gt;</code></h2>
-  <p>This command loads code into RAM on Tessel. When
-  Tessel is reset (or the script ends with CTRL + C),
-  Tessel loses the code. This command is useful for running
-  code while developing, and is used throughout this
-  tutorial.</p>
-  <p>This command is shown in the <a href=
-  "blinky.html">blinky example.</a></p><code><kbd>tessel
-  run blinky.js</kbd></code>
-  <div class="console-output">
-    <code>&gt;&gt; Bundling directory ...<br>
-    &gt;&gt; Deploying bundle ...<br>
-    &gt;&gt; Running script ...<br>
-    &gt;&gt; "I'm blinking! (Press CTRL + C to stop)"<br>
-    &gt;&gt; "I'm blinking! (Press CTRL + C to stop)"<br>
-    &gt;&gt; "I'm blinking! (Press CTRL + C to stop)"<br>
-    &gt;&gt; ...<br></code>
-  </div>
-</div>
-</div>
-<div class="row">
-<div class="large-12 columns">
-  <div style="height:2px;" class="greyBar"></div>
-</div>
-</div>
-<div class="row">
-<div class="large-12 columns">
-  <h2><code>tessel push &lt;script.js |
-  path/to/folder&gt;</code></h2>
-  <p>This command saves code into flash memory on Tessel.
-  This means that Tessel auto-runs this code when powered.
-  The code will stay on here even if you reset Tessel. If
-  you "tessel run" while you have code saved in Flash, the
-  new code will run until the Tessel is reset, and then
-  Tessel will switch back to the code from Flash.</p>
-  <p>From your "tessel-code" directory, where you saved
-  blinky.js,</p><code><kbd>tessel push
-  blinky.js</kbd></code>
-  <div class="console-output">
-    <code>&gt;&gt; Bundling directory ...<br>
-    &gt;&gt; Deploying bundle ...<br>
-    &gt;&gt; Running script ...<br>
-    &gt;&gt; Finished deployment<br></code>
-  </div>
-  <p>While Tessel is running code from flash, console logs
-  will be hidden by default. To see output after a "push"
-  command, enter</p><code><kbd>tessel logs</kbd></code>
-  <div class="console-output">
-    <code>&gt;&gt; "I'm blinking! (Press CTRL + C to
-    stop)"<br>
-    &gt;&gt; "I'm blinking! (Press CTRL + C to stop)"<br>
-    &gt;&gt; ...<br></code>
-  </div>
-</div>
-</div>
-<div class="row">
-<div class="large-4 columns">
-  <p>The <code>push</code> command is great if you want to
-  run Tessel from an external power source, such as a USB
-  battery, wall USB power, solar phone charger, or another
-  power source.</p>
-  <p>The code you've pushed will start running as soon as
-  the Tessel receives power.</p>
-  <p>Read more about it <a href=
-  "https://tessel.io/docs/untethered" target=
-  "0">here.</a></p>
-</div>
-<div class="large-4 columns"><img src=
-"https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/tessel-battery.jpg"
-style="height:300px"></div>
-<div class="large-4 columns"><img src=
-"https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/tessel-plug.jpg"
-style="height:300px"></div>
-</div>
-<div class="row">
-<div class="large-12 columns">
-  <div style="height:2px;" class="greyBar"></div>
-</div>
-</div>
-<div class="row">
-<div class="large-12 columns">
-  <h2><code>tessel erase</code></h2>
-  <p>This command erases any JavaScript code saved to
-  Tessel's flash memory. The firmware is left unchanged. If
-  you push buggy code to Tessel, an erase can remove your
-  code.</p>
-  <p>Try unplugging and replugging in your Tessel after you
-  have loaded the blinky code in Flash (tessel push). After
-  a few seconds, you should see the LEDs start to
-  blink.</p>
-  <p>Now run</p><code><kbd>tessel erase</kbd></code>
-  <div class="console-output">
-    <code>&gt;&gt; Attempting to erase
-    filesystem<br></code>
-  </div>
-  <p>This will erase the blinky code from Tessel, and the
-  LEDs will stop blinking.</p>
-</div>
-</div>
-<div class="row">
-<div class="large-12 columns">
-  <div class="greyBar"></div>
-</div>
-</div>
-<div class="row">
-<div class="large-6 columns left">
-  <a href="wifi.html" class="bottomButton button">Prev:
-  Wifi</a>
-</div>
-<div class="large-6 columns right">
-  <a href="finished.html" class=
-  "bottomButton right button">Next: Finished!</a>
-</div>
-</div>
-</div>
-</section>
-<div class="github-fork-ribbon-wrapper right-bottom">
-<div class="github-fork-ribbon">
-<a href=
-"https://github.com/tessel/t2-start">Fork on
-Github</a>
-</div>
-</div>
-<footer>
-<section id="sec-footer">
-<div class="row">
-<div class="large-10 column large-centered">
-  <div class="row text-center">
-    <p>Technical Machine © 2013-2015.</p>
-  </div>
-  <div class="row text-center">
-    <p><a href="http://tessel.io/resellers">Resellers</a> |
-    <a href="http://tessel.io/community">Community</a> |
-    <a href="http://tessel.io/about">About us</a> |
-    <a href="http://tessel.io/blog">Blog</a> | <a href=
-    "http://tessel.io/press">Press</a></p>
-  </div>
-  <div class="row text-center">
-    <a href=
-    "https://heapanalytics.com/?utm_source=badge"><img style="width:100px;height:40px"
-    src="http://heapanalytics.com/img/badge.png" alt=
-    "Heap - iOS and Web Analytics"></a>
+  {% capture include_install %}
+  {% include_relative usage.md %}
+  {% endcapture %}
+  {{ include_install | markdownify }}
+
+  <div class="large-12 columns">
+    <div class="row">
+      <div class="greyBar"></div>
+
+      <div class="large-6 columns left">
+        <a href="wifi.html" class="bottomButton button">Prev: Wifi</a>
+      </div>
+      <div class="large-6 columns right">
+        <a href="finished.html" class= "bottomButton right button">Next: Finished!</a>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,7 +1,5 @@
 {::options parse_block_html="true" /}
 
-<div id="anchor" class="large-12 columns fre-container">
-
 # Install Tessel
 
 Select the operating system you are working on.
@@ -82,14 +80,3 @@ firmware upload.
 
 Once the firmware update is complete, continue to the
 next step.
-
-<div class="greyBar"></div>
-
-<div class="large-6 columns left">
-<a href="cmd.html" class="bottomButton button">Prev:
-Command line</a>
-</div>
-<div class="large-6 columns right">
-<a href="blinky.html" class=
-"bottomButton right button">Next: Blink lights</a>
-</div>
