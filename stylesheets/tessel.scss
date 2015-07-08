@@ -1,0 +1,661 @@
+---
+---
+
+html {
+  letter-spacing: 0.04em;
+  height: auto;
+}
+body {
+  letter-spacing: 0.04em;
+  height: auto;
+  font-family: “Trebuchet MS”, Verdana, Arial, serif;
+  &#newfromrepo {
+    text-align: center;
+    background: #008cba;
+  }
+}
+h1 {
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+h2 {
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+h3 {
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+p {
+  letter-spacing: 0.04em;
+  margin-bottom: 20px;
+}
+nav {
+  font: regular 26px Source Sans Pro, sans-serif;
+  color: #363636;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+}
+.text-center {
+  text-align: center;
+}
+#sec-footer {
+  background-color: #444444;
+  color: #f6f6f6;
+  padding: 2em 0;
+  * a {
+    color: #f6f6f6;
+    font-style: regular 26px Source Sans Pro, sans-serif;
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+    padding: 0 1em;
+  }
+}
+button {
+  background-color: #008cba;
+  color: white;
+  &:hover {
+    background-color: #b8c8f5;
+    color: black;
+  }
+}
+textarea {
+  overflow: auto;
+  &#readme {
+    height: 800px;
+  }
+}
+code {
+  word-wrap: break-word;
+  font-family: Andale Mono;
+}
+.box {
+  border: 1px solid #dbdbdb;
+  padding: 7px;
+}
+.bigCode {
+  font-size: 1.6875rem;
+}
+.side-nav {
+  position: absolute;
+  width: 180px;
+  padding-left: 30px;
+  li.active>a:first-child {
+    color: #4d4d4d !important;
+    font-weight: bold !important;
+  }
+}
+.bottomButton {
+  width: 260px;
+}
+.textAlignLeft {
+  padding-left: 0;
+}
+.greyBar {
+  width: 100%;
+  height: 4px;
+  background-color: #dbdbdb;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+.moduleLink {
+  font-size: 1.3em;
+}
+.tabs {
+  dd.active {
+    border-top: 3px solid #2ba6cb;
+    margin-top: -3px;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    border-bottom: 0;
+  }
+  li.active {
+    border-top: 3px solid #2ba6cb;
+    margin-top: -3px;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    border-bottom: 0;
+  }
+}
+.tabs-content {
+  border: 1px solid #eee;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.white {
+  color: white;
+}
+.whiteBackground {
+  background-color: white;
+}
+.opaque {
+  opacity: 1;
+  &:hover {
+    opacity: 0.3;
+  }
+}
+.bold {
+  font-weight: bold;
+}
+.break-word {
+  word-wrap: break-word;
+}
+.centeralign {
+  text-align: center;
+}
+.rightalign {
+  text-align: right;
+}
+.leftalign {
+  text-align: left;
+}
+cli {
+  padding-left: 1%;
+  padding-right: 1%;
+  display: block;
+  margin: 2%;
+  margin-left: 0;
+  margin-right: 0;
+  border-left: 3px solid #dbdbdb;
+}
+.console-output {
+  background: black;
+  color: gray;
+  padding: 15px;
+  //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+  border-radius: 5px;
+  margin: 15px;
+  line-height: 1.2em;
+  font-size: 0.95em;
+}
+.currentlink {
+  color: gray;
+}
+.helptext {
+  color: #888888;
+}
+.hiddenbutton {
+  background-color: white;
+  color: black;
+  &:hover {
+    background: white;
+    color: black;
+  }
+  &:focus {
+    background: white;
+    outline: none;
+    color: black;
+  }
+}
+.disguiseaslink {
+  background-color: #ddd;
+  color: #008cba;
+  padding: 0;
+  &:hover {
+    background: #ddd;
+    color: #006687;
+  }
+  &:focus {
+    background: #ddd;
+    color: #006687;
+    outline: none;
+  }
+}
+.special-embed {
+  height: 200px;
+}
+.social {
+  height: 50px;
+  margin-left: 1em;
+}
+.moduleFREtext {
+  font-size: 16pt;
+  font-family: Open Sans, Helvetica Neue, Helvetica, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: #222;
+  text-rendering: optimizeLegibility;
+  margin: 5%;
+  margin-left: 0;
+  margin-right: 0;
+}
+.modulecontainter {
+  padding: 10%;
+  background: white;
+  word-wrap: break-word;
+}
+.main-container {
+  padding: 5%;
+  background: #ddd;
+  word-wrap: break-word;
+  &#newfromrepo {
+    background: white;
+  }
+}
+.white-container {
+  padding: 5%;
+  background: white;
+  word-wrap: break-word;
+  display: block;
+  height: 2000px;
+}
+.container-no-background {
+  padding: 5%;
+  word-wrap: break-word;
+}
+.constrain {
+  max-width: 400px;
+  max-height: 300px;
+}
+.constrain-sm {
+  max-width: 50px;
+  vertical-align: center;
+}
+.moduleStep {
+  color: #999999;
+  font-size: 1.3em;
+}
+.num {
+  display: block;
+  width: 76px;
+  padding: 5px;
+}
+.small-text {
+  font-size: 0.75em;
+}
+.prereqs {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #cccccc;
+  padding: 1%;
+  //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+  border-radius: 5px;
+  display: block;
+  margin: 1%;
+  margin-left: 0;
+  margin-right: 0;
+}
+#main-menu {
+  background-color: #eee;
+}
+#sec-left {
+  color: black;
+  padding: 15px;
+  padding-top: 0;
+  border-right: thin double;
+  border-color: #bbb;
+}
+.fre-container {
+  color: black;
+  word-wrap: break-word;
+  padding-top: 20px;
+}
+.beige-back {
+}
+.footer {
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+.modulehead {
+  cursor: pointer;
+  border-bottom: 3px solid white;
+  background-color: #eee;
+}
+.moduleTitle {
+  color: #008cba;
+  display: inline-block;
+  padding-top: 10px;
+}
+.triangle {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 9px 0 9px 23px;
+  border-color: transparent transparent transparent #008cba;
+}
+.modulebody {
+  background-color: none;
+  padding: 30px;
+}
+#moduleFRE {
+  text-align: left;
+}
+.project-container {
+}
+.project-image {
+  height: 150px;
+  overflow: hidden;
+}
+.project-title {
+  font-weight: bold;
+}
+.triangle-side {
+  width: 15px;
+  //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+  transform: rotate(90deg);
+  //vendor-prefix found
+  //-ms-transform: rotate(90deg)
+  //vendor-prefix found
+  //-webkit-transform: rotate(90deg)
+}
+.triangle-down {
+  //Instead of the line below you could use @includetransform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+  transform: rotate(180deg);
+  //vendor-prefix found
+  //-ms-transform: rotate(180deg)
+  //vendor-prefix found
+  //-webkit-transform: rotate(180deg)
+}
+.modules {
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: black;
+  text-align: center;
+  height: 100px;
+  top: 1px;
+  &:hover {
+    background: white;
+    color: black;
+  }
+  &:focus {
+    background: white;
+    outline: none;
+    color: black;
+  }
+}
+#alt-menu {
+  display: none;
+}
+#fre-content {
+  margin-left: -180px;
+  padding-left: 400px;
+  max-width: 100%;
+}
+.inlineCode {
+  background-color: #f8f8f8;
+  color: #666666;
+  border: 1px solid #ddd;
+  //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+  border-radius: 3px;
+  font-family: Consolas, Liberation Mono, Menlo, Courier, monospace;
+  font-size: 14px;
+  padding: 2px;
+  margin: 0;
+}
+#projects {
+  position: relative;
+}
+.projectTile {
+  width: 230px;
+  padding: 0;
+  margin: 5px;
+  position: relative;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+#logout {
+  display: block;
+  max-width: 152px;
+  text-align: right;
+}
+.three-up dd {
+  width: 33.33%;
+  text-align: center;
+}
+.semiopaque:hover {
+  opacity: 0.6;
+}
+.top-bar .toggle-topbar.menu-icon a span {
+  //vendor-prefix found
+  //-webkit-box-shadow: none !important
+  //Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: none !important;
+  background-color: #eee;
+}
+.modules[title]:hover:after {
+  content: attr(title);
+  display: block;
+  width: 50px;
+  text-align: center;
+  height: 0;
+}
+input#repotitle {
+  font-size: 2.75rem;
+}
+.belowh3[title]:hover:after {
+  content: attr(title);
+  position: absolute;
+  top: 90px;
+  left: 90px;
+}
+
+body {
+  background: white;
+}
+pre {
+  background: #eee;
+  //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+  border-radius: 5px;
+  line-height: 1.4;
+  padding: 10px 20px;
+  color: #eb0;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  code {
+    overflow: auto;
+  }
+}
+#sec-what {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: #fff;
+  padding: 10px 0 50px;
+  h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.6em;
+    color: #444;
+    margin: 25px 20px;
+  }
+}
+#sec-spec {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: #ddd;
+  border-width: 1px 0;
+  border-color: #ccc;
+  border-style: solid;
+  .specs {
+    margin: 20px 0;
+  }
+  h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.6em;
+    color: #444;
+    margin: 25px 20px;
+  }
+}
+#sec-lastcall {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-width: 1px 0;
+  border-color: #aaa;
+  border-style: solid;
+  text-align: center;
+  background: #fff;
+}
+#sec-heading {
+  padding-bottom: 30px;
+  text-align: center;
+  .desc {
+    font-size: 1.1em;
+    margin-top: 100px;
+    p {
+      font-size: 20px;
+      &.tagline {
+        font-size: 34px;
+        text-align: center;
+        line-height: 1.3;
+      }
+    }
+  }
+  fieldset {
+    background: white;
+  }
+}
+#sec-heading-pic-column {
+  text-align: right;
+}
+@media(max-width: 768px) {
+  #toTopHover {
+    display: none;
+    left: -100000px;
+  }
+  #toTop {
+    display: none;
+    left: -100000px;
+  }
+  #sec-heading-pic {
+    margin-bottom: -30px;
+    margin-top: -500px !important;
+    z-index: 0;
+    display: none;
+  }
+  #sec-heading-pic-column {
+    text-align: center;
+  }
+  code {
+    font-size: 14px !important;
+  }
+  #servo-anim-code {
+    //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+    border-radius: 4px;
+    padding: 14px;
+    margin-bottom: 20px;
+  }
+  #servo-anim-block {
+    padding: 20px 0;
+    button.large {
+      margin-bottom: 0;
+    }
+  }
+  #sec-what {
+    padding-bottom: 20px;
+    font-size: 14px;
+    br {
+      display: none;
+    }
+  }
+  #sec-heading .desc {
+    margin-top: 0;
+  }
+}
+@media(max-width: 500px) {
+  code {
+    font-size: 12px !important;
+  }
+}
+@media(max-height: 200px) {
+  .side-nav {
+    overflow-y: scroll;
+  }
+}
+@media(max-height: 560px) {
+  .side-nav {
+    overflow-y: scroll;
+  }
+}
+@media(max-width: 640px) {
+  #alt-menu {
+    display: block;
+  }
+  #main-menu {
+    display: none;
+  }
+  #sticky-topbar {
+    display: none;
+  }
+  #fre-sidebar {
+    display: none;
+  }
+  #fre-content {
+    margin-left: 0;
+    padding-left: 0;
+    max-width: 100%;
+  }
+}
+#sec-heading-pic {
+  width: 360px;
+  margin-top: -150px;
+}
+.modules {
+  li {
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.1;
+    font-size: 0.8em;
+    span {
+      display: block;
+      margin: 10px 0;
+      font-family: Helvetica;
+    }
+  }
+  a {
+    display: block;
+  }
+  img {
+    max-height: 80px;
+  }
+}
+#servo-anim-block {
+  background: #ddeaf6;
+  padding: 50px 0;
+}
+#servo-anim-code {
+  font-weight: normal;
+  font-size: 16px;
+  padding: 14px 20px;
+  //Instead of the line below you could use @includeborder-radius($radius, $vertical-radius)
+  border-radius: 7px;
+  text-align: left;
+}
+#sec-teardown {
+  background: #333;
+}
+tt {
+  color: #f54a42;
+  font-family: inherit;
+  font-size: inherit;
+}
+.disc {
+  padding-left: 25px;
+  margin: 10px 0;
+}
+h3 {
+  margin-top: 40px;
+  color: #000 !important;
+}
+h4 {
+  text-transform: uppercase;
+  font-size: 0.9em;
+  text-align: center;
+  color: #444;
+}
+span.name {
+  color: #f54a42;
+  font-family: inherit;
+  font-size: inherit;
+}
+ul.spread li {
+  margin: 20px 0;
+}
+
+// Undo Foundation coloring
+pre code {
+  color: black;
+}

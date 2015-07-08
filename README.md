@@ -8,7 +8,13 @@ Code is messy as this was scraped originally from a dynamic webapp. Goal is to h
 
 ## Running locally
 
-Follow the instructions [here](https://help.github.com/articles/using-jekyll-with-pages/) to deploy this repo locally. If you already have Ruby and Bundler installed, you can skip ahead and run `bundle exec jekyll serve`.
+To run this repo locally:
+
+* Run `gem install github-pages` to mirror the plug-ins used by GitHub Pages on your local machine.
+* Run `jekyll serve`.
+* Open <http://localhost:4000/>
+
+See instructions in [jekyll-now](https://github.com/barryclark/jekyll-now#local-development) for more details.
 
 ## License
 
