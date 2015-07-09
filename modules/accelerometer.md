@@ -2,7 +2,7 @@
 
 ## <img class="constrain-sm" src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules/accelerometer.png"> Accelerometer
 
-[<i class="fa fa-github"> View source on Github</i>](https://github.com/tessel/ambient-attx4)
+[<i class="fa fa-github"> View source on Github</i>](https://github.com/tessel/accel-mma84)
 
 ### Step 1
 
