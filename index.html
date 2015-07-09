@@ -3,22 +3,21 @@ layout: default
 ---
 
 <script src="javascripts/custom/install.js"></script>
-<div class="row">
-  {% capture include_install %}
-  {% include_relative install.md %}
-  {% endcapture %}
-  {{ include_install | markdownify }}
 
-  <div class="large-12 columns">
-    <div class="row">
-      <div class="greyBar"></div>
+{% capture include_install %}
+{% include_relative install.md %}
+{% endcapture %}
+{{ include_install | markdownify }}
 
-      <div class="large-6 columns left">
-        <a href="cmd.html" class="bottomButton button">Prev: Command line</a>
-      </div>
-      <div class="large-6 columns right">
-        <a href="blinky.html" class= "bottomButton right button">Next: Blink lights</a>
-      </div>
+<div class="large-12 columns">
+  <div class="row">
+    <div class="greyBar"></div>
+
+    <div class="large-6 columns left">
+      <a href="cmd.html" class="bottomButton button">Prev: Command line</a>
+    </div>
+    <div class="large-6 columns right">
+      <a href="blinky.html" class= "bottomButton right button">Next: Blink lights</a>
     </div>
   </div>
 </div>

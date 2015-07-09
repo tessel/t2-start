@@ -2,127 +2,125 @@
 layout: default
 ---
 
+<!-- mixin for the modular formatting of each module's FRE--><!-- mixins for within the includes--><!-- include all the modules--><!--each val in moduleList-->
 <div class="row">
   <div class="large-12 columns fre-container">
-    <!-- mixin for the modular formatting of each module's FRE--><!-- mixins for within the includes--><!-- include all the modules--><!--each val in moduleList-->
+    <span><img src=
+    "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules/audio.png"
+    style="margin-top:-20px;" class=
+    "constrain-sm"></span>
+    <h2 class="leftalign moduleTitle"><span style=
+    "padding-left:10px;">Audio</span></h2><span style=
+    "padding-left:20px;"><a href=
+    "https://github.com/tessel/audio-vs1053b"><i class=
+    "fa fa-github">View Source</i></a></span>
+  </div>
+</div>
+<div id="audio" class="row">
+  <div class="large-12 columns">
     <div class="row">
-      <div class="large-12 columns fre-container">
-        <span><img src=
-        "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules/audio.png"
-        style="margin-top:-20px;" class=
-        "constrain-sm"></span>
-        <h2 class="leftalign moduleTitle"><span style=
-        "padding-left:10px;">Audio</span></h2><span style=
-        "padding-left:20px;"><a href=
-        "https://github.com/tessel/audio-vs1053b"><i class=
-        "fa fa-github">View Source</i></a></span>
+      <div class="large-12 columns">
+        <p class="moduleStep">Step 1</p>
       </div>
     </div>
-    <div id="audio" class="row">
+    <div class="row">
       <div class="large-12 columns">
+        <p>Make a directory inside your "tessel-code"
+        folder: enter <code><kbd>mkdir audio</kbd></code>
+        into your command line, then change directory
+        into that folder: <code><kbd>cd
+        audio</kbd></code></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <div style="height:2px;" class="greyBar"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <p class="moduleStep">Step 2</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-6 columns">
+        <p>Plug in headphones or a speaker to the
+        Headphones/Line out jack on your module. (You can
+        also plug in a microphone to Line in, or just use
+        the Mic built into the module.)</p>
+      </div>
+      <div class="large-6 columns">
         <div class="row">
-          <div class="large-12 columns">
-            <p class="moduleStep">Step 1</p>
-          </div>
+          <div class="large-12 columns"><img src=
+          "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_special/audio-headphones.jpeg"
+          class="constrain"></div>
         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <div style="height:2px;" class="greyBar"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <p class="moduleStep">Step 3</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-6 columns">
+        <p>Plug the audio module into Tessel <b>port
+        A</b> with the hexagon/icon side down and the
+        electrical components on the top, then plug
+        Tessel into your computer via USB.</p>
+      </div>
+      <div class="large-6 columns">
         <div class="row">
-          <div class="large-12 columns">
-            <p>Make a directory inside your "tessel-code"
-            folder: enter <code><kbd>mkdir audio</kbd></code>
-            into your command line, then change directory
-            into that folder: <code><kbd>cd
-            audio</kbd></code></p>
-          </div>
+          <div class="large-12 columns"><img src=
+          "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_plugged/audio.jpeg"
+          class="constrain"></div>
         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <div style="height:2px;" class="greyBar"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <p class="moduleStep">Step 4</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-6 columns">
+        <p>Install by typing <code><kbd>npm install
+        audio-vs1053b</kbd></code> into the command
+        line.</p>
+      </div>
+      <div class="large-6 columns">
         <div class="row">
-          <div class="large-12 columns">
-            <div style="height:2px;" class="greyBar"></div>
-          </div>
+          <div class="large-12 columns"><img src=
+          "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_corners/audio.jpg"
+          class="constrain"></div>
         </div>
-        <div class="row">
-          <div class="large-12 columns">
-            <p class="moduleStep">Step 2</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-6 columns">
-            <p>Plug in headphones or a speaker to the
-            Headphones/Line out jack on your module. (You can
-            also plug in a microphone to Line in, or just use
-            the Mic built into the module.)</p>
-          </div>
-          <div class="large-6 columns">
-            <div class="row">
-              <div class="large-12 columns"><img src=
-              "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_special/audio-headphones.jpeg"
-              class="constrain"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-12 columns">
-            <div style="height:2px;" class="greyBar"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-12 columns">
-            <p class="moduleStep">Step 3</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-6 columns">
-            <p>Plug the audio module into Tessel <b>port
-            A</b> with the hexagon/icon side down and the
-            electrical components on the top, then plug
-            Tessel into your computer via USB.</p>
-          </div>
-          <div class="large-6 columns">
-            <div class="row">
-              <div class="large-12 columns"><img src=
-              "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_plugged/audio.jpeg"
-              class="constrain"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-12 columns">
-            <div style="height:2px;" class="greyBar"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-12 columns">
-            <p class="moduleStep">Step 4</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-6 columns">
-            <p>Install by typing <code><kbd>npm install
-            audio-vs1053b</kbd></code> into the command
-            line.</p>
-          </div>
-          <div class="large-6 columns">
-            <div class="row">
-              <div class="large-12 columns"><img src=
-              "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_corners/audio.jpg"
-              class="constrain"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-12 columns">
-            <div style="height:2px;" class="greyBar"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-12 columns">
-            <p class="moduleStep">Step 5</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-12 columns left">
-            <p>Save this code in a text file called
-            <code>audio.js</code>:</p>
-            <pre id="exampleCode" class="prettyprint">
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <div style="height:2px;" class="greyBar"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <p class="moduleStep">Step 5</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns left">
+        <p>Save this code in a text file called
+        <code>audio.js</code>:</p>
+        <pre id="exampleCode" class="prettyprint">
 <code>// Any copyright is dedicated to the Public Domain.
 // http://creativecommons.org/publicdomain/zero/1.0/
 
@@ -184,114 +182,114 @@ throw err;
 });
 </code>
 </pre>
-          </div>
-        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <div style="height:2px;" class="greyBar"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <p class="moduleStep">Step 6</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-6 columns">
+        <p>Locate the config button on Tessel. You'll be
+        holding down this button to record sound.</p>
+      </div>
+      <div class="large-6 columns">
         <div class="row">
-          <div class="large-12 columns">
-            <div style="height:2px;" class="greyBar"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-12 columns">
-            <p class="moduleStep">Step 6</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-6 columns">
-            <p>Locate the config button on Tessel. You'll be
-            holding down this button to record sound.</p>
-          </div>
-          <div class="large-6 columns">
-            <div class="row">
-              <div class="large-12 columns"><img src=
-              "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_special/config_button.jpg"
-              class="constrain"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-12 columns">
-            <div style="height:2px;" class="greyBar"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-12 columns">
-            <p class="moduleStep">Step 7</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-6 columns">
-            <p>In your command line, <code><kbd>tessel run
-            audio.js</kbd></code><br>
-            When prompted, hold down the config button and
-            speak loudly at the Audio module. When you
-            release the button the recording will be played
-            back to you.<br>
-            <br>
-            <b>Bonus:</b> Change the code so that recording
-            stops automatically after 5 seconds.<br>
-            <br>
-            To see what else you can do with the audio
-            module, see the module docs <a href=
-            'https://github.com/tessel/audio-vs1053b' target=
-            "0">here</a>.</p>
-          </div>
-          <div class="large-6 columns">
-            <div class="row">
-              <div class="large-12 columns"><img src=
-              "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/gifs/audio.gif"
-              class="constrain"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-12 columns">
-            <div style="height:2px;" class="greyBar"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-12 columns">
-            <p class="moduleStep">Step 8</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-12 columns">
-            <p>What else can you do with a audio module? Try
-            a <a href="http://tessel.io/projects" target=
-            "0">community-created project.</a></p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-6 columns left">
-            <iframe frameborder='0' height='270' scrolling=
-            'no' src=
-            'http://tessel.hackster.io/davidfekke/tessel-halloween/embed'
-            width='360'></iframe>
-          </div>
-          <div class="large-6 columns left">
-            <iframe frameborder='0' height='270' scrolling=
-            'no' src=
-            'http://tessel.hackster.io/driesdroesbeke/tessel-notifications/embed'
-            width='360'></iframe>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-12 columns">
-            <p><br>
-            What are you making? <a href=
-            "http://tessel.hackster.io/" target="0">Share
-            your invention!</a></p>
-            <p>If you run into any issues you can check out
-            the <a href=
-            "http://forums.tessel.io/category/audio">audio
-            forums</a>.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-12 columns">
-            <div style="height:2px;" class="greyBar"></div>
-          </div>
+          <div class="large-12 columns"><img src=
+          "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_special/config_button.jpg"
+          class="constrain"></div>
         </div>
       </div>
     </div>
-    {% include_relative _module_footer.html %}
+    <div class="row">
+      <div class="large-12 columns">
+        <div style="height:2px;" class="greyBar"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <p class="moduleStep">Step 7</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-6 columns">
+        <p>In your command line, <code><kbd>tessel run
+        audio.js</kbd></code><br>
+        When prompted, hold down the config button and
+        speak loudly at the Audio module. When you
+        release the button the recording will be played
+        back to you.<br>
+        <br>
+        <b>Bonus:</b> Change the code so that recording
+        stops automatically after 5 seconds.<br>
+        <br>
+        To see what else you can do with the audio
+        module, see the module docs <a href=
+        'https://github.com/tessel/audio-vs1053b' target=
+        "0">here</a>.</p>
+      </div>
+      <div class="large-6 columns">
+        <div class="row">
+          <div class="large-12 columns"><img src=
+          "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/gifs/audio.gif"
+          class="constrain"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <div style="height:2px;" class="greyBar"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <p class="moduleStep">Step 8</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <p>What else can you do with a audio module? Try
+        a <a href="http://tessel.io/projects" target=
+        "0">community-created project.</a></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-6 columns left">
+        <iframe frameborder='0' height='270' scrolling=
+        'no' src=
+        'http://tessel.hackster.io/davidfekke/tessel-halloween/embed'
+        width='360'></iframe>
+      </div>
+      <div class="large-6 columns left">
+        <iframe frameborder='0' height='270' scrolling=
+        'no' src=
+        'http://tessel.hackster.io/driesdroesbeke/tessel-notifications/embed'
+        width='360'></iframe>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <p><br>
+        What are you making? <a href=
+        "http://tessel.hackster.io/" target="0">Share
+        your invention!</a></p>
+        <p>If you run into any issues you can check out
+        the <a href=
+        "http://forums.tessel.io/category/audio">audio
+        forums</a>.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <div style="height:2px;" class="greyBar"></div>
+      </div>
+    </div>
+  </div>
+</div>
+{% include_relative _module_footer.html %}

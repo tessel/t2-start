@@ -2,22 +2,16 @@
 layout: default
 ---
 
-<div class="row">
-  {% capture include_install %}
-  {% include_relative wifi.md %}
-  {% endcapture %}
-  {{ include_install | markdownify }}
+{% capture include_install %}
+{% include_relative wifi.md %}
+{% endcapture %}
+{{ include_install | markdownify }}
 
-  <div class="large-12 columns">
-    <div class="row">
-      <div class="greyBar"></div>
+<div class="greyBar"></div>
 
-      <div class="large-6 columns left">
-        <a href="modules.html" class="bottomButton button">Prev: Add modules</a>
-      </div>
-      <div class="large-6 columns right">
-        <a href="usage.html" class= "bottomButton right button">Next: CLI</a>
-      </div>
-    </div>
-  </div>
+<div class="large-6 columns left">
+  <a href="modules.html" class="bottomButton button">Prev: Add modules</a>
+</div>
+<div class="large-6 columns right">
+  <a href="usage.html" class= "bottomButton right button">Next: CLI</a>
 </div>

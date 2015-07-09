@@ -2,46 +2,32 @@
 layout: default
 ---
 
-<div class="row">
-  <div class="large-12 columns fre-container">
-    <div class="row">
-      <div class="large-12 columns">
-        <h1>Tessel's First Tweet</h1>
-      </div>
-    </div><br>
-  </div>
-</div>
-<div class="row">
-  <div class="large-12 columns">
-    <p>Now that you're <a href="wifi.html">connected to
-    Wifi</a>, let's try a tweet!</p>
-    <p>This code snippet makes Tessel send a tweet from a
-    dummy account <a href="https://twitter.com/TesselTweet"
-    target="0">(@TesselTweet)</a> that we've created for
-    this.</p>
-    <p>If you want to post from your own account, go to
-    <a href="https://apps.twitter.com/" target=
-    "0">apps.twitter.com</a>, create your own OAuth tokens
-    with read and write permissions, and paste them into the
-    script.</p>
-  </div>
-</div>
-<div class="row">
-  <div class="large-12 columns">
-    <div style="height:2px;" class="greyBar"></div>
-  </div>
-</div>
-<div class="row large-12 columns">
-  <p>First, create a new directory within your "tessel-code"
-  directory:<code><kbd>mkdir tessel-tweet</kbd><kbd>cd
-  tessel-tweet</kbd><kbd>npm init</kbd></code></p>
-  <p>Now copy and paste the following into a new file and
-  save it as "tweet.js". Change the twitterHandle var to your
-  own Twitter handle.</p>
-</div>
-<div class="row">
-  <div class="large-12 columns">
-    <pre class="prettyprint">
+<h1>Tessel's First Tweet</h1>
+
+<p>Now that you're <a href="wifi.html">connected to
+Wifi</a>, let's try a tweet!</p>
+
+<p>This code snippet makes Tessel send a tweet from a
+dummy account <a href="https://twitter.com/TesselTweet"
+target="0">(@TesselTweet)</a> that we've created for
+this.</p>
+
+<p>If you want to post from your own account, go to
+<a href="https://apps.twitter.com/" target=
+"0">apps.twitter.com</a>, create your own OAuth tokens
+with read and write permissions, and paste them into the
+script.</p>
+
+<hr>
+
+<p>First, create a new directory within your "tessel-code"
+directory:<code><kbd>mkdir tessel-tweet</kbd><kbd>cd
+tessel-tweet</kbd><kbd>npm init</kbd></code></p>
+<p>Now copy and paste the following into a new file and
+save it as "tweet.js". Change the twitterHandle var to your
+own Twitter handle.</p>
+
+<pre class="prettyprint">
 <code>// Node requires
 var twitter = require('twitter');
 var util = require('util')
@@ -68,17 +54,14 @@ console.log('tweet successful!');
 }
 });</code>
 </pre>
-  </div>
-</div>
-<div class="row">
-  <div class="large-12 columns">
-    <p>We're using the <a href=
-    "https://www.npmjs.org/package/twitter">twitter
-    Node.js</a> library for convenience</p>
-    <p>We'll need to install the library using
-    npm:<code><kbd>npm install twitter</kbd></code></p>
-  </div>
-</div>
+
+<p>We're using the <a href=
+"https://www.npmjs.org/package/twitter">twitter
+Node.js</a> library for convenience</p>
+
+<p>We'll need to install the library using
+npm:<code><kbd>npm install twitter</kbd></code></p>
+
 <div class="row">
   <div class="large-4 columns">
     <br>
@@ -90,18 +73,11 @@ console.log('tweet successful!');
   "https://s3.amazonaws.com/technicalmachine-assets/fre+assets/tessel-tweet-2.png"
   style="float:right;"></div>
 </div>
-<div class="row">
-  <div class="large-12 columns">
-    <br>
-    <p><b>Bonus:</b> Try making Tessel tweet output from a
-    module.</p>
-  </div>
-</div>
-<div class="row">
-  <div class="large-12 columns">
-    <div class="greyBar"></div>
-  </div>
-</div>
+
+<p><b>Bonus:</b> Try making Tessel tweet output from a module.</p>
+
+<div class="greyBar"></div>
+
 <div class="row">
   <div class="large-5 columns left">
     <a href="wifi.html" class="bottomButton button">Prev:

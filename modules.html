@@ -2,10 +2,7 @@
 layout: default
 ---
 
-<div class="row">
-  {% capture include_install %}
-  {% include_relative modules.md %}
-  {% endcapture %}
-  {{ include_install | markdownify }}
-</div>
-  
+{% capture include_install %}
+{% include_relative modules.md %}
+{% endcapture %}
+{{ include_install | markdownify }}
