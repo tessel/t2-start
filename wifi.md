@@ -1,7 +1,15 @@
 {::options parse_block_html="true" /}
 
+<div class="row">
+<div class="large-12 columns">
+
 # Connect Tessel to Wifi
 
+Let's get online! Tessel has Wifi connectivity built into the board, so you can use online APIs right away.
+
+*Note: This step is optional. If you don't have internet right now, just go ahead to the next step: [add modules](modules.html)*
+
+</div></div>
 <div class="row">
 <div class="large-6 columns">
 

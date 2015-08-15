@@ -2,6 +2,8 @@
 
 # Install Tessel
 
+*New to the command line? [Take a step back and learn the basics.](cmd.html)*
+
 Select the operating system you are working on.
 
 <dl id="install-tabs" data-tab="" class="tabs contained three-up">
