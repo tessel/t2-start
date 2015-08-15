@@ -2,6 +2,8 @@
 
 # Install Tessel
 
+*New to the command line? [Take a step back and learn the basics.](cmd.html)*
+
 Select the operating system you are working on.
 
 <dl id="install-tabs" data-tab="" class="tabs contained three-up">
@@ -22,12 +24,11 @@ Select the operating system you are working on.
 
 [Node.js](http://nodejs.org/) is a prerequisite for installing the Tessel command line. You can install it from the [official website](http://nodejs.org/), or if you have [brew](http://brew.sh/) installed: `brew install node`
 
-Once Node.js is installed, run this installation script from your terminal: `npm install -g tessel`. If you get the common error shown [here](http://stackoverflow.com/questions/16151018/npm-throws-error-without-sudo), correct it by running `sudo chown -R $(whoami) ~/.npm` and then running `npm install -g tessel` again.
+Once Node.js is installed, run this installation script from your terminal:
 
-If the installation didn't work, please post the error message to our [forums](http://forums.tessel.io/category/installation-issues) and we'll help you out.
+<big>`npm install -g t2-cli`</big>
 
-If the scripts ran without errors, proceed to [update the firmware](index.html#firmware).
-
+*Note: If you get the common npm [EACCES error](http://stackoverflow.com/questions/16151018/npm-throws-error-without-sudo), correct it by running `sudo chown -R $(whoami) ~/.npm` and then running `npm install -g t2-cli` again.*
 </div>
 
 <div id="tab-linux" class="content">
@@ -40,14 +41,10 @@ If you are running Ubuntu _13.10 or later_, you can run this:
 
 Once Node is installed, run this in your terminal:
 
-```
+{% highlight sh %}
 apt-get install libusb-1.0-0-dev libudev-dev
-npm install -g tessel
-```
-
-If the installation didn't work, please post the error message to our [forums](http://forums.tessel.io/category/installation-issues) and we'll help you out.
-
-If the scripts ran without errors, proceed to [update the firmware](index.html#firmware).
+npm install -g t2-cli
+{% endhighlight %}
 
 </div>
 
@@ -61,22 +58,14 @@ Next, install [Node.JS](http://nodejs.org). You need this to interact with Tesse
 
 After installing the Tessel drivers and Node.js, run this in cmd.exe:
 
-`npm install -g tessel`
-
-If the installation didn't work, please post the error message to our [forums](http://forums.tessel.io/category/installation-issues) and we'll help you out.
-
-If the scripts ran without errors, proceed to [update the firmware](index.html#firmware).
+<big>`npm install -g t2-cli`</big>
 
 </div>
 </div>
 
 ### Update Tessel's Firmware
 
-Plug Tessel into your computer via USB. In the command
-line, run `tessel update`.
-
-The lights should blink yellow and red during the
-firmware upload.
+Take a quick field trip to our current [firmware update instructions](https://github.com/tessel/t2-docs/blob/master/cli.md#updating-tessel-2-on-board-osfirmware) and update Tessel's firmware, then come back to this page.
 
 Once the firmware update is complete, continue to the
 next step.

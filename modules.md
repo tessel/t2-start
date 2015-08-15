@@ -42,7 +42,7 @@ Modules should be plugged in so that all of the electrical components are face u
 
 ## Choose a module below to get up and running
 
-If you've already tried out your modules, move on to [Connecting to Wifi.](wifi.html)
+If you've already tried out your modules, move on to [Usage.](usage.html)
 
 *   [Accelerometer](modules/accelerometer.html)
 *   [Ambient (Light + Sound)](modules/ambient.html)
