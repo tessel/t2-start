@@ -22,7 +22,7 @@ Select the operating system you are working on.
 
 [Node.js](http://nodejs.org/) is a prerequisite for installing the Tessel command line. You can install it from the [official website](http://nodejs.org/), or if you have [brew](http://brew.sh/) installed: `brew install node`
 
-Once Node.js is installed, run this installation script from your terminal: `npm install -g tessel`. If you get the common error shown [here](http://stackoverflow.com/questions/16151018/npm-throws-error-without-sudo), correct it by running `sudo chown -R $(whoami) ~/.npm` and then running `npm install -g tessel` again.
+Once Node.js is installed, run this installation script from your terminal: `npm install -g t2-cli`. If you get the common error shown [here](http://stackoverflow.com/questions/16151018/npm-throws-error-without-sudo), correct it by running `sudo chown -R $(whoami) ~/.npm` and then running `npm install -g t2-cli` again.
 
 If the installation didn't work, please post the error message to our [forums](http://forums.tessel.io/category/installation-issues) and we'll help you out.
 
@@ -42,7 +42,7 @@ Once Node is installed, run this in your terminal:
 
 ```
 apt-get install libusb-1.0-0-dev libudev-dev
-npm install -g tessel
+npm install -g t2-cli
 ```
 
 If the installation didn't work, please post the error message to our [forums](http://forums.tessel.io/category/installation-issues) and we'll help you out.
@@ -61,7 +61,7 @@ Next, install [Node.JS](http://nodejs.org). You need this to interact with Tesse
 
 After installing the Tessel drivers and Node.js, run this in cmd.exe:
 
-`npm install -g tessel`
+`npm install -g t2-cli`
 
 If the installation didn't work, please post the error message to our [forums](http://forums.tessel.io/category/installation-issues) and we'll help you out.
 
