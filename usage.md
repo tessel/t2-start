@@ -28,7 +28,9 @@ This command is shown in the [blinky example.](blinky.html)
 
 <h3>`t2 push <script.js | path/to/folder>`</h3>
 
-This command saves code into flash memory on Tessel. This means that Tessel auto-runs this code when powered. The code will stay on here even if you reset Tessel. If you "tessel run" while you have code saved in Flash, the new code will run until the Tessel is reset, and then Tessel will switch back to the code from Flash.
+This command saves code into flash memory on Tessel. This means that Tessel auto-runs this code when powered. The code will stay on here even if you restart Tessel.
+
+If you "tessel run" while you have code saved in Flash, the new code will run until the Tessel is reset, and then Tessel will switch back to the code from Flash.
 
 From your "tessel-code" directory, where you saved blinky.js,
 
@@ -40,26 +42,6 @@ From your "tessel-code" directory, where you saved blinky.js,
 >> Running script ...  
 >> Finished deployment  
 {% endhighlight %}
-
-<div class="row">
-<div class="large-4 columns">
-
-The `push` command is great if you want to run Tessel from an external power source, such as a USB battery, wall USB power, solar phone charger, or another power source.
-
-The code you've pushed will start running as soon as the Tessel receives power.
-
-</div>
-<div class="large-4 columns">
-
-![](https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/tessel-battery.jpg)
-
-</div>
-<div class="large-4 columns">
-
-![](https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/tessel-plug.jpg)
-
-</div>
-</div>
 
 <h3>`t2 erase`</h3>
 
