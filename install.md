@@ -72,11 +72,7 @@ If the scripts ran without errors, proceed to [update the firmware](index.html#f
 
 ### Update Tessel's Firmware
 
-Plug Tessel into your computer via USB. In the command
-line, run `tessel update`.
-
-The lights should blink yellow and red during the
-firmware upload.
+Take a quick field trip to our current [firmware update instructions](https://github.com/tessel/t2-docs/blob/master/cli.md#updating-tessel-2-on-board-osfirmware) and update Tessel's firmware, then come back to this page.
 
 Once the firmware update is complete, continue to the
 next step.
