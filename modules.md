@@ -2,17 +2,17 @@
 
 # Modules
 
-Tessel has four module ports, labeled A, B, C, and D.
+Tessel has two module ports, labeled A and B.
 
 <div class="row">
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/tessel-ports.jpg)
+![](http://i.imgur.com/5cpim4e.jpg)
 
 </div>
 <div class="large-6 columns">
 
-In the examples below, port "A" is always specified. But as long as you change the port in the code, you can plug your module into any of the ports.
+In the examples below, port "A" is always specified. But as long as you change the port in the code, you can plug your module into either of the ports.
 
 It's best to unplug Tessel from power while plugging in modules.
 
@@ -28,14 +28,14 @@ Modules should be plugged in so that all of the electrical components are face u
 
 #### face up
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/tessel-all-plugged-sm.jpg)
+![](http://i.imgur.com/ROHx9nr.png)
 
 </div>
 <div class="large-6 columns right">
 
 #### face down
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/tessel-all-plugged-back-sm.jpg)
+![](http://i.imgur.com/vNg4gxd.png)
 
 </div>
 </div>
