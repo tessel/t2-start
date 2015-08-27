@@ -2,7 +2,7 @@
 
 <div class="row">
 <div class="large-4 columns right">
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/tessel-plugged.jpg)
+![](http://i.imgur.com/jDRIX06.jpg)
 </div>
 
 <div class="large-8 columns">
