@@ -20,7 +20,7 @@ Plug the climate module into Tessel **port A** with the hexagon/icon side down a
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_plugged/climate.jpeg)
+![](http://i.imgur.com/mMAJoEZ.jpg)
 
 </div>
 </div>

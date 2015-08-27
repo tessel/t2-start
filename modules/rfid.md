@@ -18,7 +18,7 @@ Plug the RFID module into Tessel **port A** with the hexagon/icon side down and 
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_plugged/rfid.jpeg)
+![](http://i.imgur.com/aYlr7Bd.jpg)
 
 </div>
 </div>

@@ -18,7 +18,7 @@ Plug the ambient module into Tessel **port A** with the hexagon/icon side down a
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_plugged/ambient.jpeg)
+![](http://i.imgur.com/RLmPhfw.jpg)
 
 </div>
 </div>

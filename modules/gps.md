@@ -20,7 +20,7 @@ Plug the GPS module into Tessel **port C** with the hexagon/icon side down and t
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_plugged/gps-portc.jpeg)
+![](http://i.imgur.com/F4rOKN7.jpg)
 
 </div>
 </div>

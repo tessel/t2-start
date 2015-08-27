@@ -18,7 +18,7 @@ Plug the accelerometer module into Tessel **port A** with the hexagon/icon side 
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_plugged/accelerometer.jpeg)
+![](http://i.imgur.com/aaQT2wC.jpg)
 
 </div>
 </div>
