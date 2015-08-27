@@ -2,15 +2,14 @@
 
 # Modules
 
-Tessel has two module ports, labeled A and B.
-
 <div class="row">
-<div class="large-6 columns">
+<div class="large-5 columns">
 
 ![](http://i.imgur.com/5cpim4e.jpg)
 
 </div>
-<div class="large-6 columns">
+<div class="large-7 columns">
+Tessel has two module ports, labeled A and B.
 
 In the examples below, port "A" is always specified. But as long as you change the port in the code, you can plug your module into either of the ports.
 
@@ -21,19 +20,25 @@ At the bottom of this page are walkthroughs for the connection and installation 
 </div>
 </div>
 
-Modules should be plugged in so that all of the electrical components are face up and all the hexagons are face down:
-
 <div class="row">
-<div class="large-6 columns left">
+<div class="large-4 columns">
 
-#### face up
+<br/>
+<br/>
+Modules should be plugged in so that all of the electrical components are on the top and the big hexagon is face down:
+
+</div>
+
+<div class="large-4 columns">
+
+#### this side up
 
 ![](http://i.imgur.com/ROHx9nr.png)
 
 </div>
-<div class="large-6 columns right">
+<div class="large-4 columns">
 
-#### face down
+#### this side down
 
 ![](http://i.imgur.com/vNg4gxd.png)
 
