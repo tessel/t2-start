@@ -52,7 +52,7 @@ Plug the servo module into Tessel **port A** with the hexagon/icon side down and
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_plugged/servo.jpeg)
+![](http://i.imgur.com/oiKY9md.jpg)
 
 </div>
 </div>

@@ -6,7 +6,7 @@
 
 ### Step 1
 
-**Note:** The GPS module only works on **port C** at the moment. Port C is the most isolated from RF noise from the MCU, and having Tessel doing a lot of processing will make getting a lock harder. The time between seeing satellites and actually getting a lock is dependent on the satellite. Be in view of the open sky for best results (and even then it may take a while to get a lock). Once the module has a lock, the lock should stay for a while.
+**Note:** The time between seeing satellites and actually getting a lock is dependent on the satellite. Be in view of the open sky for best results (and even then it may take a while to get a lock). Once the module has a lock, the lock should stay for a while.
 
 Make a directory inside your "tessel-code" folder: enter `mkdir gps` into your command line, then change directory into that folder: `cd gps`
 
@@ -15,12 +15,12 @@ Make a directory inside your "tessel-code" folder: enter `mkdir gps` into your c
 <div class="row">
 <div class="large-6 columns">
 
-Plug the GPS module into Tessel **port C** with the hexagon/icon side down and the electrical components on the top, then plug Tessel into your computer via USB.
+Plug the GPS module into Tessel **port A** with the hexagon/icon side down and the electrical components on the top, then plug Tessel into your computer via USB.
 
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_plugged/gps-portc.jpeg)
+![](http://i.imgur.com/F4rOKN7.jpg)
 
 </div>
 </div>

@@ -18,7 +18,7 @@ Plug the IR module into Tessel **port A** with the hexagon/icon side down and th
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_plugged/ir.jpeg)
+![](http://i.imgur.com/okriGCr.jpg)
 
 </div>
 </div>
