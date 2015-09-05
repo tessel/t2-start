@@ -7,15 +7,7 @@
 Select the operating system you are working on.
 
 <dl id="install-tabs" data-tab="" class="tabs contained three-up">
-<dd class="active">
-[OSX](#tab-osx)
-</dd>
-<dd>
-[Linux](#tab-linux)
-</dd>
-<dd>
-[Windows](#tab-pc)
-</dd>
+| [OSX](#tab-osx) || [Linux](#tab-linux) || [Windows](#tab-windows) |
 </dl>
 
 <div id="install-content" class="tabs-content">
@@ -48,7 +40,7 @@ npm install -g t2-cli
 
 </div>
 
-<div id="tab-pc" class="content">
+<div id="tab-windows" class="content">
 
 On Windows, Tessel drivers will install automatically when you plug in.
 
