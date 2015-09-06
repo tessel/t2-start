@@ -4,16 +4,16 @@ $(function () {
   var isWindows = navigator.platform.toUpperCase().indexOf('WIN')!==-1;
   var isLinux = navigator.platform.toUpperCase().indexOf('LINUX')!==-1;
 
-  isMac && $('#osx-tab').trigger('click');
-  isWindows && $('#pc-tab').trigger('click');
-  isLinux && $('#linux-tab').trigger('click');
+  isMac && $('[href="#tab-osx"]').trigger('click');
+  isWindows && $('[href="#tab-windows"]').trigger('click');
+  isLinux && $('[href="#tab-linux"]').trigger('click');
 
   // show based on window hash
   var hash = window.location.hash;
   if (hash) {
-    hash = hash.substring(hash.indexOf('#')+1).toLowerCase();
+    hash = hash.substring(hash.indexOf('#')+5).toLowerCase();
     if (['osx', 'linux', 'windows'].indexOf(hash) != -1){
-      $('#'+hash+'-tab').trigger("click");
+      $('[href="#tab-'+hash+'"]').trigger("click");
       foundOS = true;
     }
   }
@@ -68,4 +68,4 @@ $(function () {
       anchor.append(tempContent);
     }
   }
-})
+});

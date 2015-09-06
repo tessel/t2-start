@@ -7,7 +7,7 @@ layout: default
 {% capture include_install %}
 {% include_relative install.md %}
 {% endcapture %}
-{{ include_install | markdownify }}
+{{ include_install | markdownify | replace: '<p>|','<dd>' | replace: '|</p>','</dd>' | replace: '||','</dd><dd>' }}
 
 <div class="large-12 columns">
   <div class="row">
