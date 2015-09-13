@@ -16,6 +16,12 @@ To run this repo locally:
 
 See instructions in [jekyll-now](https://github.com/barryclark/jekyll-now#local-development) for more details.
 
+## Image assets
+
+Image assets are stored on Imgur, with the username TesselProject. Contact [Kelsey](//twitter.com/selkeymoonbeam) if you need the login.
+
+GIF assets can be generated from video according to [this tutorial](http://parkerhiggins.net/2012/10/howto-create-an-animated-gif-from-a-video-with-command-line-tools/).
+
 ## License
 
 Documentation is copyright The Tessel Project and released under a [Creative Commons Attribution ShareAlike license](http://creativecommons.org/licenses/by-sa/3.0/). All license text and links must be included in any redistribution.
