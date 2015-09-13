@@ -10,17 +10,23 @@
 
 Blinking some lights is the "Hello World" of hardware. Let's make those LEDs built into Tessel 2 dance for us.
 
-In your command line, make a folder for your Tessel code, then initialize a Tessel project in that folder.
+In your command line, make a folder for your Tessel code, then initialize a Tessel project in that folder by running each of the following commands in the terminal:
 
-{% highlight sh %}
-mkdir tessel-code
-cd tessel-code
-t2 init
-{% endhighlight %}
+`mkdir tessel-code`
 
-Great! Now you're set up to run code on Tessel. Your `tessel-code` folder now contains a `package.json` with some metadata Node uses for your project, and a file called `index.js`.
+`cd tessel-code`
 
-`index.js` contains the code to make the blue and green LEDs blink. Let's take a look:
+`t2 init`
+
+</div>
+</div>
+
+<div class="row">
+<div class="large-12 columns">
+
+Great! Now you're set up to run code on Tessel. Your _tessel-code_ folder now contains a _package.json_ with some metadata Node uses for your project, and a file called _index.js_.
+
+_index.js_ contains the code to make the blue and green LEDs blink. Let's take a look:
 
 {% highlight javascript %}
 // Import the interface to Tessel hardware
@@ -43,9 +49,7 @@ console.log("I'm blinking! (Press CTRL + C to stop)");
 
 In your command line, enter
 
-{% highlight sh %}
-t2 run blinky.js
-{% endhighlight %}
+`t2 run blinky.js`
 
 to run your code in Tessel's RAM.
 

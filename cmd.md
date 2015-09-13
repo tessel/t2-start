@@ -162,9 +162,11 @@ run in the command line look `like this`
 And scripts that should be saved in the text editor
 will look
 
-<pre class="prettyprint">
-  <code>like this</code>
-</pre>
+{% highlight javascript %}
+like this
+{% endhighlight %}
+
+You'll see this when you get to the [blinking lights example]({{ site.baseurl }}/blinky.html). But don't skip ahead– you'll need the tools we install in the next step.
 
 </div>
 </div>
