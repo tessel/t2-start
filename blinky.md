@@ -24,7 +24,7 @@ In your command line, make a folder for your Tessel code, then initialize a Tess
 <div class="row">
 <div class="large-12 columns">
 
-Great! Now you're set up to run code on Tessel. Your _tessel-code_ folder now contains a _package.json_ with some metadata Node uses for your project, and a file called _index.js_.
+Great! Now you're set up to run code on Tessel. Your "tessel-code" folder now contains a "package.json" with some metadata Node uses for your project, and a file called "index.js".
 
 _index.js_ contains the code to make the blue and green LEDs blink. Let's take a look:
 
