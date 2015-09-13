@@ -136,31 +136,37 @@ Now you’re a cool hacker who can use the terminal to write in the command line
 </div>
 
 <div class="row">
-<div class="large-12 columns fre-container">
+<div class="large-12 columns">
 
-<div id="text-editor">
+When you use a command line tool, you're using a grammar-like structure. Items are separated by spaces, and it's usually like this:
+
+`tool action object -flag <flag-object>`
+
+The "tool" is like a program you're calling; the "action" is the action you want the tool to perform, and the "object" is the object you want the tool to perform the action on. "Flags" are for passing in extra objects For example, on the next page you will do:
+
+`npm install t2 -g`
+
+This means:
+
+"use the tool called 'npm' to perform the 'install' action on the item called 't2'. Do this globally." T2 is the command line tool you will use to talk to the Tessel 2. `-g` stands for globally– which is to say, you want `npm` to install such that you can use the `t2` tool even outside the folder you were in when you installed it.
+
 ### Text Editors
 
 You will also need a text editor to save your JavaScript files. This means a plaintext editor, not a Word document.
 
-Here are some good options:
+We recommend that you download one of these (you can download for free):
 
 * [Sublime Text](http://www.sublimetext.com/)
 * [Atom](https://atom.io/)
 * [Notepad++](http://notepad-plus-plus.org/)
 
-</div>
+Typically, directions that belong in the command line are one line, whereas longer scripts, such as anything in JavaScript, should be typed into the text editor and saved, then run through the command line.
 
-Typically, directions that belong in the command line
-are one line, whereas longer scripts, such as anything in
-JavaScript, should be typed into the text editor and
-saved, then run through the command line.
+In the context of this tutorial, things that should be run in the command line look
 
-In the context of this tutorial, things that should be
-run in the command line look `like this`
+`like this`
 
-And scripts that should be saved in the text editor
-will look
+And scripts that should be saved in the text editor will look
 
 {% highlight javascript %}
 like this
