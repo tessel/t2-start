@@ -148,7 +148,7 @@ The "tool" is like a program you're calling; the "action" is the action you want
 
 This means:
 
-"use the tool called 'npm' to perform the 'install' action on the item called 't2'. Do this globally." T2 is the command line tool you will use to talk to the Tessel 2. `-g` stands for globally– which is to say, you want `npm` to install such that you can use the `t2` tool even outside the folder you were in when you installed it.
+"use the tool called 'npm' to perform the 'install' action on the item called 't2'. Do this globally." `t2` is the command line tool you will use to talk to the Tessel 2. `-g` stands for globally– which is to say, you want `npm` to install such that you can use the `t2` tool even outside the folder you were in when you installed it.
 
 ### Text Editors
 

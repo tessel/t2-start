@@ -13,7 +13,7 @@ You've completed the Tessel Tutorial!
 
 <a href="//tessel.io/docs" target="0"><b>Learn more</b> in Tessel's docs →</a>
 
-<a href="https//github.com/tessel/project" target="2"><b>Contribute</b> to Tessel's open source codebase →</a>
+<a href="https://github.com/tessel/project" target="2"><b>Contribute</b> to Tessel's open source codebase →</a>
 
 <a href="http://twitter.com/technicalhumans" target="1"><b>Follow us</b> to stay up-to-date on new developments:</a>
 
