@@ -1,5 +1,8 @@
 {::options parse_block_html="true" /}
 
+<div class="row">
+<div class="large-12 columns">
+
 # Some useful commands...
 
 You can look at all the options of Tessel's CLI by running
@@ -58,3 +61,18 @@ Now run:
 {% endhighlight %}
 
 This will erase the blinky code from Tessel, and the LEDs will stop blinking.
+
+</div>
+</div>
+
+<div class="greyBar"></div>
+
+<div class="row">
+<div class="large-6 columns left">
+  <a href="modules.html" class="bottomButton button">Prev: Modules</a>
+</div>
+
+<div class="large-6 columns right">
+  <a href="finished.html" class= "bottomButton right button">Next: Finished!</a>
+</div>
+</div>

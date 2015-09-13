@@ -1,5 +1,8 @@
 {::options parse_block_html="true" /}
 
+<div class="row">
+<div class="large-12 columns">
+
 # Install Tessel
 
 *New to the command line? [Take a step back and learn the basics.](cmd.html)*
@@ -61,3 +64,18 @@ Take a quick field trip to our current [firmware update instructions](https://gi
 
 Once the firmware update is complete, continue to the
 next step.
+
+</div>
+</div>
+
+<div class="greyBar"></div>
+
+<div class="row">
+<div class="large-6 columns left">
+  <a href="cmd.html" class="bottomButton button">Prev: Command line</a>
+</div>
+
+<div class="large-6 columns right">
+  <a href="blinky.html" class= "bottomButton right button">Next: Blink lights</a>
+</div>
+</div>

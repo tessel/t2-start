@@ -54,3 +54,15 @@ to run your code in Tessel's RAM.
 **Bonus:** mess with the code to make the LEDs blink in sync.
 </div>
 </div>
+
+<div class="greyBar"></div>
+
+<div class="row">
+<div class="large-6 columns left">
+  <a href="index.html" class="bottomButton button">Prev: Install</a>
+</div>
+
+<div class="large-6 columns right">
+  <a href="wifi.html" class= "bottomButton right button">Next: Wifi</a>
+</div>
+</div>
