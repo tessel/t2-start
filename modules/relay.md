@@ -1,5 +1,8 @@
 {::options parse_block_html="true" /}
 
+<div class="row">
+<div class="large-12 columns">
+
 ## <img class="constrain-sm" src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules/relay.png"> Relay
 
 [<i class="fa fa-github"> View source on Github</i>](https://github.com/tessel/relay-mono)
@@ -8,7 +11,16 @@
 
 Make a directory inside your "tessel-code" folder: enter `mkdir relay` into your command line, then change directory into that folder: `cd relay`
 
+</div>
+</div>
+
+<div class="row">
+<div class="large-12 columns">
+
 ### Step 2
+
+</div>
+</div>
 
 <div class="row">
 <div class="large-6 columns">
@@ -23,7 +35,13 @@ If you have something to turn on and off with the Relay module, cut the power wi
 </div>
 </div>
 
+<div class="row">
+<div class="large-12 columns">
+
 ### Step 3
+
+</div>
+</div>
 
 <div class="row">
 <div class="large-6 columns">
@@ -38,7 +56,13 @@ Plug the relay module into Tessel **port A** with the hexagon/icon side down and
 </div>
 </div>
 
+<div class="row">
+<div class="large-12 columns">
+
 ### Step 4
+
+</div>
+</div>
 
 <div class="row">
 <div class="large-6 columns">
@@ -52,6 +76,9 @@ Install by typing `npm install relay-mono` into the command line.
 
 </div>
 </div>
+
+<div class="row">
+<div class="large-12 columns">
 
 ### Step 5
 
@@ -93,7 +120,16 @@ relay.on('latch', function(channel, value) {
 });
 {% endhighlight %}
 
+</div>
+</div>
+
+<div class="row">
+<div class="large-12 columns">
+
 ### Step 6
+
+</div>
+</div>
 
 <div class="row">
 <div class="large-6 columns">
@@ -112,9 +148,15 @@ To see what else you can do with the relay module, see the module docs [here](ht
 </div>
 </div>
 
+<div class="row">
+<div class="large-12 columns">
+
 ### Step 7
 
 What else can you do with a relay module? Try a [community-created project.](http://tessel.io/projects)
+
+</div>
+</div>
 
 <div class="row">
 <div class="large-6 columns left">
@@ -126,6 +168,12 @@ What else can you do with a relay module? Try a [community-created project.](htt
 </div>
 </div>
 
+<div class="row">
+<div class="large-12 columns">
+
 What are you making? [Share your invention!](http://tessel.hackster.io/)
 
 If you run into any issues you can check out the [relay forums](http://forums.tessel.io/category/relay).
+
+</div>
+</div>
