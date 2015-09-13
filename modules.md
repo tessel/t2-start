@@ -1,6 +1,10 @@
 {::options parse_block_html="true" /}
 
+<div class="row">
+<div class="large-12 columns">
 # Modules
+</div>
+</div>
 
 <div class="row">
 <div class="large-5 columns">
@@ -45,6 +49,8 @@ Modules should be plugged in so that all of the electrical components are on the
 </div>
 </div>
 
+<div class="row">
+<div class="large-12 columns">
 ## Choose a module below to get up and running
 
 If you've already tried out your modules, move on to [Usage.](usage.html)
@@ -57,3 +63,14 @@ If you've already tried out your modules, move on to [Usage.](usage.html)
 *   [Relay](modules/relay.html)
 *   [RFID](modules/rfid.html)
 *   [Servo](modules/servo.html)
+
+</div>
+</div>
+
+<div class="greyBar"></div>
+
+<div class="row">
+<div class="large-6 columns left">
+  <a href="wifi.html" class="bottomButton button">Prev: Wifi</a>
+</div>
+</div>

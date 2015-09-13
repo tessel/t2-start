@@ -99,3 +99,15 @@ Now navigate to wherever you saved your blinky code.
 As usual. Now watch your Tessel blink from across the room!
 </div>
 </div>
+
+<div class="greyBar"></div>
+
+<div class="row">
+<div class="large-6 columns left">
+  <a href="blinky.html" class="bottomButton button">Prev: Blinky</a>
+</div>
+
+<div class="large-6 columns right">
+  <a href="modules.html" class= "bottomButton right button">Next: Add modules</a>
+</div>
+</div>
