@@ -24,7 +24,7 @@ Tessel 2's Wifi LED blinks with every packet it receives.
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/wifi.JPG)
+![](http://i.imgur.com/91pkDCQ.gif)
 
 </div>
 </div>
@@ -40,6 +40,9 @@ To check whether you're connected, run
 `t2 wifi -l`
 
 This lists available wifi networks and will also show your connection status.
+
+</div>
+</div>
 
 <hr>
 
@@ -64,9 +67,16 @@ INFO Searching for nearby Tessels...
 {% endhighlight %}
 
 </div>
+</div>
+
+<div class="row">
 <div class="large-4 columns">
 
-Want to try it out? Power Tessel by plugging it into something other than your laptop:
+Want to try it out? Power Tessel by plugging it into something other than your laptop.
+
+You can use USB power just like a phone or a Tessel 1:
+
+Or specify `--lan` when you run code (`--usb` is the converse flag).
 
 </div>
 <div class="large-4 columns">
@@ -79,11 +89,13 @@ Want to try it out? Power Tessel by plugging it into something other than your l
 ![](https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/tessel-plug.jpg)
 
 </div>
-
+</div>
+<div class="row">
 <div class="large-12 columns">
 Now navigate to wherever you saved your blinky code.
 
 `t2 run blinky.js`
 
 As usual. Now watch your Tessel blink from across the room!
+</div>
 </div>
