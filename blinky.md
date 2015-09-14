@@ -49,7 +49,7 @@ console.log("I'm blinking! (Press CTRL + C to stop)");
 
 In your command line, enter
 
-`t2 run blinky.js`
+`t2 run index.js`
 
 to run your code in Tessel's RAM.
 
