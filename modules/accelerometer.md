@@ -3,13 +3,15 @@
 <div class="row">
 <div class="large-12 columns">
 
-## <img class="constrain-sm" src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules/accelerometer.png"> Accelerometer
+## <img class="constrain-sm" src="//i.imgur.com/7qR5OZJ.png"> Accelerometer
 
 [<i class="fa fa-github"> View source on Github</i>](https://github.com/tessel/accel-mma84)
 
 ### Step 1
 
-Make a directory inside your "tessel-code" folder: enter `mkdir accelerometer` into your command line, then change directory into that folder: `cd accelerometer`
+Make a directory inside your "tessel-code" folder called "accelerometer", change directory into that folder, and initialize a tessel project:
+
+`mkdir accelerometer; cd accelerometer; t2 init`
 
 ### Step 2
 
@@ -45,7 +47,7 @@ Install by typing `npm install accel-mma84` into the command line.
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_corners/accelerometer.jpg)
+![](//i.imgur.com/7ZJQwQI.jpg)
 
 </div>
 </div>
@@ -61,7 +63,7 @@ Install by typing `npm install accel-mma84` into the command line.
 <div class="row">
 <div class="large-12 columns">
 
-Save this code in a text file called `accelerometer.js`:
+Rename "index.js" to "accelerometer.js" and replace the file's contents with the following:
 
 {% highlight js %}
 // Any copyright is dedicated to the Public Domain.
@@ -91,6 +93,8 @@ accel.on('error', function(err){
 });
 {% endhighlight %}
 
+Save the file.
+
 </div>
 </div>
 
@@ -105,8 +109,9 @@ accel.on('error', function(err){
 <div class="row">
 <div class="large-6 columns">
 
-In your command line, `tessel run accelerometer.js`  
- Watch x, y, and z values appear in your terminal! Move the Tessel module around to see acceleration along different axes.  
+In your command line, `t2 run accelerometer.js`
+
+Watch x, y, and z values appear in your terminal! Move the Tessel module around to see acceleration along different axes.  
 
 **Bonus:** Change the code to make the accelerometer output information once per second (every 1000ms).  
 
@@ -115,7 +120,7 @@ To see what else you can do with the accelerometer module, see the module docs [
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/gifs/accelerometer.gif)
+![](http://i.imgur.com/KnXf6uL.gif)
 
 </div>
 </div>

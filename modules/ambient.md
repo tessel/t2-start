@@ -3,13 +3,15 @@
 <div class="row">
 <div class="large-12 columns">
 
-## <img class="constrain-sm" src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules/ambient.png"> Ambient
+## <img class="constrain-sm" src="//i.imgur.com/hqZ399I.png"> Ambient
 
 [<i class="fa fa-github"> View source on Github</i>](https://github.com/tessel/ambient-attx4)
 
 ### Step 1
 
-Make a directory inside your "tessel-code" folder: enter `mkdir ambient` into your command line, then change directory into that folder: `cd ambient`
+Make a directory inside your "tessel-code" folder called "ambient", change directory into that folder, and initialize a tessel project:
+
+`mkdir ambient; cd ambient; t2 init`
 
 </div>
 </div>
@@ -51,7 +53,7 @@ Install by typing `npm install ambient-attx4` into the command line.
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_corners/ambient.jpg)
+![](//i.imgur.com/WWtJyIJ.jpg)
 
 </div>
 </div>
@@ -61,7 +63,7 @@ Install by typing `npm install ambient-attx4` into the command line.
 
 ### Step 4
 
-Save this code in a text file called `ambient.js`:
+Rename "index.js" to "ambient.js" and replace the file's contents with the following:
 
 {% highlight js %}
 // Any copyright is dedicated to the Public Domain.
@@ -128,6 +130,8 @@ ambient.on('error', function (err) {
 });
 {% endhighlight %}
 
+Save the file.
+
 </div>
 </div>
 
@@ -142,7 +146,7 @@ ambient.on('error', function (err) {
 <div class="row">
 <div class="large-6 columns">
 
-In your command line, `tessel run ambient.js`  
+In your command line, `t2 run ambient.js`  
  Watch light and sound values appear in your terminal! Try clapping or shining a flashlight at it.  
 
 **Bonus:** Change the code so the sound trigger activates with just a whisper.  
@@ -152,7 +156,7 @@ To see what else you can do with the ambient module, see the module docs [here](
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/gifs/ambient.gif)
+![](http://i.imgur.com/SuvbD9O.gif)
 
 </div>
 </div>

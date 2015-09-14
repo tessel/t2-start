@@ -3,13 +3,15 @@
 <div class="row">
 <div class="large-12 columns">
 
-## <img class="constrain-sm" src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules/relay.png"> Relay
+## <img class="constrain-sm" src="//i.imgur.com/PzU7IQ1.png"> Relay
 
 [<i class="fa fa-github"> View source on Github</i>](https://github.com/tessel/relay-mono)
 
 ### Step 1
 
-Make a directory inside your "tessel-code" folder: enter `mkdir relay` into your command line, then change directory into that folder: `cd relay`
+Make a directory inside your "tessel-code" folder called "relay", change directory into that folder, and initialize a tessel project:
+
+`mkdir relay; cd relay; t2 init`
 
 </div>
 </div>
@@ -30,7 +32,7 @@ If you have something to turn on and off with the Relay module, cut the power wi
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_special/relay-wires.jpeg)
+![](http://i.imgur.com/kMdQPqz.jpg)
 
 </div>
 </div>
@@ -72,7 +74,7 @@ Install by typing `npm install relay-mono` into the command line.
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_corners/relay.jpg)
+![](//i.imgur.com/1e7hZO0.jpg)
 
 </div>
 </div>
@@ -82,7 +84,7 @@ Install by typing `npm install relay-mono` into the command line.
 
 ### Step 5
 
-Save this code in a text file called `relay.js`:
+Rename "index.js" to "relay.js" and replace the file's contents with the following:
 
 {% highlight js %}
 // Any copyright is dedicated to the Public Domain.
@@ -120,6 +122,8 @@ relay.on('latch', function(channel, value) {
 });
 {% endhighlight %}
 
+Save the file.
+
 </div>
 </div>
 
@@ -134,7 +138,7 @@ relay.on('latch', function(channel, value) {
 <div class="row">
 <div class="large-6 columns">
 
-In your command line, `tessel run relay.js` Turn some things on and off with code! This gif shows clap-activated lights which use the ambient and relay modules together.  
+In your command line, `t2 run relay.js` Turn some things on and off with code! This gif shows clap-activated lights which use the ambient and relay modules together.  
 
 **Bonus:** Change the code to toggle only one relay channel, every 10 seconds.  
 
@@ -143,7 +147,7 @@ To see what else you can do with the relay module, see the module docs [here](ht
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/gifs/relay.gif)
+![](http://i.imgur.com/ypBLeqQ.gif)
 
 </div>
 </div>

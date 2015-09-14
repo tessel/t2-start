@@ -3,13 +3,15 @@
 <div class="row">
 <div class="large-12 columns">
 
-## <img class="constrain-sm" src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules/servo.png"> Servo
+## <img class="constrain-sm" src="//i.imgur.com/xRmlOgr.png"> Servo
 
 [<i class="fa fa-github"> View source on Github</i>](https://github.com/tessel/servo-pca9685)
 
 ### Step 1
 
-Make a directory inside your "tessel-code" folder: enter `mkdir servo` into your command line, then change directory into that folder: `cd servo`
+Make a directory inside your "tessel-code" folder called "servo", change directory into that folder, and initialize a tessel project:
+
+`mkdir servo; cd servo; t2 init`
 
 </div>
 </div>
@@ -34,7 +36,7 @@ Plug servo into port "1" on the module as shown.
 </div>
 <div class="large-5 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_special/servo_servo.jpeg)
+![](http://i.imgur.com/g4PbQIp.jpg)
 
 </div>
 </div>
@@ -55,7 +57,7 @@ Plug 5V adapter into the barrel jack on the servo module, then plug into wall po
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_special/servo_power.png)
+![](http://i.imgur.com/z78mWxa.png)
 
 </div>
 </div>
@@ -98,7 +100,7 @@ Install by typing `npm install servo-pca9685` into the command line.
 <div class="large-6 columns">
 <div class="row">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_corners/servo.jpg)
+![](//i.imgur.com/QsPkouA.jpg)
 
 </div>
 </div>
@@ -108,7 +110,7 @@ Install by typing `npm install servo-pca9685` into the command line.
 
 ### Step 6
 
-Save this code in a text file called `servo.js`:
+Rename "index.js" to "servo.js" and replace the file's contents with the following:
 
 {% highlight js %}
 // Any copyright is dedicated to the Public Domain.
@@ -152,6 +154,8 @@ servo.on('ready', function () {
 });
 {% endhighlight %}
 
+Save the file.
+
 </div>
 </div>
 
@@ -166,7 +170,7 @@ servo.on('ready', function () {
 <div class="row">
 <div class="large-6 columns">
 
-In your command line, `tessel run servo.js` Watch your servo move!  
+In your command line, `t2 run servo.js` Watch your servo move!  
 
 **Bonus:** Make the servo turn all the way to position 1 in one fell swoop, and then back to position 0.  
 
@@ -175,7 +179,7 @@ To see what else you can do with the servo module, see the module docs [here](ht
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/gifs/servo.gif)
+![](http://i.imgur.com/eMUtSTT.gif)
 
 </div>
 </div>

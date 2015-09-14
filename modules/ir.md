@@ -3,13 +3,15 @@
 <div class="row">
 <div class="large-12 columns">
 
-## <img class="constrain-sm" src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules/ir.png"> Infrared
+## <img class="constrain-sm" src="//i.imgur.com/okUgl3T.png"> Infrared
 
 [<i class="fa fa-github"> View source on Github</i>](https://github.com/tessel/ir-attx4)
 
 ### Step 1
 
-Make a directory inside your "tessel-code" folder: enter `mkdir ir` into your command line, then change directory into that folder: `cd ir`
+Make a directory inside your "tessel-code" folder called "ir", change directory into that folder, and initialize a tessel project:
+
+`mkdir ir; cd ir; t2 init`
 
 </div>
 </div>
@@ -51,7 +53,7 @@ Install by typing `npm install ir-attx4` into the command line.
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_corners/ir.jpg)
+![](//i.imgur.com/b5TdwG8.jpg)
 
 </div>
 </div>
@@ -61,7 +63,7 @@ Install by typing `npm install ir-attx4` into the command line.
 
 ### Step 4
 
-Save this code in a text file called `ir.js`:
+Rename "index.js" to "ir.js" and replace the file's contents with the following:
 
 {% highlight js %}
 // Any copyright is dedicated to the Public Domain.
@@ -107,6 +109,8 @@ infrared.on('data', function(data) {
 });
 {% endhighlight %}
 
+Save the file.
+
 </div>
 </div>
 
@@ -121,7 +125,7 @@ infrared.on('data', function(data) {
 <div class="row">
 <div class="large-6 columns">
 
-In your command line, `tessel run ir.js` Try turning on your TV! Look at the IR LED through a camera.  
+In your command line, `t2 run ir.js` Try turning on your TV! Look at the IR LED through a camera.  
 
 **Bonus:** Change the code to turn on a different device.  
 
@@ -130,7 +134,7 @@ To see what else you can do with the IR module, see the module docs [here](https
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/gifs/ir.gif)
+![](http://i.imgur.com/hbGlM7N.gif)
 
 </div>
 </div>

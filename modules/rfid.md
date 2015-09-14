@@ -3,13 +3,15 @@
 <div class="row">
 <div class="large-12 columns">
 
-## <img class="constrain-sm" src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules/rfid.png"> RFID
+## <img class="constrain-sm" src="//i.imgur.com/JsHkR2D.png"> RFID
 
 [<i class="fa fa-github"> View source on Github</i>](https://github.com/tessel/rfid-pn532)
 
 ### Step 1
 
-Make a directory inside your "tessel-code" folder: enter `mkdir rfid` into your command line, then change directory into that folder: `cd rfid`
+Make a directory inside your "tessel-code" folder called "rfid", change directory into that folder, and initialize a tessel project:
+
+`mkdir rfid; cd rfid; t2 init`
 
 </div>
 </div>
@@ -51,7 +53,7 @@ Install by typing `npm install rfid-pn532` into the command line.
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_corners/rfid.jpg)
+![](//i.imgur.com/JPTWSFj.jpg)
 
 </div>
 </div>
@@ -61,7 +63,7 @@ Install by typing `npm install rfid-pn532` into the command line.
 
 ### Step 4
 
-Save this code in a text file called `rfid.js`:
+Rename "index.js" to "rfid.js" and replace the file's contents with the following:
 
 {% highlight js %}
 // Any copyright is dedicated to the Public Domain.
@@ -91,6 +93,8 @@ rfid.on('error', function (err) {
 });
 {% endhighlight %}
 
+Save the file.
+
 </div>
 </div>
 
@@ -105,7 +109,7 @@ rfid.on('error', function (err) {
 <div class="row">
 <div class="large-6 columns">
 
-In your command line, `tessel run rfid.js` Tap the included RFID card on the reader to get its UID!  
+In your command line, `t2 run rfid.js` Tap the included RFID card on the reader to get its UID!  
 
 **Bonus:** Change the polling rate of the RFID module so that it only checks for a card once every three seconds. (Hint: you may need to check the docs.)  
 
@@ -114,7 +118,7 @@ To see what else you can do with the RFID module, see the module docs [here](htt
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/gifs/rfid.gif)
+![](http://i.imgur.com/6nA6hJy.gif)
 
 </div>
 </div>

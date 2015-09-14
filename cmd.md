@@ -24,7 +24,7 @@ Select the operating system you are working on.
 
 Open up the application on your computer called   “Terminal” by pressing ⌘ + SPACE and typing “Terminal”.
 
-Its dock icon looks like ![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/mac-term-icon.png), and the terminal will look something like ![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/mac-term.png)
+Its dock icon looks like ![](http://i.imgur.com/y5U2cZ2.png), and the terminal will look something like ![](http://i.imgur.com/SQSbFrE.png)
 
 You can use the terminal to write commands to your computer (this is the “command line”). Let’s try it out!
 
@@ -59,7 +59,7 @@ Ok, now you're a cool hacker who can use the terminal (or "console") to write in
 
 Open up the application on your computer called “Terminal” by tapping the SUPER key (Windows or Apple key, depending on your hardware) and typing “Terminal”.
 
-Its icon looks like ![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/mac-term-icon.png), and the terminal will look something like ![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/mac-term.png)
+Its icon looks like ![](http://i.imgur.com/ySRfyMC.png), and the terminal will look something like ![](http://i.imgur.com/VjVWZD8.png)
 
 You can use the terminal to write commands to your computer (this is the “command line”). Let’s try it out!
 
@@ -98,7 +98,7 @@ If you’re not on Windows 8, go to the start menu and type “Command Prompt”
 
 If you are on Windows 8+, swipe right to find “Windows System”, within which you can find “Command Prompt”.
 
-Its icon looks like ![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/win-term-icon.png), and the application (the terminal) will look something like ![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/win-term.png)
+Its icon looks like ![](http://i.imgur.com/ySRfyMC.png), and the application (the terminal) will look something like ![](http://i.imgur.com/VjVWZD8.png)
 
 You can use the terminal to write commands to your computer (this is the “command line”). Let’s try it out!
 

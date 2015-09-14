@@ -3,7 +3,7 @@
 <div class="row">
 <div class="large-12 columns">
 
-## <img class="constrain-sm" src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules/gps.png"> GPS
+## <img class="constrain-sm" src="//i.imgur.com/DI344Iy.png"> GPS
 
 [<i class="fa fa-github"> View source on Github</i>](https://github.com/tessel/gps-a2235h)
 
@@ -11,7 +11,9 @@
 
 **Note:** The time between seeing satellites and actually getting a lock is dependent on the satellite. Be in view of the open sky for best results (and even then it may take a while to get a lock). Once the module has a lock, the lock should stay for a while.
 
-Make a directory inside your "tessel-code" folder: enter `mkdir gps` into your command line, then change directory into that folder: `cd gps`
+Make a directory inside your "tessel-code" folder called "gps", change directory into that folder, and initialize a tessel project:
+
+`mkdir gps; cd gps; t2 init`
 
 </div>
 </div>
@@ -53,7 +55,7 @@ Install by typing `npm install gps-a2235h` into the command line.
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_corners/gps.jpg)
+![](//i.imgur.com/f92rOvG.jpg)
 
 </div>
 </div>
@@ -63,7 +65,7 @@ Install by typing `npm install gps-a2235h` into the command line.
 
 ### Step 4
 
-Save this code in a text file called `gps.js`:
+Rename "index.js" to "gps.js" and replace the file's contents with the following:
 
 {% highlight js %}
 // Any copyright is dedicated to the Public Domain.
@@ -112,6 +114,8 @@ gps.on('error', function(err){
 });
 {% endhighlight %}
 
+Save the file.
+
 </div>
 </div>
 
@@ -126,7 +130,7 @@ gps.on('error', function(err){
 <div class="row">
 <div class="large-6 columns">
 
-In your command line, `tessel run gps.js` Check out your location! If you're having trouble getting a location fix, try going outside; you probably don't have satellites indoors.  
+In your command line, `t2 run gps.js` Check out your location! If you're having trouble getting a location fix, try going outside; you probably don't have satellites indoors.  
 
 **Bonus:** Set up a geofence so that you are inside it. (Hint: you may need to check the documentation.)  
 
@@ -135,7 +139,7 @@ To see what else you can do with the GPS module, see the module docs [here](http
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/gifs/gps.gif)
+![](http://i.imgur.com/m4CxbLN.gif)
 
 </div>
 </div>

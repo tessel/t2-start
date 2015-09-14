@@ -5,23 +5,23 @@
 
 # Tessel's First Tweet
 
-Make sure you're [connected to Wifi]({{ site.baseurl }}/wifi.html), then let's try a tweet!
+Because Tessel runs Node, we can leverage the [thousands of libraries](//npmjs.com) that the Node community has made.
 
-This code snippet makes Tessel send a tweet from a dummy account <a href="https://twitter.com/TesselTweet" target="0">(@TesselTweet)</a> that we've created for this.
+Let's try this out with the [Node.JS twitter library](https://www.npmjs.org/package/twitter). Install it using npm:
 
-If you want to post from your own account, go to <a href="https://apps.twitter.com/" target="0">apps.twitter.com</a>, create your own OAuth tokens with read and write permissions, and paste them into the script.
+`npm install twitter`
+
+This code snippet makes Tessel send a tweet from a dummy account <a href="https://twitter.com/TesselTweet" target="0">(@TesselTweet)</a> that we've created for this purpose.
+
+_If you want to post from your own account, go to <a href="https://apps.twitter.com/" target="0">apps.twitter.com</a>, create your own OAuth tokens with read and write permissions, and paste them into the script._
 
 <hr>
 
-First, create a new directory within your "tessel-code" directory:
+Create a new directory within your "tessel-code" directory:
 
 `mkdir tessel-tweet; cd tessel-tweet; t2 init`
 
-Rename the "index.js" file you've just created to "tweet.js":
-
-`mv index.js tweet.js`
-
-Now open "tweet.js". Copy and paste the below script over the existing text:
+Rename the "index.js" file you've just created to "tweet.js", then copy and paste the below script over the existing text:
 
 {% highlight javascript %}
 // Node requires
@@ -51,17 +51,13 @@ twit.post('statuses/update', {status: status}, function(error, tweet, response){
 
 Change the "twitterHandle" var to your own Twitter handle and save.
 
-We're using the [Node.JS twitter library](https://www.npmjs.org/package/twitter). Install it using npm:
-
-`npm install twitter`
-
 </div>
 </div>
 
 <div class="row">
 <div class="large-4 columns">
 
-Now run:
+Make sure you're [connected to Wifi]({{ site.baseurl }}/wifi.html), then run:
 
 `t2 run tweet.js`
 
@@ -80,6 +76,8 @@ Now run:
 <div class="large-12 columns">
 
 **Bonus:** Try making Tessel tweet output from a module.
+
+**Extra bonus:** What's another Node module you can try out? Maybe Twilio, PubNub, Plotly, Firebase? Surf around on [npm](//npmjs.com) until you find a Node library you like, then try using it with Tessel.
 
 <div class="greyBar"></div>
 
