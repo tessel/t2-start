@@ -85,8 +85,8 @@ Now run:
 
 <div class="row">
 <div class="large-5 columns left">
-  <a href="wifi.html" class="bottomButton button">Prev:
-  Wifi</a>
+  <a href="modules.html" class="bottomButton button">Prev:
+  Modules</a>
 </div>
 <div class="large-6 columns right">
   <a href="usage.html" class=
