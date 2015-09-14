@@ -69,7 +69,7 @@ This will erase the blinky code from Tessel, and the LEDs will stop blinking.
 
 <div class="row">
 <div class="large-6 columns left">
-  <a href="modules.html" class="bottomButton button">Prev: Modules</a>
+  <a href="tweet.html" class="bottomButton button">Prev: Tweet</a>
 </div>
 
 <div class="large-6 columns right">
