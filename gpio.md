@@ -8,7 +8,7 @@
 <div class="row">
 <div class="large-8 columns">
 
-Tessel's two module ports are not just for modules! They can also be used as flexible, simply addressable GPIO (general purpose input/output) pins.
+Tessel's two module ports are not just for modules! They can also be used as flexible, simply [addressable GPIO](//tessel.io/docs/hardwareAPI) (general purpose input/output) pins.
 
 What does that mean? It means you're not limited to Tessel's ten-pin modules. In theory, you can connect nearly any electronic device or sensor to Tessel!
 
