@@ -1,22 +1,29 @@
 {::options parse_block_html="true" /}
 
+<div class="row">
+<div class="large-12 columns">
+
 ## <img class="constrain-sm" src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules/servo.png"> Servo
 
 [<i class="fa fa-github"> View source on Github</i>](https://github.com/tessel/servo-pca9685)
 
 ### Step 1
 
-Make a directory inside your "tessel-code" folder: enter `mkdir servo` into your command line, then change directory into that folder: `cd servo</kbd>`
+Make a directory inside your "tessel-code" folder: enter `mkdir servo` into your command line, then change directory into that folder: `cd servo`
+
+</div>
+</div>
+
+<div class="row">
+<div class="large-12 columns">
 
 ### Step 2
 
-<div class="row">
-<div class="large-5 columns">
-
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_special/servo_servo.jpeg)
-
 </div>
-<div class="large-6 columns right">
+</div>
+
+<div class="row">
+<div class="large-6 columns">
 
 Plug servo into port "1" on the module as shown.  
 
@@ -25,9 +32,20 @@ Plug servo into port "1" on the module as shown.
 *   the yellow wire (signal) goes to `S`
 
 </div>
+<div class="large-5 columns">
+
+![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_special/servo_servo.jpeg)
+
+</div>
 </div>
 
+<div class="row">
+<div class="large-12 columns">
+
 ### Step 3
+
+</div>
+</div>
 
 <div class="row">
 <div class="large-6 columns">
@@ -42,7 +60,13 @@ Plug 5V adapter into the barrel jack on the servo module, then plug into wall po
 </div>
 </div>
 
+<div class="row">
+<div class="large-12 columns">
+
 ### Step 4
+
+</div>
+</div>
 
 <div class="row">
 <div class="large-6 columns">
@@ -57,7 +81,13 @@ Plug the servo module into Tessel **port A** with the hexagon/icon side down and
 </div>
 </div>
 
+<div class="row">
+<div class="large-12 columns">
+
 ### Step 5
+
+</div>
+</div>
 
 <div class="row">
 <div class="large-6 columns">
@@ -72,6 +102,9 @@ Install by typing `npm install servo-pca9685` into the command line.
 
 </div>
 </div>
+
+<div class="row">
+<div class="large-12 columns">
 
 ### Step 6
 
@@ -119,7 +152,16 @@ servo.on('ready', function () {
 });
 {% endhighlight %}
 
+</div>
+</div>
+
+<div class="row">
+<div class="large-12 columns">
+
 ### Step 7
+
+</div>
+</div>
 
 <div class="row">
 <div class="large-6 columns">
@@ -138,9 +180,15 @@ To see what else you can do with the servo module, see the module docs [here](ht
 </div>
 </div>
 
+<div class="row">
+<div class="large-12 columns">
+
 ### Step 8
 
 What else can you do with a servo module? Try a [community-created project.](http://tessel.io/projects)
+
+</div>
+</div>
 
 <div class="row">
 <div class="large-6 columns left">
@@ -152,7 +200,12 @@ What else can you do with a servo module? Try a [community-created project.](htt
 </div>
 </div>
 
+<div class="row">
+<div class="large-12 columns">
 
 What are you making? [Share your invention!](http://tessel.hackster.io/)
 
 If you run into any issues you can check out the [servo forums](http://forums.tessel.io/category/servo).
+
+</div>
+</div>

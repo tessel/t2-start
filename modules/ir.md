@@ -1,5 +1,8 @@
 {::options parse_block_html="true" /}
 
+<div class="row">
+<div class="large-12 columns">
+
 ## <img class="constrain-sm" src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules/ir.png"> Infrared
 
 [<i class="fa fa-github"> View source on Github</i>](https://github.com/tessel/ir-attx4)
@@ -8,7 +11,16 @@
 
 Make a directory inside your "tessel-code" folder: enter `mkdir ir` into your command line, then change directory into that folder: `cd ir`
 
+</div>
+</div>
+
+<div class="row">
+<div class="large-12 columns">
+
 ### Step 2
+
+</div>
+</div>
 
 <div class="row">
 <div class="large-6 columns">
@@ -23,7 +35,13 @@ Plug the IR module into Tessel **port A** with the hexagon/icon side down and th
 </div>
 </div>
 
+<div class="row">
+<div class="large-12 columns">
+
 ### Step 3
+
+</div>
+</div>
 
 <div class="row">
 <div class="large-6 columns">
@@ -37,6 +55,9 @@ Install by typing `npm install ir-attx4` into the command line.
 
 </div>
 </div>
+
+<div class="row">
+<div class="large-12 columns">
 
 ### Step 4
 
@@ -86,7 +107,16 @@ infrared.on('data', function(data) {
 });
 {% endhighlight %}
 
+</div>
+</div>
+
+<div class="row">
+<div class="large-12 columns">
+
 ### Step 5
+
+</div>
+</div>
 
 <div class="row">
 <div class="large-6 columns">
@@ -105,9 +135,15 @@ To see what else you can do with the IR module, see the module docs [here](https
 </div>
 </div>
 
+<div class="row">
+<div class="large-12 columns">
+
 ### Step 6
 
 What else can you do with a IR module? Try a [community-created project.](http://tessel.io/projects)
+
+</div>
+</div>
 
 <div class="row">
 <div class="large-6 columns left">
@@ -119,6 +155,12 @@ What else can you do with a IR module? Try a [community-created project.](http:/
 </div>
 </div>
 
+<div class="row">
+<div class="large-12 columns">
+
 What are you making? [Share your invention!](http://tessel.hackster.io/)
 
 If you run into any issues you can check out the [IR forums](http://forums.tessel.io/category/ir).
+
+</div>
+</div>
