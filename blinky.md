@@ -57,7 +57,7 @@ to run your code in Tessel's RAM.
 
 **Bonus:** mess with the code to make the LEDs blink in sync.
 
-**Bonus 2:** what if you want to save blinky to your Tessel? There's a command for that! Try `t2 push blinky.js`, then unplug your Tessel and plug it back in again. Wait for it to boot up, then... lights will blink! Tired of the blinking lights? `t2 erase` will clear the saved code. Learn more `t2` commands by running `t2 -h` or looking at the [T2 CLI docs](https://tessel.io/docs/cli).
+**Bonus 2:** what if you want to save blinky to your Tessel? There's a command for that! Try `t2 push index.js`, then unplug your Tessel and plug it back in again. Wait for it to boot up, then... lights will blink! Tired of the blinking lights? `t2 erase` will clear the saved code. Learn more `t2` commands by running `t2 -h` or looking at the [T2 CLI docs](https://tessel.io/docs/cli).
 
 </div>
 </div>
