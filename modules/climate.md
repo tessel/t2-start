@@ -3,7 +3,7 @@
 <div class="row">
 <div class="large-12 columns">
 
-## <img class="constrain-sm" src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules/climate.png"> Climate
+## <img class="constrain-sm" src="//i.imgur.com/YwkoH6L.png"> Climate
 
 [<i class="fa fa-github"> View source on Github</i>](https://github.com/tessel/climate-si7020)
 
@@ -53,7 +53,7 @@ Install by typing `npm install climate-si7020` into the command line.
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_corners/climate-si7020.jpg)
+![](//i.imgur.com/QS1OgRo.jpg)
 
 </div>
 </div>
@@ -121,7 +121,7 @@ To see what else you can do with the climate module, see the module docs [here](
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/gifs/climate.gif)
+![](http://i.imgur.com/CSMwFdM.gif)
 
 </div>
 </div>

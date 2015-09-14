@@ -3,7 +3,7 @@
 <div class="row">
 <div class="large-12 columns">
 
-## <img class="constrain-sm" src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules/relay.png"> Relay
+## <img class="constrain-sm" src="//i.imgur.com/PzU7IQ1.png"> Relay
 
 [<i class="fa fa-github"> View source on Github</i>](https://github.com/tessel/relay-mono)
 
@@ -30,7 +30,7 @@ If you have something to turn on and off with the Relay module, cut the power wi
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_special/relay-wires.jpeg)
+![](http://i.imgur.com/kMdQPqz.jpg)
 
 </div>
 </div>
@@ -72,7 +72,7 @@ Install by typing `npm install relay-mono` into the command line.
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_corners/relay.jpg)
+![](//i.imgur.com/1e7hZO0.jpg)
 
 </div>
 </div>
@@ -143,7 +143,7 @@ To see what else you can do with the relay module, see the module docs [here](ht
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/gifs/relay.gif)
+![](http://i.imgur.com/ypBLeqQ.gif)
 
 </div>
 </div>

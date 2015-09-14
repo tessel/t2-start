@@ -3,7 +3,7 @@
 <div class="row">
 <div class="large-12 columns">
 
-## <img class="constrain-sm" src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules/servo.png"> Servo
+## <img class="constrain-sm" src="//i.imgur.com/xRmlOgr.png"> Servo
 
 [<i class="fa fa-github"> View source on Github</i>](https://github.com/tessel/servo-pca9685)
 
@@ -34,7 +34,7 @@ Plug servo into port "1" on the module as shown.
 </div>
 <div class="large-5 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_special/servo_servo.jpeg)
+![](http://i.imgur.com/g4PbQIp.jpg)
 
 </div>
 </div>
@@ -55,7 +55,7 @@ Plug 5V adapter into the barrel jack on the servo module, then plug into wall po
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_special/servo_power.png)
+![](http://i.imgur.com/z78mWxa.png)
 
 </div>
 </div>
@@ -98,7 +98,7 @@ Install by typing `npm install servo-pca9685` into the command line.
 <div class="large-6 columns">
 <div class="row">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_corners/servo.jpg)
+![](//i.imgur.com/QsPkouA.jpg)
 
 </div>
 </div>
@@ -175,7 +175,7 @@ To see what else you can do with the servo module, see the module docs [here](ht
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/gifs/servo.gif)
+![](http://i.imgur.com/eMUtSTT.gif)
 
 </div>
 </div>

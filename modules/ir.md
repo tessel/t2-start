@@ -3,7 +3,7 @@
 <div class="row">
 <div class="large-12 columns">
 
-## <img class="constrain-sm" src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules/ir.png"> Infrared
+## <img class="constrain-sm" src="//i.imgur.com/okUgl3T.png"> Infrared
 
 [<i class="fa fa-github"> View source on Github</i>](https://github.com/tessel/ir-attx4)
 
@@ -51,7 +51,7 @@ Install by typing `npm install ir-attx4` into the command line.
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_corners/ir.jpg)
+![](//i.imgur.com/b5TdwG8.jpg)
 
 </div>
 </div>
@@ -130,7 +130,7 @@ To see what else you can do with the IR module, see the module docs [here](https
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/gifs/ir.gif)
+![](http://i.imgur.com/hbGlM7N.gif)
 
 </div>
 </div>

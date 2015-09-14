@@ -81,12 +81,12 @@ Or specify `--lan` when you run code (`--usb` is the converse flag).
 </div>
 <div class="large-4 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/tessel-battery.jpg)
+![](http://i.imgur.com/2JXAPKt.jpg)
 
 </div>
 <div class="large-4 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/doc+pictures/tessel-plug.jpg)
+![](http://i.imgur.com/kFHhIim.jpg)
 
 </div>
 </div>

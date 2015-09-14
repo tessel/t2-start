@@ -3,7 +3,7 @@
 <div class="row">
 <div class="large-12 columns">
 
-## <img class="constrain-sm" src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules/gps.png"> GPS
+## <img class="constrain-sm" src="//i.imgur.com/DI344Iy.png"> GPS
 
 [<i class="fa fa-github"> View source on Github</i>](https://github.com/tessel/gps-a2235h)
 
@@ -53,7 +53,7 @@ Install by typing `npm install gps-a2235h` into the command line.
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_corners/gps.jpg)
+![](//i.imgur.com/f92rOvG.jpg)
 
 </div>
 </div>
@@ -135,7 +135,7 @@ To see what else you can do with the GPS module, see the module docs [here](http
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/gifs/gps.gif)
+![](http://i.imgur.com/m4CxbLN.gif)
 
 </div>
 </div>

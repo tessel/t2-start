@@ -3,7 +3,7 @@
 <div class="row">
 <div class="large-12 columns">
 
-## <img class="constrain-sm" src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules/rfid.png"> RFID
+## <img class="constrain-sm" src="//i.imgur.com/JsHkR2D.png"> RFID
 
 [<i class="fa fa-github"> View source on Github</i>](https://github.com/tessel/rfid-pn532)
 
@@ -51,7 +51,7 @@ Install by typing `npm install rfid-pn532` into the command line.
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_corners/rfid.jpg)
+![](//i.imgur.com/JPTWSFj.jpg)
 
 </div>
 </div>
@@ -114,7 +114,7 @@ To see what else you can do with the RFID module, see the module docs [here](htt
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/gifs/rfid.gif)
+![](http://i.imgur.com/6nA6hJy.gif)
 
 </div>
 </div>

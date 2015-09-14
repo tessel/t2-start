@@ -3,7 +3,7 @@
 <div class="row">
 <div class="large-12 columns">
 
-## <img class="constrain-sm" src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules/ambient.png"> Ambient
+## <img class="constrain-sm" src="//i.imgur.com/hqZ399I.png"> Ambient
 
 [<i class="fa fa-github"> View source on Github</i>](https://github.com/tessel/ambient-attx4)
 
@@ -51,7 +51,7 @@ Install by typing `npm install ambient-attx4` into the command line.
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_corners/ambient.jpg)
+![](//i.imgur.com/WWtJyIJ.jpg)
 
 </div>
 </div>
@@ -152,7 +152,7 @@ To see what else you can do with the ambient module, see the module docs [here](
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/gifs/ambient.gif)
+![](http://i.imgur.com/SuvbD9O.gif)
 
 </div>
 </div>

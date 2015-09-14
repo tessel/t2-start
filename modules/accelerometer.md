@@ -3,7 +3,7 @@
 <div class="row">
 <div class="large-12 columns">
 
-## <img class="constrain-sm" src="https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules/accelerometer.png"> Accelerometer
+## <img class="constrain-sm" src="//i.imgur.com/7qR5OZJ.png"> Accelerometer
 
 [<i class="fa fa-github"> View source on Github</i>](https://github.com/tessel/accel-mma84)
 
@@ -45,7 +45,7 @@ Install by typing `npm install accel-mma84` into the command line.
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/modules_corners/accelerometer.jpg)
+![](//i.imgur.com/7ZJQwQI.jpg)
 
 </div>
 </div>
@@ -115,7 +115,7 @@ To see what else you can do with the accelerometer module, see the module docs [
 </div>
 <div class="large-6 columns">
 
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/gifs/accelerometer.gif)
+![](http://i.imgur.com/KnXf6uL.gif)
 
 </div>
 </div>
