@@ -28,6 +28,6 @@ You've completed the Tessel Tutorial!
 
 <div class="row">
 <div class="large-6 columns left">
-  <a href="usage.html" class="bottomButton button">Prev: CLI Usage</a>
+  <a href="gpio.html" class="bottomButton button">Prev: GPIO</a>
 </div>
 </div>

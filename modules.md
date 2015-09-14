@@ -53,7 +53,7 @@ Modules should be plugged in so that all of the electrical components are on the
 <div class="large-12 columns">
 ## Choose a module below to get up and running
 
-If you've already tried out your modules, move on to [Usage.](usage.html)
+If you've already tried out your modules, move on to [other uses for the module ports.](gpio.html)
 
 *   [Accelerometer](modules/accelerometer.html)
 *   [Ambient (Light + Sound)](modules/ambient.html)
