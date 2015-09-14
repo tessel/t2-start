@@ -11,7 +11,9 @@
 
 **Note: Temperature and humidity readings can be skewed by the operating temperature of the Tessel. Distancing the the climate module from the Tessel via [wires](https://www.adafruit.com/products/1950?gclid=CjwKEAiA_s2lBRCe1YPXxtSe-DcSJACCIh3LlrKOKB5hJLKIxjIwgeJPYVW_or_As5UMK6fqwk-YERoCxGXw_wcB) is recommended for accurate readings.**
 
-Make a directory inside your "tessel-code" folder: enter `mkdir climate` into your command line, then change directory into that folder: `cd climate`
+Make a directory inside your "tessel-code" folder called "climate", change directory into that folder, and initialize a tessel project:
+
+`mkdir climate; cd climate; t2 init`
 
 </div>
 </div>
@@ -63,7 +65,7 @@ Install by typing `npm install climate-si7020` into the command line.
 
 ### Step 4
 
-Save this code in a text file called `climate.js`:
+Rename "index.js" to "climate.js" and replace the file's contents with the following:
 
 {% highlight js %}
 // Any copyright is dedicated to the Public Domain.
@@ -98,6 +100,8 @@ climate.on('error', function(err) {
 });
 {% endhighlight %}
 
+Save the file.
+
 </div>
 </div>
 
@@ -112,7 +116,7 @@ climate.on('error', function(err) {
 <div class="row">
 <div class="large-6 columns">
 
-In your command line, `tessel run climate.js` See the temperature and humidity change if you cup your hands and breathe on the module.  
+In your command line, `t2 run climate.js` See the temperature and humidity change if you cup your hands and breathe on the module.  
 
 **Bonus:** Change the code so the temperature reads out in celsius rather than Fahrenheit.  
 

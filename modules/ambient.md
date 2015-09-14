@@ -9,7 +9,9 @@
 
 ### Step 1
 
-Make a directory inside your "tessel-code" folder: enter `mkdir ambient` into your command line, then change directory into that folder: `cd ambient`
+Make a directory inside your "tessel-code" folder called "ambient", change directory into that folder, and initialize a tessel project:
+
+`mkdir ambient; cd ambient; t2 init`
 
 </div>
 </div>
@@ -61,7 +63,7 @@ Install by typing `npm install ambient-attx4` into the command line.
 
 ### Step 4
 
-Save this code in a text file called `ambient.js`:
+Rename "index.js" to "ambient.js" and replace the file's contents with the following:
 
 {% highlight js %}
 // Any copyright is dedicated to the Public Domain.
@@ -128,6 +130,8 @@ ambient.on('error', function (err) {
 });
 {% endhighlight %}
 
+Save the file.
+
 </div>
 </div>
 
@@ -142,7 +146,7 @@ ambient.on('error', function (err) {
 <div class="row">
 <div class="large-6 columns">
 
-In your command line, `tessel run ambient.js`  
+In your command line, `t2 run ambient.js`  
  Watch light and sound values appear in your terminal! Try clapping or shining a flashlight at it.  
 
 **Bonus:** Change the code so the sound trigger activates with just a whisper.  

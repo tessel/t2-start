@@ -9,7 +9,9 @@
 
 ### Step 1
 
-Make a directory inside your "tessel-code" folder: enter `mkdir servo` into your command line, then change directory into that folder: `cd servo`
+Make a directory inside your "tessel-code" folder called "servo", change directory into that folder, and initialize a tessel project:
+
+`mkdir servo; cd servo; t2 init`
 
 </div>
 </div>
@@ -108,7 +110,7 @@ Install by typing `npm install servo-pca9685` into the command line.
 
 ### Step 6
 
-Save this code in a text file called `servo.js`:
+Rename "index.js" to "servo.js" and replace the file's contents with the following:
 
 {% highlight js %}
 // Any copyright is dedicated to the Public Domain.
@@ -152,6 +154,8 @@ servo.on('ready', function () {
 });
 {% endhighlight %}
 
+Save the file.
+
 </div>
 </div>
 
@@ -166,7 +170,7 @@ servo.on('ready', function () {
 <div class="row">
 <div class="large-6 columns">
 
-In your command line, `tessel run servo.js` Watch your servo move!  
+In your command line, `t2 run servo.js` Watch your servo move!  
 
 **Bonus:** Make the servo turn all the way to position 1 in one fell swoop, and then back to position 0.  
 
