@@ -5,21 +5,37 @@
 
 # Congratulations!
 
-You've completed the Tessel Tutorial!
+You've completed the Tessel Tutorial! What's next?
 
-<p class="moduleStep">What's next?</p>
+* <a href="http://technical.io/projects" target="0"><b>Check out</b> Tessel projects (and build your own) →</a>
+* <a href="//tessel.io/docs" target="0"><b>Learn more</b> in Tessel's docs →</a>
 
-<a href="http://technical.io/projects" target="0"><b>Check out</b> Tessel projects →</a>
+<hr>
 
-<a href="//tessel.io/docs" target="0"><b>Learn more</b> in Tessel's docs →</a>
+# Get involved
 
-<a href="https://github.com/tessel/project" target="2"><b>Contribute</b> to Tessel's open source codebase →</a>
+</div>
+</div>
 
-<a href="http://twitter.com/technicalhumans" target="1"><b>Follow us</b> to stay up-to-date on new developments:</a>
+<div class="row">
+<div class="large-8 columns">
 
-<a href="http://twitter.com/technicalhumans" target="_new"><img src="images/tw.svg" class="social"></a>
-<a href="http://facebook.com/technicallyamachine" target="_new"><img src="images/fb.svg" class="social"></a>
-<a href="http://plus.google.com/103029349995646385959" target="_new"><img src="images/g.svg" class="social"></a>
+The [**Tessel Project**](https://tessel.io/about) is a completely open and volunteer-run organization. You can help to build Tessel by contributing and sharing back:
+
+* [Improve this **start experience** →](https://github.com/tessel/t2-start)
+* [Quick fix with the _contribution-easy_ tag on **CLI** →](https://github.com/tessel/t2-cli/labels/contribution-easy)
+* [Dive into Tessel 2's **firmware** →](https://github.com/tessel/t2-firmware)
+* Help build support for [Python](https://github.com/tessel/t2-cli/issues/201) and [Rust](https://github.com/tessel/t2-cli/issues/200) →
+
+Welcome to the community! We're happy to have you.
+
+Love,<br/>
+the Tessel team
+
+</div>
+<div class="large-4 columns">
+
+![](http://imgur.com/g37w4HQ.png)
 
 </div>
 </div>
