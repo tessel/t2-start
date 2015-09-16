@@ -36,10 +36,8 @@ If you are running Ubuntu _13.10 or later_, you can run this:
 
 Once Node is installed, run this in your terminal:
 
-{% highlight sh %}
-apt-get install libusb-1.0-0-dev libudev-dev
-npm install -g t2-cli
-{% endhighlight %}
+`apt-get install libusb-1.0-0-dev libudev-dev`
+`npm install -g t2-cli`
 
 </div>
 
