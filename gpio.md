@@ -6,48 +6,40 @@
 # Beyond Modules
 
 <div class="row">
-<div class="large-8 columns">
+<div class="large-3 columns right">
 
-Tessel's two module ports are not just for modules! They can also be used as flexible, simply [addressable GPIO](//tessel.io/docs/hardwareAPI) (general purpose input/output) pins.
+[![](https://raw.githubusercontent.com/rwaldron/tessel-io/master/fritzing/tessel.png)](https://github.com/rwaldron/tessel-io/tree/master/fritzing)
+
+</div>
+<div class="large-8 columns left">
+
+Tessel's two module ports are not just for modules– they can also be used as flexible, simply [addressable GPIO](//tessel.io/docs/hardwareAPI) (general purpose input/output) pins.
 
 What does that mean? It means you're not limited to Tessel's ten-pin modules. In theory, you can connect nearly any electronic device or sensor to Tessel!
 
-</div>
-<div class="large-3 columns right">
-
-![](https://raw.githubusercontent.com/rwaldron/tessel-io/master/fritzing/tessel.png)
-
+### Community modules
 </div>
 </div>
 
 <div class="row">
 <div class="large-12 columns">
 
-### Community modules
-
 For an experience nearly as easy as Tessel's ten-pin module experience, take a look at the [Community Modules](https://tessel.io/modules#third-party).
 
 These are hardware components for which members of the community have created npm libraries, documentation, and wiring information.
 
-Here are a few:
+For example:
 
 </div>
 </div>
 
 <div class="row">
 <div class="large-6 columns left">
-<iframe frameborder='0' height='270' scrolling='no' src='https://www.hackster.io/ifoundthemeaningoflife/tessel-button/embed?use_route=project' width='360'></iframe>
+<iframe frameborder='0' height='270' scrolling='no' src='https://www.hackster.io/johnnyman727/rgb-tcs34725/embed?use_route=project' width='360'></iframe>
 </div>
 <div class="large-6 columns left">
 <iframe frameborder='0' height='270' scrolling='no' src='https://tessel.hackster.io/zaccolley/thermal-printer-module-for-tessel/embed?use_route=project' width='360'></iframe>
 </div>
-</div>
-<div class="row">
-<div class="large-6 columns left">
-<iframe frameborder='0' height='270' scrolling='no' src='https://www.hackster.io/adkron/backpack-ht16k33/embed?use_route=project' width='360'></iframe>
-</div>
-<div class="large-6 columns left">
-<iframe frameborder='0' height='270' scrolling='no' src='https://tessel.hackster.io/andrewcashmore/lego-ir/embed?use_route=project' width='360'></iframe>
 </div>
 
 <div class="row">
@@ -55,6 +47,8 @@ Here are a few:
 
 <br/>
 To see more community-created modules (or to add one you've made!) go to [tessel.io/modules](https://tessel.io/modules#third-party).
+
+_Note: we're still building out Tessel 2's firmware, so you might hit some bugs trying to use community modules. If you do, please report them! We're collecting status reports on community modules [here](https://github.com/tessel/hardware-modules/issues/5)._
 
 ### Making your own Modules
 
