@@ -38,7 +38,7 @@ For example:
 <iframe frameborder='0' height='270' scrolling='no' src='https://www.hackster.io/johnnyman727/rgb-tcs34725/embed?use_route=project' width='360'></iframe>
 </div>
 <div class="large-6 columns left">
-<iframe frameborder='0' height='270' scrolling='no' src='https://tessel.hackster.io/zaccolley/thermal-printer-module-for-tessel/embed?use_route=project' width='360'></iframe>
+<iframe frameborder='0' height='270' scrolling='no' src='https://www.hackster.io/adkron/backpack-ht16k33/embed?use_route=project' width='360'></iframe>
 </div>
 </div>
 
