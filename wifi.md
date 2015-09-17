@@ -3,9 +3,9 @@
 <div class="row">
 <div class="large-12 columns">
 
-# Connect Tessel to Wifi
+# Using Tessel's Wifi
 
-Let's get online! Tessel has Wifi connectivity built into the board, so you can use online APIs right away.
+Tessel has Wifi connectivity built into the board. You already used it in the Update step, but let's see what else we can do!
 
 *Note: This step is optional. If you don't have internet right now, just go ahead to the next step: [add modules](modules.html)*
 
@@ -15,9 +15,7 @@ Let's get online! Tessel has Wifi connectivity built into the board, so you can 
 
 **To connect to a new network,** enter in your command line (without brackets)
 
-`t2 wifi -n [network name] -p [password]`
-
-The yellow Wifi LED should start blinking within a few seconds.
+`t2 wifi -n <network-name> -p <password>`
 
 Tessel 2's Wifi LED blinks with every packet it receives.
 
