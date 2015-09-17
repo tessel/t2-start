@@ -60,10 +60,36 @@ After installing the Tessel drivers and Node.js, run this in cmd.exe:
 
 ### Update Tessel's Firmware
 
-Take a quick field trip to our current [firmware update instructions](https://github.com/tessel/t2-docs/blob/master/cli.md#updating-tessel-2-on-board-osfirmware) and update Tessel's firmware, then come back to this page.
+Tessel's update process works best over Wifi, so let's get connected:
 
-Once the firmware update is complete, continue to the
-next step.
+<div class="row">
+<div class="large-6 columns">
+
+Enter in your command line
+
+`t2 wifi -n <network-name> -p <password>`
+
+The yellow Wifi LED should start blinking within a few seconds.
+
+</div>
+<div class="large-6 columns">
+
+![](http://i.imgur.com/91pkDCQ.gif)
+
+</div>
+</div>
+
+<div class="row">
+<div class="large-12 columns">
+
+Now that we're connected, let's check for updates. Run:
+
+`t2 update`
+
+Tessel will check for new firmware versions, then download and apply them.
+
+</div>
+</div>
 
 </div>
 </div>
