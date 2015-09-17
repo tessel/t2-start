@@ -87,7 +87,7 @@ Make sure you're [connected to Wifi]({{ site.baseurl }}/wifi.html), then run:
   Modules</a>
 </div>
 <div class="large-6 columns right">
-  <a href="usage.html" class=
-  "bottomButton right button">Next: Usage</a>
+  <a href="gpio.html" class=
+  "bottomButton right button">Next: Beyond modules</a>
 </div>
 </div>
