@@ -60,6 +60,8 @@ After installing the Tessel drivers and Node.js, run this in cmd.exe:
 
 ### Update Tessel's Firmware
 
+Plug in your Tessel over USB (use Tessel's microUSB port, between the USB ports and the module ports).
+
 Tessel's update process works best over Wifi, so let's get connected:
 
 <div class="row">
