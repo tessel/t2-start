@@ -62,6 +62,10 @@ After installing the Tessel drivers and Node.js, run this in cmd.exe:
 
 Plug in your Tessel over USB (use Tessel's microUSB port, between the USB ports and the module ports).
 
+**Note: you must wait for the Tessel to finish booting up (~30s) before you can run commands. Look for the tiny green LED on the Ethernet port to turn on to signal a full bootup.**
+
+*This bootup issue is because Tessel 2 is still in development; track the issue [here](https://github.com/tessel/t2-cli/issues/346).*
+
 Tessel's update process works best over Wifi, so let's get connected:
 
 <div class="row">
@@ -72,6 +76,10 @@ Enter in your command line
 `t2 wifi -n <network-name> -p <password>`
 
 The yellow Wifi LED should start blinking within a few seconds.
+
+You also need to authorize your computer to write to this Tessel:
+
+`t2 provision`
 
 </div>
 <div class="large-6 columns">
@@ -84,7 +92,7 @@ The yellow Wifi LED should start blinking within a few seconds.
 <div class="row">
 <div class="large-12 columns">
 
-Now that we're connected, let's check for updates. Run:
+Great! now that we're connected and authorized, let's check for updates. Run:
 
 `t2 update`
 
