@@ -7,10 +7,6 @@
 
 Because Tessel runs Node, we can leverage the [thousands of libraries](//npmjs.com) that the Node community has made.
 
-Let's try this out with the [Node.JS twitter library](https://www.npmjs.org/package/twitter). Install it using npm:
-
-`npm install twitter`
-
 This code snippet makes Tessel send a tweet from a dummy account <a href="https://twitter.com/TesselTweet" target="0">(@TesselTweet)</a> that we've created for this purpose.
 
 _If you want to post from your own account, go to <a href="https://apps.twitter.com/" target="0">apps.twitter.com</a>, create your own OAuth tokens with read and write permissions, and paste them into the script._
@@ -20,6 +16,10 @@ _If you want to post from your own account, go to <a href="https://apps.twitter.
 Create a new directory within your "tessel-code" directory:
 
 `mkdir tessel-tweet; cd tessel-tweet; t2 init`
+
+Use npm to install [the Twitter library](https://www.npmjs.org/package/twitter) that the Node.js community has built:
+
+`npm install twitter`
 
 Rename the "index.js" file you've just created to "tweet.js", then copy and paste the below script over the existing text:
 
