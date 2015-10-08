@@ -58,48 +58,41 @@ After installing the Tessel drivers and Node.js, run this in cmd.exe:
 </div>
 </div>
 
-### Update Tessel's Firmware
+### A note on Tessel's bootup
 
 Plug in your Tessel over USB (use Tessel's microUSB port, between the USB ports and the module ports).
 
-**Note: you must wait for the Tessel to finish booting up (~30s) before you can run commands. Look for the tiny green LED on the Ethernet port to turn on to signal a full bootup.**
+**You must wait for the Tessel to finish booting up (~30s) before you can run commands. Look for the tiny green LED on the Ethernet port to turn on to signal a full bootup.**
 
 *This bootup issue is because Tessel 2 is still in development; track the issue [here](https://github.com/tessel/t2-cli/issues/346).*
 
-Tessel's update process works best over Wifi, so let's get connected:
+<hr>
 
-<div class="row">
-<div class="large-6 columns">
+### Find your Tessel
 
-Enter in your command line
+Run:
 
-`t2 wifi -n <network-name> -p <password>`
+`t2 list`
 
-The yellow Wifi LED should start blinking within a few seconds.
+You should be able to see your Tessel connected:
 
-You also need to authorize your computer to write to this Tessel:
+{% highlight sh %}
+INFO Searching for nearby Tessels...
+	Tessel-AF768F095	USB
+{% endhighlight %}
 
-`t2 provision`
+Yay, you found it! At this point, your Tessel is operational and in communication with your computer.
 
-</div>
-<div class="large-6 columns">
+**Bonus:** give your Tessel a name, like "Frank" or "Bulbasaur":
 
-![](http://i.imgur.com/91pkDCQ.gif)
+`t2 rename <name>`
 
-</div>
-</div>
+If you run `t2 list` again, you'll see your Tessel has changed its name:
 
-<div class="row">
-<div class="large-12 columns">
-
-Great! now that we're connected and authorized, let's check for updates. Run:
-
-`t2 update`
-
-Tessel will check for new firmware versions, then download and apply them.
-
-</div>
-</div>
+{% highlight sh %}
+INFO Searching for nearby Tessels...
+	Bulbasaur	USB
+{% endhighlight %}
 
 </div>
 </div>
@@ -112,6 +105,6 @@ Tessel will check for new firmware versions, then download and apply them.
 </div>
 
 <div class="large-6 columns right">
-  <a href="blinky.html" class= "bottomButton right button">Next: Blink lights</a>
+  <a href="wifi.html" class= "bottomButton right button">Next: Get connected</a>
 </div>
 </div>

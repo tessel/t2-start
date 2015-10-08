@@ -5,19 +5,29 @@
 
 # Using Tessel's Wifi
 
-Tessel has Wifi connectivity built into the board. You already used it in the Update step, but let's see what else we can do!
-
-*Note: This step is optional. If you don't have internet right now, just go ahead to the next step: [add modules](modules.html)*
+Tessel 2 has robust Wifi built into the board. Let's get connected!
 
 </div></div>
+
+<hr>
+
+<div class="row">
+<div class="large-12 columns">
+
+### Connect
+
+</div></div>
+
 <div class="row">
 <div class="large-6 columns">
 
-**To connect to a new network,** enter in your command line (without brackets)
+To connect to a new network, enter in your command line (without brackets)
 
 `t2 wifi -n <network-name> -p <password>`
 
 Tessel 2's Wifi LED blinks with every packet it receives.
+
+Tessel saves network credentials and tries to reconnect automatically on startup.
 
 </div>
 <div class="large-6 columns">
@@ -31,21 +41,8 @@ Tessel 2's Wifi LED blinks with every packet it receives.
 
 <div class="row">
 <div class="large-12 columns">
-Tessel saves network credentials and tries to reconnect automatically on startup.
 
-To check whether you're connected, run
-
-`t2 wifi -l`
-
-This lists available wifi networks and will also show your connection status.
-
-</div>
-</div>
-
-<hr>
-
-<div class="row">
-<div class="large-12 columns">
+### Authorize
 
 On Tessel 2, you can run and push your code over Wifi, not just USB. In fact, it's actually faster than over USB! Let's get that set up. Run:
 
@@ -57,44 +54,32 @@ Now, run:
 
 `t2 list`
 
-You should see a Tessel pop up with LAN connection, something like:
+Assuming your computer is connected to the same network as your Tessel, you should see a Tessel pop up with LAN connection, something like:
 
 {% highlight sh %}
 INFO Searching for nearby Tessels...
-	Tessel-Bulbasaur	LAN
+	Bulbasaur	LAN
+	Bulbasaur	USB
 {% endhighlight %}
 
-</div>
-</div>
+You might see (as in the example) that your Tessel is connected via both USB and LAN. The connection will automatically prefer LAN, since it's faster, but you can control this by adding `--lan` or `--usb` to any command.
 
-<div class="row">
-<div class="large-4 columns">
-
-Want to try it out? Power Tessel by plugging it into something other than your laptop.
-
-You can use USB power just like a phone or a Tessel 1:
-
-Or specify `--lan` when you run code (`--usb` is the converse flag).
-
-</div>
-<div class="large-4 columns">
-
-![](http://i.imgur.com/2JXAPKt.jpg)
-
-</div>
-<div class="large-4 columns">
-
-![](http://i.imgur.com/kFHhIim.jpg)
+<hr>
 
 </div>
 </div>
+
 <div class="row">
 <div class="large-12 columns">
-Now navigate to wherever you saved your blinky code.
 
-`t2 run blinky.js`
+### Update
 
-As usual. Now watch your Tessel blink from across the room!
+Great! now that we're connected and authorized, let's check for updates. Run:
+
+`t2 update`
+
+Tessel will check for new firmware versions, then download and apply them.
+
 </div>
 </div>
 
@@ -102,10 +87,10 @@ As usual. Now watch your Tessel blink from across the room!
 
 <div class="row">
 <div class="large-6 columns left">
-  <a href="blinky.html" class="bottomButton button">Prev: Blinky</a>
+  <a href="index.html" class="bottomButton button">Prev: Install</a>
 </div>
 
 <div class="large-6 columns right">
-  <a href="modules.html" class= "bottomButton right button">Next: Add modules</a>
+  <a href="blinky.html" class= "bottomButton right button">Next: Blink lights</a>
 </div>
 </div>
