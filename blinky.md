@@ -34,20 +34,14 @@ Great! Now you're set up to run code on Tessel. Your "tessel-code" folder now co
 // Import the interface to Tessel hardware
 var tessel = require('tessel');
 
-// Set the led pins as outputs
-var led1 = tessel.led[2];
-var led2 = tessel.led[3];
-
-// Set initial LED states
-led1.output(1);
-led2.output(0);
+// Turn one of the LEDs on to start. 
+tessel.led[2].on();
 
 setInterval(function () {
   console.log("I'm blinking! (Press CTRL + C to stop)");
-  // Toggle the led states
-  led1.toggle();
-  led2.toggle();
-}, 100); // every 100 milliseconds
+  tessel.led[2].toggle();
+  tessel.led[3].toggle();
+}, 100);
 {% endhighlight %}
 
 In your command line, enter
@@ -57,6 +51,8 @@ In your command line, enter
 to run your code in Tessel's RAM.
 
 **Look at your Tessel!** The blue and green LEDs on your Tessel's LED panel should blink back and forth.
+
+![](http://i.imgur.com/kZIZNcL.gif)
 
 <hr>
 

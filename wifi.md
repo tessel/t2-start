@@ -25,9 +25,7 @@ To connect to a new network, enter in your command line (without brackets)
 
 `t2 wifi -n <network-name> -p <password>`
 
-Tessel 2's Wifi LED blinks with every packet it receives.
-
-Tessel saves network credentials and tries to reconnect automatically on startup.
+Tessel 2 will save network credentials and attempt to reconnect automatically on startup. Wifi connectivity is indicated by the ob-board Wifi LED, which will blink with every packet it receives.
 
 </div>
 <div class="large-6 columns">
@@ -48,13 +46,13 @@ On Tessel 2, you can run and push your code over Wifi, not just USB. In fact, it
 
 `t2 provision`
 
-This authorizes your computer to push code to the connected Tessel.
+This authorizes your computer to push code to the connected Tessel 2.
 
 Now, run:
 
 `t2 list`
 
-Assuming your computer is connected to the same network as your Tessel, you should see a Tessel pop up with LAN connection, something like:
+Assuming your computer is connected to the same network as your Tessel 2, you should see it listed by name, as a "LAN" connection, something like:
 
 {% highlight sh %}
 INFO Searching for nearby Tessels...
@@ -78,7 +76,7 @@ Great! now that we're connected and authorized, let's check for updates. Run:
 
 `t2 update`
 
-Tessel will check for new firmware versions, then download and apply them.
+This command will check for a new version of the Tessel 2 firmware. If there is an update available, it will be downloaded and installed.
 
 </div>
 </div>
