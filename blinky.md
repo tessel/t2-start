@@ -34,7 +34,7 @@ Great! Now you're set up to run code on Tessel. Your "tessel-code" folder now co
 // Import the interface to Tessel hardware
 var tessel = require('tessel');
 
-// Turn one of the LEDs on to start. 
+// Turn one of the LEDs on to start.
 tessel.led[2].on();
 
 setInterval(function () {
@@ -44,6 +44,11 @@ setInterval(function () {
 }, 100);
 {% endhighlight %}
 
+</div>
+</div>
+<div class="row">
+<div class="large-9 columns">
+
 In your command line, enter
 
 `t2 run index.js`
@@ -52,7 +57,13 @@ to run your code in Tessel's RAM.
 
 **Look at your Tessel!** The blue and green LEDs on your Tessel's LED panel should blink back and forth.
 
+</div>
+<div class="large-3 columns">
+
 ![](http://i.imgur.com/kZIZNcL.gif)
+
+</div>
+</div>
 
 <hr>
 
