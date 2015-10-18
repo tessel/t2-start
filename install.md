@@ -72,7 +72,7 @@ Run:
 
 `t2 list`
 
-You should be able to see your Tessel connected:
+You should be able to see your Tessel (and any other Tessels connected to the same network as your computer):
 
 {% highlight sh %}
 INFO Searching for nearby Tessels...
