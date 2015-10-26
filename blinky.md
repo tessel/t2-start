@@ -37,6 +37,7 @@ var tessel = require('tessel');
 // Turn one of the LEDs on to start.
 tessel.led[2].on();
 
+// Blink!
 setInterval(function () {
   console.log("I'm blinking! (Press CTRL + C to stop)");
   tessel.led[2].toggle();
