@@ -3,11 +3,26 @@
 <div class="row">
 <div class="large-12 columns">
 
-# Install Tessel
+# Install Tessel 2
+
+</div>
+</div>
+<div class="row">
+<div class="large-10 columns">
 
 *New to the command line? [Take a step back and learn the basics.](cmd.html)*
 
 Select the operating system you are working on.
+
+</div>
+<div class="large-2 columns">
+
+![](https://raw.githubusercontent.com/rwaldron/tessel-io/master/fritzing/tessel.png)
+
+</div>
+</div>
+<div class="row">
+<div class="large-12 columns">
 
 <dl id="install-tabs" data-tab="" class="tabs contained three-up">
 | [OSX](#tab-osx) || [Linux](#tab-linux) || [Windows](#tab-windows) |
