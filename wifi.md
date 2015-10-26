@@ -74,7 +74,11 @@ You might see (as in the example) that your Tessel is connected via both USB and
 
 ### Update
 
-Great! now that we're connected and authorized, let's check for updates. Run:
+Great! Now that we're connected and authorized, let's check for updates. If this is a new Tesse 2, use the `-f` flag to force a complete update to the latest and greatest:
+
+`t2 update -f`
+
+Next time you update this Tessel 2, you only need to type: 
 
 `t2 update`
 
