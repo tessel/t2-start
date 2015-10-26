@@ -27,7 +27,7 @@ Rename the "index.js" file you've just created to "tweet.js", then copy and past
 // Node requires
 var twitter = require('twitter');
 
-var twitterHandle = '@technicalhumans';
+var twitterHandle = '@tesselproject';
 // The status to tweet
 var status = 'Hello ' + twitterHandle + '. This is your #Tessel 2 speaking.';
 
