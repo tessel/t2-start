@@ -64,6 +64,9 @@ to run your code in Tessel's RAM.
 
 <hr>
 
+<div class="row">
+<div class="large-12 columns">
+
 **Bonus:** mess with the code to make the LEDs blink in sync.
 
 **Extra bonus:** Want to untether your computer from your Tessel? Run:
