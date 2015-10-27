@@ -12,7 +12,11 @@ Blinking some lights is the "Hello World" of hardware. Let's make those LEDs bui
 
 In your command line, make a folder for your Tessel code, then initialize a Tessel project in that folder by running each of the following commands in the terminal:
 
-`mkdir tessel-code; cd tessel-code; t2 init`
+`mkdir tessel-code`
+
+`cd tessel-code`
+
+`t2 init`
 
 Great! Now you're set up to run code on Tessel. Your "tessel-code" folder now contains a "package.json" with some metadata Node uses for your project, and a file called "index.js".
 
