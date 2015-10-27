@@ -9,7 +9,23 @@ Because Tessel runs Node, we can leverage the [thousands of libraries](//npmjs.c
 
 This code snippet makes Tessel send a tweet from a dummy account <a href="https://twitter.com/TesselTweet" target="0">(@TesselTweet)</a> that we've created for this purpose.
 
+
+</div>
+</div>
+<div class="row">
+<div class="large-6 columns">
+
 _If you want to post from your own account, go to <a href="https://apps.twitter.com/" target="0">apps.twitter.com</a>, create your own OAuth tokens with read and write permissions, and paste them into the script._
+
+</div>
+<div class="large-6 columns right">
+
+[![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/tessel-tweet-2.png)](https://twitter.com/intent/tweet?text=OAuth%20is%20hard.%20But%20at%20least%20I%20can%20sign%20requests%20from%20my%20microcontroller.%23Tessel)
+
+</div>
+</div>
+<div class="row">
+<div class="large-12 columns">
 
 <hr>
 
@@ -51,29 +67,17 @@ twit.post('statuses/update', {status: status}, function(error, tweet, response){
 
 Change the "twitterHandle" var to your own Twitter handle and save.
 
-</div>
-</div>
-
-<div class="row">
-<div class="large-4 columns">
 
 Make sure you're [connected to Wifi]({{ site.baseurl }}/wifi.html), then run:
 
-`t2 run tweet.js`
+`t2 run tweet.js --slim`
+
+_That `--slim` command is a new feature we're testing out which cleverly checks the dependencies you're using to reduce the file size - so just now, we avoided passing over any unused files in the Twitter library. You can append `--slim` to any `t2 run`._
 
 <a href="https://twitter.com/TesselTweet" target=
-"0">Check Twitter for your tweet!</a>
+"0">**Check Twitter for your tweet!**</a>
 
-</div>
-<div class="large-8 columns right">
-
-![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/tessel-tweet-2.png)
-
-</div>
-</div>
-
-<div class="row">
-<div class="large-12 columns">
+<hr>
 
 **Bonus:** Try making Tessel tweet output from a module.
 
