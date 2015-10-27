@@ -82,7 +82,7 @@ After installing the Tessel drivers and Node.js, run this in cmd.exe:
 
 Plug in your Tessel over USB (use Tessel's microUSB port, between the USB ports and the module ports).
 
-*It takes ~30s to finish booting up (track the issue [here](https://github.com/tessel/t2-firmware/issues/117)); lights will flash during this process, and commands will queue.*
+*It takes ~30s to finish booting up (track the issue [here](https://github.com/tessel/t2-firmware/issues/117)); lights will flash during this process.*
 
 Run:
 
