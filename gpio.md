@@ -17,6 +17,8 @@ Tessel's two module ports are not just for modules– they can also be used as f
 
 What does that mean? It means you're not limited to Tessel's ten-pin modules. In theory, you can connect nearly any electronic device or sensor to Tessel!
 
+<hr>
+
 ### Community modules
 </div>
 </div>
@@ -32,7 +34,6 @@ For example:
 
 </div>
 </div>
-
 <div class="row">
 <div class="large-6 columns left">
 <iframe frameborder='0' height='270' scrolling='no' src='https://www.hackster.io/johnnyman727/rgb-tcs34725/embed?use_route=project' width='360'></iframe>
@@ -41,14 +42,14 @@ For example:
 <iframe frameborder='0' height='270' scrolling='no' src='https://www.hackster.io/adkron/backpack-ht16k33/embed?use_route=project' width='360'></iframe>
 </div>
 </div>
-
 <div class="row">
 <div class="large-12 columns">
-
 <br/>
 To see more community-created modules (or to add one you've made!) go to [tessel.io/modules](https://tessel.io/modules#third-party).
 
 _Note: we're still building out Tessel 2's firmware, so you might hit some bugs trying to use community modules. If you do, please report them! We're collecting status reports on community modules [here](https://github.com/tessel/hardware-modules/issues/5)._
+
+<hr>
 
 ### Making your own Modules
 

@@ -150,6 +150,8 @@ This means:
 
 "use the tool called 'npm' to perform the 'install' action on the item called 't2'. Do this globally." `t2` is the command line tool you will use to talk to the Tessel 2. `-g` stands for globally– which is to say, you want `npm` to install such that you can use the `t2` tool even outside the folder you were in when you installed it.
 
+<hr>
+
 ### Text Editors
 
 You will also need a text editor to save your JavaScript files. This means a plaintext editor, not a Word document.
@@ -174,10 +176,9 @@ like this
 
 You'll see this when you get to the [blinking lights example]({{ site.baseurl }}/blinky.html). But don't skip ahead– you'll need the tools we install in the next step.
 
-</div>
-</div>
-
 <div class="greyBar"></div>
+</div>
+</div>
 
 <div class="row">
 <div class="large-12 columns right">

@@ -22,11 +22,10 @@ Great! Now you're set up to run code on Tessel. Your "tessel-code" folder now co
 
 </div>
 </div>
-
-<hr>
-
 <div class="row">
 <div class="large-12 columns">
+
+<hr>
 
 "index.js" contains the code to make the blue and green LEDs blink. Let's take a look:
 
@@ -65,7 +64,8 @@ to run your code in Tessel's RAM.
 
 </div>
 </div>
-
+<div class="row">
+<div class="large-12 columns">
 <hr>
 
 **Bonus:** mess with the code to make the LEDs blink in sync.

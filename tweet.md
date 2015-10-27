@@ -80,6 +80,8 @@ Make sure you're [connected to Wifi]({{ site.baseurl }}/wifi.html), then run:
 **Extra bonus:** What's another Node module you can try out? Maybe Twilio, PubNub, Plotly, Firebase? Surf around on [npm](//npmjs.com) until you find a Node library you like, then try using it with Tessel.
 
 <div class="greyBar"></div>
+</div>
+</div>
 
 <div class="row">
 <div class="large-5 columns left">
