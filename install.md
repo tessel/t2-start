@@ -73,21 +73,28 @@ After installing the Tessel drivers and Node.js, run this in cmd.exe:
 </div>
 </div>
 
-### A note on Tessel's bootup
+### Find your Tessel
+
+</div>
+</div>
+<div class="row">
+<div class="small-10 columns">
 
 Plug in your Tessel over USB (use Tessel's microUSB port, between the USB ports and the module ports).
 
-**You must wait for the Tessel to finish booting up (~30s) before you can run commands. Look for the tiny green LED on the Ethernet port to turn on to signal a full bootup.**
-
-*This bootup issue is because Tessel 2 is still in development; track the issue [here](https://github.com/tessel/t2-cli/issues/346).*
-
-<hr>
-
-### Find your Tessel
+*It takes ~30s to finish booting up (track the issue [here](https://github.com/tessel/t2-firmware/issues/117)); lights will flash during this process, and commands will queue.*
 
 Run:
 
 `t2 list`
+
+</div>
+<div class="small-2 columns">
+![](http://i.imgur.com/jDRIX06.jpg)
+</div>
+</div>
+<div class="row">
+<div class="large-12 columns">
 
 You should be able to see your Tessel (and any other Tessels connected to the same network as your computer):
 
