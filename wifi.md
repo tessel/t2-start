@@ -7,17 +7,17 @@
 
 Tessel 2 has robust Wifi built into the board. Let's get connected!
 
-</div></div>
-
-<hr>
-
+</div>
+</div>
 <div class="row">
 <div class="large-12 columns">
 
+<hr>
+
 ### Connect
 
-</div></div>
-
+</div>
+</div>
 <div class="row">
 <div class="large-6 columns">
 
@@ -36,11 +36,10 @@ Wifi connectivity is indicated by the on-board amber Wifi LED, which will blink 
 
 </div>
 </div>
-
-<hr>
-
 <div class="row">
 <div class="large-12 columns">
+
+<hr>
 
 ### Authorize
 
@@ -64,13 +63,13 @@ INFO Searching for nearby Tessels...
 
 You might see (as in the example) that your Tessel is connected via both USB and LAN. The connection will automatically prefer LAN, since it's faster, but you can control this by adding `--lan` or `--usb` to any command.
 
-<hr>
-
 </div>
 </div>
 
 <div class="row">
 <div class="large-12 columns">
+
+<hr>
 
 ### Update
 
@@ -80,10 +79,9 @@ Great! now that we're connected and authorized, let's check for updates. Run:
 
 This command will check for a new version of the Tessel 2 firmware. If there is an update available, it will be downloaded and installed.
 
-</div>
-</div>
-
 <div class="greyBar"></div>
+</div>
+</div>
 
 <div class="row">
 <div class="large-6 columns left">

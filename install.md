@@ -96,6 +96,8 @@ INFO Searching for nearby Tessels...
 
 Yay, you found it! At this point, your Tessel is operational and in communication with your computer.
 
+<hr>
+
 **Bonus:** give your Tessel a name, like "Frank" or "Bulbasaur":
 
 `t2 rename <name>`
@@ -107,10 +109,9 @@ INFO Searching for nearby Tessels...
 	Bulbasaur	USB
 {% endhighlight %}
 
-</div>
-</div>
-
 <div class="greyBar"></div>
+</div>
+</div>
 
 <div class="row">
 <div class="large-6 columns left">

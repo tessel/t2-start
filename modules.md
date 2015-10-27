@@ -23,7 +23,6 @@ At the bottom of this page are walkthroughs for the connection and installation 
 
 </div>
 </div>
-
 <div class="row">
 <div class="large-4 columns">
 
@@ -32,7 +31,6 @@ At the bottom of this page are walkthroughs for the connection and installation 
 Modules should be plugged in so that all of the electrical components are on the top and the big hexagon is face down:
 
 </div>
-
 <div class="large-4 columns">
 
 #### this side up
@@ -48,9 +46,10 @@ Modules should be plugged in so that all of the electrical components are on the
 
 </div>
 </div>
-
 <div class="row">
 <div class="large-12 columns">
+<hr>
+
 ## Choose a module below to get up and running
 
 If you've already tried out your modules, move on to [Tweet.](tweet.html)
@@ -64,10 +63,9 @@ If you've already tried out your modules, move on to [Tweet.](tweet.html)
 *   [RFID](modules/rfid.html)
 *   [Servo](modules/servo.html)
 
-</div>
-</div>
-
 <div class="greyBar"></div>
+</div>
+</div>
 
 <div class="row">
 <div class="large-6 columns left">
