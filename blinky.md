@@ -111,6 +111,6 @@ Learn more `t2` commands by running `t2 -h` or looking at the [T2 CLI docs](http
 </div>
 
 <div class="large-6 columns right">
-  <a href="modules.html" class= "bottomButton right button">Next: Add modules</a>
+  <a href="ap.html" class= "bottomButton right button">Next: Access Point</a>
 </div>
 </div>
