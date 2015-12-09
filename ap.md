@@ -23,7 +23,7 @@ Great! Now you're set up to run code on Tessel. Your "tessel-router" folder now 
 
 <hr />
 
-"index.js" contains code to make the blue and green LEDs blink. We're going to replace that with our server setup. Let's take a look:
+"index.js" contains code to make the blue and green LEDs blink. We're going to replace that with our initial server setup. Let's take a look:
 
 {% highlight javascript %}
 // Import the interface to Tessel hardware
@@ -44,6 +44,20 @@ server.listen(8080);
 console.log("Server running at http://192.168.1.101:8080/");
 
 {% endhighlight %}
+
+Now that our server is in place, let's get our access point set up. In the terminal, run the following command:
+
+`t2 ap -n TesselRouter`
+
+This will make an open wifi network called TesselRouter. If you open the wifi setting of your computer or a separate device like a smartphone or tablet, and scan for new devices, you should be able to see and connect to this new network. After connecting to TesselRouter, run the following command in your terminal:
+
+`t2 run index.js`
+
+Once you see "Server running at http://192.168.1.101:8080/" in the terminal, go to http://192.168.1.101:8080/ in the web browser of the device connected to the TesselRouter network. You should "Hello from Tessel!" appear on the screen. 
+
+Now let's take it up a notch by adding some interactivity between the web page and the Tessel!
+
+<hr />
 
 </div>
 </div>
