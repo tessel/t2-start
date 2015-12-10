@@ -7,14 +7,12 @@
 
 Because Tessel runs Node, we can leverage the [thousands of libraries](//npmjs.com) that the Node community has made.
 
-You can use this code snippet to sent a tweet from the dummy Twitter account <a href="https://twitter.com/TesselTweet" target="0">(@TesselTweet)</a>.
+This code snippet makes Tessel send a tweet from a dummy account <a href="https://twitter.com/TesselTweet" target="0">(@TesselTweet)</a> that we've created for this purpose.
 
 </div>
 </div>
 <div class="row">
 <div class="large-6 columns">
-_Don't worry when you see the hard-coded OAuth credentials in the snippet—we meant to do that. We created the <a href="https://twitter.com/TesselTweet" target="0">(@TesselTweet)</a> account specifically to let people try out tweeting from the Tessel._
-
 _If you would prefer to post from your own account, go to <a href="https://apps.twitter.com/" target="0">apps.twitter.com</a>, create your own OAuth tokens with read and write permissions, and paste them into the script._
 
 </div>
@@ -47,7 +45,6 @@ var twitterHandle = '@tesselproject';
 // The status to tweet
 var status = 'Hello ' + twitterHandle + '. This is your #Tessel 2 speaking.';
 
-// Enter the oauth key and secret information
 // These OAuth credentials are for the dummy @TesselTweet account
 // Paste in your own OAuth details if you want to tweet from your own account
 var twit = new twitter({
