@@ -4,7 +4,7 @@
 <div class="large-8 columns">
 # Build Your Own Internet
 
-Along with connecting to an existing Wifi network, Tessel 2 can also act as a portable router and emit a custom Wifi network. We can use this functionality to connect directly with our Tessel through a web browser. By the end of this article, we'll be able to control the Tessel LEDs through a web app served by the Tessel.  
+Along with connecting to an existing Wifi network, Tessel 2 can also act as a portable router and emit a custom Wifi network called an access point. We can use this functionality to connect directly with our Tessel through a web browser. The advantage of doing this through Tessel's access point instead of through a local Wifi network is reduced latency of requests to the Tessel since they won't be making a detour through a different router. This also means there is no need for a local network for connecting to Tessel through the web. By the end of this article, we'll be able to control the Tessel LEDs through a web app served by the Tessel.  
 
 In your command line, make a folder for your Tessel code, then initialize a Tessel project in that folder by running each of the following commands in the terminal:
 
@@ -23,7 +23,7 @@ Great! Now you're set up to run code on Tessel. Your "tessel-router" folder now 
 
 <hr>
 
-"index.js" contains code to make the blue and green LEDs blink. We're going to replace that with our initial server setup. Let's take a look:
+Rename the “index.js” file you’ve just created to “ap.js”, then copy and paste the below script over the existing text:
 
 {% highlight javascript %}
 // Import the interface to Tessel hardware
@@ -37,7 +37,7 @@ var server = http.createServer(function (request, response) {
   response.end("Hello from Tessel!\n");
 });
 
-// Listen on port 8080, IP defaults to 192.168.1.101
+// Listen on port 8080, IP defaults to 192.168.1.101. Also accessible through [tessel-name].local
 server.listen(8080);
 
 // Put a friendly message on the terminal
@@ -53,7 +53,7 @@ This will make an open wifi network called TesselRouter. If you open the wifi se
 
 `t2 run index.js`
 
-Once you see "Server running at http://192.168.1.101:8080/" in the terminal, go to http://192.168.1.101:8080/ in the web browser of the device connected to the TesselRouter network. You should "Hello from Tessel!" appear on the screen. You can press "Control+C" while in your terminal to stop this server. 
+Once you see "Server running at http://192.168.1.101:8080/" in the terminal, go to http://192.168.1.101:8080/ (or http://tessel.local:8080/, replacing "tessel" with the name of your Tessel) in the web browser of the device connected to the TesselRouter network. You should "Hello from Tessel!" appear on the screen. You can press "Control+C" while in your terminal to stop this server. 
 
 Now let's take it up a notch by adding some interactivity between the web page and the Tessel!
 
@@ -127,7 +127,7 @@ In that html, we have a heading, a line of instructions for the user, and a list
 
 While there are some comments in the previous code snippet, the summary is when a button with the class "led-button" is clicked, we grab the info from its "data-led" attribute and make a request to our Tessel server with that info in the url. After we get a successful response from the server, we update the "Status" field next to the button with the state of the corresponding LED. 
 
-Now let's check out `index.js` again to finish up the project. First, we're going to make a few changes to our server set up:
+Now let's check out `index.js` again to finish up the project. First, we're going to make a few changes to our server setup:
 
 {% highlight javascript %}
 // These two dependencies remain the same
@@ -219,10 +219,10 @@ Just like before, once you see the "Server running at http://192.168.1.101:8080/
 
 <div class="row">
 <div class="large-6 columns left">
-  <a href="blinky.html" class="bottomButton button">Prev: Blinky</a>
+  <a href="tweet.html" class="bottomButton button">Prev: Tweet</a>
 </div>
 
 <div class="large-6 columns right">
-  <a href="modules.html" class= "bottomButton right button">Next: Add modules</a>
+  <a href="gpio.html" class= "bottomButton right button">Next: Beyond modules</a>
 </div>
 </div>
