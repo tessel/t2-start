@@ -69,9 +69,7 @@ Change the "twitterHandle" var to your own Twitter handle and save.
 
 Make sure you're [connected to Wifi]({{ site.baseurl }}/wifi.html), then run:
 
-`t2 run tweet.js --slim`
-
-_That `--slim` command is a new feature we're testing out which cleverly checks the dependencies you're using to reduce the file size - so just now, we avoided passing over any unused files in the Twitter library. You can append `--slim` to any `t2 run`._
+`t2 run tweet.js`
 
 <a href="https://twitter.com/TesselTweet" target=
 "0">**Check Twitter for your tweet!**</a>
