@@ -54,7 +54,7 @@ Now that our server is in place, let's get our access point set up. In the termi
 
 This will make an open wifi network called TesselRouter. If you open the wifi setting of your computer or a separate device like a smartphone or tablet, and scan for new devices, you should be able to see and connect to this new network. After connecting to TesselRouter, run the following command in your terminal:
 
-`t2 run index.js`
+`t2 run ap.js`
 
 Once you see "Server running at http://192.168.1.101:8080/" in the terminal, go to http://192.168.1.101:8080/ (or http://tessel.local:8080/, replacing "tessel" with the name of your Tessel) in the web browser of the device connected to the TesselRouter network. You should "Hello from Tessel!" appear on the screen. You can press "Control+C" while in your terminal to stop this server. 
 
@@ -135,7 +135,7 @@ In that html, we have a heading, a line of instructions for the user, and a list
 
 While there are some comments in the previous code snippet, the summary is when a button with the class "led-button" is clicked, we grab the info from its "data-led" attribute and make a request to our Tessel server with that info in the url. After we get a successful response from the server, we update the "Status" field next to the button with the state of the corresponding LED. 
 
-Now let's check out `index.js` again to finish up the project. First, we're going to make a few changes to our server setup:
+Now let's check out `ap.js` again to finish up the project. First, we're going to make a few changes to our server setup:
 
 {% highlight javascript %}
 // These two dependencies remain the same
@@ -210,11 +210,11 @@ function toggleLED (url, request, response) {
 
 In our `showIndex` function, we grab the content of `index.html` using the Node.js `fs` module and respond to the web browser request with that content. In our toggleLED function, we use a Regex to search the url for the index of the led we want to toggle and pass that index into the `tessel.led` array. Now that we have the led we want, we toggle it and use the callback to respond to the server request with the current state of the led using `isOn` property.
 
-One last step is to create a `.tesselignore` file in the project directory and add any non-JavaScript files we want to deploy with `index.js`. For this project, that means adding one line: `index.html`. 
+One last step is to create a `.tesselignore` file in the project directory and add any non-JavaScript files we want to deploy with `ap.js`. For this project, that means adding one line: `index.html`. 
 
 Finally, let's fire up our server again by running:
 
-`t2 run index.js`
+`t2 run ap.js`
 
 Just like before, once you see the "Server running at http://192.168.1.101:8080/" message in your terminal, you should be able to connect to that url in the web browser of the device connected to the TesselRouter network. After connecting, you should see the index.html view we built earlier and, after clicking/tapping the buttons, see either the blue or green LEDs on the Tessel should be toggled on or off. 
 
