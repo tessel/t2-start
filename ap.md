@@ -1,8 +1,8 @@
 {::options parse_block_html="true" /}
 
 <div class="row">
-<div class="large-8 columns">
 # Build Your Own Internet
+<div class="large-8 columns">
 
 Along with connecting to an existing Wifi network, Tessel 2 can also act as a portable router and emit a custom Wifi network called an access point. We can use this functionality to connect directly with our Tessel through a web browser. The advantage of doing this through Tessel's access point instead of through a local Wifi network is reduced latency of requests to the Tessel since they won't be making a detour through a different router. This also means there is no need for a local network for connecting to Tessel through the web. By the end of this article, we'll be able to control the Tessel LEDs through a web app served by the Tessel.  
 
@@ -15,6 +15,9 @@ In your command line, make a folder for your Tessel code, then initialize a Tess
 `t2 init`
 
 Great! Now you're set up to run code on Tessel. Your "tessel-router" folder now contains a "package.json" with some metadata Node uses for your project, and a file called "index.js".
+</div>
+<div class="large-4 columns right">
+![router](./images/router.jpg)
 </div>
 </div>
 
@@ -85,6 +88,10 @@ Let's start this next part by building out the web page we want Tessel to send t
 </html>
 {% endhighlight %}
 
+If you open that file in your browser, you should see something like this:
+
+![web app screenshot](./images/ap-web-app-preview.png)
+
 In that html, we have a heading, a line of instructions for the user, and a list of buttons for controlling a corresponding LED on the Tessel. Below that list of buttons we'll add some JavaScript for communicating with the Tessel:
 
 {% highlight html %}
@@ -124,6 +131,7 @@ In that html, we have a heading, a line of instructions for the user, and a list
   }
 </script>
 {% endhighlight %}
+
 
 While there are some comments in the previous code snippet, the summary is when a button with the class "led-button" is clicked, we grab the info from its "data-led" attribute and make a request to our Tessel server with that info in the url. After we get a successful response from the server, we update the "Status" field next to the button with the state of the corresponding LED. 
 
@@ -210,7 +218,7 @@ Finally, let's fire up our server again by running:
 
 Just like before, once you see the "Server running at http://192.168.1.101:8080/" message in your terminal, you should be able to connect to that url in the web browser of the device connected to the TesselRouter network. After connecting, you should see the index.html view we built earlier and, after clicking/tapping the buttons, see either the blue or green LEDs on the Tessel should be toggled on or off. 
 
-[Show demo video here?]
+<video src="https://dl.dropboxusercontent.com/u/74986127/tessel-router-demo.mp4" controls loop class="small-12 medium-8" >Video not available at the moment.</video>
 
 </div>
 </div>
