@@ -1,23 +1,22 @@
 {::options parse_block_html="true" /}
 
 <div class="row">
+<div class="large-12 columns">
 # Build Your Own Internet
-<div class="large-8 columns">
-
-Along with connecting to an existing Wifi network, Tessel 2 can also act as a portable router and emit a custom Wifi network called an access point. We can use this functionality to connect directly with our Tessel through a web browser. The advantage of doing this through Tessel's access point instead of through a local Wifi network is reduced latency of requests to the Tessel since they won't be making a detour through a different router. This also means there is no need for a local network for connecting to Tessel through the web. By the end of this article, we'll be able to control the Tessel LEDs through a web app served by the Tessel.  
-
-In your command line, make a folder for your Tessel code, then initialize a Tessel project in that folder by running each of the following commands in the terminal:
-
-`mkdir tessel-router`
-
-`cd tessel-router`
-
-`t2 init`
-
-Great! Now you're set up to run code on Tessel. Your "tessel-router" folder now contains a "package.json" with some metadata Node uses for your project, and a file called "index.js".
 </div>
-<div class="large-4 columns right">
-![router](./images/router.jpg)
+<div class="large-7 small-12 columns">
+
+As explained in [wifi tutorial](/wifi.html), Tessel 2 can easily connect to wifi networks using the command line tool. If we're using a device connected to the same network as the Tessel, then we can connect to it through our device's web browser. Like most network-connected devices, communication over the web depends on a shared router, or access point, to direct requests and responses between every device on the network or through the Internet. This is fine and dandy if we want to use Tessel in a place with an available network, but what happens when that's not possible? 
+
+</div>
+<div class="large-5 small-12 columns right">
+![router](./images/router.png)
+</div>
+<div class="large-7 small-12 columns">
+Instead of requiring a shared network through a standalone router, we can use the command line tool for configuring Tessel to emit a custom Wifi network and use it as an access point. Then, using Node, we can also start a web server for communicating with any connected device. Unfortunately, we won't be able to connect to the Internet but there is still a lot we can do without that. By the end of this article, we'll be able to control the Tessel LEDs through a web app served by the Tessel.
+</div>
+<div class="large-5 small-12 columns right">
+![router](./images/Tessel-AP.png)
 </div>
 </div>
 
@@ -25,6 +24,13 @@ Great! Now you're set up to run code on Tessel. Your "tessel-router" folder now 
 <div class="large-12 columns">
 
 <hr>
+In your command line, make a folder for your Tessel code, then initialize a Tessel project in that folder by running each of the following commands in the terminal:
+
+`mkdir tessel-router`
+
+`cd tessel-router`
+
+`t2 init`
 
 Rename the “index.js” file you’ve just created to “ap.js”, then copy and paste the below script over the existing text:
 
@@ -52,11 +58,17 @@ Now that our server is in place, let's get our access point set up. In the termi
 
 `t2 ap -n TesselRouter`
 
-This will make an open wifi network called TesselRouter. If you open the wifi setting of your computer or a separate device like a smartphone or tablet, and scan for new devices, you should be able to see and connect to this new network. After connecting to TesselRouter, run the following command in your terminal:
+This will make an open, or password-less, wifi network called TesselRouter. If you open the wifi setting of your computer or a separate device like a smartphone or tablet, and scan for new devices, you should be able to see and connect to this new network. For info about making a secure network, take a look at [the cli docs](https://tessel.io/docs/cli#usage). After connecting to TesselRouter, run the following command in your terminal:
 
 `t2 run ap.js`
 
-Once you see "Server running at http://192.168.1.101:8080/" in the terminal, go to http://192.168.1.101:8080/ (or http://tessel.local:8080/, replacing "tessel" with the name of your Tessel) in the web browser of the device connected to the TesselRouter network. You should "Hello from Tessel!" appear on the screen. You can press "Control+C" while in your terminal to stop this server. 
+<div class="small-12 large-6 columns">
+Once you see "Server running at http://192.168.1.101:8080/" in the terminal, we can connect to that URL (or http://tessel.local:8080/, replacing "tessel" with the name of your Tessel) in a web browser of the device connected to the TesselRouter network.
+</div>
+
+<div class="small-12 large-6 columns">
+![web app screenshot](./images/hello-tessel.png)
+</div>
 
 Now let's take it up a notch by adding some interactivity between the web page and the Tessel!
 
@@ -88,11 +100,15 @@ Let's start this next part by building out the web page we want Tessel to send t
 </html>
 {% endhighlight %}
 
-If you open that file in your browser, you should see something like this:
-
-![web app screenshot](./images/ap-web-app-preview.png)
-
+<div class="small-12 large-6 columns">
 In that html, we have a heading, a line of instructions for the user, and a list of buttons for controlling a corresponding LED on the Tessel. Below that list of buttons we'll add some JavaScript for communicating with the Tessel:
+</div>
+
+<div class="small-12 large-6 columns">
+![web app screenshot](./images/ap-web-app-preview.png)
+</div>
+
+We will add the following JavaScript before `</body>` tag:
 
 {% highlight html %}
 <script type="text/javascript">
@@ -104,13 +120,13 @@ In that html, we have a heading, a line of instructions for the user, and a list
     button.addEventListener('click', toggleLed);
   });
 
-  // Our event handler function for 'click' events on the LED buttons
+  // Our event handler function for 'click' event on the LED buttons
   function toggleLed (event) {
     var button = event.target;
     var ledIndex = button.getAttribute('data-led'); // The index of the led in the Tessel.led array
-    var statusNode = button.parentNode.querySelector('.led-status'); // The sibling status span to update
+    var statusNode = button.parentNode.querySelector('.led-status'); // The sibling status <span> to update
 
-    // create a new XHR for communicating requests to our Tessel server
+    // Create a new XHR for communicating requests to our Tessel server
     var req = new XMLHttpRequest();
 
     // Open a GET request to '/leds/:index'
@@ -119,21 +135,16 @@ In that html, we have a heading, a line of instructions for the user, and a list
     // Once the request gets a successful response, update that statusNode with the status of the LED.
     req.onload = function(e) {
       if (req.readyState == 4 && req.status == 200) {
-        if (req.status == 200) {
-          var response = JSON.parse(req.responseText);
-          statusNode.textContent = response.on ? 'ON' : 'OFF';
-        } else { 
-          console.log('Error'); 
-        }
+        var response = JSON.parse(req.responseText);
+        statusNode.textContent = response.on ? 'ON' : 'OFF';
+      } else { 
+        console.log('Error', e); // If something went wrong, log that event to the console.
       }
     }
-    req.send(); // send our request to the server
+    req.send(); // Send our request to the server
   }
 </script>
 {% endhighlight %}
-
-
-While there are some comments in the previous code snippet, the summary is when a button with the class "led-button" is clicked, we grab the info from its "data-led" attribute and make a request to our Tessel server with that info in the url. After we get a successful response from the server, we update the "Status" field next to the button with the state of the corresponding LED. 
 
 Now let's check out `ap.js` again to finish up the project. First, we're going to make a few changes to our server setup:
 
@@ -147,15 +158,15 @@ var fs = require('fs');
 var url = require('url');
 
 var server = http.createServer(function (request, response) {
-  // here is the biggest change
-  var urlParts = url.parse(request.url, true); // break up the url into easier-to-use parts
-  var ledRegex = /leds/; // a Regex to catch requests to toggle LEDs
+  // Here is the biggest change
+  var urlParts = url.parse(request.url, true); // Break up the url into easier-to-use parts
+  var ledRegex = /leds/; // Create a regular expression to match requests to toggle LEDs
 
   if (urlParts.pathname.match(ledRegex)) {
-    // if there is a request containing 'leds' call a function, toggleLED
+    // If there is a request containing the string 'leds' call a function, toggleLED
     toggleLED(urlParts.pathname, request, response);
   } else {
-    // all other request will call a function, showIndex
+    // All other request will call a function, showIndex
     showIndex(urlParts.pathname, request, response);
   }
 });
@@ -170,37 +181,37 @@ console.log('Server running at http://192.168.1.101:8080/');
 Inside our `createServer` callback function, we've replaced the old plain text response with a basic router that catches requests to '/leds/:index' and defaults all other requests to a separate function. Let's add those functions below the `console.log`:
 
 {% highlight javascript %}
-// respond to the request with our index.html page
+// Respond to the request with our index.html page
 function showIndex (url, request, response) {
   response.writeHead(200, {"Content-Type": "text/html"});
-  // use fs to read in index.html
+  // Use fs to read in index.html
   fs.readFile(__dirname + '/index.html', function (err, content) {
     if (err) {
       throw err;
     }
 
-    // serves the content of index.html read in by fs
+    // Serve the content of index.html read in by fs
     response.end(content);
   });
 }
 
-// toggle the led specified in the url and respond with its state
+// Toggle the led specified in the url and respond with its state
 function toggleLED (url, request, response) {
-  var indexRegex = /(\d)$/; // Regex to find the number at the end of the url
-  var result = indexRegex.exec(url); // capture the number, returns an array
-  var index = +result[1]; // grab the captured result from the array and make sure it's a Number
+  var indexRegex = /(\d)$/; // Create a regular expression to find the number at the end of the url
+  var result = indexRegex.exec(url); // Capture the number, returns an array
+  var index = +result[1]; // Grab the captured result from the array and make sure it's a Number
 
-  var led = tessel.led[index]; // use the index to refence the correct LED
+  var led = tessel.led[index]; // Use the index to refence the correct LED
 
-  // toggle the state of the led and call the callback after that's done
+  // Toggle the state of the led and call the callback after that's done
   led.toggle(function (err) {
     if (err) {
-      // log the error and send back a 500 (internal server error) response to the client
+      // Log the error and send back a 500 (internal server error) response to the client
       console.log(err);
       response.writeHead(500, {"Content-Type": "application/json"});
       response.end(JSON.stringify({error: err}));
     } else {
-      // the led was successfully toggled, so respond with the state of the toggled led using led.isOn
+      // The led was successfully toggled, so respond with the state of the toggled led using led.isOn
       response.writeHead(200, {"Content-Type": "application/json"});
       response.end(JSON.stringify({on: led.isOn}));
     }
@@ -208,18 +219,27 @@ function toggleLED (url, request, response) {
 }
 {% endhighlight %}
 
-In our `showIndex` function, we grab the content of `index.html` using the Node.js `fs` module and respond to the web browser request with that content. In our toggleLED function, we use a Regex to search the url for the index of the led we want to toggle and pass that index into the `tessel.led` array. Now that we have the led we want, we toggle it and use the callback to respond to the server request with the current state of the led using `isOn` property.
+One last step is to create a `.tesselinclude` file in the project directory and add any files not required by `ap.js` that we want to deploy with it. For this project, that means adding one line: 
 
-One last step is to create a `.tesselignore` file in the project directory and add any non-JavaScript files we want to deploy with `ap.js`. For this project, that means adding one line: `index.html`. 
+```
+index.html
+``` 
 
 Finally, let's fire up our server again by running:
 
 `t2 run ap.js`
 
+<div class="small-12 medium-6 columns">
 Just like before, once you see the "Server running at http://192.168.1.101:8080/" message in your terminal, you should be able to connect to that url in the web browser of the device connected to the TesselRouter network. After connecting, you should see the index.html view we built earlier and, after clicking/tapping the buttons, see either the blue or green LEDs on the Tessel should be toggled on or off. 
+</div>
 
-<video src="https://dl.dropboxusercontent.com/u/74986127/tessel-router-demo.mp4" controls loop class="small-12 medium-8" >Video not available at the moment.</video>
+<div class="small-12 medium-6 columns">
+<video src="https://dl.dropboxusercontent.com/u/74986127/tessel-router-demo.mp4" controls loop class="small-12" >Video not available at the moment.</video>
+</div>
 
+<hr />
+
+**Bonus:** Add a way to toggle the red LED as well.
 </div>
 </div>
 
