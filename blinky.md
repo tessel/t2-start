@@ -107,7 +107,7 @@ Learn more `t2` commands by running `t2 -h` or looking at the [T2 CLI docs](http
 
 <div class="row">
 <div class="large-6 columns left">
-  <a href="wifi.html" class="bottomButton button">Prev: Wifi</a>
+  <a href="ap.html" class="bottomButton button">Prev: Access Point</a>
 </div>
 
 <div class="large-6 columns right">
