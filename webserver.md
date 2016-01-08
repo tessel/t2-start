@@ -1,21 +1,25 @@
 {::options parse_block_html="true" /}
 
 <div class="row">
-<div class="large-12">
+
+<div class="large-12 columns">
 # Build Your Own Internet
 </div>
-<div class="small-12">
+
+<div class="small-12 columns">
 
 NEW INTRO NEEDED 
 
 </div>
-<div class="small-12">
+
+<div class="small-12 columns">
 By the end of this article, we'll be able to control the Tessel LEDs through a web app served by the Tessel.
 </div>
+
 </div>
 
 <div class="row">
-<div class="large-12">
+<div class="large-12 columns">
 
 <hr>
 In your command line, make a folder for your Tessel code, then initialize a Tessel project in that folder by running each of the following commands in the terminal:
@@ -43,7 +47,7 @@ var server = http.createServer(function (request, response) {
 // Listen on port 8080, IP defaults to 192.168.1.101. Also accessible through [tessel-name].local
 server.listen(8080);
 
-// Put a friendly message on the terminal
+// Put a friendly message in the terminal
 console.log("Server running at http://192.168.1.101:8080/");
 
 {% endhighlight %}
@@ -56,19 +60,25 @@ If you haven't read about creating access points yet, check out the [access poin
 
 `t2 run ap.js`
 
+</div>
+
 <div class="small-12 large-6 columns">
-Once you see "Server running at http://192.168.1.101:8080/" in the terminal, we can connect to that URL (or http://tessel.local:8080/, replacing "tessel" with the name of your Tessel) in a web browser of the device connected to the TesselRouter network.
+When "Server running at http://192.168.1.101:8080/" appears in the terminal, connect to that URL (or http://tessel.local:8080/, replacing "tessel" with the name of your Tessel) in a web browser of the device connected to the TesselRouter network.
 </div>
 
 <div class="small-12 large-6 columns">
 ![web app screenshot](./images/hello-tessel.png)
 </div>
 
+<div class="small-12 columns">
+
 Now let's take it up a notch by adding some interactivity between the web page and the Tessel!
 
 <hr>
 
-Let's start this next part by building out the web page we want Tessel to send to your web browser. Create a file called `index.html` in your project directory and open it up in your preferred text editor to add the initial html for our web page:
+Let's start this next part by building out the web page we want Tessel to send to your web browser. 
+
+Create a file called `index.html` in your project directory and open it up in your preferred text editor to add the initial html:
 
 {% highlight html %}
 <!DOCTYPE html>
@@ -94,144 +104,167 @@ Let's start this next part by building out the web page we want Tessel to send t
 </html>
 {% endhighlight %}
 
-<div class="small-12 large-6 columns">
-In that html, we have a heading, a line of instructions for the user, and a list of buttons for controlling a corresponding LED on the Tessel. Below that list of buttons we'll add some JavaScript for communicating with the Tessel:
 </div>
 
-<div class="small-12 large-6 columns">
-![web app screenshot](./images/ap-web-app-preview.png)
+<div class="small-12 large-6 columns" style="padding-top: 2rem" >
+
+Open that file in the browser to see the UI for this web app.
+
 </div>
 
-We will add the following JavaScript before `</body>` tag:
+  <div class="small-12 large-6 columns">
+  ![web app screenshot](./images/ap-web-app-preview.png)
+  </div>
 
-{% highlight html %}
-<script type="text/javascript">
-  // Get a NodeList of elements with the class 'led-button'
-  var buttons = document.querySelectorAll('.led-button');
+  <div class="small-12 columns">
 
-  // Iterate through that Nodelist and add a 'click' EventListener
-  Array.prototype.forEach.call(buttons, function (button) {
-    button.addEventListener('click', toggleLed);
-  });
+  Add the following JavaScript before `</body>` tag:
 
-  // Our event handler function for 'click' event on the LED buttons
-  function toggleLed (event) {
-    var button = event.target;
-    var ledIndex = button.getAttribute('data-led'); // The index of the led in the Tessel.led array
-    var statusNode = button.parentNode.querySelector('.led-status'); // The sibling status <span> to update
+  {% highlight html %}
+  <script type="text/javascript">
+    // Get a NodeList of elements with the class 'led-button'
+    var buttons = document.querySelectorAll('.led-button');
 
-    // Create a new XHR for communicating requests to our Tessel server
-    var req = new XMLHttpRequest();
+    // Iterate through that Nodelist and add a 'click' EventListener
+    Array.prototype.forEach.call(buttons, function (button) {
+      button.addEventListener('click', toggleLed);
+    });
 
-    // Open a GET request to '/leds/:index'
-    req.open('GET', '/leds/' + ledIndex);
+    // Our event handler function for 'click' event on the LED buttons
+    function toggleLed (event) {
+      var button = event.target;
+      var ledIndex = button.getAttribute('data-led'); // The index of the led in the Tessel.led array
+      var statusNode = button.parentNode.querySelector('.led-status'); // The sibling status <span> to update
 
-    // Once the request gets a successful response, update that statusNode with the status of the LED.
-    req.onload = function(e) {
-      if (req.readyState == 4 && req.status == 200) {
-        var response = JSON.parse(req.responseText);
-        statusNode.textContent = response.on ? 'ON' : 'OFF';
-      } else { 
-        console.log('Error', e); // If something went wrong, log that event to the console.
+      // Create a new XHR for communicating requests to our Tessel server
+      var req = new XMLHttpRequest();
+
+      // Open a GET request to '/leds/:index'
+      req.open('GET', '/leds/' + ledIndex);
+
+      // Once the request gets a successful response, update that statusNode with the status of the LED.
+      req.onload = function(e) {
+        if (req.readyState == 4 && req.status == 200) {
+          var response = JSON.parse(req.responseText);
+          statusNode.textContent = response.on ? 'ON' : 'OFF';
+        } else { 
+          console.log('Error', e); // If something went wrong, log that event to the console.
+        }
       }
+      req.send(); // Send our request to the server
     }
-    req.send(); // Send our request to the server
-  }
-</script>
-{% endhighlight %}
+  </script>
+  {% endhighlight %}
 
-Now let's check out `ap.js` again to finish up the project. First, we're going to make a few changes to our server setup:
+  Now let's check out the server again to finish up the project. 
+
+  Replace the code in `ap.js` with the following:
 
 {% highlight javascript %}
-// These two dependencies remain the same
-var tessel = require('tessel');
-var http = require('http');
+  // These two dependencies remain the same
+  var tessel = require('tessel');
+  var http = require('http');
 
-// Require two other core Node.js modules
-var fs = require('fs');
-var url = require('url');
+  // Require two other core Node.js modules
+  var fs = require('fs');
+  var url = require('url');
 
-var server = http.createServer(function (request, response) {
-  // Here is the biggest change
-  var urlParts = url.parse(request.url, true); // Break up the url into easier-to-use parts
-  var ledRegex = /leds/; // Create a regular expression to match requests to toggle LEDs
+  var server = http.createServer(function (request, response) {
+    // Break up the url into easier-to-use parts
+    var urlParts = url.parse(request.url, true);
 
-  if (urlParts.pathname.match(ledRegex)) {
-    // If there is a request containing the string 'leds' call a function, toggleLED
-    toggleLED(urlParts.pathname, request, response);
-  } else {
-    // All other request will call a function, showIndex
-    showIndex(urlParts.pathname, request, response);
-  }
-});
+    // Create a regular expression to match requests to toggle LEDs
+    var ledRegex = /leds/;
 
-// Stays the same
-server.listen(8080);
-
-// Stays the same
-console.log('Server running at http://192.168.1.101:8080/');
-{% endhighlight %}
-
-Inside our `createServer` callback function, we've replaced the old plain text response with a basic router that catches requests to '/leds/:index' and defaults all other requests to a separate function. Let's add those functions below the `console.log`:
-
-{% highlight javascript %}
-// Respond to the request with our index.html page
-function showIndex (url, request, response) {
-  response.writeHead(200, {"Content-Type": "text/html"});
-  // Use fs to read in index.html
-  fs.readFile(__dirname + '/index.html', function (err, content) {
-    if (err) {
-      throw err;
-    }
-
-    // Serve the content of index.html read in by fs
-    response.end(content);
-  });
-}
-
-// Toggle the led specified in the url and respond with its state
-function toggleLED (url, request, response) {
-  var indexRegex = /(\d)$/; // Create a regular expression to find the number at the end of the url
-  var result = indexRegex.exec(url); // Capture the number, returns an array
-  var index = +result[1]; // Grab the captured result from the array and make sure it's a Number
-
-  var led = tessel.led[index]; // Use the index to refence the correct LED
-
-  // Toggle the state of the led and call the callback after that's done
-  led.toggle(function (err) {
-    if (err) {
-      // Log the error and send back a 500 (internal server error) response to the client
-      console.log(err);
-      response.writeHead(500, {"Content-Type": "application/json"});
-      response.end(JSON.stringify({error: err}));
+    if (urlParts.pathname.match(ledRegex)) {
+      // If there is a request containing the string 'leds' call a function, toggleLED
+      toggleLED(urlParts.pathname, request, response);
     } else {
-      // The led was successfully toggled, so respond with the state of the toggled led using led.isOn
-      response.writeHead(200, {"Content-Type": "application/json"});
-      response.end(JSON.stringify({on: led.isOn}));
+      // All other request will call a function, showIndex
+      showIndex(urlParts.pathname, request, response);
     }
   });
-}
+
+  // Stays the same
+  server.listen(8080);
+
+  // Stays the same
+  console.log('Server running at http://192.168.1.101:8080/');
+
+  // Respond to the request with our index.html page
+  function showIndex (url, request, response) {
+    // Create a response header telling the browser to expect html
+    response.writeHead(200, {"Content-Type": "text/html"});
+
+    // Use fs to read in index.html
+    fs.readFile(__dirname + '/index.html', function (err, content) {
+      // If there was an error, throw to stop code execution
+      if (err) {
+        throw err;
+      }
+
+      // Serve the content of index.html read in by fs.readFile
+      response.end(content);
+    });
+  }
+
+  // Toggle the led specified in the url and respond with its state
+  function toggleLED (url, request, response) {
+    // Create a regular expression to find the number at the end of the url
+    var indexRegex = /(\d)$/;
+
+    // Capture the number, returns an array
+    var result = indexRegex.exec(url);
+
+    // Grab the captured result from the array
+    var index = result[1];
+
+    // Use the index to refence the correct LED
+    var led = tessel.led[index];
+
+    // Toggle the state of the led and call the callback after that's done
+    led.toggle(function (err) {
+      if (err) {
+        // Log the error, send back a 500 (internal server error) response to the client
+        console.log(err);
+        response.writeHead(500, {"Content-Type": "application/json"});
+        response.end(JSON.stringify({error: err}));
+      } else {
+        // The led was successfully toggled, respond with the state of the toggled led using led.isOn
+        response.writeHead(200, {"Content-Type": "application/json"});
+        response.end(JSON.stringify({on: led.isOn}));
+      }
+    });
+  }
 {% endhighlight %}
 
-One last step is to create a `.tesselinclude` file in the project directory and add any files not required by `ap.js` that we want to deploy with it. For this project, that means adding one line: 
+In order to make code pushing more efficient, Tessel only pushes the entry point file and its Node dependencies by default. Since index.html is not included in this default push, we'll need to explicitly require it with a .tesselinclude file.
 
-```
+Create a new file called .tesselinclude and copy and paste the following:
+
+{% highlight javascript %}
 index.html
-``` 
+{% endhighlight %}
 
 Finally, let's fire up our server again by running:
 
 `t2 run ap.js`
 
-<div class="small-12 medium-6 columns">
-Just like before, once you see the "Server running at http://192.168.1.101:8080/" message in your terminal, you should be able to connect to that url in the web browser of the device connected to the TesselRouter network. After connecting, you should see the index.html view we built earlier and, after clicking/tapping the buttons, see either the blue or green LEDs on the Tessel should be toggled on or off. 
 </div>
 
-<div class="small-12 medium-6 columns">
+<div class="small-12 columns">
+Once the server is running, connect to the URL in the web browser. 
+
+Click on the buttons to toggle the lights.
+</div>
+
+<div class="small-12 columns">
+Here is a demo video:
+
 <video src="https://dl.dropboxusercontent.com/u/74986127/tessel-router-demo.mp4" controls loop class="small-12" >Video not available at the moment.</video>
 </div>
 
-<hr />
+<div class="small-12 columns">
 
 **Bonus:** Add a way to toggle the red LED as well.
 </div>
