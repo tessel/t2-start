@@ -93,7 +93,7 @@ _That `--slim` command is a new feature we're testing out which cleverly checks 
   Modules</a>
 </div>
 <div class="large-6 columns right">
-  <a href="webserver.html" class=
-  "bottomButton right button">Next: Build Your Internet</a>
+  <a href="ap.html" class=
+  "bottomButton right button">Next: Access Point</a>
 </div>
 </div>

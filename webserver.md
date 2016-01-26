@@ -3,12 +3,14 @@
 <div class="row">
 
 <div class="large-12 columns">
-# Build Your Own Internet
+# Build A Portable Web Server
 </div>
 
 <div class="small-12 columns">
 
-NEW INTRO NEEDED 
+Most web applications are served from remote machines in data centers miles and miles away from the devices that are using them. Because we're used to high-speed internet connections, that distance can seem trivial and unnoticeable. 
+
+The Tessel 2 can run a server and deliver web applications to locally connected devices. It's quicker than those remote machines due to the immediate distance between the Tessel and devices connected to it. By the end of this article, we'll start a server on the Tessel and serve a web application that controls the Tessel LEDs through a local network.
 
 </div>
 
@@ -238,7 +240,7 @@ Open that file in the browser to see the UI for this web app.
   }
 {% endhighlight %}
 
-In order to make code pushing more efficient, Tessel only pushes the entry point file and its Node dependencies by default. Since index.html is not included in this default push, we'll need to explicitly require it with a .tesselinclude file.
+In order to make code pushing more efficient, Tessel only pushes the entry point file and its Node dependencies by default. Since index.html is not included in this default push, we'll need to explicitly require it with a .tesselinclude file. (Read more about project files [here](https://tessel.io/docs/cli#usage))
 
 Create a new file called .tesselinclude and copy and paste the following:
 
@@ -267,6 +269,7 @@ Here is a demo video:
 <div class="small-12 columns">
 
 **Bonus:** Add a way to toggle the red LED as well.
+
 </div>
 </div>
 
@@ -274,7 +277,7 @@ Here is a demo video:
 
 <div class="row">
 <div class="large-6 columns left">
-  <a href="tweet.html" class="bottomButton button">Prev: Tweet</a>
+  <a href="ap.html" class="bottomButton button">Prev: Access Point</a>
 </div>
 
 <div class="large-6 columns right">
