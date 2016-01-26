@@ -1,0 +1,9 @@
+---
+layout: default
+---
+
+{% capture include_install %}
+{% include_relative ap.md %}
+{% endcapture %}
+{{ include_install | markdownify }}
+

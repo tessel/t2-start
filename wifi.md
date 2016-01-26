@@ -89,6 +89,6 @@ This command will check for a new version of the Tessel 2 firmware. If there is 
 </div>
 
 <div class="large-6 columns right">
-  <a href="blinky.html" class= "bottomButton right button">Next: Blink lights</a>
+  <a href="blinky.html" class= "bottomButton right button">Next: Hello Blinky</a>
 </div>
 </div>
