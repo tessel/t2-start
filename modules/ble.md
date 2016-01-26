@@ -20,7 +20,7 @@ Make a directory inside your "tessel-code" folder called "ble", change directory
 <div class="row">
 <div class="large-6 columns">
 
-Plug the BLE module into either of Tessel's USB ports, then plug Tessel into your computer via USB.
+Plug Tessel into your computer via USB, then plug the BLE module into either of Tessel's USB ports.
 
 </div>
 <div class="large-6 columns">
