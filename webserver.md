@@ -232,7 +232,7 @@ Open that file in the browser to see the UI for this web app.
   }
 {% endhighlight %}
 
-In order to make code pushing more efficient, Tessel only pushes the entry point file and its Node dependencies by default. Since index.html is not included in this default push, we'll need to explicitly require it with a .tesselinclude file. (Read more about project files [here](https://tessel.io/docs/cli#usage))
+In order to make code pushing more efficient, Tessel only pushes the entry point file and its Node dependencies by default. Since index.html is not included in this default push, we'll need to explicitly require it with a .tesselinclude file (Read more about project files [here](https://tessel.io/docs/cli#usage)). 
 
 Create a new file called `.tesselinclude` and copy and paste the following:
 
