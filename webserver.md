@@ -4,18 +4,10 @@
 
 <div class="large-12 columns">
 # Build A Portable Web Server
-</div>
-
-<div class="small-12 columns">
 
 Most web applications are served from remote machines in data centers miles and miles away from the devices that are using them. Because we're used to high-speed internet connections, that distance can seem trivial and unnoticeable. 
 
 The Tessel 2 can run a server and deliver web applications to locally connected devices. It's quicker than those remote machines due to the immediate distance between the Tessel and devices connected to it. By the end of this article, we'll start a server on the Tessel and serve a web application that controls the Tessel LEDs through a local network.
-
-</div>
-
-<div class="small-12 columns">
-By the end of this article, we'll be able to control the Tessel LEDs through a web app served by the Tessel.
 </div>
 
 </div>
@@ -32,7 +24,7 @@ In your command line, make a folder for your Tessel code, then initialize a Tess
 
 `t2 init`
 
-Rename the “index.js” file you’ve just created to “ap.js”, then copy and paste the below script over the existing text:
+Rename the “index.js” file you’ve just created to “webserver.js”, then copy and paste the below script over the existing text:
 
 {% highlight javascript %}
 // Import the interface to Tessel hardware
@@ -60,7 +52,7 @@ Now that our server is in place, let's get our access point set up. In the termi
 
 If you haven't read about creating access points yet, check out the [access point tutorial](/ap.html). After connecting to TesselRouter, run the following command in your terminal:
 
-`t2 run ap.js`
+`t2 run webserver.js`
 
 </div>
 
@@ -160,7 +152,7 @@ Open that file in the browser to see the UI for this web app.
 
   Now let's check out the server again to finish up the project. 
 
-  Replace the code in `ap.js` with the following:
+  Replace the code in `webserver.js` with the following:
 
 {% highlight javascript %}
   // These two dependencies remain the same
@@ -242,7 +234,7 @@ Open that file in the browser to see the UI for this web app.
 
 In order to make code pushing more efficient, Tessel only pushes the entry point file and its Node dependencies by default. Since index.html is not included in this default push, we'll need to explicitly require it with a .tesselinclude file. (Read more about project files [here](https://tessel.io/docs/cli#usage))
 
-Create a new file called .tesselinclude and copy and paste the following:
+Create a new file called `.tesselinclude` and copy and paste the following:
 
 {% highlight javascript %}
 index.html
@@ -250,7 +242,7 @@ index.html
 
 Finally, let's fire up our server again by running:
 
-`t2 run ap.js`
+`t2 run webserver.js`
 
 </div>
 
@@ -267,6 +259,7 @@ Here is a demo video:
 </div>
 
 <div class="small-12 columns">
+The full code for this project can be found in [this repo](https://github.com/HipsterBrown/tessel-router).
 
 **Bonus:** Add a way to toggle the red LED as well.
 
