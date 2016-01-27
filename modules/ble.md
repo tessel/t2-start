@@ -112,7 +112,7 @@ To see what else you can do with the BLE dongle, read the [noble](https://github
 </div>
 <div class="large-6 columns">
 
-![](http://i.imgur.com/KnXf6uL.gif)
+![](https://s3.amazonaws.com/technicalmachine-assets/fre+assets/gifs/usb-ble.gif)
 
 </div>
 </div>
