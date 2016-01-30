@@ -90,7 +90,7 @@ Make sure you're [connected to Wifi]({{ site.baseurl }}/wifi.html), then run:
   Modules</a>
 </div>
 <div class="large-6 columns right">
-  <a href="gpio.html" class=
-  "bottomButton right button">Next: Beyond modules</a>
+  <a href="ap.html" class=
+  "bottomButton right button">Next: Access Point</a>
 </div>
 </div>
