@@ -40,6 +40,7 @@ Make sure your Tessel is connected to a wifi network as shown on the [wifi page]
 `t2 root`
 
 This command gives you direct access to the Linux system running on Tessel. We need this in order to power up the USB dongle. Run this command:
+
 `hciconfig hci0 up`
 
 Then exit the root shell:
