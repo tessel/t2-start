@@ -3,7 +3,7 @@
 <div class="row">
 <div class="large-12 columns">
 
-## Bluetooth Low Energy
+## <img class="constrain-sm" src="https://s3.amazonaws.com/technicalmachine-assets/technical-io/modules/usb.png"> Bluetooth Low Energy
 
 [<i class="fa fa-github"> View source on Github</i>](https://github.com/sandeepmistry/noble)
 
