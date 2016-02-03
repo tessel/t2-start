@@ -35,21 +35,9 @@ Plug Tessel into your computer via USB, then plug a USB mass storage device (fla
 
 ### Step 3
 
-Make sure your Tessel is connected to a wifi network as shown on the [wifi page](/wifi.html). Then gain root access to the Tessel shell:
-
-`t2 root`
-
-This command gives you direct access to the Linux system running on Tessel. We need this in order to power up the USB dongle. Run this command:
-
-`hciconfig hci0 up`
-
-Then exit the root shell:
-
-`exit`
-
-### Step 4
-
 You don't need to install a library to use a USB storage module. We will use the [fs](https://nodejs.org/api/fs.html) (filesystem) library that's built into Node.js to interact USB mass storage devices.
+
+The storage device you plug in first will be mounted to the path `/mnt/sda1`; the second, to `/mnt/sdb1`. If you're having trouble, it's possible that you've run into [this bug](https://github.com/tessel/openwrt-tessel/issues/40).
 
 In the folder where you ran `t2 init`, rename "index.js" to "storage.js" and replace the file's contents with the following:
 
@@ -62,10 +50,13 @@ TODO what do we want in the example
 *********************************************/
 // Import the fs library
 var fs = require('fs');
-// USB modules don't have to be explicitly connected
+var path = require('path');
+var mountPoint = '/mnt/sda1'; // The first flash drive you plug in will be mounted here, the second will be at '/mnt/sdb1'
 
 // Copy a file, access a file, make example..
-
+fs.readFile(path.join(mountPoint, 'myFile.txt'), function(err, contents) {
+  ...
+});
 {% endhighlight %}
 
 Save the file.
@@ -76,7 +67,7 @@ Save the file.
 <div class="row">
 <div class="large-12 columns">
 
-### Step 6
+### Step 4
 
 </div>
 </div>
@@ -103,7 +94,7 @@ To see what else you can do with a USB storage module, read the [fs](https://nod
 <div class="row">
 <div class="large-12 columns">
 
-### Step 7
+### Step 5
 
 What else can you do with a USB mass storage device? Get inspired by a [community-created project.](http://tessel.io/projects)
 
