@@ -61,7 +61,7 @@ Save the file.
 <div class="row">
 <div class="large-12 columns">
 
-### Step 6
+### Step 5
 
 </div>
 </div>
@@ -88,7 +88,7 @@ To see what else you can do with the USB audio module, read the [audiovideo](htt
 <div class="row">
 <div class="large-12 columns">
 
-### Step 7
+### Step 6
 
 What else can you do with an audio module? Get inspired by a [community-created project.](http://tessel.io/projects)
 
