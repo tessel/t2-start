@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+{% capture include_install %}
+{% include_relative audio.md %}
+{% endcapture %}
+{{ include_install | markdownify }}
+
+{% include_relative _module_footer.html %}

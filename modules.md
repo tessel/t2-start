@@ -56,6 +56,7 @@ If you've already tried out your modules, move on to [Tweet.](tweet.html)
 
 *   [Accelerometer](modules/accelerometer.html)
 *   [Ambient (Light + Sound)](modules/ambient.html)
+*   [Audio](modules/audio.html)
 *   [BLE](modules/ble.html)
 *   [Climate](modules/climate.html)
 *   [GPS](modules/gps.html)
