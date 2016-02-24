@@ -94,7 +94,7 @@ To see what else you can do with a USB storage module, read the [fs](https://nod
 </div>
 <div class="large-6 columns">
 
-![](storage gif)
+![](http://i.imgur.com/wKksk4X.gif)
 
 </div>
 </div>
