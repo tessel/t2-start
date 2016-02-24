@@ -35,9 +35,7 @@ Plug Tessel into your computer via USB, then plug a USB mass storage device (fla
 
 ### Step 3
 
-You don't need to install a library to use a USB storage module. We will use the [fs](https://nodejs.org/api/fs.html) (filesystem) library that's built into Node.js to interact USB mass storage devices.
-
-The storage device you plug in first will be mounted to the path `/mnt/sda1`; the second, to `/mnt/sdb1`. If you're having trouble, it's possible that you've run into [this bug](https://github.com/tessel/openwrt-tessel/issues/40).
+You don't need to install a library to use a USB storage module. We will use the [fs](https://nodejs.org/api/fs.html) (filesystem) library that's built into Node.js to interact with USB mass storage devices.
 
 In the folder where you ran `t2 init`, rename "index.js" to "storage.js" and replace the file's contents with the following:
 
@@ -46,16 +44,26 @@ In the folder where you ran `t2 init`, rename "index.js" to "storage.js" and rep
 // http://creativecommons.org/publicdomain/zero/1.0/
 
 /*********************************************
-TODO what do we want in the example
+Write some text to a file on a USB mass storage
+device, then read it back.
 *********************************************/
+
 // Import the fs library
 var fs = require('fs');
 var path = require('path');
 var mountPoint = '/mnt/sda1'; // The first flash drive you plug in will be mounted here, the second will be at '/mnt/sdb1'
+var filepath = path.join(mountPoint, 'myFile.txt');
 
-// Copy a file, access a file, make example..
-fs.readFile(path.join(mountPoint, 'myFile.txt'), function(err, contents) {
-  ...
+var textToWrite = 'Hello Tessel!';
+
+// Write the text to a file on the flash drive
+fs.writeFile(filepath, textToWrite, function () {
+  console.log('Wrote', textToWrite, 'to', filepath, 'on USB mass storage device.');
+});
+
+// Read the text we wrote from the file
+fs.readFile(filepath, function (err, data) {
+  console.log('Read', data.toString(), 'from USB mass storage device.');
 });
 {% endhighlight %}
 
