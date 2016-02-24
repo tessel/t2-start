@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+{% capture include_install %}
+{% include_relative storage.md %}
+{% endcapture %}
+{{ include_install | markdownify }}
+
+{% include_relative _module_footer.html %}

@@ -63,6 +63,7 @@ If you've already tried out your modules, move on to [Tweet.](tweet.html)
 *   [Relay](modules/relay.html)
 *   [RFID](modules/rfid.html)
 *   [Servo](modules/servo.html)
+*   [Storage](modules/storage.html)
 
 <div class="greyBar"></div>
 </div>
