@@ -85,9 +85,9 @@ Save the file.
 
 In your command line, `t2 run storage.js`
 
-Hooray, you've moved a file around!
+Now you can create, write to, read from, and otherwise manipulate files on USB storage devices!
 
-**Bonus:** Try saving some data from a sensor module into a file.
+**Bonus:** Try writing some longer text (or output from a different module) by using streams. Hint: look up the fs function `createWriteStream`.
 
 To see what else you can do with a USB storage module, read the [fs](https://nodejs.org/api/fs.html) documentation.
 
