@@ -57,13 +57,14 @@ If you've already tried out your modules, move on to [Tweet.](tweet.html)
 *   [Accelerometer](modules/accelerometer.html)
 *   [Ambient (Light + Sound)](modules/ambient.html)
 *   [BLE](modules/ble.html)
+*   [Camera](modules/camera.html)
 *   [Climate](modules/climate.html)
 *   [GPS](modules/gps.html)
 *   [Infrared](modules/ir.html)
 *   [Relay](modules/relay.html)
 *   [RFID](modules/rfid.html)
 *   [Servo](modules/servo.html)
-*   [Video](modules/video.html)
+
 
 <div class="greyBar"></div>
 </div>
