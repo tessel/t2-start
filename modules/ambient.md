@@ -81,17 +81,16 @@ var ambientlib = require('ambient-attx4');
 var ambient = ambientlib.use(tessel.port['A']);
 
 ambient.on('ready', function () {
-  // Get points of light and sound data.
-  setInterval(function () {
-    ambient.getLightLevel( function(err, ldata) {
+ // Get points of light and sound data.
+  setInterval( function () {
+    ambient.getLightLevel( function(err, lightdata) {
       if (err) throw err;
-      ambient.getSoundLevel( function(err, sdata) {
+      ambient.getSoundLevel( function(err, sounddata) {
         if (err) throw err;
-        console.log("Light level:", ldata.toFixed(8), " ", "Sound Level:", sdata.toFixed(8));
+        console.log("Light level:", lightdata.toFixed(8), " ", "Sound Level:", sounddata.toFixed(8));
       });
-    })
-  }, 500); // The readings will happen every .5 seconds unless the trigger is hit
-
+    });
+  }, 500); // The readings will happen every .5 seconds
 });
 
 ambient.on('error', function (err) {
@@ -118,7 +117,7 @@ Save the file.
 In your command line, `t2 run ambient.js`  
  Watch light and sound values appear in your terminal! Try clapping or shining a flashlight at it.  
 
-**Bonus:** Change the code so the sound trigger activates with just a whisper.  
+**Bonus:** Test out setting triggers with light and sound (hint: there is an example in [the ambient module's examples folder](https://github.com/tessel/ambient-attx4/tree/master/examples)).  
 
 To see what else you can do with the ambient module, see the module docs [here](https://github.com/tessel/ambient-attx4).
 
