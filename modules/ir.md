@@ -82,7 +82,7 @@ var infraredlib = require('ir-attx4');
 var infrared = infraredlib.use(tessel.port['A']);
 
 // When we're connected
-infrared.on('ready', function() {
+infrared.on('ready', function(err) {
   if (!err) {
     console.log("Connected to IR!");
     // Start sending a signal every three seconds
