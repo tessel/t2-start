@@ -13,9 +13,9 @@ Make a directory inside your "tessel-code" folder called "audio", change directo
 
 `mkdir audio; cd audio; t2 init`
 
-Download [this mp3](https://dl.dropboxusercontent.com/u/3531958/yoda-mudhole.mp3) into the "audio" directory, this will be the audio file we manipulate. 
+Download [this mp3](https://dl.dropboxusercontent.com/u/3531958/yoda-mudhole.mp3) into the "audio" directory, this will be the audio file we manipulate.
 
-In order to include static, non-require-dependency resources in your deployment, you'll need to explicitly inform Tessel's CLI. To do this, create a `.tesselinclude` file in your `audio` directory. In that file, type the name of the static asset that should be deployed with the project. For this project, your `.tesselinclude` will have at least the following in it: 
+In order to include static, non-require-dependency resources in your deployment, you'll need to explicitly inform Tessel's CLI. To do this, create a `.tesselinclude` file in your `audio` directory. In that file, type the name of the static asset that should be deployed with the project. For this project, your `.tesselinclude` will have at least the following in it:
 
 `yoda-mudhole.mp3`
 
@@ -55,7 +55,7 @@ Rename "index.js" to "audio.js" and replace the file's contents with the followi
 
 /*********************************************
 - Play audio from an amusing scene between Luke Skywalker, R2-D2 and Yoda
-- When the audio reaches the end, play it again from the beginning. 
+- When the audio reaches the end, play it again from the beginning.
 *********************************************/
 
 var path = require('path');
@@ -86,22 +86,17 @@ Save the file.
 </div>
 
 <div class="row">
-<div class="large-6 columns">
+<div class="large-12 columns">
 
 In your command line, `t2 run audio.js`
 
 Hooray! You should hear the mp3 playing in a loop!
 
-**Bonus:** EXTRA CHALLENGE FOR AUDIO
+**Bonus:** Try connecting buttons to your Tessel 2 and use them to control playback. Hint: it may help to look for the NPM module `tessel-gpio-button`.
+
+**Extra bonus:** Load many mp3s onto a USB storage drive and playback from that source. Hint: check out the "storage" tutorial on the left sidebar.
 
 To see what else you can do with the USB audio module, read the [tessel-av](https://github.com/tessel/tessel-av) documentation.
-
-- Try connecting buttons to your Tessel 2 and use them to control playback. 
-- Load many mp3s onto a USB storage drive and playback from that source. 
-
-</div>
-<div class="large-6 columns">
-
 
 </div>
 </div>
