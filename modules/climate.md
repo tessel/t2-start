@@ -9,7 +9,7 @@
 
 ### Step 1
 
-**Note: Temperature and humidity readings can be skewed by the operating temperature of the Tessel. Distancing the the climate module from the Tessel via [wires](https://www.adafruit.com/products/1950?gclid=CjwKEAiA_s2lBRCe1YPXxtSe-DcSJACCIh3LlrKOKB5hJLKIxjIwgeJPYVW_or_As5UMK6fqwk-YERoCxGXw_wcB) is recommended for accurate readings.**
+**Note: Temperature and humidity readings can be skewed by the operating temperature of the Tessel. Distancing the the climate module from the Tessel via [wires](https://www.adafruit.com/products/1954) is recommended for accurate readings.**
 
 Make a directory inside your "tessel-code" folder called "climate", change directory into that folder, and initialize a tessel project:
 
