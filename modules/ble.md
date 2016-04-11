@@ -37,7 +37,7 @@ Plug Tessel into your computer via USB, then plug the BLE module into either of 
 
 Install `noble` by typing `npm install noble --force` into the command line (the `--force` flag is in case you are on OSX. The library is compatible with Linux (which Tessel uses) but not OSX, so npm blocks downloads to incompatible systems).
 
-### Step 5
+### Step 4
 
 Rename "index.js" to "ble.js" and replace the file's contents with the following:
 
@@ -80,7 +80,7 @@ Save the file.
 <div class="row">
 <div class="large-12 columns">
 
-### Step 6
+### Step 5
 
 </div>
 </div>
@@ -107,7 +107,7 @@ To see what else you can do with the BLE dongle, read the [noble](https://github
 <div class="row">
 <div class="large-12 columns">
 
-### Step 7
+### Step 6
 
 What else can you do with a BLE module? Get inspired by a [community-created project.](http://tessel.io/projects)
 
