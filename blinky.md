@@ -21,8 +21,8 @@ In your command line, make a folder for your Tessel code, then initialize a Tess
 Great! Now you're set up to run code on Tessel. Your "tessel-code" folder now contains:
 
 * a "package.json" with some metadata Node uses for your project
-* a ".tesselinclude" file which the T2 CLI uses to optimize file size
-* a file called "index.js"
+* a ".tesselinclude" file which the T2 CLI uses to optimize bundle size
+* an entrypoint file called "index.js"
 
 </div>
 </div>
