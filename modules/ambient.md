@@ -154,7 +154,7 @@ What else can you do with an ambient module? Try a [community-created project.](
 
 What are you making? [Share your invention!](//tessel.io/projects)
 
-If you run into any issues you can check out the [ambient forums](http://forums.tessel.io/category/ambient).
+If you run into any issues you can check out the [ambient forums](https://forums.tessel.io/c/modules/ambient).
 
 </div>
 </div>

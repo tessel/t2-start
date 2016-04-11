@@ -143,7 +143,7 @@ What else can you do with a accelerometer module? Try a [community-created proje
 
 What are you making? [Share your invention!](//tessel.io/projects)
 
-If you run into any issues you can check out the [accelerometer forums](http://forums.tessel.io/category/accelerometer).
+If you run into any issues you can check out the [accelerometer forums](https://forums.tessel.io/c/modules/accelerometer).
 
 </div>
 </div>

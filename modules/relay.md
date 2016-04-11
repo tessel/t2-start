@@ -177,7 +177,7 @@ What else can you do with a relay module? Try a [community-created project.](htt
 
 What are you making? [Share your invention!](http://tessel.hackster.io/)
 
-If you run into any issues you can check out the [relay forums](http://forums.tessel.io/category/relay).
+If you run into any issues you can check out the [relay forums](https://forums.tessel.io/c/modules/relay).
 
 </div>
 </div>

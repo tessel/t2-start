@@ -156,7 +156,7 @@ What else can you do with a climate module? Try a [community-created project.](h
 
 What are you making? [Share your invention!](//tessel.io/projects)
 
-If you run into any issues you can check out the [climate forums](http://forums.tessel.io/category/climate).
+If you run into any issues you can check out the [climate forums](https://forums.tessel.io/c/modules/climate).
 
 </div>
 </div>
