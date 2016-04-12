@@ -89,14 +89,11 @@ Hooray! You should see the following in your terminal:
 
 > Note: `bishop` is just the name of my Tessel 2 board, yours will display whatever you've named your board!
 
-**Bonus:** EXTRA CHALLENGE FOR VIDEO
+**Bonus:** Try connecting a button to your Tessel 2 and use it as a shutter. Hint: it may help to look for the NPM module `tessel-gpio-button`.
+
+**Extra bonus:** Use an USB storage drive to store many photos. Hint: check out the "storage" module tutorial.
 
 To see what else you can do with the USB camera module, read the [tessel-av](https://github.com/tessel-av) documentation.
-
-- Try connecting a button to your Tessel 2 and use it as a shutter.
-- Use an USB storage drive to store many photos.
-
-
 
 </div>
 <div class="large-6 columns">
