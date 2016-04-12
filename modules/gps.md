@@ -167,7 +167,7 @@ What else can you do with a GPS module? Try a [community-created project.](http:
 
 What are you making? [Share your invention!](//tessel.io/projects)
 
-If you run into any issues you can check out the [GPS forums](http://forums.tessel.io/category/gps).
+If you run into any issues you can check out the [gps forums](https://forums.tessel.io/c/modules/gps).
 
 </div>
 </div>

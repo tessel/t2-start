@@ -160,7 +160,7 @@ What else can you do with a IR module? Try a [community-created project.](http:/
 
 What are you making? [Share your invention!](http://tessel.hackster.io/)
 
-If you run into any issues you can check out the [IR forums](http://forums.tessel.io/category/ir).
+If you run into any issues you can check out the [ir forums](https://forums.tessel.io/c/modules/ir).
 
 </div>
 </div>

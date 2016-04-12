@@ -20,7 +20,7 @@ Make a directory inside your "tessel-code" folder called "camera", change direct
 <div class="row">
 <div class="large-6 columns">
 
-Plug Tessel into your computer via USB, then plug the camera module into either of Tessel's USB ports. You will also need a [UVC compatible USB camera](https://tessel.io/modules#tessel-av). 
+Plug Tessel into your computer via USB, then plug the camera module into either of Tessel's USB ports. You will also need a [UVC compatible USB camera](https://tessel.io/modules#tessel-av).
 
 </div>
 <div class="large-6 columns">
@@ -82,7 +82,7 @@ Save the file.
 
 In your command line, `t2 run camera.js`
 
-Hooray! You should see the following in your terminal: 
+Hooray! You should see the following in your terminal:
 
 ![](http://i.imgur.com/8JdxCON.gif)
 
@@ -93,7 +93,7 @@ Hooray! You should see the following in your terminal:
 
 To see what else you can do with the USB camera module, read the [tessel-av](https://github.com/tessel-av) documentation.
 
-- Try connecting a button to your Tessel 2 and use it as a shutter. 
+- Try connecting a button to your Tessel 2 and use it as a shutter.
 - Use an USB storage drive to store many photos.
 
 
@@ -116,7 +116,7 @@ What else can you do with a camera module? Get inspired by a [community-created 
 
 What are you making? [Share your invention!](//tessel.io/projects)
 
-If you run into any issues you can check out the [module forums](http://forums.tessel.io/c/modules).
+If you run into any issues you can check out the [camera forums](https://forums.tessel.io/c/usb-modules/camera).
 
 </div>
 </div>

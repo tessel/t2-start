@@ -148,7 +148,7 @@ What else can you do with a RFID module? Try a [community-created project.](http
 
 What are you making? [Share your invention!](http://tessel.hackster.io/)
 
-If you run into any issues you can check out the [RFID forums](http://forums.tessel.io/category/rfid).
+If you run into any issues you can check out the [rfid forums](https://forums.tessel.io/c/modules/rfid).
 
 </div>
 </div>

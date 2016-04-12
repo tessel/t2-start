@@ -108,7 +108,7 @@ What else can you do with a USB mass storage device? Get inspired by a [communit
 
 What are you making? [Share your invention!](//tessel.io/projects)
 
-If you run into any issues you can check out the [module forums](http://forums.tessel.io/c/modules).
+If you run into any issues you can check out the [storage forums](https://forums.tessel.io/c/usb-modules/storage).
 
 </div>
 </div>

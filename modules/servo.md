@@ -209,7 +209,7 @@ What else can you do with a servo module? Try a [community-created project.](htt
 
 What are you making? [Share your invention!](http://tessel.hackster.io/)
 
-If you run into any issues you can check out the [servo forums](http://forums.tessel.io/category/servo).
+If you run into any issues you can check out the [servo forums](https://forums.tessel.io/c/modules/servo).
 
 </div>
 </div>
