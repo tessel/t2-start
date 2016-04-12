@@ -108,7 +108,7 @@ To see what else you can do with the USB audio module, read the [tessel-av](http
 
 What else can you do with an audio module? What are you making? [Share your invention!](//tessel.io/projects)
 
-If you run into any issues you can check out the [audio forums](https://forums.tessel.io/c/modules/audio).
+If you run into any issues you can check out the [audio forums](https://forums.tessel.io/c/usb-modules/audio).
 
 </div>
 </div>

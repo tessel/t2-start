@@ -116,7 +116,7 @@ What else can you do with a camera module? Get inspired by a [community-created 
 
 What are you making? [Share your invention!](//tessel.io/projects)
 
-If you run into any issues you can check out the [camera forums](https://forums.tessel.io/c/modules/camera).
+If you run into any issues you can check out the [camera forums](https://forums.tessel.io/c/usb-modules/camera).
 
 </div>
 </div>

@@ -113,7 +113,7 @@ What else can you do with a BLE module? Get inspired by a [community-created pro
 
 What are you making? [Share your invention!](//tessel.io/projects)
 
-If you run into any issues you can check out the [ble forums](https://forums.tessel.io/c/modules/ble).
+If you run into any issues you can check out the [ble forums](https://forums.tessel.io/c/usb-modules/ble).
 
 </div>
 </div>
