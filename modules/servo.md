@@ -5,7 +5,7 @@
 
 ## <img class="constrain-sm" src="//i.imgur.com/xRmlOgr.png"> Servo
 
-[<i class="fa fa-github"> View source on Github</i>](https://github.com/tessel/servo-pca9685)
+[<i class="fa fa-github"></i> View source on Github](https://github.com/tessel/servo-pca9685)
 
 ### Step 1
 

@@ -5,7 +5,7 @@
 
 ## <img class="constrain-sm" src="https://s3.amazonaws.com/technicalmachine-assets/technical-io/modules/usb.png"> Storage (Flash Drive)
 
-[<i class="fa fa-github"> View source on Github</i>](https://github.com/nodejs/node/blob/master/lib/fs.js)
+[<i class="fa fa-github"></i> View source on Github](https://github.com/nodejs/node/blob/master/lib/fs.js)
 
 ### Step 1
 

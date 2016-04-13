@@ -5,7 +5,7 @@
 
 ## <img class="constrain-sm" src="//i.imgur.com/JsHkR2D.png"> RFID
 
-[<i class="fa fa-github"> View source on Github</i>](https://github.com/tessel/rfid-pn532)
+[<i class="fa fa-github"></i> View source on Github](https://github.com/tessel/rfid-pn532)
 
 ### Step 1
 
