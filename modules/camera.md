@@ -74,32 +74,24 @@ Save the file.
 
 ### Step 5
 
+In your command line, `t2 run camera.js`
+
+Hooray! You should see the following:
+
 </div>
 </div>
 
 <div class="row">
 <div class="large-6 columns">
 
-In your command line, `t2 run camera.js`
-
-Hooray! You should see the following in your terminal:
+In your terminal:
 
 ![](http://i.imgur.com/8JdxCON.gif)
 
-
-> Note: `bishop` is just the name of my Tessel 2 board, yours will display whatever you've named your board!
-
-**Bonus:** EXTRA CHALLENGE FOR VIDEO
-
-To see what else you can do with the USB camera module, read the [tessel-av](https://github.com/tessel-av) documentation.
-
-- Try connecting a button to your Tessel 2 and use it as a shutter.
-- Use an USB storage drive to store many photos.
-
-
-
 </div>
 <div class="large-6 columns">
+
+In your browser:
 
 ![](http://i.imgur.com/Yjvr1Uc.png)
 
@@ -108,6 +100,14 @@ To see what else you can do with the USB camera module, read the [tessel-av](htt
 
 <div class="row">
 <div class="large-12 columns">
+
+> Note: `bishop` is just the name of my Tessel 2 board, your Tessel's URL will include whatever you've named your board!
+
+**Bonus:** Try connecting a button to your Tessel 2 and use it as a shutter. Hint: it may help to look for the NPM module `tessel-gpio-button`.
+
+**Extra bonus:** Use an USB storage drive to store many photos. Hint: check out the "storage" module tutorial.
+
+To see what else you can do with the USB camera module, read the [tessel-av](https://github.com/tessel-av) documentation.
 
 ### Step 6
 
