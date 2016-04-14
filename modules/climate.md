@@ -5,7 +5,7 @@
 
 ## <img class="constrain-sm" src="//i.imgur.com/YwkoH6L.png"> Climate
 
-[<i class="fa fa-github"> View source on Github</i>](https://github.com/tessel/climate-si7020)
+[<i class="fa fa-github"></i> View source on Github](https://github.com/tessel/climate-si7020)
 
 ### Step 1
 

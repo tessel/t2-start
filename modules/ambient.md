@@ -5,7 +5,7 @@
 
 ## <img class="constrain-sm" src="//i.imgur.com/hqZ399I.png"> Ambient
 
-[<i class="fa fa-github"> View source on Github</i>](https://github.com/tessel/ambient-attx4)
+[<i class="fa fa-github"></i> View source on Github](https://github.com/tessel/ambient-attx4)
 
 ### Step 1
 

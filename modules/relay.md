@@ -5,7 +5,7 @@
 
 ## <img class="constrain-sm" src="//i.imgur.com/PzU7IQ1.png"> Relay
 
-[<i class="fa fa-github"> View source on Github</i>](https://github.com/tessel/relay-mono)
+[<i class="fa fa-github"></i> View source on Github](https://github.com/tessel/relay-mono)
 
 ### Step 1
 

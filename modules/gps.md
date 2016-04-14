@@ -5,7 +5,7 @@
 
 ## <img class="constrain-sm" src="//i.imgur.com/DI344Iy.png"> GPS
 
-[<i class="fa fa-github"> View source on Github</i>](https://github.com/tessel/gps-a2235h)
+[<i class="fa fa-github"></i> View source on Github](https://github.com/tessel/gps-a2235h)
 
 ### Step 1
 

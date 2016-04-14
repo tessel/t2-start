@@ -5,7 +5,7 @@
 
 ## <img class="constrain-sm" src="//i.imgur.com/okUgl3T.png"> Infrared
 
-[<i class="fa fa-github"> View source on Github</i>](https://github.com/tessel/ir-attx4)
+[<i class="fa fa-github"></i> View source on Github](https://github.com/tessel/ir-attx4)
 
 ### Step 1
 

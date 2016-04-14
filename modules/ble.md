@@ -5,7 +5,7 @@
 
 ## <img class="constrain-sm" src="https://s3.amazonaws.com/technicalmachine-assets/technical-io/modules/usb.png"> Bluetooth Low Energy
 
-[<i class="fa fa-github"> View source on Github</i>](https://github.com/sandeepmistry/noble)
+[<i class="fa fa-github"></i> View source on Github](https://github.com/sandeepmistry/noble)
 
 ### Step 1
 
