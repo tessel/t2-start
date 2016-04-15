@@ -40,7 +40,7 @@ Once Node.js is installed, run this installation script from your terminal:
 
 <big>`npm install -g t2-cli`</big>
 
-*Note: If you get the common npm [EACCES error](http://stackoverflow.com/questions/16151018/npm-throws-error-without-sudo), correct it by running `sudo chown -R $(whoami) ~/.npm` and then running `npm install -g t2-cli` again.*
+*Note: If you get the common npm EACCES error, correct it by [fixing npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions) and then running `npm install -g t2-cli` again.*
 </div>
 
 <div id="tab-linux" class="content">
