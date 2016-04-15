@@ -659,3 +659,8 @@ ul.spread li {
 pre code {
   color: black;
 }
+
+// to remove padding on code snippets
+.highlight {
+  margin: 1em 0;
+}
