@@ -65,6 +65,8 @@ On Windows, Tessel drivers will install automatically when you plug in.
 
 On Windows 7, you may receive the notification "Device driver software was not successfully installed". If you do, click on the notification, click the "Change settings..." button, and then select "Install driver software from Windows Update if it is not found on my computer." Save changes and re-try.
 
+On Windows, if the drivers are still not installing properly, it may be necessary to install [Zadig](http://zadig.akeo.ie/) in order to install generic USB drivers (WinUSB).  Download the application, open it and choose "Install WCID Driver."
+
 Next, install [Node.JS](http://nodejs.org). You need this to interact with Tessel from the command line.
 
 After installing the Tessel drivers and Node.js, run this in cmd.exe:
