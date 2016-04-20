@@ -50,7 +50,7 @@ Now that our server is in place, let's get our access point set up. In the termi
 
 `t2 ap -n TesselRouter`
 
-If you haven't read about creating access points yet, check out the [access point tutorial](/ap.html). After connecting to TesselRouter, run the following command in your terminal:
+If you haven't read about creating access points yet, check out the [access point tutorial](ap.html). After connecting to TesselRouter, run the following command in your terminal:
 
 `t2 run webserver.js`
 
