@@ -101,7 +101,7 @@ You should be able to see your Tessel (and any other Tessels connected to the sa
 
 {% highlight sh %}
 INFO Searching for nearby Tessels...
-	Tessel-AF768F095	USB
+  USB Tessel-AF768F095
 {% endhighlight %}
 
 Yay, you found it! At this point, your Tessel is operational and in communication with your computer.
@@ -116,7 +116,7 @@ If you run `t2 list` again, you'll see your Tessel has changed its name:
 
 {% highlight sh %}
 INFO Searching for nearby Tessels...
-	Bulbasaur	USB
+  USB Bulbasaur
 {% endhighlight %}
 
 <div class="greyBar"></div>
