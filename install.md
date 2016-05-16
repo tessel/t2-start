@@ -45,17 +45,29 @@ Once Node.js is installed, run this installation script from your terminal:
 
 <div id="tab-linux" class="content">
 
-[Node.js](http://nodejs.org/) is a prerequisite for installing the Tessel command line. You can install it from the [official website](http://nodejs.org) or following [these instructions for your package manager](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager).
+[Node.js](http://nodejs.org/) v4.x or newer is a prerequisite for installing the Tessel command line. You can install it from the [official website](http://nodejs.org) or following [these instructions from Node.js](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions):
 
-If you are running Ubuntu _13.10 or later_, you can run this:
+`curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -`
 
-`apt-get install nodejs nodejs-legacy`
+`sudo apt-get install -y nodejs`
 
-Once Node is installed, run this in your terminal:
+*Note: Piping a script into a shell with root access can be a security issue. Feel free to [read the script contents](https://deb.nodesource.com/setup_4.x) before executing the commands.*
+
+Once Node is installed, install USB dependencies:
 
 `apt-get install libusb-1.0-0-dev libudev-dev`
 
+Then, install the Tessel 2 command line interface:
+
 `npm install -g t2-cli`
+
+*Note: If you get the common npm EACCES error, correct it by [fixing npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions) and then running `npm install -g t2-cli` again. Using sudo is not recommended. Here is a handy [shell script](https://github.com/glenpike/npm-g_nosudo#npm-g_nosudo) to fix permissions issues.*
+
+Finally, you will need to install Tessel USB rules:
+
+`sudo t2 install-drivers`
+
+*Note: This is a one-time operation that uses `sudo` and you should not use it for any other Tessel commands.*
 
 </div>
 
