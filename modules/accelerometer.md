@@ -113,7 +113,7 @@ In your command line, `t2 run accelerometer.js`
 
 Watch x, y, and z values appear in your terminal! Move the Tessel module around to see acceleration along different axes.  
 
-**Bonus:** Change the code to make the accelerometer output information once per second (every 1000ms).  
+**Bonus:** Instead of just printing data, can you make the accelerometer tell you something useful? Make the Tessel log whether it's right side up or upside down.  
 
 To see what else you can do with the accelerometer module, see the module docs [here](https://github.com/tessel/accel-mma84).
 
