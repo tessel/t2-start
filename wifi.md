@@ -25,7 +25,7 @@ To connect to a new network, enter in your command line (without brackets)
 
 `t2 wifi -n <network-name> -p <password>`
 
-Tessel 2 will save network credentials and attempt to reconnect automatically on startup.
+The password flag is optional. Tessel 2 will save network credentials and attempt to reconnect automatically on startup.
 
 Wifi connectivity is indicated by the on-board amber Wifi LED, which will blink with every packet it receives.
 
