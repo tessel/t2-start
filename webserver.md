@@ -5,7 +5,7 @@
 <div class="large-12 columns">
 # Build A Portable Web Server
 
-Most web applications are served from remote machines in data centers miles and miles away from the devices that are using them. Because we're used to high-speed internet connections, that distance can seem trivial and unnoticeable. 
+Most web applications are served from remote machines in data centers miles and miles away from the devices that are using them. Because we're used to high-speed internet connections, that distance can seem trivial and unnoticeable.
 
 The Tessel 2 can run a server and deliver web applications to locally connected devices. It's quicker than those remote machines due to the immediate distance between the Tessel and devices connected to it. By the end of this article, we'll start a server on the Tessel and serve a web application that controls the Tessel LEDs through a local network.
 </div>
@@ -70,7 +70,7 @@ Now let's take it up a notch by adding some interactivity between the web page a
 
 <hr>
 
-Let's start this next part by building out the web page we want Tessel to send to your web browser. 
+Let's start this next part by building out the web page we want Tessel to send to your web browser.
 
 Create a file called `index.html` in your project directory and open it up in your preferred text editor to add the initial html:
 
@@ -141,7 +141,7 @@ Open that file in the browser to see the UI for this web app.
         if (req.readyState == 4 && req.status == 200) {
           var response = JSON.parse(req.responseText);
           statusNode.textContent = response.on ? 'ON' : 'OFF';
-        } else { 
+        } else {
           console.log('Error', e); // If something went wrong, log that event to the console.
         }
       }
@@ -150,7 +150,7 @@ Open that file in the browser to see the UI for this web app.
   </script>
   {% endhighlight %}
 
-  Now let's check out the server again to finish up the project. 
+  Now let's check out the server again to finish up the project.
 
   Replace the code in `webserver.js` with the following:
 
@@ -232,9 +232,9 @@ Open that file in the browser to see the UI for this web app.
   }
 {% endhighlight %}
 
-In order to make code pushing more efficient, Tessel only pushes the entry point file and its Node dependencies by default. Since index.html is not included in this default push, we'll need to explicitly require it with a .tesselinclude file (Read more about project files [here](https://tessel.io/docs/cli#usage)). 
+In order to make code pushing more efficient, Tessel only pushes the entry point file and its Node dependencies by default. Since index.html is not included in this default push, we'll need to explicitly require it with a .tesselinclude file (Read more about project files [here](https://tessel.io/docs/cli#usage)).
 
-Create a new file called `.tesselinclude` and copy and paste the following:
+You already have a `.tesselinclude` file, which was created when you ran `t2 init`. Open it up and copy and paste the following on a new line:
 
 {% highlight javascript %}
 index.html
@@ -247,7 +247,7 @@ Finally, let's fire up our server again by running:
 </div>
 
 <div class="small-12 columns">
-Once the server is running, connect to the URL in the web browser. 
+Once the server is running, connect to the URL in the web browser.
 
 Click on the buttons to toggle the lights.
 </div>
