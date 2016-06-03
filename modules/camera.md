@@ -74,7 +74,7 @@ Save the file.
 
 ### Step 5
 
-In your command line, `t2 run camera.js`
+Make sure your Tessel and computer are [connected to the same Wifi network](http://tessel.github.io/t2-start/wifi.html). Then, in your command line, `t2 run camera.js`
 
 Hooray! You should see the following:
 
