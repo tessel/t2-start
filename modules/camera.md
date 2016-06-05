@@ -107,7 +107,7 @@ In your browser:
 
 **Extra bonus:** Use an USB storage drive to store many photos. Hint: check out the "storage" module tutorial.
 
-To see what else you can do with the USB camera module, read the [tessel-av](https://github.com/tessel-av) documentation.
+To see what else you can do with the USB camera module, read the [tessel-av](https://github.com/tessel/tessel-av) documentation.
 
 ### Step 6
 
