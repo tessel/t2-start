@@ -65,7 +65,7 @@ var sound = new av.Speaker(mp3);
 
 sound.play();
 
-sound.on('end', function(seconds) {
+sound.on('ended', function(seconds) {
   sound.play();
 });
 
