@@ -34,7 +34,7 @@ Select the operating system you are working on.
 
 <div id="tab-osx" class="content active">
 
-[Node.js](http://nodejs.org/) is a prerequisite for installing the Tessel command line. You can install it from the [official website](http://nodejs.org/), or if you have [brew](http://brew.sh/) installed: `brew install node`
+[Node.js](http://nodejs.org/) is a prerequisite for installing the Tessel command line. Tessel currently supports the Long Term Support (LTS) version of Node.js. You can install it from the [official website](http://nodejs.org/) (select the LTS option), or if you have [brew](http://brew.sh/) installed: `brew install homebrew/versions/node4-lts`
 
 Once Node.js is installed, run this installation script from your terminal:
 
@@ -45,7 +45,7 @@ Once Node.js is installed, run this installation script from your terminal:
 
 <div id="tab-linux" class="content">
 
-[Node.js](http://nodejs.org/) v4.x or newer is a prerequisite for installing the Tessel command line. You can install it from the [official website](http://nodejs.org) or following [these instructions from Node.js](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions):
+[Node.js](http://nodejs.org/) is a prerequisite for installing the Tessel command line. Tessel currently supports the Long Term Support (LTS) version of Node.js. You can install it from the [official website](http://nodejs.org/) (select the LTS option), or following [these instructions from Node.js](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions):
 
 `curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -`
 
@@ -73,15 +73,17 @@ Finally, you will need to install Tessel USB rules:
 
 <div id="tab-windows" class="content">
 
-On Windows, Tessel drivers will install automatically when you plug in.
+On Windows, Tessel drivers should install automatically when you plug this device into your computer..
 
-On Windows 7, you may receive the notification "Device driver software was not successfully installed". If you do, click on the notification, click the "Change settings..." button, and then select "Install driver software from Windows Update if it is not found on my computer." Save changes and re-try.
+On Windows 7, you may receive the notification "Device driver software was not successfully installed". If you do, click on the notification, click the "Change settings..." button, and then select "Install driver software from Windows Update if it is not found on my computer." Save changes and retry.
 
-Next, install [Node.JS](http://nodejs.org). You need this to interact with Tessel from the command line.
+[Node.js](http://nodejs.org/) is a prerequisite for installing the Tessel command line. Tessel currently supports the Long Term Support (LTS) version of Node.js. You can install it from the [official website](http://nodejs.org/) (select the LTS option).
 
 After installing the Tessel drivers and Node.js, run this in cmd.exe:
 
 <big>`npm install -g t2-cli`</big>
+
+*Note: If you get the common npm EACCES error, correct it by [fixing npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions) and then running `npm install -g t2-cli` again.*
 
 </div>
 </div>
