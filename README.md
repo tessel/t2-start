@@ -1,11 +1,7 @@
 # t2-start
 [![Code of Conduct](https://img.shields.io/badge/%E2%9D%A4-code%20of%20conduct-blue.svg?style=flat)](https://github.com/tessel/project/blob/master/CONDUCT.md)
 
-This is a forked version of start.tessel.io that has the goal of becoming a book for the Tessel 2 "Getting Started" guide.
-
-It's statically published as a GitHub page at this URL: http://tessel.github.io/t2-start/
-
-Code is messy as this was scraped originally from a dynamic webapp. Goal is to have a clean, but static publishing system.
+The Tessel 2 first run experience – viewable at tessel.io/t2-start
 
 ## Running locally
 
