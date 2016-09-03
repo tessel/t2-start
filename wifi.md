@@ -43,7 +43,7 @@ Wifi connectivity is indicated by the on-board amber Wifi LED, which will blink 
 
 ### Authorize
 
-On Tessel 2, you can run and push your code over Wifi, not just USB. In fact, it's actually faster than over USB! Let's get that set up. Run:
+On Tessel 2, you can run and push your code over Wifi, not just USB. Let's get that set up. Run:
 
 `t2 provision`
 
