@@ -17,6 +17,8 @@ Tessel's two module ports are not just for modules– they can also be used as f
 
 What does that mean? It means you're not limited to Tessel's ten-pin modules. In theory, you can connect nearly any electronic device or sensor to Tessel!
 
+There is now a Tessel 2-based kit called the [Johnny-Five Inventor's Kit](https://www.sparkfun.com/products/13847?_ga=1.139920435.1460354922.1460705643) which gets you started with electronic components, complete with its own thorough [Experiment Guide](https://learn.sparkfun.com/tutorials/experiment-guide-for-the-johnny-five-inventors-kit/introduction-to-the-johnny-five-inventors-kit).
+
 <hr>
 
 ### Community modules
