@@ -12,7 +12,7 @@
 
 These are instructions for Tessel 2. Start [here for Tessel 1](//tessel.io/t1-start).
 
-*New to the command line? [Take a step back and learn the basics.](cmd.html)*
+**New to the command line? [Take a step back and learn the basics.](cmd.html)**
 
 Select the operating system you are working on.
 
