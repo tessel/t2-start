@@ -24,8 +24,7 @@ The [**Tessel Project**](https://tessel.io/about) is a completely open and volun
 
 * [Improve this **start experience** →](https://github.com/tessel/t2-start)
 * [Quick fix with the _contribution-easy_ tag on **CLI** →](https://github.com/tessel/t2-cli/labels/contribution-easy)
-* [Dive into Tessel 2's **firmware** →](https://github.com/tessel/t2-firmware)
-* Help build support for [Python](https://github.com/tessel/t2-cli/issues/201) and [Rust](https://github.com/tessel/t2-cli/issues/200) →
+* [Learn about Tessel 2's **tech stack** →](https://tessel.gitbooks.io/t2-docs/content/Debugging/Technical_Overview.html)
 
 Welcome to the community! We're happy to have you.
 
