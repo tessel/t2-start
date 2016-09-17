@@ -1,0 +1,8 @@
+---
+layout: default
+---
+
+{% capture include_install %}
+{% include_relative blinky-rust.md %}
+{% endcapture %}
+{{ include_install | markdownify }}
