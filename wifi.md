@@ -23,7 +23,11 @@ Tessel 2 has robust Wifi built into the board. Let's get connected!
 
 To connect to a new network, enter in your command line (without brackets)
 
-`t2 wifi -n <network-name> -p <password>`
+`t2 wifi -n <network-name> -p <password>`  
+
+
+_Note: if you have spaces in your network name, or password, add quotes around the network name and/or password_  
+`t2 wifi -n "<network name with spaces>" -p "<password with spaces>"`
 
 The password flag is optional. Tessel 2 will save network credentials and attempt to reconnect automatically on startup.
 
