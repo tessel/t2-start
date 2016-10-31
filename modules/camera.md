@@ -52,7 +52,7 @@ Create a server that responds to every request by taking a picture and piping it
 var av = require('tessel-av');
 var os = require('os');
 var http = require('http');
-var port = 8080;
+var port = 8000;
 var camera = new av.Camera();
 
 http.createServer((request, response) => {
