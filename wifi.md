@@ -25,8 +25,8 @@ To connect to a new network, enter in your command line (without brackets)
 
 `t2 wifi -n <network-name> -p <password>`  
 
-
-_Note: if you have spaces in your network name, or password, add quotes around the network name and/or password_  
+_Note: Wifi radio on Tessel can only connect to 2.4GHz networks. As of yet, you cannot to connect over a 5GHz network.
+_Note: if you have spaces in your network name, or password, add quotes around the network name and/or password_
 `t2 wifi -n "<network name with spaces>" -p "<password with spaces>"`
 
 The password flag is optional. Tessel 2 will save network credentials and attempt to reconnect automatically on startup.
