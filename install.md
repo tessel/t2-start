@@ -63,7 +63,7 @@ Then, install the Tessel 2 command line interface:
 
 Finally, you will need to install Tessel USB rules:
 
-`sudo t2 install-drivers`
+`sudo t2 install drivers`
 
 *Note: This is a one-time operation that uses `sudo` and you should not use it for any other Tessel commands.*
 
