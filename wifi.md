@@ -84,6 +84,8 @@ Great! now that we're connected and authorized, let's check for updates. Run:
 
 This command will check for a new version of the Tessel 2 firmware. If there is an update available, it will be downloaded and installed.
 
+Note that after an update is applied your tessel will revert to the default name, so you will have to run `t2 rename` again if you previously gave your tessel a name.
+
 <div class="greyBar"></div>
 </div>
 </div>
