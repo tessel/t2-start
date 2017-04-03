@@ -1,7 +1,7 @@
 # t2-start
 [![Code of Conduct](https://img.shields.io/badge/%E2%9D%A4-code%20of%20conduct-blue.svg?style=flat)](https://github.com/tessel/project/blob/master/CONDUCT.md)
 
-The Tessel 2 first run experience – viewable at tessel.io/t2-start
+The Tessel 2 first run experience – viewable at http://tessel.io/t2-start
 
 ## Running locally
 
