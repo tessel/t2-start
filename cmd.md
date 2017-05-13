@@ -1,5 +1,7 @@
 {::options parse_block_html="true" /}
 
+<script src="javascripts/custom/install.js"></script>
+
 <div class="row">
 <div class="large-12 columns">
 
