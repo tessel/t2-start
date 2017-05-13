@@ -1,4 +1,5 @@
 $(function () {
+  console.log("Running install.js");
   var foundOS = false;
   var isMac = navigator.platform.toUpperCase().indexOf('MAC')!==-1;
   var isWindows = navigator.platform.toUpperCase().indexOf('WIN')!==-1;
