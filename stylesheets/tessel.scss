@@ -13,6 +13,9 @@ body {
     text-align: center;
     background: #008cba;
   }
+  dl.tabs[data-tab] > dt {
+    display: none;
+  }
 }
 h1 {
   letter-spacing: 0.04em;
