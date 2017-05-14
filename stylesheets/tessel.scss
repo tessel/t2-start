@@ -13,6 +13,13 @@ body {
     text-align: center;
     background: #008cba;
   }
+  /* 
+  Hide any dt elements inside dl elements when the dl elements are being
+  used to create Foundation horizontal tabs
+  */
+  dl.tabs[data-tab] > dt {
+    display: none;
+  }
 }
 h1 {
   letter-spacing: 0.04em;

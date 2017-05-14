@@ -1,5 +1,7 @@
 {::options parse_block_html="true" /}
 
+<script type="text/javascript" src="javascripts/custom/install.js"></script>
+
 <div class="row">
 <div class="large-12 columns">
 
@@ -14,9 +16,15 @@ you will work on and save your programs.
 
 Select the operating system you are working on.
 
-<dl id="install-tabs" data-tab="" class="tabs contained three-up">
-| [OSX](#tab-osx) || [Linux](#tab-linux) || [Windows](#tab-windows) |
-</dl>
+{:.tabs.contained.three-up #install-tabs data-tab=""}
+OSX
+: {:.active} [OSX](#tab-osx)
+
+Linux
+: [Linux](#tab-linux)
+
+Windows
+: [Windows](#tab-windows)
 
 <div id="install-content" class="tabs-content">
 
