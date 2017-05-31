@@ -24,7 +24,7 @@ In your command line, make a folder for your Tessel code, then initialize a Tess
 
 `t2 init`
 
-Rename the “index.js” file you’ve just created to “webserver.js”, then copy and paste the below script over the existing text:
+Rename the “index.js” file you’ve just created to “web-server.js”, then copy and paste the below script over the existing text:
 
 {% highlight javascript %}
 // Import the interface to Tessel hardware
@@ -52,7 +52,7 @@ Now that our server is in place, let's get our access point set up. In the termi
 
 If you haven't read about creating access points yet, check out the [access point tutorial](ap.html). After connecting to TesselRouter, run the following command in your terminal:
 
-`t2 run webserver.js`
+`t2 run web-server.js`
 
 </div>
 
@@ -152,7 +152,7 @@ Open that file in the browser to see the UI for this web app.
 
   Now let's check out the server again to finish up the project.
 
-  Replace the code in `webserver.js` with the following:
+  Replace the code in `web-server.js` with the following:
 
 {% highlight javascript %}
   // These two dependencies remain the same
@@ -242,7 +242,7 @@ index.html
 
 Finally, let's fire up our server again by running:
 
-`t2 run webserver.js`
+`t2 run web-server.js`
 
 </div>
 

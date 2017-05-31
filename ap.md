@@ -63,6 +63,6 @@ Open the wifi setting of your computer, or a separate device like a smartphone o
 </div>
 
 <div class="large-6 columns right">
-  <a href="webserver.html" class= "bottomButton right button">Next: Build A Web Server</a>
+  <a href="web-server.html" class= "bottomButton right button">Next: Build A Web Server</a>
 </div>
 </div>
