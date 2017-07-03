@@ -55,7 +55,7 @@ Install by typing `npm install climate-si7020` into the command line.
 </div>
 <div class="large-6 columns">
 
-![](http://i.imgur.com/QS1OgRo.jpg)
+![](https://www.pubnub.com/wp-content/uploads/2015/04/climate-si7020.jpg)
 
 </div>
 </div>
