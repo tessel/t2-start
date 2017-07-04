@@ -67,7 +67,7 @@ Ok, now you're a cool hacker who can use the terminal (or "console") to write in
 
 Open up the application on your computer called “Terminal” by tapping the SUPER key (Windows or Apple key, depending on your hardware) and typing “Terminal”.
 
-Its icon looks like ![](http://i.imgur.com/ySRfyMC.png), and the terminal will look something like ![](http://i.imgur.com/VjVWZD8.png)
+Its icon looks like ![](http://i.imgur.com/y5U2cZ2.png), and the terminal will look something like ![](http://i.imgur.com/6jzen4Y.png?1)
 
 You can use the terminal to write commands to your computer (this is the “command line”). Let’s try it out!
 
