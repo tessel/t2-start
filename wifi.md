@@ -86,6 +86,8 @@ Great! now that we're connected and authorized, let's check for updates. Run:
 
 This command will check for a new version of the Tessel 2 firmware. If there is an update available, it will be downloaded and installed.
 
+Have a look at [the cli docs](https://tessel.gitbooks.io/t2-docs/content/API/CLI.html#updating-tessel-2-on-board-osfirmware) to get more information on updations.
+
 <div class="greyBar"></div>
 </div>
 </div>
