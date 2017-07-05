@@ -18,6 +18,8 @@ In your command line, make a folder for your Tessel code, then initialize a Tess
 
 `t2 init`
 
+Have a look at [the cli docs](https://tessel.gitbooks.io/t2-docs/content/API/CLI.html#starting-projects) to explore `t2 init` command.
+
 Great! Now you're set up to run code on Tessel. Your "tessel-code" folder now contains:
 
 * a "package.json" with some metadata Node uses for your project
