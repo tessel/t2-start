@@ -34,6 +34,8 @@ The password flag is optional. Tessel 2 will save network credentials and attemp
 
 Wifi connectivity is indicated by the on-board amber Wifi LED, which will blink with every packet it receives.
 
+To explore more options of the t2 wifi command, take a look at [the cli docs](https://tessel.gitbooks.io/t2-docs/content/API/CLI.html#using-wifi). 
+
 </div>
 <div class="large-6 columns">
 
