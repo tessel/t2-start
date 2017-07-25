@@ -34,7 +34,7 @@ The password flag is optional. Tessel 2 will save network credentials and attemp
 
 Wifi connectivity is indicated by the on-board amber Wifi LED, which will blink with every packet it receives.
 
-To explore more options available for `t2 wifi`, take a look at [the cli docs](https://tessel.gitbooks.io/t2-docs/content/API/CLI.html#using-wifi). 
+_To explore more options available for the `t2 wifi` command, take a look at [the cli docs](https://tessel.gitbooks.io/t2-docs/content/API/CLI.html#using-wifi)._
 
 </div>
 <div class="large-6 columns">
@@ -86,7 +86,7 @@ Great! now that we're connected and authorized, let's check for updates. Run:
 
 This command will check for a new version of the Tessel 2 firmware. If there is an update available, it will be downloaded and installed.
 
-Have a look at [the cli docs](https://tessel.gitbooks.io/t2-docs/content/API/CLI.html#updating-tessel-2-on-board-osfirmware) to get more information on updations.
+_Have a look at [the cli docs](https://tessel.gitbooks.io/t2-docs/content/API/CLI.html#updating-tessel-2-on-board-osfirmware) to get more information on updations._
 
 <div class="greyBar"></div>
 </div>
