@@ -18,7 +18,7 @@ In your command line, make a folder for your Tessel code, then initialize a Tess
 
 `t2 init`
 
-_Have a look at [the cli docs](https://tessel.gitbooks.io/t2-docs/content/API/CLI.html#starting-projects) to explore the `t2 init` command._
+_Have a look at [the CLI docs](https://tessel.gitbooks.io/t2-docs/content/API/CLI.html#starting-projects) to explore the `t2 init` command._
 
 Great! Now you're set up to run code on Tessel. Your "tessel-code" folder now contains:
 
