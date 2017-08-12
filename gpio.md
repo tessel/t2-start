@@ -68,7 +68,7 @@ Share what you've made, and if you need help, [just ask](https://forums.tessel.i
 
 <div class="row">
 <div class="large-6 columns left">
-  <a href="webserver.html" class="bottomButton button">Prev: Build Your Internet</a>
+  <a href="web-server.html" class="bottomButton button">Prev: Build Your Internet</a>
 </div>
 
 <div class="large-6 columns right">
